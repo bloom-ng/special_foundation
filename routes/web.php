@@ -15,38 +15,55 @@ use App\Http\Controllers\NewsletterController;
 |
 */
 
-Route::resource('newsletters', NewsletterController::class);
 
 
-Route::get('/create-newsletter', function () {
-    $newsletter = Newsletter::all();
+// Route::get('/create-newsletter', function () {
+//     $newsletter = Newsletter::all();
 
 
-    return Newsletter::all();
+//     return Newsletter::all();
+// });
+
+// Route::get('/newsletters', [NewsletterController::class, 'index']);
+
+
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/newsletters', function () {
+    $newsletters = Newsletter::all();
+    return view('index', [ "newsletters" => $newsletters]);
 });
 
 
+Auth::routes();
 
-Route::get('/', function () {
-    return view('blank');
-});
 
-Route::get('calendar', function () {
-    return view('calendar');
-});
 
-Route::get('forms', function () {
-    return view('forms');
-});
+Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
-Route::get('index', function () {
-    return view('index');
-});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+    // Add other routes that require authentication here
+    Route::get('calendar', function () {
+        return view('calendar');
+    });
+    
+    Route::get('forms', function () {
+        return view('forms');
+    });
 
-Route::get('tables', function () {
-    return view('tables');
-});
+    Route::get('blank', function () {
+        return view('blank');
+    });
 
-Route::get('tabs', function () {
-    return view('tabs');
+    Route::get('tables', function () {
+        return view('tables');
+    });
+
+    Route::get('tabs', function () {
+        return view('tabs');
+    });
+
 });

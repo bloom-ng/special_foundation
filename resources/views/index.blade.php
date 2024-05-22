@@ -147,11 +147,30 @@
                             class="block px-4 py-2 account-link hover:text-white"
                             >Support</a
                         >
-                        <a
-                            href="#"
+                        <div class="px-4 py-2 account-link hover:text-white">
+                            <form
+                                id="logout-form"
+                                action="{{ route('logout') }}"
+                                method="POST"
+                                style="display: none"
+                            >
+                                @csrf
+                            </form>
+
+                            <a
+                                href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"
+                            >
+                                Sign Out
+                            </a>
+                        </div>
+
+                        <!-- <a
+                            href="/login"
                             class="block px-4 py-2 account-link hover:text-white"
                             >Sign Out</a
-                        >
+                        > -->
                     </div>
                 </div>
             </header>
@@ -255,7 +274,6 @@
                 <i class="fas fa-plus mr-3"></i> New Report
             </button> -->
             </header>
-
             <div class="w-full overflow-x-hidden border-t flex flex-col">
                 <main class="w-full flex-grow p-6">
                     <h1 class="text-3xl text-black pb-6">Dashboard</h1>
@@ -292,9 +310,6 @@
                         <p class="text-xl pb-3 flex items-center">
                             <i class="fas fa-list mr-3"></i> Latest Reports
                         </p>
-                        <a href="{{ route('newsletters.create') }}"
-                            >Create New Newsletter</a
-                        >
                         <div class="bg-white overflow-auto">
                             <table class="min-w-full bg-white">
                                 <thead class="bg-gray-800 text-white">
@@ -321,23 +336,40 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                @foreach ($newsletters as $newsletter)
                                 <tbody class="text-gray-700">
+                                    @foreach ($newsletters as $newsletter)
                                     <tr>
-                                        <td class="w-1/3 text-left py-3 px-4" >{{ $newsletter->id }}</td>
-                                        <td class="w-1/3 text-left py-3 px-4" >{{ $newsletter->name }}</td>
-                                        <td class="w-1/3 text-left py-3 px-4">{{ $newsletter->email }}</td>
                                         <td class="w-1/3 text-left py-3 px-4">
-                                            <a href="{{ route('newsletters.show', $newsletter->id) }}">Show</a>
-                                            <a href="{{ route('newsletters.edit', $newsletter->id) }}">Edit</a>
-                                            <form action="{{ route('newsletters.destroy', $newsletter->id) }}" method="POST" style="display:inline;">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit">Delete</button>
+                                            {{ $newsletter->id }}
+                                        </td>
+                                        <td class="w-1/3 text-left py-3 px-4">
+                                            {{ $newsletter->name }}
+                                        </td>
+                                        <td class="w-1/3 text-left py-3 px-4">
+                                            {{ $newsletter->email }}
+                                        </td>
+                                        <td class="w-1/3 text-left py-3 px-4">
+                                            {{ $newsletter->created_at }}
+                                        </td>
+                                        <td class="w-1/3 text-left py-3 px-4">
+                                            {{ $newsletter->updated_at }}
+                                        </td>
+                                        <td class="w-1/3 text-left py-3 px-4">
+                                            <a href="#">Show</a>
+                                            <a href="#">Edit</a>
+                                            <form
+                                                action="#"
+                                                method="POST"
+                                                style="display: inline"
+                                            >
+                                                @csrf @method('DELETE')
+                                                <button type="submit">
+                                                    Delete
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>
-                                    @endforeach        
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

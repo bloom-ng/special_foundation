@@ -62,7 +62,6 @@
             Upgrade to Pro!
         </a>
     </aside>
-
     <div class="relative w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
@@ -75,7 +74,24 @@
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">Account</a>
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">Support</a>
-                    <a href="#" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
+                    <div class="px-4 py-2 account-link hover:text-white">
+                            <form
+                                id="logout-form"
+                                action="{{ route('logout') }}"
+                                method="POST"
+                                style="display: none"
+                            >
+                                @csrf
+                            </form>
+
+                            <a
+                                href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"
+                            >
+                                Sign Out
+                            </a>
+                        </div>
                 </div>
             </div>
         </header>
