@@ -17,28 +17,12 @@ use App\Http\Controllers\NewsletterController;
 
 
 
-// Route::get('/create-newsletter', function () {
-//     $newsletter = Newsletter::all();
+
+Route::get('/newsletters', [NewsletterController::class, 'index']);
 
 
-//     return Newsletter::all();
-// });
 
-// Route::get('/newsletters', [NewsletterController::class, 'index']);
-
-
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-Route::get('/newsletters', function () {
-    $newsletters = Newsletter::all();
-    return view('index', [ "newsletters" => $newsletters]);
-});
-
-Route::get('homepage', function () {
-        return view('homepage');
-    });
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Auth::routes();
 
@@ -47,7 +31,6 @@ Auth::routes();
 Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
     // Add other routes that require authentication here
     Route::get('calendar', function () {
         return view('calendar');
