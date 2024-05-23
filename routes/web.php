@@ -21,7 +21,6 @@ use App\Http\Controllers\NewsletterController;
 Route::get('/newsletters', [NewsletterController::class, 'index']);
 
 
-
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Auth::routes();
