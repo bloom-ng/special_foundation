@@ -18,6 +18,8 @@ use App\Http\Controllers\NewsletterController;
 
 
 
+
+
 Route::get('/newsletters', [NewsletterController::class, 'index']);
 
 
