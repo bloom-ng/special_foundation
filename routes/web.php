@@ -36,6 +36,9 @@ Route::get('/newsletters', function () {
     return view('index', [ "newsletters" => $newsletters]);
 });
 
+Route::get('homepage', function () {
+        return view('homepage');
+    });
 
 Auth::routes();
 
