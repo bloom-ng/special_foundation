@@ -17,6 +17,10 @@ use App\Http\Controllers\NewsletterController;
 
 
 
+Route::get('homepage', function () {
+        return view('homepage');
+    });
+
 
 
 
@@ -33,8 +37,12 @@ Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name
 
 Route::middleware(['auth'])->group(function () {
     // Add other routes that require authentication here
-    Route::get('calendar', function () {
-        return view('calendar');
+    Route::get('dashboard', function () {
+    return view('admin.dashboard');
+});
+    
+    Route::get('newsletter', function () {
+        return view('admin.newsletter.index');
     });
     
     Route::get('forms', function () {
