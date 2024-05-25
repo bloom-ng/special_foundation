@@ -10,6 +10,10 @@ export default {
       colors: {
         'white-70': 'rgba(255, 255, 255, 0.7)',
       },
+      flexBasis: {
+        '4/7': '57.14%', // 4/7 of the container width
+        '3/7': '42.86%', // 3/7 of the container width
+      },
     },
     screens: {
       'sm': '640px', // Small screens, mobile phones

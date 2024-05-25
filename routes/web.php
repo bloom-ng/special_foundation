@@ -21,7 +21,9 @@ Route::get('homepage', function () {
         return view('homepage');
     });
 
-
+Route::get('programs', function () {
+        return view('programs');
+    });
 
 
 Route::get('/newsletters', [NewsletterController::class, 'index']);
