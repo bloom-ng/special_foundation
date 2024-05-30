@@ -42,7 +42,7 @@
     </head>
     <body class="bg-gray-100 font-family-karla flex">
         <aside
-            class="relative bg-indigo-900 h-screen w-64 hidden sm:block shadow-xl"
+            class="relative bg-[#26225F] h-screen w-64 hidden sm:block shadow-xl"
         >
             <div class="p-6">
                 <a
@@ -54,7 +54,7 @@
             </div>
             <nav class="text-white text-base font-semibold pt-3">
                 <a
-                    href="/index"
+                    href="/dashboard"
                     class="flex items-center {{$page == 'dashboard' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
                     <i class="fas fa-tachometer-alt mr-3"></i>
@@ -76,7 +76,7 @@
                 </a>
                 <a
                     href="/forms"
-                    class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item"
+                    class="flex items-center {{$page == 'forms' ? 'active-nav-link' : ''}}  text-white hover:opacity-100 py-4 pl-6 nav-item"
                 >
                     <i class="fas fa-align-left mr-3"></i>
                     Forms
@@ -88,13 +88,13 @@
                     <i class="fas fa-tablet-alt mr-3"></i>
                     Tabbed Content
                 </a>
-                <a
+                <!-- <a
                     href="/calendar"
                     class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item"
                 >
                     <i class="fas fa-calendar mr-3"></i>
                     Calendar
-                </a>
+                </a> -->
             </nav>
             
         </aside>
@@ -190,7 +190,7 @@
                     class="flex flex-col pt-4"
                 >
                     <a
-                        href="/index"
+                        href="/dashboard"
                         class="flex items-center active-nav-link text-white py-2 pl-4 nav-item"
                     >
                         <i class="fas fa-tachometer-alt mr-3"></i>
@@ -224,13 +224,13 @@
                         <i class="fas fa-tablet-alt mr-3"></i>
                         Tabbed Content
                     </a>
-                    <a
+                    <!-- <a
                         href="/calendar"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                     >
                         <i class="fas fa-calendar mr-3"></i>
                         Calendar
-                    </a>
+                    </a> -->
                     <a
                         href="#"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"

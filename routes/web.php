@@ -25,6 +25,9 @@ Route::get('programs', function () {
         return view('programs');
     });
 
+    Route::get('who-we-are', function () {
+        return view('who-we-are');
+    });
 
 Route::get('/newsletters', [NewsletterController::class, 'index']);
 
