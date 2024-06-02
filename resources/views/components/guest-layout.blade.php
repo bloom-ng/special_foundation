@@ -8,7 +8,7 @@
     {{-- @vite('/resources/css/app.css') --}}
 
     <link rel="stylesheet" href="{{ asset('css/font.css') }}" />
-    <link rel="stylesheet" href="resources/css/app.css" />
+    {{-- <link rel="stylesheet" href="resources/css/app.css" /> --}}
 
     <title>{{ $title }}</title>
 
