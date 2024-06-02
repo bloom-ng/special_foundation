@@ -29,6 +29,13 @@
             rel="stylesheet"
         /> -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+        <style>
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+        </style>
     </head>
 
     <body>
@@ -75,7 +82,7 @@
         </div>
          {{$slot}}
          {{-- Chat Module --}}
-         <div class="fixed bottom-0 right-0 mb-4 mr-4 z-50" id="chat"></div>
+         <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div>
         <!-- footer -->
         <x-footer></x-footer>
     </body>
