@@ -29,7 +29,7 @@ Route::get('programs', function () {
         return view('who-we-are');
     });
 
-Route::get('/newsletters', [NewsletterController::class, 'index']);
+
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
@@ -40,30 +40,29 @@ Auth::routes();
 
 Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
-Route::middleware(['auth'])->group(function () {
+Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Add other routes that require authentication here
-    Route::get('dashboard', function () {
-    return view('admin.dashboard');
-});
-    
-    Route::get('newsletter', function () {
-        return view('admin.newsletter.index');
-    });
-    
-    Route::get('forms', function () {
-        return view('forms');
-    });
+    Route::get('dashboard', function () { return view('admin.dashboard');} );
 
-    Route::get('blank', function () {
-        return view('blank');
-    });
-
-    Route::get('tables', function () {
-        return view('tables');
-    });
-
-    Route::get('tabs', function () {
-        return view('tabs');
-    });
+    Route::get('/newsletters', [NewsletterController::class, 'index']);
+    Route::delete('/newsletters/{newsletter}', [NewsletterController::class, 'delete']);
 
 });
+    
+    
+    // Route::get('forms', function () {
+    //     return view('forms');
+    // });
+
+    // Route::get('blank', function () {
+    //     return view('blank');
+    // });
+
+    // Route::get('tables', function () {
+    //     return view('tables');
+    // });
+
+    // Route::get('tabs', function () {
+    //     return view('tabs');
+    // });
+

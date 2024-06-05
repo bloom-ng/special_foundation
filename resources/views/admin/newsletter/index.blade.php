@@ -47,15 +47,14 @@
                                 </td>
                                
                                 <td class="w-1/3 text-left py-3 px-4">
-                                    <a href="#">Show</a>
-                                    <a href="#">Edit</a>
                                     <form
-                                        action="#"
+                                        id="newsletter-delete"
+                                        action="/admin/newsletters/{{$newsletter->id}}"
                                         method="POST"
                                         style="display: inline"
                                     >
                                         @csrf @method('DELETE')
-                                        <button type="submit">
+                                        <button type="submit" class="text-red-500">
                                             Delete
                                         </button>
                                     </form>
@@ -67,5 +66,17 @@
                 </div>
             </div>
         </main>
+
+        <script>
+            const form = document.getElementById('newsletter-delete');
+          
+            form.addEventListener('submit', (e) => {
+              e.preventDefault(); // Prevent the form from submitting normally
+              const confirmSubmit = confirm('Proceed to delete?');
+              if (confirmSubmit) {
+                form.submit(); // Submit the form if the user confirms
+              }
+            });
+          </script>
 
 </x-admin-layout>

@@ -54,14 +54,14 @@
             </div>
             <nav class="text-white text-base font-semibold pt-3">
                 <a
-                    href="/dashboard"
+                    href="/admin/dashboard"
                     class="flex items-center {{$page == 'dashboard' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
                 <a
-                    href="/newsletter"
+                    href="/admin/newsletters"
                     class="flex items-center {{$page == 'newsletter' ? 'active-nav-link' : ''}} text-white hover:opacity-100 py-4 pl-6 nav-item"
                 >
                     <i class="fas fa-sticky-note mr-3"></i>
@@ -104,7 +104,18 @@
             <header
                 class="w-full items-center bg-white py-2 px-6 hidden sm:flex"
             >
-                <div class="w-1/2"></div>
+                <div class="w-1/2">
+                    @if (session('success'))
+                        <div class="bg-green-400 font-semibold text-gray-50 p-2">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    @if (session('error'))
+                        <div class="bg-red-400 font-semibold text-gray-50 p-2">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+                </div>
                 <div
                     x-data="{ isOpen: false }"
                     class="relative w-1/2 flex justify-end"
@@ -114,7 +125,7 @@
                         class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none"
                     >
                         <img
-                            src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400"
+                            src="https://ui-avatars.com/api/?color=6c5ce7&background=fff&name={{auth()->user()->name}}"
                         />
                     </button>
                     <button
@@ -130,11 +141,6 @@
                             href="#"
                             class="block px-4 py-2 account-link hover:text-white"
                             >Account</a
-                        >
-                        <a
-                            href="#"
-                            class="block px-4 py-2 account-link hover:text-white"
-                            >Support</a
                         >
                         <div class="px-4 py-2 account-link hover:text-white">
                             <form
@@ -155,11 +161,7 @@
                             </a>
                         </div>
 
-                        <!-- <a
-                            href="/login"
-                            class="block px-4 py-2 account-link hover:text-white"
-                            >Sign Out</a
-                        > -->
+                       
                     </div>
                 </div>
             </header>
@@ -189,12 +191,20 @@
                     :class="isOpen ? 'flex': 'hidden'"
                     class="flex flex-col pt-4"
                 >
+                
                     <a
-                        href="/dashboard"
-                        class="flex items-center active-nav-link text-white py-2 pl-4 nav-item"
+                        href="/admin/dashboard"
+                        class="flex items-center {{$page == 'dashboard' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
                         <i class="fas fa-tachometer-alt mr-3"></i>
                         Dashboard
+                    </a>
+                    <a
+                        href="/admin/newsletters"
+                        class="flex items-center {{$page == 'newsletter' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
+                    >
+                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        Newsletter Subscribers
                     </a>
                     <a
                         href="/"
@@ -231,13 +241,7 @@
                         <i class="fas fa-calendar mr-3"></i>
                         Calendar
                     </a> -->
-                    <a
-                        href="#"
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                    >
-                        <i class="fas fa-cogs mr-3"></i>
-                        Support
-                    </a>
+                  
                     <a
                         href="#"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
@@ -245,8 +249,17 @@
                         <i class="fas fa-user mr-3"></i>
                         My Account
                     </a>
+                    <form
+                    id="logout-form"
+                    action="{{ route('logout') }}"
+                    method="POST"
+                    style="display: none"
+                >
+                    @csrf
+                </form>
                     <a
-                        href="#"
+                    href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                     >
                         <i class="fas fa-sign-out-alt mr-3"></i>

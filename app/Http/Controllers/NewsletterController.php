@@ -15,4 +15,10 @@ class NewsletterController extends Controller
        return view('admin.newsletter.index')->with('newsletters', $newsletters);
     }
 
+    public function delete(Newsletter $newsletter)
+    {
+        $newsletter->delete();
+        return back()->with('success', 'Newsletter Deleted');
+    }
+
 }
