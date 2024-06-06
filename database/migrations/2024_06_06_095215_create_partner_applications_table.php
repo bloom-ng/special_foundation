@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('c_m_s', function (Blueprint $table) {
+        Schema::create('partner_applications', function (Blueprint $table) {
             $table->id();
-            $table->string('page');
-            $table->string('slug')->unique();
-            $table->string('type')->nullable();
-            $table->string('value');
+            $table->string('name');
+            $table->string('email');
+            $table->string('contact_number');
+            $table->string('area_of_residence');
+            $table->text('purpose_of_application');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('c_m_s');
+        Schema::dropIfExists('partner_applications');
     }
 };
