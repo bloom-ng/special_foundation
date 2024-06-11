@@ -15,6 +15,20 @@ class NewsletterController extends Controller
        return view('admin.newsletter.index')->with('newsletters', $newsletters);
     }
 
+    public function create(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'email' => 'required|email',
+        ]);
+
+        Newsletter::create([
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+        return back()->with('success', 'Newsletter Created');
+    }
+
     public function delete(Newsletter $newsletter)
     {
         $newsletter->delete();

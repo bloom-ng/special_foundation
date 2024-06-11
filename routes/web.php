@@ -2,6 +2,7 @@
 use App\Models\Newsletter;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\DownloadController;
 
 
 /*
@@ -25,9 +26,11 @@ Route::get('programs', function () {
         return view('programs');
     });
 
-    Route::get('who-we-are', function () {
+Route::get('who-we-are', function () {
         return view('who-we-are');
     });
+
+Route::post('/newsletters', [NewsletterController::class, 'create']);
 
 
 
@@ -47,22 +50,16 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/newsletters', [NewsletterController::class, 'index']);
     Route::delete('/newsletters/{newsletter}', [NewsletterController::class, 'delete']);
 
+    // Downloads routes
+    Route::get('/downloads', [DownloadController::class, 'index']);
+    Route::get('/downloads/create', [DownloadController::class, 'create']);
+    Route::post('/downloads', [DownloadController::class, 'store']);
+    Route::delete('/downloads/{download}', [DownloadController::class, 'destroy']);
+
 });
     
     
-    // Route::get('forms', function () {
-    //     return view('forms');
-    // });
-
-    // Route::get('blank', function () {
-    //     return view('blank');
-    // });
-
-    // Route::get('tables', function () {
-    //     return view('tables');
-    // });
-
-    // Route::get('tabs', function () {
-    //     return view('tabs');
-    // });
+ Route::get('/forms', function () {
+        return view('forms');
+    });
 

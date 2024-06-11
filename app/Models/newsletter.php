@@ -9,10 +9,8 @@ class Newsletter extends Model
 {
     use HasFactory;
 
-    // Specify the table if it does not follow the naming convention
     protected $table = 'newsletters';
 
-    // Specify fillable attributes if using mass assignment
     protected $fillable = ['name', 'email'];
 
 }
