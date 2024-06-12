@@ -63,6 +63,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $newsletters->links() }}
                 </div>
             </div>
         </main>

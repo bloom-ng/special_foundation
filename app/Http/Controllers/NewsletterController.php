@@ -11,7 +11,7 @@ class NewsletterController extends Controller
     // Display all content of DB
     public function index()
     {
-       $newsletters = Newsletter::all();
+       $newsletters = Newsletter::latest()->paginate(15);
        return view('admin.newsletter.index')->with('newsletters', $newsletters);
     }
 

@@ -1,0 +1,80 @@
+<?php
+
+namespace App\Http\Controllers;
+
+
+use App\Models\BeneficiaryApplication;
+use Illuminate\Http\Request;
+
+class BeneficiaryApplicationController extends Controller
+{
+    // Display all content of DB
+    // protected $fillable = [
+    //     'name',
+    //     'email',
+    //     'contact_number',
+    //     'area_of_residence',
+    //     'purpose_of_application',
+    //     'programme'
+    // ];
+    public function index()
+    {
+       $applications = BeneficiaryApplication::latest()->paginate(15);
+       return view('admin.application.beneficiary.index')
+                    ->with('applications', $applications)
+                    ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
+    }
+
+    public function show($id)
+    {
+        $application = BeneficiaryApplication::find($id);
+        return view('admin.application.beneficiary.show')
+                    ->with('application', $application)
+                    ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'contact_number' => 'required|string',
+            'area_of_residence' => 'required|string',
+            'purpose_of_application' => 'string',
+            'programme' => 'required|numeric',
+        ]);
+
+        $application = new BeneficiaryApplication;
+        $application->name = $request->name;
+        $application->email = $request->email;
+        $application->contact_number = $request->contact_number;
+        $application->area_of_residence = $request->area_of_residence;
+        $application->purpose_of_application = $request->purpose_of_application;
+        $application->programme = $request->programme;
+        $application->save();
+        return back()->with('success', 'Application Created');
+  
+    }
+
+    public function create(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'email' => 'required|email',
+        ]);
+
+        Newsletter::create([
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+        return back()->with('success', 'Newsletter Created');
+    }
+
+    public function destroy($id)
+    {
+        $application = BeneficiaryApplication::find($id);
+        $application->delete();
+        return back()->with('success', 'Application Deleted');
+    }
+
+}

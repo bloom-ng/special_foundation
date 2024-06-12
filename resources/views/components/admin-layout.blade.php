@@ -47,12 +47,12 @@
             <div class="p-6">
                 <a
                     href="/index"
-                    class="text-white text-3xl font-semibold uppercase hover:text-gray-300"
+                    class="text-white text-xl font-semibold uppercase hover:text-gray-300"
                     >Admin</a
                 >
                
             </div>
-            <nav class="text-white text-base font-semibold pt-3">
+            <nav class="text-white text-xs font-semibold pt-3">
                 <a
                     href="/admin/dashboard"
                     class="flex items-center {{$page == 'dashboard' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
@@ -75,6 +75,13 @@
                     Downloads
                 </a>
                 <a
+                    href="/admin/beneficiaries"
+                    class="flex items-center {{$page == 'beneficiary' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
+                >
+                    <i class="fas fa-download mr-3"></i>
+                    Beneficiary Applications
+                </a>
+                {{-- <a
                     href="/forms"
                     class="flex items-center {{$page == 'forms' ? 'active-nav-link' : ''}}  text-white hover:opacity-100 py-4 pl-6 nav-item"
                 >
@@ -87,7 +94,7 @@
                 >
                     <i class="fas fa-tablet-alt mr-3"></i>
                     Tabbed Content
-                </a>
+                </a> --}}
                 <!-- <a
                     href="/calendar"
                     class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item"
@@ -214,6 +221,13 @@
                         Downloads
                     </a>
                     <a
+                        href="/admin/beneficiaries"
+                        class="flex items-center {{$page == 'beneficiary' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
+                    >
+                        <i class="fas fa-download mr-3"></i>
+                        Beneficiary Applications
+                    </a>
+                    {{-- <a
                         href="/tables"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                     >
@@ -233,7 +247,7 @@
                     >
                         <i class="fas fa-tablet-alt mr-3"></i>
                         Tabbed Content
-                    </a>
+                    </a> --}}
                     <!-- <a
                         href="/calendar"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"

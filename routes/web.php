@@ -3,6 +3,7 @@ use App\Models\Newsletter;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\BeneficiaryApplicationController;
 
 
 /*
@@ -55,6 +56,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/downloads/create', [DownloadController::class, 'create']);
     Route::post('/downloads', [DownloadController::class, 'store']);
     Route::delete('/downloads/{download}', [DownloadController::class, 'destroy']);
+
+    // Beneficiary Applications routes
+    Route::get('/beneficiaries', [BeneficiaryApplicationController::class, 'index']);
+    Route::get('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'show']);
+    Route::get('/beneficiaries/create', [BeneficiaryApplicationController::class, 'create']);
+    Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
+    Route::delete('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'destroy']);
 
 });
     
