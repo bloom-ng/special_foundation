@@ -43,23 +43,26 @@
 </head>
 
 <body>
-    <nav class="bg-white text-lg text-black flex flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-20">
-        <div class="flex flex-row gap-4 lg:gap-6 justify-center items-center">
-            <a href="/">
-                <img class="w-8 lg:w-10" src="/images/the-special-youth-leadership-foundation-03.png" alt="" />
-            </a>
-            <a href="/">
-                <img class="w-28 h-4 lg:w-36 lg:h-5" src="/images/the-special-youth-leadership-foundation-02.png"
-                    alt="" />
-            </a>
-        </div>
-        <div class="flex items-center lg:hidden">
-            <button id="mobile-menu-button" class="focus:outline-none">
-                <img src="/images/hamburger.svg" alt="Menu Icon" class="w-6 h-6" id="menu-icon" />
-            </button>
+    <nav class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-20">
+        <div class="flex items-center justify-between w-full">
+            <div class="flex flex-row gap-4 lg:gap-6 justify-center items-center">
+                <a href="/">
+                    <img class="w-8 lg:w-10" src="/images/the-special-youth-leadership-foundation-03.png"
+                        alt="" />
+                </a>
+                <a href="/">
+                    <img class="w-28 h-4 lg:w-36 lg:h-5" src="/images/the-special-youth-leadership-foundation-02.png"
+                        alt="" />
+                </a>
+            </div>
+            <div class="flex items-center lg:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none">
+                    <img src="/images/hamburger.svg" alt="Menu Icon" class="w-6 h-6" id="menu-icon" />
+                </button>
+            </div>
         </div>
         <div id="menu"
-            class="hidden lg:flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-16 text-base poppins-medium w-full lg:w-auto">
+            class="hidden flex flex-col lg:flex-row justify-center  items-start lg:items-center gap-8 lg:gap-16 text-base poppins-medium w-full lg:w-auto">
             <a href="/" class="{{ $page == 'home' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}">HOME</a>
             <div class="relative">
                 <button id="programs-button"
@@ -109,8 +112,8 @@
 
             mobileMenuButton.addEventListener('click', function() {
                 menu.classList.toggle('hidden');
-                menuIcon.src = menu.classList.contains('hidden') ? '/images/menu-icon.svg' :
-                    '/images/close-icon.svg';
+                menuIcon.src = menu.classList.contains('hidden') ? '/images/hamburger.svg' :
+                    '/images/hamburger.svg';
             });
 
             programsButton.addEventListener('click', function() {
