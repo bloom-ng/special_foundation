@@ -30,6 +30,8 @@
             rel="stylesheet"
         /> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
     <style>
         html,
@@ -41,32 +43,82 @@
 </head>
 
 <body>
-    <div class="bg-white text-lg text-black flex flex-row justify-between gap-12 my-6 mx-20">
-        <div class="flex flex-row gap-6 justify-center items-center">
-            <a href="">
-                <img class="w-10" src="/images/the-special-youth-leadership-foundation-03.png" alt="" />
+    <nav class="bg-white text-lg text-black flex flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-20">
+        <div class="flex flex-row gap-4 lg:gap-6 justify-center items-center">
+            <a href="/">
+                <img class="w-8 lg:w-10" src="/images/the-special-youth-leadership-foundation-03.png" alt="" />
             </a>
-            <a href="">
-                <img class="w-36 h-5" src="/images/the-special-youth-leadership-foundation-02.png" alt="" />
+            <a href="/">
+                <img class="w-28 h-4 lg:w-36 lg:h-5" src="/images/the-special-youth-leadership-foundation-02.png"
+                    alt="" />
             </a>
         </div>
-        <div class="flex justify-between justify-center items-center gap-16 text-base poppins-medium">
-            <a href="#" class="text-[#25A8D6] poppins-bold">HOME</a>
-            <div class="flex gap-2 items-center justify-center">
-                <a href="#" class="">PROGRAMS</a>
-                <img class="pt-1" src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
+        <div class="flex items-center lg:hidden">
+            <button id="mobile-menu-button" class="focus:outline-none">
+                <img src="/images/hamburger.svg" alt="Menu Icon" class="w-6 h-6" id="menu-icon" />
+            </button>
+        </div>
+        <div id="menu"
+            class="hidden lg:flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-16 text-base poppins-medium w-full lg:w-auto">
+            <a href="/" class="{{ $page == 'home' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}">HOME</a>
+            <div class="relative">
+                <button id="programs-button"
+                    class="{{ $page == 'programs' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }} flex gap-2 items-center justify-center focus:outline-none">
+                    <span>PROGRAMS</span>
+                    <img id="programs-icon" class="pt-1 transform transition-transform" src="/images/collapse-arrow.svg"
+                        alt="Collapse Arrow" />
+                </button>
+                <div id="programs-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-10">
+                    <a href="/inspire-program" class="block px-4 py-2 text-black hover:bg-gray-200">Inspire
+                        Scholarship</a>
+                    <a href="/special-scholarship-program" class="block px-4 py-2 text-black hover:bg-gray-200">Special
+                        Scolarship</a>
+                    <a href="/mentorship-program" class="block px-4 py-2 text-black hover:bg-gray-200">Mentorship
+                        Program</a>
+                    <a href="/summer-school-program" class="block px-4 py-2 text-black hover:bg-gray-200">Summer
+                        School</a>
+                    <a href="/life-long-program" class="block px-4 py-2 text-black hover:bg-gray-200">Lifelong
+                        Developmennt</a>
+                    <a href="/school-build" class="block px-4 py-2 text-black hover:bg-gray-200">School Build</a>
+                </div>
             </div>
-            <a href="#">WHO WE ARE</a>
-            <a href="#">BLOG</a>
-            <a href="#">GET INVOLVED</a>
-            <a href="#" class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
+            <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">WHO WE
+                ARE</a>
+            <a class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">BLOG</a>
+            <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">GET
+                INVOLVED</a>
+            <a class="{{ $page == 'donate' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#"
+                class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
         </div>
+    </nav>
+    <div class="w-full">
+        {{ $slot }}
     </div>
-    {{ $slot }}
     {{-- Chat Module --}}
-    <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div>
+    {{-- <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div> --}}
     <!-- footer -->
     <x-footer></x-footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const programsButton = document.getElementById('programs-button');
+            const programsDropdown = document.getElementById('programs-dropdown');
+            const programsIcon = document.getElementById('programs-icon');
+
+            mobileMenuButton.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
+                menuIcon.src = menu.classList.contains('hidden') ? '/images/menu-icon.svg' :
+                    '/images/close-icon.svg';
+            });
+
+            programsButton.addEventListener('click', function() {
+                programsDropdown.classList.toggle('hidden');
+                programsIcon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
 </body>
 
 </html>

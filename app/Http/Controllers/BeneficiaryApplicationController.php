@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\BeneficiaryApplication;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 
 class BeneficiaryApplicationController extends Controller
@@ -19,18 +20,18 @@ class BeneficiaryApplicationController extends Controller
     // ];
     public function index()
     {
-       $applications = BeneficiaryApplication::latest()->paginate(15);
-       return view('admin.application.beneficiary.index')
-                    ->with('applications', $applications)
-                    ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
+        $applications = BeneficiaryApplication::latest()->paginate(15);
+        return view('admin.application.beneficiary.index')
+            ->with('applications', $applications)
+            ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
     }
 
     public function show($id)
     {
         $application = BeneficiaryApplication::find($id);
         return view('admin.application.beneficiary.show')
-                    ->with('application', $application)
-                    ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
+            ->with('application', $application)
+            ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
     }
 
     public function store(Request $request)
@@ -53,7 +54,6 @@ class BeneficiaryApplicationController extends Controller
         $application->programme = $request->programme;
         $application->save();
         return back()->with('success', 'Application Created');
-  
     }
 
     public function create(Request $request)
@@ -76,5 +76,4 @@ class BeneficiaryApplicationController extends Controller
         $application->delete();
         return back()->with('success', 'Application Deleted');
     }
-
 }
