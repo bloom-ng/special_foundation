@@ -31,6 +31,7 @@
         /> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
     <style>
@@ -43,8 +44,41 @@
 </head>
 
 <body>
+    @if (session('success'))
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script>
+            Toastify({
+                text: "{{ session('success') }}",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "green",
+                stopOnFocus: true,
+                ariaLive: "polite",
+                onClick: function() {}
+            }).showToast();
+        </script>
+    @endif
+
+    @if (session('error'))
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script>
+            Toastify({
+                text: "{{ session('error') }}",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "red",
+                stopOnFocus: true,
+                ariaLive: "polite",
+                onClick: function() {}
+            }).showToast();
+        </script>
+    @endif
     <nav class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-20">
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center justify-between w-full lg:w-fit">
             <div class="flex flex-row gap-4 lg:gap-6 justify-center items-center">
                 <a href="/">
                     <img class="w-8 lg:w-10" src="/images/the-special-youth-leadership-foundation-03.png"
@@ -62,7 +96,7 @@
             </div>
         </div>
         <div id="menu"
-            class="hidden flex flex-col lg:flex-row justify-center  items-start lg:items-center gap-8 lg:gap-16 text-base poppins-medium w-full lg:w-auto">
+            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-8 lg:gap-16 text-base poppins-medium w-full lg:w-auto">
             <a href="/" class="{{ $page == 'home' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}">HOME</a>
             <div class="relative">
                 <button id="programs-button"
@@ -85,13 +119,14 @@
                     <a href="/school-build" class="block px-4 py-2 text-black hover:bg-gray-200">School Build</a>
                 </div>
             </div>
-            <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">WHO WE
+            <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="/who-we-are">WHO
+                WE
                 ARE</a>
             <a class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">BLOG</a>
             <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">GET
                 INVOLVED</a>
-            <a class="{{ $page == 'donate' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#"
-                class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
+            <a class="{{ $page == 'donate' ? 'text-[#25A8D6] poppins-bold' : '' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white"
+                href="#" class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
         </div>
     </nav>
     <div class="w-full">
