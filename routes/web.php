@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\BeneficiaryApplicationController;
+use App\Http\Controllers\PartnerApplicationController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -35,10 +36,11 @@ Route::post('/newsletters', [NewsletterController::class, 'create']);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Auth::routes();
-
 Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
+Route::post('/partners', [PartnerApplicationController::class, 'store']);
 
+
+Auth::routes();
 
 Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
@@ -61,8 +63,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/beneficiaries', [BeneficiaryApplicationController::class, 'index']);
     Route::get('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'show']);
     Route::get('/beneficiaries/create', [BeneficiaryApplicationController::class, 'create']);
-    Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
     Route::delete('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'destroy']);
+
+    // Partner Applications routes
+    Route::get('/partners', [PartnerApplicationController::class, 'index']);
+    Route::get('/partners/{id}', [PartnerApplicationController::class, 'show']);
+    Route::get('/partners/create', [PartnerApplicationController::class, 'create']);
+    Route::delete('/partners/{id}', [PartnerApplicationController::class, 'destroy']);
 });
 
 

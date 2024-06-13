@@ -9,15 +9,6 @@ use Illuminate\Http\Request;
 
 class BeneficiaryApplicationController extends Controller
 {
-    // Display all content of DB
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'contact_number',
-    //     'area_of_residence',
-    //     'purpose_of_application',
-    //     'programme'
-    // ];
     public function index()
     {
         $applications = BeneficiaryApplication::latest()->paginate(15);
@@ -56,19 +47,6 @@ class BeneficiaryApplicationController extends Controller
         return back()->with('success', 'Application Created');
     }
 
-    public function create(Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'required|string',
-            'email' => 'required|email',
-        ]);
-
-        Newsletter::create([
-            'name' => $request->name,
-            'email' => $request->email,
-        ]);
-        return back()->with('success', 'Newsletter Created');
-    }
 
     public function destroy($id)
     {

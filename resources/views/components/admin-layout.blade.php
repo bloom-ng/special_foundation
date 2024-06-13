@@ -81,6 +81,13 @@
                     <i class="fas fa-download mr-3"></i>
                     Beneficiary Applications
                 </a>
+                <a
+                    href="/admin/partners"
+                    class="flex items-center {{$page == 'partner' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
+                >
+                    <i class="fas fa-download mr-3"></i>
+                    Partner Applications
+                </a>
                 {{-- <a
                     href="/forms"
                     class="flex items-center {{$page == 'forms' ? 'active-nav-link' : ''}}  text-white hover:opacity-100 py-4 pl-6 nav-item"
@@ -226,6 +233,13 @@
                     >
                         <i class="fas fa-download mr-3"></i>
                         Beneficiary Applications
+                    </a>
+                    <a
+                        href="/admin/partners"
+                        class="flex items-center {{$page == 'partner' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
+                    >
+                        <i class="fas fa-download mr-3"></i>
+                        Partner Applications
                     </a>
                     {{-- <a
                         href="/tables"
