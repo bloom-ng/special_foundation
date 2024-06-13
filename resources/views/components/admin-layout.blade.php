@@ -78,14 +78,14 @@
                     href="/admin/beneficiaries"
                     class="flex items-center {{$page == 'beneficiary' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
-                    <i class="fas fa-download mr-3"></i>
+                    <i class="fas fa-file-invoice mr-3"></i>
                     Beneficiary Applications
                 </a>
                 <a
                     href="/admin/partners"
                     class="flex items-center {{$page == 'partner' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
-                    <i class="fas fa-download mr-3"></i>
+                    <i class="fas fa-file-invoice mr-3"></i>
                     Partner Applications
                 </a>
                 {{-- <a
