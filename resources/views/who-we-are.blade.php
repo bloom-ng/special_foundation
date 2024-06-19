@@ -224,6 +224,11 @@
                         <img src="/images/team_5.png" alt="Team member" class="max-w-[370px] w-auto h-80">
                     </div>
                 </swiper-slide>
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-10 rounded-3xl">
+                        <img src="/images/team_6.png" alt="Team member" class="max-w-[370px] w-auto h-80">
+                    </div>
+                </swiper-slide>
 
                 {{-- <swiper-slide class="">
                     <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
@@ -326,7 +331,7 @@
                     through:
                 </p>
 
-                <ul class="border-[#25A8D6] pl-14 border-l-[14px] space-y-3 text-sm" style="list-style-type: circle;">
+                <ul class="border-[#25A8D6] pl-14 border-l-[14px] space-y-3 text-sm list-disc">
                     <li>A vibrant board of trustees and Advisory council who provide general oversight to the activities
                         of the Foundation.</li>
                     <li>A set of operating principles to which our team board advisory council and ambassadors are held
