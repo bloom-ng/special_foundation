@@ -7,7 +7,7 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\BeneficiaryApplicationController;
 use App\Http\Controllers\PartnerApplicationController;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Download;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +26,8 @@ Route::get('homepage', function () {
 });
 
 Route::get('who-we-are', function () {
-    return view('who-we-are');
+    $downloads = Download::all();
+    return view('who-we-are')->with('downloads', $downloads);
 });
 
 Route::post('/newsletters', [NewsletterController::class, 'create']);

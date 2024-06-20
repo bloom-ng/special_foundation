@@ -67,11 +67,9 @@
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col items-center">
                             <h1 class="poppins-semibold pb-9 -ml-5">Downloads</h1>
                             <div class="flex flex-col gap-6 poppins-extralight text-xs leading-[18px]">
-                                <p>Brochure</p>
-                                <p>Annual Report 2020</p>
-                                <p>Annual Report 2021</p>
-                                <p>Annual Report 2022</p>
-                                <p>Annual Report 2023</p>
+                                {{-- @foreach ($downloads as $download)
+                                    <a href="{{ $download->url }}" target="_blank">{{ $download->name }}</a>
+                                @endforeach --}}
                             </div>
                         </div>
                     </div>

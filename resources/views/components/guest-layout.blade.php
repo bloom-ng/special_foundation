@@ -105,17 +105,17 @@
                     <img id="programs-icon" class="pt-1 transform transition-transform" src="/images/collapse-arrow.svg"
                         alt="Collapse Arrow" />
                 </button>
-                <div id="programs-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-10">
+                <div id="programs-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20">
                     <a href="/inspire-program" class="block px-4 py-2 text-black hover:bg-gray-200">Inspire
                         Scholarship</a>
                     <a href="/special-scholarship-program" class="block px-4 py-2 text-black hover:bg-gray-200">Special
-                        Scolarship</a>
+                        Scholarship</a>
                     <a href="/mentorship-program" class="block px-4 py-2 text-black hover:bg-gray-200">Mentorship
                         Program</a>
                     <a href="/summer-school-program" class="block px-4 py-2 text-black hover:bg-gray-200">Summer
                         School</a>
                     <a href="/life-long-program" class="block px-4 py-2 text-black hover:bg-gray-200">Lifelong
-                        Developmennt</a>
+                        Development</a>
                     <a href="/school-build" class="block px-4 py-2 text-black hover:bg-gray-200">School Build</a>
                 </div>
             </div>
@@ -133,9 +133,12 @@
         {{ $slot }}
     </div>
     {{-- Chat Module --}}
-    {{-- <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div> --}}
+    <div class="flex bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div>
+
     <!-- footer -->
-    <x-footer></x-footer>
+
+    <x-footers></x-footers>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -148,7 +151,7 @@
             mobileMenuButton.addEventListener('click', function() {
                 menu.classList.toggle('hidden');
                 menuIcon.src = menu.classList.contains('hidden') ? '/images/hamburger.svg' :
-                    '/images/hamburger.svg';
+                    '/images/close_menu.svg';
             });
 
             programsButton.addEventListener('click', function() {

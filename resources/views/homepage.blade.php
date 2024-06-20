@@ -1,31 +1,20 @@
-<x-guest-layout title="Home" page="">
+<x-guest-layout title="Home" page="home">
     <div class="max-h-[100vh] max-w-[100vw]">
-        <swiper-container
-            slides-per-view="1"
-            speed="900"
-            loop="true"
-            autoPlay="true"
-            css-mode="true"
-            class="flex max-w-[100vw] justify-between items-center"
-        >
-            <swiper-slide class=""
-                ><img src="/images/carousel-1.png" alt="" class="w-[100vw]"
-            /></swiper-slide>
-            <swiper-slide class=""
-                ><img src="/images/carousel-2.png" alt="" class="w-[100vw]"
-            /></swiper-slide>
-            <swiper-slide class=""
-                ><img src="/images/carousel-3.png" alt="" class="w-[100vw]"
-            /></swiper-slide>
+        <swiper-container slides-per-view="1" speed="900" loop="true" autoPlay="true" css-mode="true"
+            class="flex max-w-[100vw] justify-between items-center">
+            <swiper-slide class=""><img src="/images/carousel-1.png" alt=""
+                    class="w-[100vw]" /></swiper-slide>
+            <swiper-slide class=""><img src="/images/carousel-2.png" alt=""
+                    class="w-[100vw]" /></swiper-slide>
+            <swiper-slide class=""><img src="/images/carousel-3.png" alt=""
+                    class="w-[100vw]" /></swiper-slide>
         </swiper-container>
     </div>
-    <div class="mx-20 py-20 flex flex-row gap-20">
+    <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
         <div class="basis-4/5 flex flex-col gap-16">
-            <div class="flex flex-row gap-10">
+            <div class="flex flex-col lg:flex-row gap-10">
                 <div class="poppins-medium text-xs basis-3/5">
-                    <h1
-                        class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-6"
-                    >
+                    <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
                         Who We Are
                     </h1>
                     <div class="">
@@ -40,7 +29,7 @@
                             governance in Africa by creating access for more
                             children to get an education. <br />
                             <br />
-    
+
                             Founded by Seyi Akinwale in 2018 through his
                             vision to improve the quality of leadership in
                             all spheres of governance in Africa and ensure
@@ -54,29 +43,21 @@
                     </div>
                 </div>
                 <div class="basis-2/5">
-                    <img
-                        class="w-full h-[278px]"
-                        src="/images/small-rectangle.png"
-                        alt=""
-                    />
+                    <img class="w-full h-[278px]" src="/images/home_1.png" alt="" />
                 </div>
             </div>
-            <div class="relative">
-                <img src="/images/bigger-rectangle.png" alt="" />
-                <div class="absolute z-10 right-0 bottom-0 p-20">
-                    <a
-                        href="#"
-                        class="text-white text-base bg-[#25A8D6] px-10 py-3 -mt-2 rounded-full"
-                        >READ MORE</a
-                    >
+            <div class="relative w-full h-[350px] lg:h-[550px] rounded-3xl"
+                style="background-image: url('{{ asset('/images/home_2.png') }}'); background-repeat: no-repeat; background-size: cover;">
+                {{-- <img src="/images/home_2.png" alt="" /> --}}
+                <div class="absolute z-10 right-0 bottom-0 p-5 lg:p-20">
+                    <a href="/who-we-are" class="text-white text-base bg-[#25A8D6] px-10 py-3 -mt-2 rounded-full">READ
+                        MORE</a>
                 </div>
             </div>
         </div>
         <div class="poppins-medium text-xs basis-1/5">
             <div class="pb-10">
-                <h1
-                    class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3"
-                >
+                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     21,000+
                 </h1>
                 <p class="">
@@ -85,9 +66,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1
-                    class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3"
-                >
+                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     460+
                 </h1>
                 <p class="">
@@ -96,9 +75,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1
-                    class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3"
-                >
+                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     10,672+
                 </h1>
                 <p class="">
@@ -107,9 +84,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1
-                    class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3"
-                >
+                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     6,879+
                 </h1>
                 <p class="">
@@ -118,9 +93,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1
-                    class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3"
-                >
+                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     5+
                 </h1>
                 <p class="">
@@ -130,25 +103,17 @@
             </div>
         </div>
     </div>
+
+    {{-- OUR PROGRAMS START --}}
     <div class="bg-[#26225F]">
-        <div
-            class="mx-20 pt-20 pb-12 text-[#25A8D6] poppins-bold text-[38px] leading-[45px]"
-        >
+        <div class="mx-5 lg:mx-20 pt-20 pb-12 text-[#25A8D6] poppins-bold text-[38px] leading-[45px]">
             Our Programs
         </div>
-        <swiper-container
-            slides-per-view="4"
-            speed="500"
-            loop="true"
-            autoplay="true"
-            css-mode="true"
-            class="swiper-container-second flex flex-row gap-12 pb-16 mx-8"
-        >
+        <swiper-container slides-per-view="1" speed="500" loop="true" autoplay="true" css-mode="true"
+            class="swiper-container-second flex lg:hidden flex-row pb-16 mx-5">
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1
-                        class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold"
-                    >
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
                         Inspire Scholarship
                     </h1>
                     <p class="poppins-medium text-xs pb-16">
@@ -159,19 +124,14 @@
                         schools.
                     </p>
                     <div class="">
-                        <a
-                            href="#"
-                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full"
-                            >LEARN MORE</a
-                        >
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1
-                        class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold"
-                    >
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
                         Lifelong Development
                     </h1>
                     <p class="poppins-medium text-xs pb-16">
@@ -181,19 +141,14 @@
                         and leadership training.
                     </p>
                     <div class="">
-                        <a
-                            href="#"
-                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full"
-                            >LEARN MORE</a
-                        >
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1
-                        class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold"
-                    >
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
                         Mentorship/Career Day Program
                     </h1>
                     <p class="poppins-medium text-xs pb-12">
@@ -204,19 +159,14 @@
                         fulfill their potential.
                     </p>
                     <div class="">
-                        <a
-                            href="#"
-                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full"
-                            >LEARN MORE</a
-                        >
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1
-                        class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold"
-                    >
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
                         School <br />
                         Builds
                     </h1>
@@ -228,19 +178,14 @@
                         quality education.
                     </p>
                     <div class="">
-                        <a
-                            href="#"
-                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full"
-                            >LEARN MORE</a
-                        >
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1
-                        class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold"
-                    >
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
                         Special <br />
                         Scholarship
                     </h1>
@@ -251,22 +196,114 @@
                         students under the age of 21 and covers tuition.
                     </p>
                     <div class="">
-                        <a
-                            href="#"
-                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full"
-                            >LEARN MORE</a
-                        >
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+
+        <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
+            class="swiper-container-second hidden lg:flex flex-row gap-12 pb-16 mx-8">
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                        Inspire Scholarship
+                    </h1>
+                    <p class="poppins-medium text-xs pb-16">
+                        This scholarship is targeted at orphaned and
+                        vulnerable children in disadvantaged communities. We
+                        provide tuition (including cost of books and other
+                        materials) to children in primary and secondary
+                        schools.
+                    </p>
+                    <div class="">
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                        Lifelong Development
+                    </h1>
+                    <p class="poppins-medium text-xs pb-16">
+                        The Special Foundation facilitates continuous
+                        development of the children we support through a
+                        lifelong program. The program includes mentorship
+                        and leadership training.
+                    </p>
+                    <div class="">
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                        Mentorship/Career Day Program
+                    </h1>
+                    <p class="poppins-medium text-xs pb-12">
+                        This is a merit-based program that focuses on
+                        identifying young talents through a rigorous
+                        selection process and linking them with
+                        opportunities or platforms that will allow them best
+                        fulfill their potential.
+                    </p>
+                    <div class="">
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                        School <br />
+                        Builds
+                    </h1>
+                    <p class="poppins-medium text-xs pb-12">
+                        The Special Foundation seeks to build schools to
+                        make sure more children have access to a safe and
+                        quality learning environment. We believe this is
+                        critical to ensuring more children gain access to
+                        quality education.
+                    </p>
+                    <div class="">
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                        Special <br />
+                        Scholarship
+                    </h1>
+                    <p class="poppins-medium text-xs pb-16">
+                        Special Scholarship is merit based and targeted at
+                        identifying gifted students for local tertiary
+                        institutions. This scholarship is available to
+                        students under the age of 21 and covers tuition.
+                    </p>
+                    <div class="">
+                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
                     </div>
                 </div>
             </swiper-slide>
         </swiper-container>
     </div>
-    <div class="bg-white mx-20 py-20">
-        <div class="flex flex-row gap-28">
+    {{-- OUR PROGRAMS END --}}
+
+    {{-- SUPPORT START --}}
+    <div class="bg-white mx-5 lg:mx-20 py-20">
+        <div class="flex flex-col lg:flex-row gap-28">
             <div class="poppins-medium text-xs basis-3/5">
-                <h1
-                    class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-6"
-                >
+                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
                     Supporting the UN’s SD Goals
                 </h1>
                 <div class="">
@@ -321,67 +358,86 @@
                     </div>
                 </div>
                 <div class="flex flex-row pt-2 items-center justify-center">
-                    <img
-                        class="w-[90px] -ml-12"
-                        src="/images/sdg-16.png"
-                        alt=""
-                    />
+                    <img class="w-[90px] -ml-12" src="/images/sdg-16.png" alt="" />
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-white mx-20">
+    {{-- SUPPORT END --}}
+
+    {{-- OUR PARTNERS START --}}
+    <div class="bg-white mx-5 lg:mx-20">
         <div>
-            <h1
-                class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-10"
-            >
+            <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-10">
                 Our Partners
             </h1>
         </div>
         <div>
-            <swiper-container
-                slides-per-view="4"
-                speed="500"
-                loop="true"
-                autoplay="true"
-                css-mode="true"
-                class="swiper-container-second flex flex-row gap-12 pb-24"
-            >
+            <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="swiper-container-second flex lg:hidden flex-row gap-12 pb-24">
                 <swiper-slide class="">
-                    <img
-                        src="/images/1-microsoft-logo.png"
-                        alt=""
-                    /> </swiper-slide
-                ><swiper-slide class="pl-16">
-                    <img
-                        src="/images/2-google-logo.png"
-                        alt=""
-                    /> </swiper-slide
-                ><swiper-slide class="pl-16">
-                    <img src="/images/3-logo.png" alt="" /> </swiper-slide
-                ><swiper-slide class="">
-                    <img
-                        src="/images/4-firstep_lg.png"
-                        alt=""
-                    /> </swiper-slide
-                ><swiper-slide class="pl-16">
-                    <img
-                        src="/images/6-gardaworld_logo.png"
-                        alt=""
-                    /> </swiper-slide
-                ><swiper-slide class="">
-                    <img src="/images/7-greychapel-legal-logo.png" alt="" />
+                    <img src="/images/microsoft_home.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-16">
+                    <img src="/images/2-google-logo.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-16">
+                    <img src="/images/3-logo.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="">
+                    <img src="/images/4-firstep_lg.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-16">
+                    <img src="/images/garda_home.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-16">
+                    <img src="/images/graychapel_home.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-16">
+                    <img src="/images/rif_trust_home.png" alt="" />
+                </swiper-slide>
+            </swiper-container>
+
+            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="swiper-container-second hidden lg:flex flex-row gap-12 pb-24">
+                <swiper-slide class="">
+                    <img src="/images/microsoft_home.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/2-google-logo.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/3-logo.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="">
+                    <img src="/images/4-firstep_lg.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/garda_home.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/graychapel_home.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/rif_trust_home.png" alt="" />
                 </swiper-slide>
             </swiper-container>
         </div>
     </div>
+    {{-- OUR PARTNERS END --}}
+
+    {{-- NEWSLETTER START --}}
     <div class="bg-[#26225F]">
-        <div class="relative text-white py-20 mx-20 flex flex-row gap-20">
-            <div class="basis-3/5">
+        <div class="relative text-white py-20 mx-5 lg:mx-20 flex flex-row gap-8 lg:gap-20">
+            <div class="w-full basis-full lg:basis-3/5">
                 <div class="pb-12">
-                    <h1
-                        class="poppins-bold text-[#25A8D6] text-[38px] leading-[45px] pb-5"
-                    >
+                    <h1 class="poppins-bold text-[#25A8D6] text-[38px] leading-[45px] pb-5">
                         Subscribe to our Newsletter
                     </h1>
                     <p class="poppins-medium text-xs">
@@ -389,53 +445,47 @@
                         Foundation’s work, subscribe below
                     </p>
                 </div>
-                <div class="flex flex-col gap-4">
-                    <div>
-                        <input
-                            class="w-full bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins ps-12 py-4 rounded-full border border-1 border-[#25A8D6]"
-                            type="text"
-                            placeholder="Full Name"
-                        />
+
+                <div class="flex items-center w-full">
+                    <div class="flex flex-col gap-4 w-full">
+                        <div>
+                            <input
+                                class="w-full bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins ps-12 py-4 rounded-full border border-1 border-[#25A8D6]"
+                                type="text" placeholder="Full Name" />
+                        </div>
+                        <div>
+                            <input
+                                class="w-full bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins ps-12 py-4 rounded-full border border-1 border-[#25A8D6]"
+                                type="text" placeholder="Your Email" />
+                        </div>
+                        <div class="pt-12 lg:pt-14">
+                            <p class="text-center rounded-full w-full py-3 text-white bg-[#25A8D6]">
+                                SUBSCRIBE
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <input
-                            class="w-full bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins ps-12 py-4 rounded-full border border-1 border-[#25A8D6]"
-                            type="text"
-                            placeholder="Your Email"
-                        />
-                    </div>
-                </div>
-                <div class="pt-14">
-                    <p
-                        class="text-center rounded-full w-full py-3 text-white bg-[#25A8D6]"
-                    >
-                        SUBSCRIBE
-                    </p>
+
+                    <img class="block lg:hidden w-44" src="/images/email-symbol.png" alt="" />
                 </div>
             </div>
-            <img
-                class="absolute -mt-40 -mr-20 right-0 top-0 basis-2/5 z-20 w-[750px]"
-                src="/images/email-symbol.png"
-                alt=""
-            />
+
+            <img class="hidden lg:block lg:absolute -mt-40 -mr-20 right-0 top-0 basis-2/5 z-20 xl:w-[750px] lg:w-[600px]"
+                src="/images/email-symbol.png" alt="" />
         </div>
     </div>
-    <div class="bg-white mx-20 py-20">
+    {{-- NEWSLETTER END --}}
+
+    {{-- BLOG START --}}
+    <div class="bg-white mx-5 lg:mx-20 py-20">
         <div class="">
-            <h1
-                class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-8"
-            >
+            <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-8">
                 Featured Blogs
             </h1>
         </div>
-        <div class="flex flex-row gap-10 text-white">
+        <div class="flex flex-col md:flex-row no-wrap md:flex-wrap gap-10 md:gap-2 lg:gap-10 text-white">
             <div class="flex flex-col bg-[#26225F] w-[380px]">
                 <div>
-                    <img
-                        class="w-[380px]"
-                        src="/images/teacher-giving-high-five.png"
-                        alt=""
-                    />
+                    <img class="w-[380px]" src="/images/teacher-giving-high-five.png" alt="" />
                 </div>
                 <div class="mx-12 pt-8 pb-5">
                     <h1 class="pb-4 leading-[20px] poppins-semibold">
@@ -446,18 +496,12 @@
                     <p class="poppins-light text-xs pb-4">
                         November 26, 2021
                     </p>
-                    <a class="text-[#25A8D6] text-[8px]" href="#"
-                        >READ MORE</a
-                    >
+                    <a class="text-[#25A8D6] text-[8px]" href="#">READ MORE</a>
                 </div>
             </div>
             <div class="flex flex-col bg-[#26225F] w-[380px]">
                 <div>
-                    <img
-                        class="w-[380px]"
-                        src="/images/teacher-giving-high-five.png"
-                        alt=""
-                    />
+                    <img class="w-[380px]" src="/images/teacher-giving-high-five.png" alt="" />
                 </div>
                 <div class="mx-12 pt-8 pb-5">
                     <h1 class="pb-4 leading-[20px] poppins-semibold">
@@ -468,18 +512,12 @@
                     <p class="poppins-light text-xs pb-4">
                         November 26, 2021
                     </p>
-                    <a class="text-[#25A8D6] text-[8px]" href="#"
-                        >READ MORE</a
-                    >
+                    <a class="text-[#25A8D6] text-[8px]" href="#">READ MORE</a>
                 </div>
             </div>
             <div class="flex flex-col bg-[#26225F] w-[380px]">
                 <div>
-                    <img
-                        class="w-[380px]"
-                        src="/images/teacher-giving-high-five.png"
-                        alt=""
-                    />
+                    <img class="w-[380px]" src="/images/teacher-giving-high-five.png" alt="" />
                 </div>
                 <div class="mx-12 pt-8 pb-5">
                     <h1 class="pb-4 leading-[20px] poppins-semibold">
@@ -490,11 +528,10 @@
                     <p class="poppins-light text-xs pb-4">
                         November 26, 2021
                     </p>
-                    <a class="text-[#25A8D6] text-[8px]" href="#"
-                        >READ MORE</a
-                    >
+                    <a class="text-[#25A8D6] text-[8px]" href="#">READ MORE</a>
                 </div>
             </div>
         </div>
     </div>
+    {{-- BLOG END --}}
 </x-guest-layout>

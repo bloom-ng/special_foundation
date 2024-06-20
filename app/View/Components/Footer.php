@@ -5,9 +5,12 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Download;
 
-class footer extends Component
+class Footer extends Component
 {
+    public $downloads;
+
     /**
      * Create a new component instance.
      */
@@ -21,6 +24,6 @@ class footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.footer');
+        return view('components.footers', ['downloads' => $this->downloads = Download::all()]);
     }
 }

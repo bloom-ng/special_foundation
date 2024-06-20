@@ -9,7 +9,7 @@
     <div class="bg-white">
         <div class="mx-8 lg:mx-20 py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-thin">
+                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-light">
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         The Special Foundation is a social impact organisation that focuses on raising young African
                         leaders through education by providing platforms and opportunities to fulfil their dreams. We
@@ -194,11 +194,49 @@
         {{-- MEET THE TEAM START --}}
 
         <div class="h-auto">
-            <div class="mx-10 lg:mx-20 pt-20 pb-12 text-[#26225F] poppins-bold text-[38px] leading-[45px]">
+            <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] poppins-bold text-[38px] leading-[45px]">
                 Meet The Team
             </div>
+
+            {{-- MOBILE VIEW START --}}
+            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="swiper-container-second flex lg:hidden flex-row gap-12 pb-16">
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-8 rounded-3xl">
+                        <img src="/images/team_1.png" alt="Team member" class="max-w-[100px] w-auto h-36">
+                    </div>
+                </swiper-slide>
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-8 rounded-3xl">
+                        <img src="/images/team_2.png" alt="Team member" class="max-w-[100px] w-auto h-36">
+                    </div>
+                </swiper-slide>
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-8 rounded-3xl">
+                        <img src="/images/team_3.png" alt="Team member" class="max-w-[100px] w-auto h-36">
+                    </div>
+                </swiper-slide>
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-8 rounded-3xl">
+                        <img src="/images/team_4.png" alt="Team member" class="max-w-[100px] w-auto h-36">
+                    </div>
+                </swiper-slide>
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-8 rounded-3xl">
+                        <img src="/images/team_5.png" alt="Team member" class="max-w-[100px] w-auto h-36">
+                    </div>
+                </swiper-slide>
+                <swiper-slide class="">
+                    <div class="bg-white py-10 px-10 rounded-3xl">
+                        <img src="/images/team_6.png" alt="Team member" class="max-w-[100px] w-auto h-36">
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+            {{-- MOBILE VIEW END --}}
+
+            {{-- PC VIEW START --}}
             <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="swiper-container-second flex flex-row gap-12 pb-16">
+                class="swiper-container-second hidden lg:flex flex-row gap-12 pb-16">
                 <swiper-slide class="">
                     <div class="bg-white py-10 px-10 rounded-3xl">
                         <img src="/images/team_1.png" alt="Team member" class="max-w-[370px] w-auto h-80">
@@ -248,6 +286,8 @@
                     </div>
                 </swiper-slide> --}}
             </swiper-container>
+            {{-- PC VIEW END --}}
+
         </div>
         {{-- MEET THE TEAM END --}}
 
