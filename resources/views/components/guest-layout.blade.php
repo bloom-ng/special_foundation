@@ -133,7 +133,7 @@
         {{ $slot }}
     </div>
     {{-- Chat Module --}}
-    <div class="flex bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div>
+    {{-- <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div> --}}
 
     <!-- footer -->
 

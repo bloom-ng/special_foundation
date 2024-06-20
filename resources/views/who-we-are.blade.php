@@ -25,7 +25,12 @@
                     </p>
                 </div>
                 <div class="basis-1/2 pl-6">
-                    <img src="/images/who_we_are_1.png" alt="" />
+                    {{-- <img src="/images/who_we_are_1.png" alt="" /> --}}
+                    <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/GlMndYS_rY0?si=9VKzjWgqGAR672bq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                 </div>
             </div>
 
@@ -381,8 +386,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="basis-1/2 pl-6 h-full">
-                <img src="/images/obasanjo.png" alt="Obasanjo Image" class="h-full" />
+            <div class="basis-1/2 px-8 lg:pl-6 h-full">
+                {{-- <img src="/images/obasanjo.png" alt="Obasanjo Image" class="h-full" /> --}}
+                <iframe class="w-[100%] h-[315px]" src="https://www.youtube.com/embed/LCCspjFdjLQ?si=0moyFxtWcxyTDMPr"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
             </div>
         </div>
         {{-- OUR ACCOUNNTABILITY END --}}
