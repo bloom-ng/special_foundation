@@ -6,6 +6,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\BeneficiaryApplicationController;
 use App\Http\Controllers\PartnerApplicationController;
+use App\Http\Controllers\DonationController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 /*
@@ -39,6 +40,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 
 Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
 Route::post('/partners', [PartnerApplicationController::class, 'store']);
+Route::post('/donation-lead', [DonationController::class, 'store']);
 
 
 Auth::routes();
@@ -71,6 +73,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/partners/{id}', [PartnerApplicationController::class, 'show']);
     Route::get('/partners/create', [PartnerApplicationController::class, 'create']);
     Route::delete('/partners/{id}', [PartnerApplicationController::class, 'destroy']);
+
+    
+    // Donation Lead routes
+    Route::get('/donation-lead', [DonationController::class, 'index']);
+    Route::delete('/donation-lead/{donation}', [DonationController::class, 'destroy']);
+
 });
 
 
