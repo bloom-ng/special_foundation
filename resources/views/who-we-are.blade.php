@@ -170,7 +170,7 @@
                 <div class="basis-full lg:basis-1/2 ">
                     <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Meet The
                         Founder</h2>
-                    <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-thin">
+                    <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-light">
 
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6] font-bold">
                             Seyi Akinwale
@@ -303,7 +303,7 @@
             </div>
             <div class="basis-full lg:basis-1/2 ">
                 <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">How We Work</h2>
-                <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-thin">
+                <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-light">
 
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         Our strategy is anchored on three pillars which are Quality, Life Long Development and Access.
@@ -344,12 +344,12 @@
                 Locations
             </h2>
 
-            <p class="text-white text-center poppins-thin mb-5">
+            <p class="text-white text-center poppins-light mb-5">
                 Through cooperation agreements with State and Local Governments, Missionary Societies and Schools. We
                 currently sponsor children across 21 states in Nigeria with the vision to move to other African
                 Countries. We have an operating office in Lagos which coordinates all our activities.
             </p>
-            <p class="text-white text-center poppins-thin mb-8">
+            <p class="text-white text-center poppins-light mb-8">
                 Our impact locations include; Lagos, Niger, Abuja, Kano, Adamawa, Ogun, Osun, Gombe, Kogi, Plateau,
                 Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, and Delta.
             </p>

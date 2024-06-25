@@ -122,11 +122,12 @@
             <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="/who-we-are">WHO
                 WE
                 ARE</a>
-            <a class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">BLOG</a>
-            <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="#">GET
+            <a class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="/blogs">BLOG</a>
+            <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}"
+                href="/get-involved">GET
                 INVOLVED</a>
-            <a class="{{ $page == 'donate' ? 'text-[#25A8D6] poppins-bold' : '' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white"
-                href="#" class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
+            <a class="{{ $page == 'donate' ? 'poppins-bold' : '' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white"
+                href="/donate" class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
         </div>
     </nav>
     <div class="w-full">

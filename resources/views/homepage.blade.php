@@ -124,7 +124,8 @@
                         schools.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/inspire-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -141,7 +142,8 @@
                         and leadership training.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/life-long-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -159,7 +161,8 @@
                         fulfill their potential.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/mentorship-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -178,7 +181,7 @@
                         quality education.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/school-build" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -196,7 +199,8 @@
                         students under the age of 21 and covers tuition.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/special-scholarship-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -218,7 +222,8 @@
                         schools.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/inspire-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -235,7 +240,8 @@
                         and leadership training.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/life-long-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -253,7 +259,8 @@
                         fulfill their potential.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/mentorship-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -272,7 +279,8 @@
                         quality education.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/school-build"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -290,7 +298,8 @@
                         students under the age of 21 and covers tuition.
                     </p>
                     <div class="">
-                        <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/special-scholarship-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -437,7 +446,7 @@
         <div class="relative text-white py-20 mx-5 lg:mx-20 flex flex-row gap-8 lg:gap-20">
             <div class="w-full basis-full lg:basis-3/5">
                 <div class="pb-12">
-                    <h1 class="poppins-bold text-[#25A8D6] text-[38px] leading-[45px] pb-5">
+                    <h1 class="poppins-bold text-[#25A8D6] text-[14px] md::text-[38px] leading-[45px] pb-5">
                         Subscribe to our Newsletter
                     </h1>
                     <p class="poppins-medium text-xs">
@@ -447,25 +456,27 @@
                 </div>
 
                 <div class="flex items-center w-full">
-                    <div class="flex flex-col gap-4 w-full">
+                    <form action="/newsletters" method="POST" class="flex flex-col gap-4 w-full">
+                        @csrf
                         <div>
                             <input
-                                class="w-full bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins ps-12 py-4 rounded-full border border-1 border-[#25A8D6]"
-                                type="text" placeholder="Full Name" />
+                                class="w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
+                                type="text" name="name" placeholder="Full Name" required />
                         </div>
                         <div>
                             <input
-                                class="w-full bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins ps-12 py-4 rounded-full border border-1 border-[#25A8D6]"
-                                type="text" placeholder="Your Email" />
+                                class="w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
+                                type="text" name="email" placeholder="Your Email" required />
                         </div>
                         <div class="pt-12 lg:pt-14">
-                            <p class="text-center rounded-full w-full py-3 text-white bg-[#25A8D6]">
+                            <button type="submit"
+                                class="text-center rounded-full w-full py-3 text-white bg-[#25A8D6]">
                                 SUBSCRIBE
-                            </p>
+                            </button>
                         </div>
-                    </div>
+                    </form>
 
-                    <img class="block lg:hidden w-44" src="/images/email-symbol.png" alt="" />
+                    <img class="block lg:hidden w-36" src="/images/mail.png" alt="" />
                 </div>
             </div>
 

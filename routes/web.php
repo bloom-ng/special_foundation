@@ -104,3 +104,19 @@ Route::get('/life-long-program', function () {
 Route::get('/school-build', function () {
     return view('programme.school-builds');
 });
+
+Route::get('/blogs', function () {
+    return view('blogs');
+});
+
+Route::get('/blog/{id}', function () {
+    return view('blog-view');
+});
+
+Route::get('/get-involved', function () {
+    return view('get-involved');
+});
+
+Route::get('/donate', function () {
+    return view('donate');
+});

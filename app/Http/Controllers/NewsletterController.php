@@ -26,7 +26,7 @@ class NewsletterController extends Controller
             'name' => $request->name,
             'email' => $request->email,
         ]);
-        return back()->with('success', 'Newsletter Created');
+        return back()->with('success', 'Successfully Subscribed To Our Newsletter');
     }
 
     public function delete(Newsletter $newsletter)
