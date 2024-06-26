@@ -68,7 +68,8 @@
                     You can also fill the form below and we will contact you to complete your donation
                 </p>
 
-                <form action="" class="w-full flex flex-col space-y-8">
+                <form action="/donate" method="POST" class="w-full flex flex-col space-y-8">
+                    @csrf
                     <input
                         class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
                         type="text" name="name" placeholder="Your Full Name" required />
@@ -80,22 +81,28 @@
 
                         <input
                             class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
-                            type="text" name="phone" placeholder="Contact Number" required />
-
+                            type="text" name="contact_number" placeholder="Contact Number" required />
                     </div>
 
                     <p
                         class="montserrat-thin text-base font-bold leading-6 text-left md:text-lg lg:text-xl xl:text-2xl md:leading-7 lg:leading-8 xl:leading-9 text-[#26225F]">
                         How did you hear about us?
                     </p>
+
                     <select
                         class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
-                        type="text" name="how_did_you_hear" placeholder="Select an option" required>
+                        type="text" name="source" placeholder="Select an option" required>
                         <option disabled value="">Select an option</option>
-                        <option value="website">Website</option>
-                        <option value="social_media">Social Media</option>
-                        <option value="newspaper">Newspaper</option>
-                        <option value="staff">Staff</option>
+                        <option value="1">Social Media</option>
+                        <option value="2">Google Search</option>
+                        <option value="3">Word of Mouth</option>
+                        <option value="4">Online Advertising</option>
+                        <option value="5">Email Marketing</option>
+                        <option value="6">Content Marketing</option>
+                        <option value="7">Event or Conference</option>
+                        <option value="8">Referral from Partner or Affiliate</option>
+                        <option value="9">Online Directory or Listing</option>
+                        <option value="10">Other (specify in comment)</option>
                     </select>
 
                     <textarea

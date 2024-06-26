@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('contact_number');
-            $table->text('comments');
+            $table->text('comments')->nullable();
             $table->tinyInteger('source');
             $table->timestamps();
         });
