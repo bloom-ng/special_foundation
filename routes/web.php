@@ -118,16 +118,18 @@ Route::get('/blogs', function () {
 
 Route::get('/blog/{id}', function ($id) {
     $post = App\Models\Post::with(['user'])->find($id);
-    $words = explode(' ', $post->title);
-
-    $similarPosts = App\Models\Post::where(function ($query) use ($words) {
-        foreach ($words as $word) {
-            $query->orWhere('title', 'LIKE', "%{$word}%");
-        }
-    })->get()
-      ->filter(function ($post, $key) use($id) {
-        return $post->id != $id;
-    });
+    $similarPosts = [];
+    if (!empty($post)) {
+        $words = explode(' ', $post->title);
+        $similarPosts = App\Models\Post::where(function ($query) use ($words) {
+            foreach ($words as $word) {
+                $query->orWhere('title', 'LIKE', "%{$word}%");
+            }
+        })->get()
+        ->filter(function ($post, $key) use($id) {
+            return $post->id != $id;
+        });
+    }
 
     return view('blog-view', [
         'post' => $post,
