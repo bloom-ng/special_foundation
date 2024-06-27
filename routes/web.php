@@ -118,7 +118,6 @@ Route::get('/blogs', function () {
 
 Route::get('/blog/{id}', function ($id) {
     $post = App\Models\Post::with(['user'])->find($id);
-    dd($post);
     $words = explode(' ', $post->title);
 
     $similarPosts = App\Models\Post::where(function ($query) use ($words) {
