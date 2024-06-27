@@ -138,10 +138,6 @@ Route::get('/blog/{id}', function ($id) {
 });
 
 Route::get('/get-involved', function () {
-    return view('get-involved');
-});
-
-Route::get('/donate', function () {
     $ambassadors = [
         ['name' => 'Abimbola Ayinde', 'list_image' => '/images/ambassador_1.png', 'image' => '/images/detail_1.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
         ['name' => 'Akinbamidel Akintola', 'list_image' => '/images/ambassador_2.png', 'image' => '/images/detail_2.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
@@ -157,6 +153,10 @@ Route::get('/donate', function () {
     ];
 
     return view('get-involved', compact('ambassadors'));
+});
+
+Route::get('/donate', function () {
+    return view('donate');
 });
 
 Route::post('/donate', [DonationController::class, 'store']);
