@@ -105,11 +105,35 @@ Route::get('/school-build', function () {
 });
 
 Route::get('/blogs', function () {
-    return view('blogs');
+    $posts = App\Models\Post::latest()->paginate();
+    $featured_posts = App\Models\Post::where('is_featured', 1)
+                                ->get();
+
+    return view('blogs', [
+        'posts' => $posts,
+        'featured_posts' => $featured_posts->shuffle()->take(4)
+    ]
+    );
 });
 
-Route::get('/blog/{id}', function () {
-    return view('blog-view');
+Route::get('/blog/{id}', function ($id) {
+    $post = App\Models\Post::with(['user'])->find($id);
+    dd($post);
+    $words = explode(' ', $post->title);
+
+    $similarPosts = App\Models\Post::where(function ($query) use ($words) {
+        foreach ($words as $word) {
+            $query->orWhere('title', 'LIKE', "%{$word}%");
+        }
+    })->get()
+      ->filter(function ($post, $key) use($id) {
+        return $post->id != $id;
+    });
+
+    return view('blog-view', [
+        'post' => $post,
+        'similar_posts' => $similarPosts
+    ]);
 });
 
 Route::get('/get-involved', function () {
