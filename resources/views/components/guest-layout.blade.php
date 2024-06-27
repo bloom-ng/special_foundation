@@ -137,8 +137,7 @@
     {{-- <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div> --}}
 
     <!-- footer -->
-
-    <x-footers></x-footers>
+    <x-footer></x-footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

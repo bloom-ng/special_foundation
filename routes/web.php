@@ -142,7 +142,21 @@ Route::get('/get-involved', function () {
 });
 
 Route::get('/donate', function () {
-    return view('donate');
+    $ambassadors = [
+        ['name' => 'Abimbola Ayinde', 'list_image' => '/images/ambassador_1.png', 'image' => '/images/detail_1.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Akinbamidel Akintola', 'list_image' => '/images/ambassador_2.png', 'image' => '/images/detail_2.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Chukwuma Nwanze', 'list_image' => '/images/ambassador_3.png', 'image' => '/images/detail_3.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Damilola Akinwale', 'list_image' => '/images/ambassador_4.png', 'image' => '/images/detail_4.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Funlola Adegoke', 'list_image' => '/images/ambassador_5.png', 'image' => '/images/detail_5.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Ifeoma Okpala', 'list_image' => '/images/ambassador_6.png', 'image' => '/images/detail_6.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Ijeoma Anyigbo', 'list_image' => '/images/ambassador_7.png', 'image' => '/images/detail_7.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Nnenna Irebisi', 'list_image' => '/images/ambassador_8.png', 'image' => '/images/detail_8.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Oluwole Coker', 'list_image' => '/images/ambassador_9.png', 'image' => '/images/detail_9.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        ['name' => 'Seyi Akinwale', 'list_image' => '/images/ambassador_10.png', 'image' => '/images/detail_10.png', 'content' => 'Content for Ambassador 1', 'link' => 'https://linkedin.com/in/ambassador1'],
+        // Add more ambassadors as needed
+    ];
+
+    return view('get-involved', compact('ambassadors'));
 });
 
 Route::post('/donate', [DonationController::class, 'store']);
