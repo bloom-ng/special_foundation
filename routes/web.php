@@ -7,8 +7,10 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\BeneficiaryApplicationController;
 use App\Http\Controllers\PartnerApplicationController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
+use App\Models\Volunteer;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +43,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
 Route::post('/partners', [PartnerApplicationController::class, 'store']);
 Route::post('/donation-lead', [DonationController::class, 'store']);
+Route::get('/volunteers', [VolunteerController::class, 'store']);
 
 
 Auth::routes();
@@ -78,6 +81,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/donation-leads', [DonationController::class, 'index']);
     Route::get('/donation-leads/{id}', [DonationController::class, 'show']);
     Route::delete('/donation-leads/{donation}', [DonationController::class, 'destroy']);
+
+     // Volunteer Applications routes
+     Route::get('/volunteers', [VolunteerController::class, 'index']);
+     Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
+     Route::get('/volunteers/create', [VolunteerController::class, 'create']);
+     Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
 
 });
 
@@ -249,7 +258,12 @@ Route::get('/get-involved', function () {
         // Add more ambassadors as needed
     ];
 
-    return view('get-involved', compact('ambassadors'));
+    return view('get-involved', compact('ambassadors'))
+                ->with("genderMapping", Volunteer::getGenderMapping())
+                ->with("sourceMapping", Volunteer::getSourceMapping())
+                ->with("availabilityMapping", Volunteer::getAvailabilityMapping())
+                ->with("interestMapping", Volunteer::getInterestMapping())
+                ;
 });
 
 Route::get('/donate', function () {

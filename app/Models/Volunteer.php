@@ -35,6 +35,62 @@ class Volunteers extends Model
     const SOURCE_ONLINE_DIRECTORY_LISTING = 9;
     const SOURCE_OTHER = 10;
 
+    const GENDER_MALE = "Male";
+    const GENDER_FEMALE = "Female";
+
+    const AVAILABILITY_FLEXIBLE = 1;
+    const AVAILABILITY_WEEKDAYS = 2;
+    const AVAILABILITY_WEEKENDS = 3;
+    const AVAILABILITY_MORNINGS = 4;
+    const AVAILABILITY_EVENINGS = 5;
+
+    const INTEREST_ADVOCACY = 1;
+    const INTEREST_BOOKREADING = 2;
+    const INTEREST_MENTORING = 3;
+    const INTEREST_EVENT = 4;
+    const INTEREST_GRANT = 5;
+    const INTEREST_PROMOTION = 6;
+    const INTEREST_MUSIC = 7;
+    const INTEREST_IT = 8;
+    const INTEREST_TEACHING = 9;
+    const INTEREST_HEALTH = 10;
+
+    public static function getInterestMapping()
+    {
+        return [
+            INTEREST_ADVOCACY => "Advocacy & Research",
+            INTEREST_BOOKREADING => "Book Reading",
+            INTEREST_MENTORING => "Mentoring",
+            INTEREST_EVENT => "Events planning/support",
+            INTEREST_GRANT => "Grant writing & research",
+            INTEREST_PROMOTION => "Promotion (Fundraising & publicity)",
+            INTEREST_MUSIC => "Music lessons",
+            INTEREST_IT => "Computer / IT Skills",
+            INTEREST_TEACHING => "Adult literacy & Life Skills",
+            INTEREST_HEALTH => "Health Services"
+        ];
+    }
+
+
+    public static function getGenderMapping()
+    {
+        return [
+            self::GENDER_MALE => "Male",
+            self::GENDER_FEMALE => "Female"
+        ];
+    }
+
+    public static function getAvailabilityMapping()
+    {
+        return [
+            AVAILABILITY_FLEXIBLE => "I am flexible",
+            AVAILABILITY_WEEKDAYS => "Weekdays",
+            AVAILABILITY_WEEKENDS => "Weekends",
+            AVAILABILITY_MORNINGS => "Mornings",
+            AVAILABILITY_EVENINGS => "Evenings",
+        ];
+    }
+
     public static function getSourceMapping()
     {
         return [
