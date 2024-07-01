@@ -1,4 +1,4 @@
-<x-guest-layout title="Home" page="home">
+<x-guest-layout title="Special Foundation - Home" page="home">
     <div class="max-h-[100vh] max-w-[100vw]">
         <swiper-container slides-per-view="1" speed="900" loop="true" autoPlay="true" css-mode="true"
             class="flex max-w-[100vw] justify-between items-center">

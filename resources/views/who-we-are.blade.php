@@ -361,7 +361,7 @@
 
         {{-- OUR ACCOUNNTABILITY START --}}
         <div class="p-10 lg:p-20 flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-            <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-thin">
+            <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-thin font-light">
                 <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Our
                     Accountability Framework</h2>
                 <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">

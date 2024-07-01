@@ -10,13 +10,12 @@ use App\Models\Download;
 class Footer extends Component
 {
     public $downloads;
-
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $this->downloads = Download::all();
     }
 
     /**
@@ -24,6 +23,8 @@ class Footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.footers', ['downloads' => $this->downloads = Download::all()]);
+        return view('components.footer', [
+            'downloads' => $this->downloads,
+        ]);
     }
 }

@@ -77,7 +77,8 @@
             }).showToast();
         </script>
     @endif
-    <nav class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-20">
+    <nav
+        class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-8 xl:mx-20">
         <div class="flex items-center justify-between w-full lg:w-fit">
             <div class="flex flex-row gap-4 lg:gap-6 justify-center items-center">
                 <a href="/">
@@ -85,7 +86,7 @@
                         alt="" />
                 </a>
                 <a href="/">
-                    <img class="w-28 h-4 lg:w-36 lg:h-5" src="/images/the-special-youth-leadership-foundation-02.png"
+                    <img class="w-22 h-4 lg:w-36 lg:h-5" src="/images/the-special-youth-leadership-foundation-02.png"
                         alt="" />
                 </a>
             </div>
@@ -96,7 +97,7 @@
             </div>
         </div>
         <div id="menu"
-            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-8 lg:gap-16 text-base poppins-medium w-full lg:w-auto">
+            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-6 lg:gap-8 xl:gap-16 lg:text-sm xl:text-base poppins-medium w-full lg:w-auto">
             <a href="/" class="{{ $page == 'home' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}">HOME</a>
             <div class="relative">
                 <button id="programs-button"
@@ -137,8 +138,7 @@
     {{-- <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div> --}}
 
     <!-- footer -->
-
-    <x-footers></x-footers>
+    <x-footer></x-footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
