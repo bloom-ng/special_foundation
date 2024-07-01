@@ -9,7 +9,7 @@
                     <i class="fas fa-list mr-3"></i>
                     Downloads
                 </div>
-                <a type="button" href="/admin/downloads/create" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+                <a type="button" href="/admin/downloads/create" class=" text-xs bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                    <i class="fas fa-plus"></i> New
                 </a>
             </div>
@@ -18,28 +18,28 @@
                     <thead class="bg-indigo-900 text-white">
                         <tr>
                             <th
-                                class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm"
+                                class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-xs"
                             >
                                 ID
                             </th>
                             <th
-                                class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm"
+                                class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-xs"
                             >
                                 Name
                             </th>
                             <th
-                                class="text-left py-3 px-4 uppercase font-semibold text-sm"
+                                class="text-left py-3 px-4 uppercase font-semibold text-xs"
                             >
                                 URL
                             </th>
                             <th
-                                class="text-left py-3 px-4 uppercase font-semibold text-sm"
+                                class="text-left py-3 px-4 uppercase font-semibold text-xs"
                             >
                                 Actions
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="text-gray-700">
+                    <tbody class="text-gray-700 text-xs">
                         @foreach ($downloads as $download)
                         <tr>
                             <td class="w-1/3 text-left py-3 px-4">

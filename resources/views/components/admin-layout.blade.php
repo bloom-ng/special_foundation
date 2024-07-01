@@ -88,6 +88,13 @@
                     <i class="fas fa-file-invoice mr-3"></i>
                     Partner Applications
                 </a>
+                <a
+                    href="/admin/donation-leads"
+                    class="flex items-center {{$page == 'donation' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
+                >
+                    <i class="fas fa-file-invoice mr-3"></i>
+                    Donation Leads
+                </a>
                 {{-- <a
                     href="/forms"
                     class="flex items-center {{$page == 'forms' ? 'active-nav-link' : ''}}  text-white hover:opacity-100 py-4 pl-6 nav-item"
@@ -240,6 +247,13 @@
                     >
                         <i class="fas fa-download mr-3"></i>
                         Partner Applications
+                    </a>
+                    <a
+                        href="/admin/donation-leads"
+                        class="flex items-center {{$page == 'donation' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
+                    >
+                        <i class="fas fa-download mr-3"></i>
+                        Donation Leads
                     </a>
                     {{-- <a
                         href="/tables"

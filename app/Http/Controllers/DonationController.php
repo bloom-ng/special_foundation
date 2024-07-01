@@ -18,7 +18,9 @@ class DonationController extends Controller
     {
         $donation = Donation::find($id);
         return view('admin.donation.show')
-            ->with('donation', $donation);
+            ->with('donation', $donation)
+            ->with('sourceMapping', Donation::getSourceMapping())
+            ;
     }
 
     public function store(Request $request)

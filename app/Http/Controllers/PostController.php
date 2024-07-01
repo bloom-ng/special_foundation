@@ -96,6 +96,8 @@ class PostController extends Controller
 
         $post->user_id = $post->user_id ?? request()->user()->id;
 
+        // Add images
+
         $post->save();
 
         $tags = Tag::query()->get(['id', 'name', 'slug']);

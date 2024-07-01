@@ -12,28 +12,28 @@
                         <thead class="bg-indigo-900 text-white">
                             <tr>
                                 <th
-                                    class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm"
+                                    class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-xs"
                                 >
                                     ID
                                 </th>
                                 <th
-                                    class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm"
+                                    class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-xs"
                                 >
                                     Name
                                 </th>
                                 <th
-                                    class="text-left py-3 px-4 uppercase font-semibold text-sm"
+                                    class="text-left py-3 px-4 uppercase font-semibold text-xs"
                                 >
                                     Email
                                 </th>
                                 <th
-                                    class="text-left py-3 px-4 uppercase font-semibold text-sm"
+                                    class="text-left py-3 px-4 uppercase font-semibold text-xs"
                                 >
                                     Actions
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-700">
+                        <tbody class="text-gray-700 text-xs">
                             @foreach ($newsletters as $newsletter)
                             <tr>
                                 <td class="w-1/3 text-left py-3 px-4">

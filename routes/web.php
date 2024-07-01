@@ -75,8 +75,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::delete('/partners/{id}', [PartnerApplicationController::class, 'destroy']);
 
     // Donation Lead routes
-    Route::get('/donation-lead', [DonationController::class, 'index']);
-    Route::delete('/donation-lead/{donation}', [DonationController::class, 'destroy']);
+    Route::get('/donation-leads', [DonationController::class, 'index']);
+    Route::get('/donation-leads/{id}', [DonationController::class, 'show']);
+    Route::delete('/donation-leads/{donation}', [DonationController::class, 'destroy']);
 
 });
 
