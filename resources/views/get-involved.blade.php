@@ -157,7 +157,7 @@
 
         {{-- AMBASSADORS MODAL START --}}
         <div id="ambassador-modal"
-            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden">
+            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
         </div>
         {{-- AMBASSADORS MODAL END --}}
 

@@ -124,7 +124,20 @@
             <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="/who-we-are">WHO
                 WE
                 ARE</a>
-            <a class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}" href="/blogs">BLOG</a>
+
+            <div class="relative">
+                <button id="communications-button"
+                    class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }} flex gap-2 items-center justify-center focus:outline-none">
+                    <span>Communications</span>
+                    <img id="communications-icon" class="pt-1 transform transition-transform"
+                        src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
+                </button>
+                <div id="communications-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20">
+                    <a href="/blogs" class="block px-4 py-2 text-black hover:bg-gray-200">Blogs</a>
+                    <a href="/social-media-posts" class="block px-4 py-2 text-black hover:bg-gray-200">Social Media
+                        Posts</a>
+                </div>
+            </div>
             <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}"
                 href="/get-involved">GET
                 INVOLVED</a>
@@ -147,8 +160,9 @@
             const menu = document.getElementById('menu');
             const menuIcon = document.getElementById('menu-icon');
             const programsButton = document.getElementById('programs-button');
-            const programsDropdown = document.getElementById('programs-dropdown');
-            const programsIcon = document.getElementById('programs-icon');
+            const communicationsButton = document.getElementById('communications-button');
+            const communicationsDropdown = document.getElementById('communications-dropdown');
+            const communicationsIcon = document.getElementById('communications-icon');
 
             mobileMenuButton.addEventListener('click', function() {
                 menu.classList.toggle('hidden');
@@ -159,6 +173,11 @@
             programsButton.addEventListener('click', function() {
                 programsDropdown.classList.toggle('hidden');
                 programsIcon.classList.toggle('rotate-180');
+            });
+
+            communicationsButton.addEventListener('click', function() {
+                communicationsDropdown.classList.toggle('hidden');
+                communicationsIcon.classList.toggle('rotate-180');
             });
         });
     </script>
