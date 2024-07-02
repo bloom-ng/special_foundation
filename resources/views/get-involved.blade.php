@@ -167,7 +167,7 @@
             <div
                 class="flex flex-col items-center justify-center p-8 lg:p-20 rounded-3xl bg-[#EDEDED] w-[90%] md:w-[70%] xl:w-[60%]">
                 <h2
-                    class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] mb-12">
+                    class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-5xl lg:leading-none xl:leading-none text-[#25A8D6] mb-12">
                     Partner With Us
                 </h2>
 
@@ -206,7 +206,7 @@
             <div
                 class="flex flex-col items-center justify-center p-8 lg:p-20 rounded-3xl bg-[#EDEDED] w-[90%] md:w-[70%] xl:w-[60%]">
                 <h2
-                    class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] mb-12">
+                    class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-5xl lg:leading-none xl:leading-none text-[#25A8D6] mb-12">
                     Volunteer Now
                 </h2>
 
