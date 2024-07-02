@@ -32,11 +32,11 @@ class VolunteerController extends Controller
             'email' => 'required|email',
             'contact_number' => 'required|string',
             'area_of_residence' => 'required|string',
-            'availability' => 'required',
+            'availability*' => 'required',
             'specify_time' => 'nullable',
             'times_per_week_month' => 'nullable',
             'other' => 'nullable',
-            'interests' => 'nullable',
+            'interests*' => 'nullable',
             'religious_affirmation' => 'nullable',
             'source' => 'string',
         ]);
@@ -47,11 +47,11 @@ class VolunteerController extends Controller
         $volunteer->gender = $request->gender;
         $volunteer->contact_number = $request->contact_number;
         $volunteer->area_of_residence = $request->area_of_residence;
-        $volunteer->availability = $request->availability;
+        $volunteer->availability = json_encode($request->availability);
         $volunteer->specify_time = $request->specify_time ?? "";
         $volunteer->times_per_week_month = $request->times_per_week_month ?? "";
         $volunteer->other = $request->other ?? "";
-        $volunteer->interests = $request->interests ?? "";
+        $volunteer->interests = json_encode($request->interests) ?? "";
         $volunteer->religious_affirmation = $request->religious_affirmation ?? "";
         $volunteer->source = $request->source ?? Volunteer::SOURCE_OTHER;
         $volunteer->save();

@@ -14,39 +14,16 @@
                         </div>
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
                             <h1 class="poppins-semibold pb-9">Featured Blogs</h1>
-                            <div class="pb-4">
-                                <p class="poppins-extralight text-xs leading-[18px] pb-3">
-                                    Children need you to vote
-                                </p>
-                                <p class="poppins-thin text-[9px] leading-[18px]">
-                                    January 16, 2022
-                                </p>
-                            </div>
-                            <div class="pb-4">
-                                <p class="poppins-extralight text-xs leading-[18px] pb-3">
-                                    Is my child at risk?
-                                </p>
-                                <p class="poppins-thin text-[9px] leading-[18px]">
-                                    January 19, 2022
-                                </p>
-                            </div>
-                            <div class="pb-4">
-                                <p class="poppins-extralight text-xs leading-[18px] pb-3">
-                                    Children have a right to an education, a quality
-                                    education
-                                </p>
-                                <p class="poppins-thin text-[9px] leading-[18px]">
-                                    January 19, 2022
-                                </p>
-                            </div>
-                            <div class="pb-4">
-                                <p class="poppins-extralight text-xs leading-[18px] pb-3">
-                                    Ikechukwu Oramife - A Special Child Spotlight
-                                </p>
-                                <p class="poppins-thin text-[9px] leading-[18px]">
-                                    October 31, 2021
-                                </p>
-                            </div>
+                            @foreach ($featured_blogs as $blog)
+                                <a href="/blog/{{ $blog->id }}" class="pb-4 cursor-pointer">
+                                    <p class="poppins-extralight text-xs leading-[18px] pb-3">
+                                        {{ $blog->title }}
+                                    </p>
+                                    <p class="poppins-thin text-[9px] leading-[18px]">
+                                        {{ \Carbon\Carbon::parse($blog->created_at)->format('F d, Y') }}
+                                    </p>
+                                </a>
+                            @endforeach
                         </div>
                     </div>
                     <div class="flex flex-row gap-14">

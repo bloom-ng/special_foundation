@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Volunteers extends Model
+class Volunteer extends Model
 {
     use HasFactory;
 
@@ -58,16 +58,16 @@ class Volunteers extends Model
     public static function getInterestMapping()
     {
         return [
-            INTEREST_ADVOCACY => "Advocacy & Research",
-            INTEREST_BOOKREADING => "Book Reading",
-            INTEREST_MENTORING => "Mentoring",
-            INTEREST_EVENT => "Events planning/support",
-            INTEREST_GRANT => "Grant writing & research",
-            INTEREST_PROMOTION => "Promotion (Fundraising & publicity)",
-            INTEREST_MUSIC => "Music lessons",
-            INTEREST_IT => "Computer / IT Skills",
-            INTEREST_TEACHING => "Adult literacy & Life Skills",
-            INTEREST_HEALTH => "Health Services"
+            self::INTEREST_ADVOCACY => "Advocacy & Research",
+            self::INTEREST_BOOKREADING => "Book Reading",
+            self::INTEREST_MENTORING => "Mentoring",
+            self::INTEREST_EVENT => "Events planning/support",
+            self::INTEREST_GRANT => "Grant writing & research",
+            self::INTEREST_PROMOTION => "Promotion (Fundraising & publicity)",
+            self::INTEREST_MUSIC => "Music lessons",
+            self::INTEREST_IT => "Computer / IT Skills",
+            self::INTEREST_TEACHING => "Adult literacy & Life Skills",
+            self::INTEREST_HEALTH => "Health Services"
         ];
     }
 
@@ -83,11 +83,11 @@ class Volunteers extends Model
     public static function getAvailabilityMapping()
     {
         return [
-            AVAILABILITY_FLEXIBLE => "I am flexible",
-            AVAILABILITY_WEEKDAYS => "Weekdays",
-            AVAILABILITY_WEEKENDS => "Weekends",
-            AVAILABILITY_MORNINGS => "Mornings",
-            AVAILABILITY_EVENINGS => "Evenings",
+            self::AVAILABILITY_FLEXIBLE => "I am flexible",
+            self::AVAILABILITY_WEEKDAYS => "Weekdays",
+            self::AVAILABILITY_WEEKENDS => "Weekends",
+            self::AVAILABILITY_MORNINGS => "Mornings",
+            self::AVAILABILITY_EVENINGS => "Evenings",
         ];
     }
 

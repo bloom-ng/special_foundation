@@ -6,16 +6,20 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use App\Models\Download;
+use App\Models\Post;
 
 class Footer extends Component
 {
     public $downloads;
+    public $featured_blogs;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         $this->downloads = Download::all();
+        $this->featured_blogs = $featured_posts = Post::where('is_featured', 1)
+                                ->get();
     }
 
     /**
@@ -25,6 +29,7 @@ class Footer extends Component
     {
         return view('components.footer', [
             'downloads' => $this->downloads,
+            'featured_blogs' => $this->featured_blogs->shuffle()->take(4)
         ]);
     }
 }

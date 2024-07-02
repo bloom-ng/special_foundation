@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('homepage');
+        $featured_posts = Post::where('is_featured', 1)
+                                ->get();
+        return view('homepage', [
+            'featured_posts' => $featured_posts->shuffle()->take(4)
+        ]);
     }
 }
