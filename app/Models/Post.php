@@ -30,6 +30,13 @@ class Post extends Model
     protected $guarded = [];
 
     /**
+     * Relationships that should be eager loaded.
+     *
+     * @var array
+     */
+    protected $with = ['user'];
+
+    /**
      * The primary key for the model.
      *
      * @var string

@@ -68,6 +68,13 @@
                     Newsletter Subscribers
                 </a>
                 <a
+                    href="/admin/blogs"
+                    class="flex items-center {{$page == 'blogs' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
+                >
+                    <i class="fas fa-file mr-3"></i>
+                    Posts
+                </a>
+                <a
                     href="/admin/downloads"
                     class="flex items-center {{$page == 'downloads' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
@@ -95,27 +102,7 @@
                     <i class="fas fa-file-invoice mr-3"></i>
                     Donation Leads
                 </a>
-                {{-- <a
-                    href="/forms"
-                    class="flex items-center {{$page == 'forms' ? 'active-nav-link' : ''}}  text-white hover:opacity-100 py-4 pl-6 nav-item"
-                >
-                    <i class="fas fa-align-left mr-3"></i>
-                    Forms
-                </a>
-                <a
-                    href="/tabs"
-                    class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item"
-                >
-                    <i class="fas fa-tablet-alt mr-3"></i>
-                    Tabbed Content
-                </a> --}}
-                <!-- <a
-                    href="/calendar"
-                    class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item"
-                >
-                    <i class="fas fa-calendar mr-3"></i>
-                    Calendar
-                </a> -->
+                
             </nav>
             
         </aside>
@@ -228,6 +215,13 @@
                         Newsletter Subscribers
                     </a>
                     <a
+                        href="/admin/blogs"
+                        class="flex items-center {{$page == 'blogs' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
+                    >
+                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        Posts
+                    </a>
+                    <a
                         href="/admin/downloads"
                         class="flex items-center {{$page == 'downloads' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
@@ -255,34 +249,7 @@
                         <i class="fas fa-download mr-3"></i>
                         Donation Leads
                     </a>
-                    {{-- <a
-                        href="/tables"
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                    >
-                        <i class="fas fa-table mr-3"></i>
-                        Tables
-                    </a>
-                    <a
-                        href="/forms"
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                    >
-                        <i class="fas fa-align-left mr-3"></i>
-                        Forms
-                    </a>
-                    <a
-                        href="/tabs"
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                    >
-                        <i class="fas fa-tablet-alt mr-3"></i>
-                        Tabbed Content
-                    </a> --}}
-                    <!-- <a
-                        href="/calendar"
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
-                    >
-                        <i class="fas fa-calendar mr-3"></i>
-                        Calendar
-                    </a> -->
+                    
                   
                     <a
                         href="#"

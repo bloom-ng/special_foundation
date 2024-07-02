@@ -8,6 +8,7 @@ use App\Http\Controllers\BeneficiaryApplicationController;
 use App\Http\Controllers\PartnerApplicationController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\VolunteerController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -87,6 +88,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
      Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
      Route::get('/volunteers/create', [VolunteerController::class, 'create']);
      Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
+
+     // Blog routes
+     Route::get('/blogs', [PostController::class, 'index']);
+     Route::get('/blogs/{id}', [PostController::class, 'show']);
+     Route::get('/blogs/create', [PostController::class, 'create']);
+     Route::post('/blogs/{id}', [PostController::class, 'store']);
+     Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
 
 });
 

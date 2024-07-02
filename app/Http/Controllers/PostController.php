@@ -26,13 +26,14 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::query()
-                    ->select('id', 'title', 'summary', 'featured_image', 'published_at', 'created_at', 'updated_at')
                      ->when(request()->query('type', 'published') != 'draft', function (Builder $query) {
                          return $query->published();
                      }, function (Builder $query) {
                          return $query->draft();
                      })
+                   
                      ->latest()
+
                      ->withCount('views')
                      ->paginate();
 
@@ -43,6 +44,7 @@ class PostController extends Controller
         $publishedCount = Post::query()
                               ->published()
                               ->count();
+
 
         return view('admin.blog.index', [
             'posts' => $posts,
@@ -97,6 +99,9 @@ class PostController extends Controller
         $post->user_id = $post->user_id ?? request()->user()->id;
 
         // Add images
+        $url = $request->file('featured_image');
+        $path = $request->file('featured_image')->storeAs('public/posts', $url->getClientOriginalName());
+        $post->featured_image = $path;
 
         $post->save();
 
@@ -152,7 +157,7 @@ class PostController extends Controller
                     ->with('tags:name,slug', 'topic:name,slug')
                     ->findOrFail($id);
 
-        return view("admin.blog.show", [
+        return view("admin.blog.create", [
             'post' => $post,
             'tags' => Tag::query()->get(['name', 'slug']),
             'topics' => Topic::query()->get(['name', 'slug']),
