@@ -262,8 +262,7 @@ Route::get('/get-involved', function () {
                 ->with("genderMapping", Volunteer::getGenderMapping())
                 ->with("sourceMapping", Volunteer::getSourceMapping())
                 ->with("availabilityMapping", Volunteer::getAvailabilityMapping())
-                ->with("interestMapping", Volunteer::getInterestMapping())
-                ;
+                ->with("interestMapping", Volunteer::getInterestMapping());
 });
 
 Route::get('/donate', function () {

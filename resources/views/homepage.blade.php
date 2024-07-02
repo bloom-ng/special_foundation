@@ -494,55 +494,29 @@
             </h1>
         </div>
         <div class="flex flex-col md:flex-row no-wrap md:flex-wrap gap-10 md:gap-2 lg:gap-10 text-white">
-            <div class="flex flex-col bg-[#26225F] w-[380px]">
-                <div>
-                    <img class="w-[380px]" src="/images/teacher-giving-high-five.png" alt="" />
+            @foreach ($featured_posts as $featured_blog)
+                <div class="flex flex-col bg-[#26225F] w-[380px]">
+                    <div>
+                        <img class="w-[380px]" src="{{ $featured_blog->featured_image }}" alt="" />
+                    </div>
+                    <div class="mx-12 pt-8 pb-5">
+                        <h1 class="pb-4 leading-[20px] poppins-semibold">
+                            {{ $featured_blog->title }}
+                        </h1>
+                        <p class="poppins-light text-xs pb-4">
+                            {{ \Carbon\Carbon::parse($featured_blog->created_at)->format('F d, Y') }}
+                        </p>
+                        <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $featured_blog->id }}">READ MORE</a>
+                    </div>
                 </div>
-                <div class="mx-12 pt-8 pb-5">
-                    <h1 class="pb-4 leading-[20px] poppins-semibold">
-                        Children have a right to an education, a quality
-                        <br />
-                        education.
-                    </h1>
-                    <p class="poppins-light text-xs pb-4">
-                        November 26, 2021
-                    </p>
-                    <a class="text-[#25A8D6] text-[8px]" href="#">READ MORE</a>
-                </div>
-            </div>
-            <div class="flex flex-col bg-[#26225F] w-[380px]">
-                <div>
-                    <img class="w-[380px]" src="/images/teacher-giving-high-five.png" alt="" />
-                </div>
-                <div class="mx-12 pt-8 pb-5">
-                    <h1 class="pb-4 leading-[20px] poppins-semibold">
-                        Children have a right to an education, a quality
-                        <br />
-                        education.
-                    </h1>
-                    <p class="poppins-light text-xs pb-4">
-                        November 26, 2021
-                    </p>
-                    <a class="text-[#25A8D6] text-[8px]" href="#">READ MORE</a>
-                </div>
-            </div>
-            <div class="flex flex-col bg-[#26225F] w-[380px]">
-                <div>
-                    <img class="w-[380px]" src="/images/teacher-giving-high-five.png" alt="" />
-                </div>
-                <div class="mx-12 pt-8 pb-5">
-                    <h1 class="pb-4 leading-[20px] poppins-semibold">
-                        Children have a right to an education, a quality
-                        <br />
-                        education.
-                    </h1>
-                    <p class="poppins-light text-xs pb-4">
-                        November 26, 2021
-                    </p>
-                    <a class="text-[#25A8D6] text-[8px]" href="#">READ MORE</a>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
     {{-- BLOG END --}}
+    <div class="w-full px-5 lg:px-20">
+        <script type="text/javascript"
+            src="https://www.juicer.io/embed/the-special-youth-leadership-foundation-3a2b091e-3e79-4220-9202-595034c22b83/embed-code.js"
+            async defer></script>
+    </div>
 </x-guest-layout>

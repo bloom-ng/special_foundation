@@ -11,6 +11,7 @@
     {{-- <link rel="stylesheet" href="resources/css/app.css" /> --}}
 
     <title>{{ $title }}</title>
+    <link rel="shortcut icon" href="/images/about-us-logo.png" type="image/x-icon">
 
     {{-- CHAT BOT --}}
     <script type="module" crossorigin src="/chat-assets/index-sGn6lMje.js"></script>
