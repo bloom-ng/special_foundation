@@ -43,7 +43,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
 Route::post('/partners', [PartnerApplicationController::class, 'store']);
 Route::post('/donation-lead', [DonationController::class, 'store']);
-Route::get('/volunteers', [VolunteerController::class, 'store']);
+Route::post('/volunteer', [VolunteerController::class, 'store']);
 
 
 Auth::routes();

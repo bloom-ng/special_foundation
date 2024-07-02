@@ -45,6 +45,7 @@
             and/or proactively publicizing the activities and objectives of the Foundation.
         </p>
 
+        {{-- PARTNER WITH US START --}}
         <div class="flex flex-col lg:flex-row items-center justify-center my-12 lg:my-24 gap-10">
             <div class="w-full lg:w-[40%]">
                 <h2
@@ -58,7 +59,7 @@
                     children all around Africa.
                 </p>
 
-                <button
+                <button id="partner-button"
                     class="text-white font-normal w-[308px] h-[54px] pt-[15px] pr-[10px] pb-[15px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
                     PARTNER WITH US
                 </button>
@@ -127,6 +128,7 @@
                 {{-- PC PARTNER END --}}
             </div>
         </div>
+        {{-- PARTNER WITH US END --}}
 
         {{-- VOLUNTEER START --}}
         <div class="flex flex-col lg:flex-row items-center justify-center my-12 lg:my-24 gap-10">
@@ -145,7 +147,7 @@
                     today to make our world better. <span class="montserrat-bold">We appreciate your support.</span>
                 </p>
 
-                <button
+                <button id="volunteer-button"
                     class="text-white font-normal w-[308px] h-[54px] pt-[15px] pr-[10px] pb-[15px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
                     VOLUNTEER NOW
                 </button>
@@ -155,30 +157,187 @@
 
         {{-- AMBASSADORS MODAL START --}}
         <div id="ambassador-modal"
-            class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden">
-            @isset($selectedAmbassador)
-                <x-detail :name="$selectedAmbassador['name']" :content="$selectedAmbassador['content']" :image="$selectedAmbassador['image']" :link="$selectedAmbassador['link']" />
-            @endisset
+            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden">
         </div>
         {{-- AMBASSADORS MODAL END --}}
+
+        {{-- PARTNER WITH US MODAL START --}}
+        <div id="partner-modal"
+            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-20">
+            <div
+                class="flex flex-col items-center justify-center p-8 lg:p-20 rounded-3xl bg-[#EDEDED] w-[90%] md:w-[70%] xl:w-[60%]">
+                <h2
+                    class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] mb-12">
+                    Partner With Us
+                </h2>
+
+                <form action="/partners" method="POST" class="w-full flex flex-col items-center justify-center gap-8">
+                    @csrf
+                    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
+                        <input type="text" name="name"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Name of Beneficiary" />
+                        <input type="email" name="email"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Email Address" />
+                    </div>
+                    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
+                        <input type="text" name="contact_number"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Contact Number" />
+                        <input type="text" name="area_of_residence"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Area of Residence" />
+                    </div>
+                    <textarea name="purpose_of_application" id="" cols="30" rows="10"
+                        placeholder="Purpose for Applicaiton"
+                        class="w-full rounded-3xl border border-[#25A8D6] px-4 py-4 montserrat-thin font-light text-black"></textarea>
+
+                    <button
+                        class="bg-[#26225F] rounded-full px-4 py-4 w-[90%] md:w-[40%] text-white montserrat-thin font-light text-base lg:text-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+        {{-- PARTNER WITH US MODAL END --}}
+
+        {{-- VOLUNTEER NOW MODAL START --}}
+        <div id="volunteer-modal"
+            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-20">
+            <div
+                class="flex flex-col items-center justify-center p-8 lg:p-20 rounded-3xl bg-[#EDEDED] w-[90%] md:w-[70%] xl:w-[60%]">
+                <h2
+                    class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] mb-12">
+                    Volunteer Now
+                </h2>
+
+                <form action="/volunteer" method="POST"
+                    class="w-full flex flex-col items-center justify-center gap-8">
+                    @csrf
+                    <input type="text" name="full_name"
+                        class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                        placeholder="Full Name" required />
+
+                    <div class="w-full flex flex-col items-start ml-16">
+                        <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Gender</h5>
+                        @foreach ($genderMapping as $key => $value)
+                            <div class="flex items-center justify-center gap-3">
+                                <input class="poppins-thin font-normal my-4 h-8 w-8" type="radio" name="gender"
+                                    value="{{ $key }}" id="{{ $key }}">
+                                <label for="{{ $key }}">{{ $value }}</label>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
+                        <input type="email" name="email"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Email Address" required />
+                        <input type="text" name="contact_number"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Contact Number" required />
+                    </div>
+
+                    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
+                        <input type="text" name="area_of_residence"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Area of Residence" required />
+
+                        <input type="text" name="religious_affirmation"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Religious Affirmation" />
+                    </div>
+
+                    <div class="w-full flex flex-col items-start ml-16">
+                        <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Availability</h5>
+                        <p>During which hours are you available for volunteering? (Select all that apply)</p>
+                        @foreach ($availabilityMapping as $key => $value)
+                            <div class="flex items-center justify-center gap-3"s>
+                                <input type="checkbox" name="availability[]"
+                                    class="poppins-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
+                                    id="{{ $key }}">
+                                <label for="{{ $key }}">{{ $value }}</label>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
+                        <input type="text" name="specify_time"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Specify Time" />
+
+                        <input type="text" name="times_per_week_month"
+                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            placeholder="Number of times per week/month" />
+                    </div>
+
+                    <input type="text" name="other"
+                        class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                        placeholder="Other (Specify)" />
+
+                    <div class="w-full flex flex-col items-start ml-16">
+                        <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Interests</h5>
+                        @foreach ($interestMapping as $key => $value)
+                            <div class="flex items-center justify-center gap-3"s>
+                                <input type="checkbox" name="interests[]"
+                                    class="poppins-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
+                                    id="{{ $key }}">
+                                <label for="{{ $key }}">{{ $value }}</label>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <div class="w-full flex flex-col items-start">
+                        <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3 ml-10">How did you hear
+                            about
+                            us
+                        </h5>
+                        <select
+                            class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            name="source">
+                            <option value="">Select an option</option>
+                            @foreach ($sourceMapping as $key => $value)
+                                <option class="poppins-thin font-normal my-4 h-8 w-8" value="{{ $key }}">
+                                    {{ $value }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <button
+                        class="bg-[#26225F] rounded-full px-4 py-4 w-[90%] md:w-[40%] text-white montserrat-thin font-light text-base lg:text-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+        {{-- VOLUNTEER NOW MODAL END --}}
+
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const ambassadors = @json($ambassadors);
             const modal = document.getElementById('ambassador-modal');
+            const partner = document.getElementById('partner-modal');
+            const volunteer = document.getElementById('volunteer-modal');
 
             document.querySelectorAll('.grid img').forEach(img => {
                 img.addEventListener('click', function() {
                     const index = this.getAttribute('data-index');
                     const ambassador = ambassadors[index];
 
-                    console.log(ambassador)
+                    const content =
+                        `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
+                            <img src="${ambassador.image}" alt="${ambassador.name}">
+                            <div class="flex flex-col items-start gap-8">
+                                <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${ambassador.name}</h3>
+                                <p class="montserrat-thin font-light">
+                                    ${ambassador.content}
+                                </p>
+                                <a href="${ambassador.link}">
+                                    <img src="/images/detail_icon.svg" alt="Linkedin Icon">
+                                </a>
+                            </div>
+                        </div>`;
 
-                    @php
-                        $selectedAmbassador = isset($ambassadors[$index]) ? $ambassadors[$index] : null;
-                    @endphp
-
+                    modal.innerHTML = content;
                     modal.classList.remove('hidden');
                 });
             });
@@ -186,6 +345,27 @@
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
                     modal.classList.add('hidden');
+                }
+            });
+
+
+            document.getElementById('partner-button').addEventListener('click', function() {
+                partner.classList.remove('hidden')
+            })
+
+            partner.addEventListener('click', function(e) {
+                if (e.target === partner) {
+                    partner.classList.add('hidden');
+                }
+            });
+
+            document.getElementById('volunteer-button').addEventListener('click', function() {
+                volunteer.classList.remove('hidden')
+            })
+
+            volunteer.addEventListener('click', function(e) {
+                if (e.target === volunteer) {
+                    volunteer.classList.add('hidden');
                 }
             });
         });
