@@ -348,7 +348,7 @@
             <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Downloads</h2>
 
             <div class="w-full flex flex-wrap justify-start items-center gap-8">
-                @foreach ($downloads as $downlaod)
+                @foreach ($downloads as $download)
                     <a href="{{ $download->url }}"
                         class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">{{ $download->name }}</a>
                 @endforeach
