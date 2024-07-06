@@ -41,8 +41,8 @@
                                 Hughes Avenue, Alagomeji, Yaba, Lagos, Nigeria.
                             </p>
                         </div>
-                        <div class="basis-1/2 lg:basis-1/4 flex flex-col items-center">
-                            <h1 class="poppins-semibold pb-9 -ml-5">Downloads</h1>
+                        <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                            <h1 class="poppins-semibold pb-9">Downloads</h1>
                             <div class="flex flex-col gap-6 poppins-extralight text-xs leading-[18px]">
                                 @foreach ($downloads as $download)
                                     <a href="{{ $download->url }}" target="_blank">{{ $download->name }}</a>

@@ -514,9 +514,5 @@
         </div>
     </div>
     {{-- BLOG END --}}
-    <div class="w-full px-5 lg:px-20">
-        <script type="text/javascript"
-            src="https://www.juicer.io/embed/the-special-youth-leadership-foundation-3a2b091e-3e79-4220-9202-595034c22b83/embed-code.js"
-            async defer></script>
-    </div>
+
 </x-guest-layout>

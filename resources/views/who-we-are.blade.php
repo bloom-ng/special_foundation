@@ -77,7 +77,8 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">21,000+</h3>
-                            <p class="poppins-thin w-inherit">Nigerian children directly and indirectly impacted by the
+                            <p class="poppins-thin font-light w-inherit">Nigerian children directly and indirectly
+                                impacted by the
                                 foundation
                                 over the last 5 years</p>
                         </div>
@@ -86,7 +87,8 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">100,000+</h3>
-                            <p class="poppins-thin">Africans directly and indirectly impacted by the Foundation</p>
+                            <p class="poppins-thin font-light">Africans directly and indirectly impacted by the
+                                Foundation</p>
                         </div>
                     </div>
                     {{-- ITEM 1 END --}}
@@ -95,7 +97,8 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">460+</h3>
-                            <p class="poppins-thin w-inherit">Nigerian children are given access to education through
+                            <p class="poppins-thin font-light w-inherit">Nigerian children are given access to education
+                                through
                                 the Inspire Scholarship Pprogram yearly</p>
                         </div>
                         <div class="w-[5%] mr-4 ml-8">
@@ -103,7 +106,8 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">5,000+</h3>
-                            <p class="poppins-thin">African students given access to education through scholarships
+                            <p class="poppins-thin font-light">African students given access to education through
+                                scholarships
                                 every year</p>
                         </div>
                     </div>
@@ -113,7 +117,8 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">10,672+</h3>
-                            <p class="poppins-thin w-inherit">Nigerian children access educational and vocational
+                            <p class="poppins-thin font-light w-inherit">Nigerian children access educational and
+                                vocational
                                 training through the free Summer School Program yearly</p>
                         </div>
                         <div class="w-[5%] mr-4 ml-8">
@@ -121,7 +126,8 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">20,000+</h3>
-                            <p class="poppins-thin">African students sponsored through the Summer School programs</p>
+                            <p class="poppins-thin font-light">African students sponsored through the Summer School
+                                programs</p>
                         </div>
                     </div>
                     {{-- ITEM 3 END --}}
@@ -130,7 +136,8 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">6,879+</h3>
-                            <p class="poppins-thin w-inherit">Nigerian children accessing mentorship through our
+                            <p class="poppins-thin font-light w-inherit">Nigerian children accessing mentorship through
+                                our
                                 Mentorship/Career Day Program</p>
                         </div>
                         <div class="w-[5%] mr-4 ml-8">
@@ -138,7 +145,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">60,000+</h3>
-                            <p class="poppins-thin">African students on our mentorship program</p>
+                            <p class="poppins-thin font-light">African students on our mentorship program</p>
                         </div>
                     </div>
                     {{-- ITEM 4 END --}}
@@ -147,7 +154,8 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">5+</h3>
-                            <p class="poppins-thin w-inherit">Nigerian Schools accessing conducive learning environment
+                            <p class="poppins-thin font-light w-inherit">Nigerian Schools accessing conducive learning
+                                environment
                                 through our school build project</p>
                         </div>
                         <div class="w-[5%] mr-4 ml-8">
@@ -155,7 +163,8 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">100+</h3>
-                            <p class="poppins-thin">African schools benefiting from the School Build Program</p>
+                            <p class="poppins-thin font-light">African schools benefiting from the School Build Program
+                            </p>
                         </div>
                     </div>
                     {{-- ITEM 5 END --}}
@@ -197,99 +206,36 @@
         {{-- MEET THE FOUNDER END --}}
 
         {{-- MEET THE TEAM START --}}
-
-        <div class="h-auto">
+        <div class="">
             <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] poppins-bold text-[38px] leading-[45px]">
                 Meet The Team
             </div>
 
             {{-- MOBILE VIEW START --}}
             <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="swiper-container-second flex lg:hidden flex-row gap-12 pb-16">
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-8 rounded-3xl">
-                        <img src="/images/team_1.png" alt="Team member" class="max-w-[100px] w-auto h-36">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-8 rounded-3xl">
-                        <img src="/images/team_2.png" alt="Team member" class="max-w-[100px] w-auto h-36">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-8 rounded-3xl">
-                        <img src="/images/team_3.png" alt="Team member" class="max-w-[100px] w-auto h-36">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-8 rounded-3xl">
-                        <img src="/images/team_4.png" alt="Team member" class="max-w-[100px] w-auto h-36">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-8 rounded-3xl">
-                        <img src="/images/team_5.png" alt="Team member" class="max-w-[100px] w-auto h-36">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_6.png" alt="Team member" class="max-w-[100px] w-auto h-36">
-                    </div>
-                </swiper-slide>
+                class="flex lg:hidden flex-row gap-12 pb-16">
+                @foreach ($teams as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-8 rounded-3xl team-img">
+                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[100px] w-auto h-36" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
             </swiper-container>
             {{-- MOBILE VIEW END --}}
 
             {{-- PC VIEW START --}}
             <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="swiper-container-second hidden lg:flex flex-row gap-12 pb-16">
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_1.png" alt="Team member" class="max-w-[370px] w-auto h-80">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_2.png" alt="Team member" class="max-w-[370px] w-auto h-80">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_3.png" alt="Team member" class="max-w-[370px] w-auto h-80">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_4.png" alt="Team member" class="max-w-[370px] w-auto h-80">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_5.png" alt="Team member" class="max-w-[370px] w-auto h-80">
-                    </div>
-                </swiper-slide>
-                <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl">
-                        <img src="/images/team_6.png" alt="Team member" class="max-w-[370px] w-auto h-80">
-                    </div>
-                </swiper-slide>
-
-                {{-- <swiper-slide class="">
-                    <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                        <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
-                            Lifelong Development
-                        </h1>
-                        <p class="poppins-medium text-xs pb-16">
-                            The Special Foundation facilitates continuous
-                            development of the children we support through a
-                            lifelong program. The program includes mentorship
-                            and leadership training.
-                        </p>
-                        <div class="">
-                            <a href="#" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
-                                MORE</a>
+                class="hidden lg:flex flex-row gap-12 pb-16">
+                @foreach ($teams as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-10 rounded-3xl team-img">
+                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
                         </div>
-                    </div>
-                </swiper-slide> --}}
+                    </swiper-slide>
+                @endforeach
             </swiper-container>
             {{-- PC VIEW END --}}
 
@@ -402,18 +348,60 @@
             <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Downloads</h2>
 
             <div class="w-full flex flex-wrap justify-start items-center gap-8">
-                <a href="#" class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">BROCHURE</a>
-                <a href="#" class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">ANNUAL REPORT
-                    2020</a>
-                <a href="#" class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">ANNUAL REPORT
-                    2021</a>
-                <a href="#" class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">ANNUAL REPORT
-                    2022</a>
-                <a href="#" class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">ANNUAL REPORT
-                    2023</a>
+                @foreach ($downloads as $download)
+                    <a href="{{ $download->url }}"
+                        class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">{{ $download->name }}</a>
+                @endforeach
             </div>
         </div>
         {{-- DOWNLOADS END --}}
+
+        {{-- TEAM MODAL START --}}
+        <div id="team-modal"
+            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
+        </div>
+        {{-- TEAM MODAL END --}}
     </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const teams = @json($teams);
+            const modal = document.getElementById('team-modal');
+
+            document.querySelectorAll('.team-img img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    const team = teams[index];
+
+                    const content =
+                        `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
+                            <img src="${team.image}" alt="${team.name}">
+                            <div class="flex flex-col items-start gap-8">
+                                <div>
+                                    <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${team.name}</h3>
+                                    <h3 class="montserrat-bold text-black text-xl">${team.position}</h3>
+                                </div>
+                                <p class="montserrat-thin font-light">
+                                    ${team.content}
+                                </p>
+                                <a href="${team.link}">
+                                    <img src="/images/detail_icon.svg" alt="Linkedin Icon">
+                                </a>
+                            </div>
+                        </div>`;
+
+                    modal.innerHTML = content;
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </x-guest-layout>

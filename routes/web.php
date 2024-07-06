@@ -31,7 +31,74 @@ Route::get('homepage', function () {
 
 Route::get('who-we-are', function () {
     $downloads = Download::all();
-    return view('who-we-are')->with('downloads', $downloads);
+    $teams = [
+        [
+            'name' => 'Adesuwa Nosakhare',
+            'position' => 'Corporate Partnership Manager',
+            'list_image' => '/images/team_1.png', 
+            'image' => '/images/team_detail_1.png', 
+            'content' => "Ade is a Management consultant with an MBA from the University of California, Berkeley. She has a wealth of experience in the semiconductor industry, working as a process engineer and quality program manager in the United States.  At The Special Youth Foundation, she works closely with the executive team on corporate strategy and relationship building.<br><br>
+                She holds a BSc. in Chemical Engineering from the University of Maryland and an MSc. in Petroleum Engineering from the University of Oklahoma. Ade is passionate about operational business excellence and committed to supporting the education and development of children of differing abilities and socioeconomic backgrounds."
+            , 
+            'link' => 'https://linkedin.com/in/team1'
+        ],
+        
+        [
+            'name' => 'Ayobamidele Shodipe',
+            'position' => 'Foundation Manager',
+            'list_image' => '/images/team_2.png', 
+            'image' => '/images/team_detail_2.png', 
+            'content' => "Ayobamidele currently serves as the Foundation and Operations Manager at The Special Foundation. She oversees the general operations management, as well as programs and project management of the foundation. She curates, plans, executes, and implements the foundation’s cardinal programs.<br><br>
+                She holds a BSc in Animal Nutrition from the Federal University of Agriculture, Abeokuta, an MSc in Industrial Labour and Relations from the University of Lagos, Akoka, and has over 5 years of experience with a proven track record in administrative management, operations, program planning and execution, and customer service."
+            ,
+            'link' => 'https://linkedin.com/in/team2'
+        ],
+        
+        [
+            'name' => 'Cynthia Amakiri',
+            'position' => 'Programs Manager',
+            'list_image' => '/images/team_3.png', 
+            'image' => '/images/team_detail_3.png', 
+            'content' => "Cynthia is the Programs Manager of the Special Foundation.  She is also the co-founder of ACEYSA; a youth-led NGO focused on poverty alleviation.<br><br>
+                Although Cynthia has worked in different sectors including the finance and medical sector, she has devoted the past few years of her life to human capital development, health and wellness programs and improving educational opportunities for vulnerable people in society as she believes that everyone deserves a chance at a better life. She does these by planning and executing projects that ensure children have basic education and better learning conditions and youths are empowered through education or skill acquisition."
+            , 
+            'link' => 'https://linkedin.com/in/team2'
+        ],
+        
+        [
+            'name' => 'Feyikoya Kamson',
+            'position' => 'Innovation Manager',
+            'list_image' => '/images/team_4.png', 
+            'image' => '/images/team_detail_4.png', 
+            'content' => "Feyikoya Kamson is the Innovation Manager at the Foundation. She is an IT nerd turned Travel enthusiast. With a degree in Industrial Physics and over 6years work experience as a Business consultant for notable companies like IBM UK, Huawei Nigeria and Etisalat Nigeria, Feyikoya founded FNP Travel- A Travel Company committed to helping others see the world differently.<br><br>
+                She found a way to merge her passion for helping people and creating aesthetically pleasing storytelling content. Feyikoya strongly believes in self actualisation and is passionate about driving the message."
+            , 
+            'link' => 'https://linkedin.com/in/team2'
+        ],
+        
+        [
+            'name' => 'Gloria Odigili',
+            'position' => 'Administrative & Engagement Manager',
+            'list_image' => '/images/team_5.png', 
+            'image' => '/images/team_detail_5.png', 
+            'content' => "Gloria currently serves as the Administrative and Engagement Manager at The Special Foundation, where she plays a pivotal role in managing all administrative operations and curating content to boost engagement across various platforms.<br><br>
+                A committed graduate of Covenant University, Gloria brings a wealth of experience with a solid background in data management, product management, and client relationship management, spanning over 5 years. Her versatile professional journey across multiple industries has honed her ability to approach daily operations with a critical, strategic, and creative mindset."
+            , 
+            'link' => 'https://linkedin.com/in/team2'
+        ],
+        
+        [
+            'name' => 'Roli Edoja',
+            'position' => 'Partnership Manager',
+            'list_image' => '/images/team_6.png', 
+            'image' => '/images/team_detail_6.png', 
+            'content' => "Meet Roli, the dynamic Head of Partnerships at our Special Foundation, tasked with seeking out, recruiting, and continually developing existing partnerships.  Armed with a B.Sc. in Mass Communication and a rich four-year history in Marketing, client relations, brand management, and creative direction.<br><br>
+                Beyond her impressive professional background, Roli has a passion for making a meaningful impact, she thrives on challenges that spark her creativity and innovative ideas. Outside the world of partnerships and marketing, Roli enjoys her free time binge-watching historical drama, action, or fantasy series."
+            , 
+            'link' => 'https://linkedin.com/in/team2'
+        ],
+    ];
+    return view('who-we-are', compact('teams'))->with('downloads', $downloads);
 });
 
 Route::post('/newsletters', [NewsletterController::class, 'create']);
@@ -98,6 +165,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 });
 
+
+Route::get('/social-media-posts', function () {
+    return view('social-media-posts');
+});
 
 Route::get('/forms', function () {
     return view('forms');
