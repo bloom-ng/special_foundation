@@ -79,7 +79,7 @@
         </script>
     @endif
     <nav
-        class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:my-6 lg:mx-8 xl:mx-20">
+        class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:py-8 lg:px-8 xl:px-16">
         <div class="flex items-center justify-between w-full lg:w-fit">
             <div class="flex flex-row gap-4 lg:gap-6 justify-center items-center">
                 <a href="/">
@@ -141,8 +141,8 @@
             <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}"
                 href="/get-involved">GET
                 INVOLVED</a>
-            <a class="{{ $page == 'donate' ? 'poppins-bold' : '' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white"
-                href="/donate" class="text-white bg-[#25A8D6] px-10 py-2 -mt-2 rounded-full">DONATE</a>
+            <a class="{{ $page == 'donate' ? 'poppins-bold' : '' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white text-center"
+                href="/donate">DONATE</a>
         </div>
     </nav>
     <div class="w-full">
@@ -160,6 +160,8 @@
             const menu = document.getElementById('menu');
             const menuIcon = document.getElementById('menu-icon');
             const programsButton = document.getElementById('programs-button');
+            const programsDropdown = document.getElementById('programs-dropdown');
+            const programsIcon = document.getElementById('programs-icon');
             const communicationsButton = document.getElementById('communications-button');
             const communicationsDropdown = document.getElementById('communications-dropdown');
             const communicationsIcon = document.getElementById('communications-icon');
