@@ -26,11 +26,11 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::query()
-                     ->when(request()->query('type', 'published') != 'draft', function (Builder $query) {
-                         return $query->published();
-                     }, function (Builder $query) {
-                         return $query->draft();
-                     })
+                    //  ->when(request()->query('type', 'published') != 'draft', function (Builder $query) {
+                    //      return $query->published();
+                    //  }, function (Builder $query) {
+                    //      return $query->draft();
+                    //  })
                    
                      ->latest()
 
@@ -61,9 +61,12 @@ class PostController extends Controller
     public function create()
     {
         $uuid = Str::uuid();
+        $post = new Post([
+            "id" => $uuid->toString()
+        ]);
 
         return view('admin.blog.create', [
-            'id' => $uuid->toString(),
+            'post' => $post,
             'slug' => "post-{$uuid->toString()}",
             'tags' => Tag::query()->get(['name', 'slug']),
             'topics' => Topic::query()->get(['name', 'slug']),
@@ -90,7 +93,7 @@ class PostController extends Controller
         if (! $post) {
             $post = new Post([
                 'id' => $id,
-                'slug' => Str::slug($title) . "-" . Str::random(3),
+                'slug' => Str::slug($data['title']) . "-" . Str::random(3),
             ]);
         }
 

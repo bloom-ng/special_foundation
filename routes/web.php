@@ -91,8 +91,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
      // Blog routes
      Route::get('/blogs', [PostController::class, 'index']);
-     Route::get('/blogs/{id}', [PostController::class, 'show']);
      Route::get('/blogs/create', [PostController::class, 'create']);
+     Route::get('/blogs/{id}', [PostController::class, 'show']);
      Route::post('/blogs/{id}', [PostController::class, 'store']);
      Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
 

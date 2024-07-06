@@ -92,7 +92,7 @@
       modules: {
         toolbar: [
           ['bold', 'italic', 'underline', 'strike'],
-          ['link', 'image', 'video'],
+          ['link', '', ''],
           ['code-block', 'blockquote'],
           ['list-ol', 'list-ul'],
           ['align-left', 'align-center', 'align-right']
