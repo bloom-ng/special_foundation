@@ -495,11 +495,12 @@
         </div>
         <div class="flex flex-col md:flex-row no-wrap md:flex-wrap gap-10 md:gap-2 lg:gap-10 text-white">
             @foreach ($featured_posts as $featured_blog)
-                <div class="flex flex-col bg-[#26225F] w-[380px]">
+                <div class="flex flex-col w-[380px]">
                     <div>
-                        <img class="w-[380px]" src="{{ $featured_blog->featured_image }}" alt="" />
+                        <img class="w-[380px]" src="{{ Storage::url($featured_blog->featured_image) }}"
+                            alt="{{ $featured_blog->title }}" />
                     </div>
-                    <div class="mx-12 pt-8 pb-5">
+                    <div class="bg-[#26225F] px-12 pt-8 pb-5">
                         <h1 class="pb-4 leading-[20px] poppins-semibold">
                             {{ $featured_blog->title }}
                         </h1>
