@@ -9,7 +9,7 @@
                     </p>
                     <p
                         class="block antialiased font-sans text-sm font-light leading-normal text-inherit font-normal text-gray-600 md:w-full w-4/5">
-                        Upward arrow indicating an increase in compared to the previous
+                        Upward arrow indicating an increase compared to the previous
                         month.
                     </p>
                 </div>

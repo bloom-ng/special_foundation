@@ -69,6 +69,12 @@
                                     Name
                                 </p>
                             </th>
+                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
+                                <p
+                                    class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
+                                    Email
+                                </p>
+                            </th>
                           
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p
@@ -86,6 +92,9 @@
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
                                 {{ $user->name }}
+                            </td>
+                            <td class="w-1/3 text-left py-3 px-4">
+                                {{ $user->email }}
                             </td>
                            
                             <td class="w-1/3 text-left py-3 px-4">
