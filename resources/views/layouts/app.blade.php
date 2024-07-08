@@ -29,7 +29,8 @@
             >
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config("app.name", "Special Foundation") }}
+                        <img class="w-12 lg:w-16" src="/images/the-special-youth-leadership-foundation-03.png"
+                        alt="" />  
                     </a>
                     <button
                         class="navbar-toggler"
