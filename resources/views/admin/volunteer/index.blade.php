@@ -1,4 +1,4 @@
-<x-admin-layout title="Admin | Beneficiary Application" page="beneficiary">
+<x-admin-layout title="Admin | Volunteer Application" page="volunteer">
  
     <main class="w-full flex-grow p-6">
 
@@ -10,15 +10,15 @@
                         <div>
                             <p
                                 class="block antialiased font-sans text-base font-light leading-relaxed text-inherit font-bold">
-                                Beneficiary Applications
+                                Prospective Volunteers
                             </p>
                             <p
                                 class="block antialiased text-sm font-sans text-base font-light leading-relaxed text-inherit font-normal text-gray-600">
-                                See list of beneficiary applications
+                                See list of prospective volunteers
                             </p>
                         </div>
                         <div>
-                            <a type="button" target="_blank" href="/admin/download/BeneficiaryApplication/csv"
+                            <a type="button" target="_blank" href="/admin/download/Volunteer/csv"
                                 class="align-middle select-none font-sans font-bold text-center capitalize transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-indigo-500"
                                 type="button" data-ripple-light="true">
                                 <i class="fa fa-download mr-3"></i> Download CSV
@@ -52,7 +52,6 @@
                 </div>
             </section>
 
-           
             <div class="bg-white overflow-auto">
                 <table class="min-w-full bg-white">
                     <thead class="">
@@ -72,13 +71,13 @@
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p
                                     class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
-                                    Email
+                                    Gender
                                 </p>
                             </th>
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p
                                     class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
-                                    Programme
+                                    Email
                                 </p>
                             </th>
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
@@ -96,26 +95,26 @@
                         </tr>
                     </thead>
                     <tbody class="text-gray-700 text-xs">
-                        @foreach ($applications as $application)
+                        @foreach ($volunteers as $volunteer)
                         <tr>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->id }}
+                                {{ $volunteer->id }}
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->name }}
+                                {{ $volunteer->full_name }}
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->email }}
+                                {{ $volunteer->gender }}
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $programmeMapping[$application->programme] }}
+                                {{ $volunteer->email }}
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->contact_number }}
+                                {{ $volunteer->contact_number }}
                             </td>
                            
                             <td class="w-1/3 text-left py-3 px-4 gap-y-1">
-                                <a class="text-blue-300 hover:text-blue-500" href="/admin/beneficiaries/{{$application->id}}">
+                                <a class="text-blue-300 hover:text-blue-500" href="/admin/volunteers/{{$volunteer->id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -124,8 +123,8 @@
                                     
                                 </a>
                                 <form
-                                    id="beneficiary-delete-{{$application->id}}"
-                                    action="/admin/beneficiaries/{{$application->id}}"
+                                    id="volunteer-delete-{{$volunteer->id}}"
+                                    action="/admin/volunteers/{{$volunteer->id}}"
                                     method="POST"
                                     style="display: inline"
                                 >
@@ -137,30 +136,27 @@
                                         </svg>
                                     </button>
 
-                                    
-
-
                                 </form>
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {{ $applications->links() }}
+                {{ $volunteers->links() }}
             </div>
         </div>
     </main>
 
     <script>
-        @foreach ($applications as $application)
+        @foreach ($volunteers as $volunteer)
             
-            const form{{$application->id}} = document.getElementById('beneficiary-delete-{{$application->id}}');
+            const form{{$volunteer->id}} = document.getElementById('volunteer-delete-{{$volunteer->id}}');
             
-            form{{$application->id}}.addEventListener('submit', (e) => {
+            form{{$volunteer->id}}.addEventListener('submit', (e) => {
                 e.preventDefault(); // Prevent the form from submitting normally
                 const confirmSubmit = confirm('Proceed to delete?');
                 if (confirmSubmit) {
-                form{{$application->id}}.submit(); // Submit the form if the user confirms
+                form{{$volunteer->id}}.submit(); // Submit the form if the user confirms
                 }
             });
         @endforeach

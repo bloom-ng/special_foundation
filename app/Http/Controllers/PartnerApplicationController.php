@@ -10,7 +10,16 @@ class PartnerApplicationController extends Controller
 
     public function index()
     {
-        $applications = PartnerApplication::latest()->paginate(15);
+        $applications = PartnerApplication::query()
+                        ->when(request()->query('search','') != '', function ($query) {
+                            $query->where('name', 'like', '%' . request()->query('search') . '%');
+                            $query->orWhere('email', 'like', '%' . request()->query('search') . '%');
+                            $query->orWhere('contact_number', 'like', '%' . request()->query('search') . '%');
+                            return $query;
+                        })
+                        ->latest()
+                        ->paginate(20);
+
         return view('admin.application.partner.index')
             ->with('applications', $applications);
     }

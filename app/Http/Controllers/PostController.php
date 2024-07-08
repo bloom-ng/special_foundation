@@ -31,9 +31,12 @@ class PostController extends Controller
                     //  }, function (Builder $query) {
                     //      return $query->draft();
                     //  })
-                   
+                    ->when(request()->query('search','') != '', function (Builder $query) {
+                        $query->where('title', 'like', '%' . request()->query('search') . '%');
+                        $query->orWhere('summary', 'like', '%' . request()->query('search') . '%');
+                        return $query;
+                    })
                      ->latest()
-
                      ->withCount('views')
                      ->paginate();
 
@@ -97,14 +100,19 @@ class PostController extends Controller
             ]);
         }
 
+
         $post->fill($data);
+        $post->is_featured = !empty($data['is_featured']) ? $data['is_featured'] : 0;
 
         $post->user_id = $post->user_id ?? request()->user()->id;
 
         // Add images
-        $url = $request->file('featured_image');
-        $path = $request->file('featured_image')->storeAs('public/posts', $url->getClientOriginalName());
-        $post->featured_image = $path;
+        if ($request->hasFile('featured_image')) {
+            $url = $request->file('featured_image');
+            $path = $request->file('featured_image')->storeAs('public/posts', $url->getClientOriginalName());
+            $post->featured_image = $path;
+        }
+      
 
         $post->save();
 
@@ -145,7 +153,7 @@ class PostController extends Controller
 
         $post->topic()->sync($topicToSync);
         
-        return back()->with('success', 'Action Successfully');
+        return back()->with('success', 'Action Successful');
     }
 
     /**
@@ -201,6 +209,6 @@ class PostController extends Controller
 
         $post->delete();
 
-        return back()->with('success', 'Action Successfully');
+        return back()->with('success', 'Action Successful');
     }
 }

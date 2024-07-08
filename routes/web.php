@@ -9,9 +9,13 @@ use App\Http\Controllers\PartnerApplicationController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CSVController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
+use App\Models\View;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -120,9 +124,10 @@ Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Add other routes that require authentication here
-    Route::get('dashboard', function () {
-        return view('admin.dashboard');
-    });
+
+    Route::get('/download/{model}/csv', [CSVController::class, 'download'])->where('model', '[A-Za-z]+');
+
+    Route::get('dashboard', [DashboardController::class, 'show']);
 
     Route::get('/newsletters', [NewsletterController::class, 'index']);
     Route::delete('/newsletters/{newsletter}', [NewsletterController::class, 'delete']);
@@ -163,6 +168,16 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
      Route::post('/blogs/{id}', [PostController::class, 'store']);
      Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
 
+     // User routes
+     Route::get('/users', [UserController::class, 'index']);
+     Route::get('/users/create', [UserController::class, 'create']);
+     Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+     Route::get('/users/{id}', [UserController::class, 'show']);
+     Route::put('/users/{id}', [UserController::class, 'update']);
+     Route::post('/users', [UserController::class, 'store']);
+     Route::delete('/users/{id}', [UserController::class, 'destroy']);
+     
+     Route::get('/users/edit/me', [UserController::class, 'me']);
 });
 
 
@@ -219,6 +234,9 @@ Route::get('/blog/{id}', function ($id) {
             return $post->id != $id;
         });
     }
+
+    // increase view
+    View::create(['post_id' => $post->id]);
 
     return view('blog-view', [
         'post' => $post,

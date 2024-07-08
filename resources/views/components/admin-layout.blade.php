@@ -36,19 +36,20 @@
                 background: #a0abd4;
             }
             .account-link:hover {
-                background: #3d68ff;
+                background: #6366F1;
             }
         </style>
     </head>
     <body class="bg-gray-100 font-family-karla flex">
         <aside
-            class="relative bg-[#26225F] h-screen w-64 hidden sm:block shadow-xl"
+            class="relative bg-indigo-600 h-screen w-64 hidden sm:block shadow-xl"
         >
             <div class="p-6">
                 <a
-                    href="/index"
+                    href="/admin/dashboard"
                     class="text-white text-xl font-semibold uppercase hover:text-gray-300"
-                    >Admin</a
+                    ><img class="w-12 lg:w-16" src="/images/the-special-youth-leadership-foundation-03.png"
+                    alt="" /></a
                 >
                
             </div>
@@ -79,7 +80,7 @@
                     class="flex items-center {{$page == 'downloads' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
                     <i class="fas fa-download mr-3"></i>
-                    Downloads
+                    Documents
                 </a>
                 <a
                     href="/admin/beneficiaries"
@@ -99,8 +100,22 @@
                     href="/admin/donation-leads"
                     class="flex items-center {{$page == 'donation' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
                 >
+                    <i class="fas fa-money-bill-wave mr-3"></i>
+                    Prospective Donors
+                </a>
+                <a
+                    href="/admin/volunteers"
+                    class="flex items-center {{$page == 'volunteer' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
+                >
                     <i class="fas fa-file-invoice mr-3"></i>
-                    Donation Leads
+                    Prospective Volunteers
+                </a>
+                <a
+                    href="/admin/users"
+                    class="flex items-center {{$page == 'users' ? 'active-nav-link' : ''}} text-white py-4 pl-6 nav-item"
+                >
+                    <i class="fas fa-users mr-3"></i>
+                    Users
                 </a>
                 
             </nav>
@@ -121,6 +136,15 @@
                     @if (session('error'))
                         <div class="bg-red-400 font-semibold text-gray-50 p-2">
                             {{ session('error') }}
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                        <div class="text-red-400 p-2 text-xs font-extralight">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
                         </div>
                     @endif
                 </div>
@@ -146,8 +170,8 @@
                         class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16"
                     >
                         <a
-                            href="#"
-                            class="block px-4 py-2 account-link hover:text-white"
+                            href="/admin/users/edit/me"
+                            class="block px-4 py-2 account-link hover:text-white "
                             >Account</a
                         >
                         <div class="px-4 py-2 account-link hover:text-white">
@@ -177,13 +201,14 @@
             <!-- Mobile Header & Nav -->
             <header
                 x-data="{ isOpen: false }"
-                class="w-full bg-indigo-900 py-5 px-6 sm:hidden"
+                class="w-full bg-indigo-600 py-5 px-6 sm:hidden"
             >
                 <div class="flex items-center justify-between">
                     <a
                         href="/index"
                         class="text-white text-3xl font-semibold uppercase hover:text-gray-300"
-                        >Admin</a
+                        ><img class="w-12 lg:w-16" src="/images/the-special-youth-leadership-foundation-03.png"
+                        alt="" /></a
                     >
                     <button
                         @click="isOpen = !isOpen"
@@ -211,14 +236,14 @@
                         href="/admin/newsletters"
                         class="flex items-center {{$page == 'newsletter' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
-                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        <i class="fas fa-newspaper mr-3"></i>
                         Newsletter Subscribers
                     </a>
                     <a
                         href="/admin/blogs"
                         class="flex items-center {{$page == 'blogs' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
-                        <i class="fas fa-tachometer-alt mr-3"></i>
+                        <i class="fas fa-file mr-3"></i>
                         Posts
                     </a>
                     <a
@@ -226,33 +251,41 @@
                         class="flex items-center {{$page == 'downloads' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
                         <i class="fas fa-download mr-3"></i>
-                        Downloads
+                        Documents
                     </a>
                     <a
                         href="/admin/beneficiaries"
                         class="flex items-center {{$page == 'beneficiary' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
-                        <i class="fas fa-download mr-3"></i>
+                        <i class="fas fa-file-invoice mr-3"></i>
                         Beneficiary Applications
                     </a>
                     <a
                         href="/admin/partners"
                         class="flex items-center {{$page == 'partner' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
-                        <i class="fas fa-download mr-3"></i>
+                        <i class="fas fa-file-invoice mr-3"></i>
                         Partner Applications
                     </a>
                     <a
                         href="/admin/donation-leads"
                         class="flex items-center {{$page == 'donation' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
                     >
-                        <i class="fas fa-download mr-3"></i>
-                        Donation Leads
+                        <i class="fas fa-money-bill-wave mr-3"></i>
+                        Prospective Donors
+                    </a>
+
+                    <a
+                        href="/admin/users"
+                        class="flex items-center {{$page == 'donation' ? 'active-nav-link' : ''}} text-white py-2 pl-4 nav-item"
+                    >
+                        <i class="fas fa-users mr-3"></i>
+                        Users
                     </a>
                     
                   
                     <a
-                        href="#"
+                        href="/admin/users/edit/me"
                         class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item"
                     >
                         <i class="fas fa-user mr-3"></i>
@@ -280,7 +313,7 @@
                 <i class="fas fa-plus mr-3"></i> New Report
             </button> -->
             </header>
-            <div class="w-full overflow-x-hidden border-t flex flex-col">
+            <div class="w-full overflow-x-hidden border-t flex flex-col bg-white">
 
                 {{$slot}}
 

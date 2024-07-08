@@ -9,7 +9,15 @@ class DonationController extends Controller
 {
     public function index()
     {
-        $donations = Donation::latest()->paginate(15);
+        $donations = Donation::query()
+                        ->when(request()->query('search','') != '', function ($query) {
+                            $query->where('name', 'like', '%' . request()->query('search') . '%');
+                            $query->orWhere('email', 'like', '%' . request()->query('search') . '%');
+                            $query->orWhere('contact_number', 'like', '%' . request()->query('search') . '%');
+                            return $query;
+                        })
+                        ->latest()
+                        ->paginate(15);
         return view('admin.donation.index')
             ->with('donations', $donations);
     }
@@ -47,6 +55,6 @@ class DonationController extends Controller
     {
         $donation = Donation::find($id);
         $donation->delete();
-        return back()->with('success', 'Donation Lead Deleted');
+        return back()->with('success', 'Prospective Donor Deleted');
     }
 }

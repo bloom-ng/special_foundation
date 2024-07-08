@@ -186,6 +186,7 @@ class Post extends Model
         return ! is_null($this->published_at) && $this->published_at <= now()->toDateTimeString();
     }
 
+
     /**
      * Scope a query to only include published posts.
      *

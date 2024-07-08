@@ -9,17 +9,30 @@ class VolunteerController extends Controller
 {
     public function index()
     {
-        $volunteers = Volunteer::latest()->paginate(15);
+        $volunteers = Volunteer::query()
+        ->when(request()->query('search','') != '', function ($query) {
+            $query->where('full_name', 'like', '%' . request()->query('search') . '%');
+            $query->orWhere('email', 'like', '%' . request()->query('search') . '%');
+            $query->orWhere('contact_number', 'like', '%' . request()->query('search') . '%');
+            $query->orWhere('gender', 'like', '%' . request()->query('search') . '%');
+            return $query;
+        })->latest()->paginate(20);
+
         return view('admin.volunteer.index')
+            ->with('genderMapping', Volunteer::getGenderMapping())
             ->with('volunteers', $volunteers);
     }
 
     public function show($id)
     {
         $volunteer = Volunteer::find($id);
+
         return view('admin.volunteer.show')
             ->with('volunteer', $volunteer)
             ->with('sourceMapping', Volunteer::getSourceMapping())
+            ->with('genderMapping', Volunteer::getGenderMapping())
+            ->with('availabilityMapping', Volunteer::getAvailabilityMapping())
+            ->with('interestMapping', Volunteer::getInterestMapping())
             ;
     }
 

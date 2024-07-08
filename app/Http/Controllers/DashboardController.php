@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class DashboardController extends Controller
+{
+    public function show()
+    {
+
+        $last_month_subscribers = \App\Models\Newsletter::whereMonth('created_at', now()->subMonth()->month)->count();
+        $current_month_subscribers = \App\Models\Newsletter::whereMonth('created_at', now()->month)->count();
+
+        $subStats = $this->getMonthStat($current_month_subscribers, $last_month_subscribers);
+
+        $last_month_beneficiaries = \App\Models\BeneficiaryApplication::whereMonth('created_at', now()->subMonth()->month)->count();
+        $current_month_beneficiaries = \App\Models\BeneficiaryApplication::whereMonth('created_at', now()->month)->count();
+
+        $beneficiaryStats = $this->getMonthStat($current_month_beneficiaries, $last_month_beneficiaries);
+
+        return view("admin.dashboard", [
+            "subscribers" => \App\Models\Newsletter::count(),
+            "subStats" => $subStats,
+            "beneficiaries" => \App\Models\BeneficiaryApplication::count(),
+            "beneficiaryStats" => $beneficiaryStats,
+            "posts" => \App\Models\Post::published()->count(),
+            "latest_posts" => \App\Models\Post::published()->latest()->take(2)->get(),
+            "documents" => \App\Models\Download::count(),
+        ]);
+    }
+
+    protected function getMonthStat($current_month = 0, $last_month = 0.0000001)
+    {
+        $is_up = $current_month > $last_month;
+        $up_by = (abs(($current_month - $last_month)) / $last_month) * 100;
+
+        return [
+            "is_up" => $is_up,
+            "up_by" => round($up_by, 2),
+        ];
+    }
+}

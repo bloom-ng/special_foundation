@@ -1,73 +1,63 @@
 <x-admin-layout title="Admin | View Application" page="partner">
 
     <main class="w-full flex-grow p-6">
-        <h1 class="w-full text-3xl text-black pb-6">View Partner Application</h1>
-
-      
-
-        <div class="flex flex-wrap">
-            <div class="w-full lg:w-1/2 my-6 pr-0 lg:pr-2">
-                <div class="leading-loose">
-                    <div class="flex items-center">
-                        <div class="w-1/2 text-lg font-semibold">Name</div>
-                       <div class="flex  "> 
-                            {{ $application->name }} 
-                            {{-- add copy svg     --}}
-                            <svg onclick="copyToClipboard('{{ $application->name }}')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer w-3 h-3 ml-1">
-                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-1/2 text-lg font-semibold">Email</div>
-                       <div class="flex  "> 
-                            {{ $application->email }}
-                            {{-- add copy svg     --}}
-                            <svg onclick="copyToClipboard('{{ $application->email }}')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer w-3 h-3 ml-1">
-                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-1/2 text-lg font-semibold">Contact Number</div>
-                       <div class="flex  "> 
-                            {{ $application->contact_number }} 
-                            {{-- add copy svg     --}}
-                            <svg onclick="copyToClipboard('{{ $application->contact_number }}')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer w-3 h-3 ml-1">
-                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center">
-                        <div class="w-1/2 text-lg font-semibold">Area of Residence</div>
-                       <div class="flex  "> 
-                            {{ $application->area_of_residence }} 
-                            {{-- add copy svg     --}}
-                            <svg onclick="copyToClipboard('{{ $application->area_of_residence }}')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer w-3 h-3 ml-1">
-                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
-                            </svg>
-                        </div>
-                    </div>
-
-                   
-                    <div class="flex items-center">
-                        <div class="w-1/2 text-lg font-semibold">Purpose of Application</div>
-                       <div class="flex  "> 
-                            {{ $application->purpose_of_application }}
-                            {{-- add copy svg     --}}
-                            <svg onclick="copyToClipboard('{{ $application->area_of_residence }}')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer w-3 h-3 ml-1">
-                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
-                            </svg>
-                        </div>
-                    </div>
-                   
-            
+        <div>
+            <div class="flex justify-between md:items-center gap-y-4 flex-col md:flex-row w-full">
+                <div>
+                    <p class="block antialiased font-sans text-base font-light leading-relaxed text-inherit font-bold">
+                        Partner Applicant Details
+                    </p>
+                    <p
+                        class="block antialiased text-sm font-sans text-base font-light leading-relaxed text-inherit font-normal text-gray-600">
+                        Personal details and application
+                    </p>
                 </div>
+                <div>
+                    <a type="button" href="/admin/partners"
+                        class="align-middle select-none font-sans font-bold text-center capitalize transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-indigo-500"
+                        type="button" data-ripple-light="true">
+                        Applicants List
+                    </a>
+                </div>
+
             </div>
 
-           
+
+
+
+            <div class="mt-6 border-t border-gray-100">
+                <dl class="divide-y divide-gray-100">
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-medium leading-6 text-gray-900">Name</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $application->name }}
+                        </dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-medium leading-6 text-gray-900">Contact Number</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                            {{ $application->contact_number }} </dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-medium leading-6 text-gray-900">Email </dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                            {{ $application->email }} </dd>
+                    </div>
+                   
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-medium leading-6 text-gray-900">Area of Residence</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                            {{ $application->area_of_residence }} </dd>
+                    </div>
+                    <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                        <dt class="text-sm font-medium leading-6 text-gray-900">Purpose of Application</dt>
+                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                            {{ $application->purpose_of_application }} </dd>
+                    </div>
+
+                </dl>
+            </div>
         </div>
+    </main>
 
         <script>
             function copyToClipboard(text) {

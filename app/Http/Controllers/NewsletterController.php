@@ -5,13 +5,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class NewsletterController extends Controller
 {
     // Display all content of DB
     public function index()
     {
-       $newsletters = Newsletter::latest()->paginate(15);
+       $newsletters = Newsletter::query()
+                        ->when(request()->query('search','') != '', function (Builder $query) {
+                            $query->where('name', 'like', '%' . request()->query('search') . '%');
+                            $query->orWhere('email', 'like', '%' . request()->query('search') . '%');
+                            return $query;
+                        })
+                        ->latest()
+                        ->paginate(15);
        return view('admin.newsletter.index')->with('newsletters', $newsletters);
     }
 

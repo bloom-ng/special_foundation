@@ -12,7 +12,14 @@ class DownloadController extends Controller
 
     public function index()
     {
-        $downloads = Download::latest()->get();
+        $downloads = Download::query()
+                                ->when(request()->query('search','') != '', function ($query) {
+                                    $query->where('name', 'like', '%' . request()->query('search') . '%');
+                                    return $query;
+                                })
+                                ->latest()
+                                ->get();
+
         return view('admin.download.index', ['downloads' => $downloads]);
     }
 
@@ -26,7 +33,7 @@ class DownloadController extends Controller
         $request->validate([
             'name' => 'required',
             'doc' => [
-                'required','max:12000',
+                'required','max:21000',
             ],
         ]);
         
@@ -46,7 +53,7 @@ class DownloadController extends Controller
     {
         Storage::delete($download->url);
         $download->delete();
-        return back()->with('success', 'Download Deleted');
+        return back()->with('success', 'Document Deleted');
     }
     
 }

@@ -1,4 +1,4 @@
-<x-admin-layout title="Admin | Beneficiary Application" page="beneficiary">
+<x-admin-layout title="Admin | Users" page="users">
  
     <main class="w-full flex-grow p-6">
 
@@ -10,18 +10,18 @@
                         <div>
                             <p
                                 class="block antialiased font-sans text-base font-light leading-relaxed text-inherit font-bold">
-                                Beneficiary Applications
+                                Users
                             </p>
                             <p
                                 class="block antialiased text-sm font-sans text-base font-light leading-relaxed text-inherit font-normal text-gray-600">
-                                See list of beneficiary applications
+                                See all users
                             </p>
                         </div>
                         <div>
-                            <a type="button" target="_blank" href="/admin/download/BeneficiaryApplication/csv"
+                            <a type="button" href="/admin/users/create"
                                 class="align-middle select-none font-sans font-bold text-center capitalize transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-indigo-500"
                                 type="button" data-ripple-light="true">
-                                <i class="fa fa-download mr-3"></i> Download CSV
+                                <i class="fas fa-plus"></i> Add User
                             </a>
                         </div>
 
@@ -52,116 +52,78 @@
                 </div>
             </section>
 
-           
+
             <div class="bg-white overflow-auto">
                 <table class="min-w-full bg-white">
                     <thead class="">
                         <tr>
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left ">
                                 <p
-                                    class="block antialiased font-sans text-xs  leading-normal text-blue-gray-900 !font-bold">
+                                    class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
                                     ID
                                 </p>
                             </th>
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p
-                                    class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
+                                    class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
                                     Name
                                 </p>
                             </th>
+                          
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p
-                                    class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
-                                    Email
-                                </p>
-                            </th>
-                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
-                                <p
-                                    class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
-                                    Programme
-                                </p>
-                            </th>
-                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
-                                <p
-                                    class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
-                                    Contact Number
-                                </p>
-                            </th>
-                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
-                                <p
-                                    class="block antialiased font-sans text-xs leading-normal text-blue-gray-900 !font-bold">
+                                    class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
                                     Actions
                                 </p>
                             </th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-700 text-xs">
-                        @foreach ($applications as $application)
+                        @foreach ($users as $user)
                         <tr>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->id }}
+                                {{ $user->id }}
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->name }}
-                            </td>
-                            <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->email }}
-                            </td>
-                            <td class="w-1/3 text-left py-3 px-4">
-                                {{ $programmeMapping[$application->programme] }}
-                            </td>
-                            <td class="w-1/3 text-left py-3 px-4">
-                                {{ $application->contact_number }}
+                                {{ $user->name }}
                             </td>
                            
-                            <td class="w-1/3 text-left py-3 px-4 gap-y-1">
-                                <a class="text-blue-300 hover:text-blue-500" href="/admin/beneficiaries/{{$application->id}}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                      </svg>
-                                      
-                                    
+                            <td class="w-1/3 text-left py-3 px-4">
+                                <a class="pr-2 text-blue-300 hover:text-blue-500" href="/admin/users/{{$user->id}}/edit">
+                                    Edit
                                 </a>
                                 <form
-                                    id="beneficiary-delete-{{$application->id}}"
-                                    action="/admin/beneficiaries/{{$application->id}}"
+                                    id="user-delete-{{$user->id}}"
+                                    action="/admin/users/{{$user->id}}"
                                     method="POST"
                                     style="display: inline"
                                 >
-                                    @csrf @method('DELETE')
-                                    <button type="submit" class="text-red-300 hover:text-red-500">
-                                        
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                                        </svg>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500">
+                                        Delete
                                     </button>
-
-                                    
-
-
                                 </form>
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {{ $applications->links() }}
+                {{ $users->links()}}
             </div>
         </div>
     </main>
 
     <script>
-        @foreach ($applications as $application)
-            
-            const form{{$application->id}} = document.getElementById('beneficiary-delete-{{$application->id}}');
-            
-            form{{$application->id}}.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent the form from submitting normally
-                const confirmSubmit = confirm('Proceed to delete?');
-                if (confirmSubmit) {
-                form{{$application->id}}.submit(); // Submit the form if the user confirms
-                }
+        @foreach($users as $user)
+            const form{{$user->id}} = document.getElementById('user-delete-{{$user->id}}');
+        
+            form{{$user->id}}.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            const confirmSubmit = confirm('Proceed to delete?');
+            if (confirmSubmit) {
+                form{{$user->id}}.submit(); 
+            }
             });
         @endforeach
       </script>
