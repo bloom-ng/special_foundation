@@ -98,7 +98,7 @@
             </div>
         </div>
         <div id="menu"
-            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-6 lg:gap-8 xl:gap-16 lg:text-sm xl:text-base poppins-medium w-full lg:w-auto">
+            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-6 xl:gap-14 lg:text-sm xl:text-sm poppins-medium w-full lg:w-auto">
             <a href="/" class="{{ $page == 'home' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }}">HOME</a>
             <div class="relative">
                 <button id="programs-button"

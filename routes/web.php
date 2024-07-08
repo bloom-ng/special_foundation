@@ -44,7 +44,7 @@ Route::get('who-we-are', function () {
             'content' => "Ade is a Management consultant with an MBA from the University of California, Berkeley. She has a wealth of experience in the semiconductor industry, working as a process engineer and quality program manager in the United States.  At The Special Youth Foundation, she works closely with the executive team on corporate strategy and relationship building.<br><br>
                 She holds a BSc. in Chemical Engineering from the University of Maryland and an MSc. in Petroleum Engineering from the University of Oklahoma. Ade is passionate about operational business excellence and committed to supporting the education and development of children of differing abilities and socioeconomic backgrounds."
             , 
-            'link' => 'https://linkedin.com/in/team1'
+            'link' => 'https://www.linkedin.com/in/adenosakhare/'
         ],
         
         [
@@ -55,7 +55,7 @@ Route::get('who-we-are', function () {
             'content' => "Ayobamidele currently serves as the Foundation and Operations Manager at The Special Foundation. She oversees the general operations management, as well as programs and project management of the foundation. She curates, plans, executes, and implements the foundation’s cardinal programs.<br><br>
                 She holds a BSc in Animal Nutrition from the Federal University of Agriculture, Abeokuta, an MSc in Industrial Labour and Relations from the University of Lagos, Akoka, and has over 5 years of experience with a proven track record in administrative management, operations, program planning and execution, and customer service."
             ,
-            'link' => 'https://linkedin.com/in/team2'
+            'link' => 'https://www.linkedin.com/in/ayobamidele-ms/'
         ],
         
         [
@@ -99,7 +99,7 @@ Route::get('who-we-are', function () {
             'content' => "Meet Roli, the dynamic Head of Partnerships at our Special Foundation, tasked with seeking out, recruiting, and continually developing existing partnerships.  Armed with a B.Sc. in Mass Communication and a rich four-year history in Marketing, client relations, brand management, and creative direction.<br><br>
                 Beyond her impressive professional background, Roli has a passion for making a meaningful impact, she thrives on challenges that spark her creativity and innovative ideas. Outside the world of partnerships and marketing, Roli enjoys her free time binge-watching historical drama, action, or fantasy series."
             , 
-            'link' => 'https://linkedin.com/in/team2'
+            'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
         ],
     ];
     return view('who-we-are', compact('teams'))->with('downloads', $downloads);
@@ -255,7 +255,7 @@ Route::get('/get-involved', function () {
                 Abimbola holds an MBA from Manchester Business School in the UK and a bachelor's degree from the University of Ibadan in Nigeria. She has extensive experience in investment banking, strategic business planning, and management consulting. 
                 <br><br>
                 Abimbola is dedicated to supporting the education and wellbeing of children with absent or underprivileged parents, volunteering and advocating for multiple NGOs.", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/abimbola-ayinde-0ab79018/'
         ],
 
         [
@@ -265,7 +265,7 @@ Route::get('/get-involved', function () {
             'content' => "Dele, a seasoned executive with 15+ years in Equity Capital Markets (ECM) and investment banking across Sub-Saharan Africa, has raised over USD10bn for African-focused corporates. Currently, as Chief Commercial Officer at Alerzo, an innovative Technology Distribution Startup, he tackles FMCG supply chain issues in Nigeria, empowering informal retailers, especially working mothers. 
                 Previously, as Senior VP at Stanbic IBTC Stockbrokers Limited, he fortified the firm's position as the top brokerage for over a decade, executing landmark ECM deals. Dele's tenure at Renaissance Capital also saw pivotal growth, where he managed Africa Equity Sales and served as an Equity Research Analyst.<br>
                 He's renowned for capital raises like the $200M MTN Nigeria Secondary Sale, $500M Seplat IPO, and $5B MTN Nigeria Listing by Introduction. Academically, he holds a bachelor’s degree from Babcock University, an MSc from Loughborough University, and recently completed an Executive MBA at MIT.", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/mwlite/in/akinbamidele-akintola-90aa2546'
         ],
 
         [
@@ -275,7 +275,7 @@ Route::get('/get-involved', function () {
             'content' => "Chukwuma Nwanze is the Managing Director/Chief Executive Officer at Credit Direct Ltd, Nigeria's premier consumer lending finance company. Prior to joining Credit Direct, Chukwuma had worked in different sectors of the economy including Banking, Management Consulting, Oil and Gas, ICT and the Public Sector as a Chief Finance Officer in many prestigious companies.<br>
                 He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) with over 22 years of working experience. He holds an MBA from the prestigious Warwick Business School, University of Warwick, Coventry, United Kingdom. He is an alumnus of Oxford Business School, UK, Nanyang Business School, Singapore and the Stellenbosch Business School, Cape Town, South Africa and the Lagos Business School, Lagos, Nigeria.<br>
                 Chukwuma is a doctoral candidate at Edinburgh Business School and is a big advocate of equal learning opportunities for every child.", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/chukwuma-nwanze-9b002a18/'
         ],
 
         [
@@ -288,7 +288,7 @@ Route::get('/get-involved', function () {
                 <br><br>
                 Damilola is involved in professional mentoring programs and is passionate about raising well-behaved children who are positive change agents in society.
                 ", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/lola-akinwale-2002472/'
         ],
 
         [
@@ -310,7 +310,7 @@ Route::get('/get-involved', function () {
             'content' => "Ifeoma is an executive coach and shipping and logistics professional in Denmark since 2019. With over 13 years of experience, she has held various management roles in Africa and Europe. Currently, she works for Maersk and serves as VP and Director of Career & Personal Development for Professional Women of Colour Denmark (ProWoc), a non-profit offering networking events and career programs for women of colour in Denmark.<br>
                 Ifeoma holds a bachelor’s in mass communication from the University of Lagos, Prince2 certification in Project Management from the UK, and Executive Leadership Education from the University of Stellenbosch. She earned her Executive Coaching Certification from Henley Business School Denmark.<br>
                 An avid traveller, Ifeoma loves connecting people and ideas for impactful encounters. She supports professionals through mentoring, coaching, and equipping them with career development tools.", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/ifeoma-okpala/'
         ],
 
         [
@@ -321,7 +321,7 @@ Route::get('/get-involved', function () {
                 <br><br>
                 Ijeoma is also a Director at Quelu Education Advising Center and has partnered with Education USA (Nigeria) on college focused initiatives.
             ", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/ijeoma-anyigbo-3118a84a/'
         ],
 
         [
@@ -331,7 +331,7 @@ Route::get('/get-involved', function () {
             'content' => "Nnenna is an experienced policy, growth and technology leader with several years of scaling high-impact businesses across Africa. She currently leads Strategic Government Engagements across West Africa at AWS, driving technology advancement across government organizations for citizen good.<br>
                 Previously, Nnenna led growth and expansion as Regional Business Lead, West and Central Africa at Refinitiv. She was responsible for strategy, retention and growing existing and new business, expanding into new countries. Prior to Thomson Reuters, Nnenna had experience in consulting and energy, working across Sahara Group, Optima Group and as a consultant.<br>
                 Nnenna sits on the board of BlueSpace Africa, a Pan African FinTech, and lends her experience to start-ups looking to penetrate African markets.", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/nnennairebisi/'
         ],
 
         [
@@ -339,7 +339,7 @@ Route::get('/get-involved', function () {
             'list_image' => '/images/ambassador_9.png', 
             'image' => '/images/detail_9.png', 
             'content' => 'Content for Ambassador 1', 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/oluwole-coker-49499a121/'
         ],
 
         [
@@ -350,7 +350,7 @@ Route::get('/get-involved', function () {
                 <br><br>
                 His understanding of the key role education plays in the development of nations has led to the decision to set up the Foundation to provide a platform to improve the quality of leadership in Africa by increasing access to education for less privileged children.
             ", 
-            'link' => 'https://linkedin.com/in/ambassador1'
+            'link' => 'https://www.linkedin.com/in/seyi-akinwale/'
         ],
         // Add more ambassadors as needed
     ];

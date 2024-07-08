@@ -62,19 +62,25 @@
                     </div>
                     <div class="flex flex-row gap-4">
                         <div>
-                            <a href="#"><img class="w-9" src="/images/Facebook.png" alt="" /></a>
+                            <a href="https://www.facebook.com/TSFNigeria/"><img class="w-9"
+                                    src="/images/Facebook.png" alt="Facebook" /></a>
                         </div>
                         <div>
-                            <a href="#"><img class="w-9" src="/images/TwitterX.png" alt="" /></a>
+                            <a href="https://x.com/thespecialfoun1"><img class="w-9" src="/images/TwitterX.png"
+                                    alt="Twitter | X" /></a>
                         </div>
                         <div>
-                            <a href="#"><img class="w-9" src="/images/Instagram.png" alt="" /></a>
+                            <a href="https://www.instagram.com/thespecialfoundation/"><img class="w-9"
+                                    src="/images/Instagram.png" alt="Instagram" /></a>
                         </div>
                         <div>
-                            <a href="#"><img class="w-9" src="/images/LinkedIn.png" alt="" /></a>
+                            <a
+                                href="https://www.linkedin.com/company/the-special-youth-leadership-foundation/?originalSubdomain=ng"><img
+                                    class="w-9" src="/images/LinkedIn.png" alt="Linkedin" /></a>
                         </div>
                         <div>
-                            <a href="#"><img class="w-9" src="/images/YouTube.png" alt="" /></a>
+                            <a href="https://www.youtube.com/channel/UCyd16DepueNAALGGNu1fJkw"><img class="w-9"
+                                    src="/images/YouTube.png" alt="Youtube" /></a>
                         </div>
                     </div>
                 </div>

@@ -92,7 +92,7 @@
                         <img src="{{ Storage::url($post->featured_image) }}"
                             class="w-full lg:w-[50%] max-h-[370px] rounded-3xl" alt="">
                         <div class="w-full lg:w-[50%] px-12 pt-8 pb-5 text-[#26225F]">
-                            <h1 class="pb-5 leading-[28px] montserrat-bold text-[18px] md:text-[20px] xl:text-[24px]">
+                            <h1 class="pb-5 leading-[22px] montserrat-bold text-[12px] xl:text-[14px] 2xl:text-[18px]">
                                 {{ $post->title }}
                             </h1>
                             <p class="poppins-light text-xs pb-5">
