@@ -18,7 +18,7 @@ class DownloadController extends Controller
                                     return $query;
                                 })
                                 ->latest()
-                                ->get();
+                                ->paginate();
 
         return view('admin.download.index', ['downloads' => $downloads]);
     }

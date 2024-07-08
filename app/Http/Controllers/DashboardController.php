@@ -32,8 +32,12 @@ class DashboardController extends Controller
 
     protected function getMonthStat($current_month = 0, $last_month = 0.0000001)
     {
+        $current_month = $current_month ?? 0.001;
         $is_up = $current_month > $last_month;
-        $up_by = (abs(($current_month - $last_month)) / $last_month) * 100;
+        $up_by = 0;
+        if ($last_month != 0) {
+            $up_by = (abs(($current_month - $last_month)) / $last_month) * 100;
+        }
 
         return [
             "is_up" => $is_up,
