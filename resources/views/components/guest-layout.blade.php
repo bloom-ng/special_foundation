@@ -128,7 +128,7 @@
             <div class="relative">
                 <button id="communications-button"
                     class="{{ $page == 'blog' ? 'text-[#25A8D6] poppins-bold' : 'text-black' }} flex gap-2 items-center justify-center focus:outline-none">
-                    <span>Communications</span>
+                    <span>COMMUNICATIONS</span>
                     <img id="communications-icon" class="pt-1 transform transition-transform"
                         src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
                 </button>

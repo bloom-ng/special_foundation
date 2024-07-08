@@ -349,7 +349,7 @@
 
             <div class="w-full flex flex-wrap justify-start items-center gap-8">
                 @foreach ($downloads as $download)
-                    <a href="{{ $download->url }}"
+                    <a href="{{ Storage::url($download->url) }}"
                         class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">{{ $download->name }}</a>
                 @endforeach
             </div>

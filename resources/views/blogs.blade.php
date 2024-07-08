@@ -22,7 +22,7 @@
                     @foreach ($featured_posts as $post)
                         @if ($loop->iteration == 1)
                             <div class="w-full lg:w-[60%]">
-                                <img src="{{ $post->featured_image }}" class="w-full max-h-[467px]"
+                                <img src="{{ Storage::url($post->featured_image) }}" class="w-full max-h-[467px]"
                                     alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
                                     <h1 class="pb-4 leading-[20px] poppins-semibold">
@@ -36,7 +36,7 @@
                             </div>
                         @elseif ($loop->iteration == 2)
                             <div class="w-full lg:w-[40%]">
-                                <img src="{{ $post->featured_image }}" class="w-full h-full max-h-[467px]"
+                                <img src="{{ Storage::url($post->featured_image) }}" class="w-full h-full max-h-[467px]"
                                     alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
                                     <h1 class="pb-4 leading-[20px] poppins-semibold">
@@ -56,8 +56,8 @@
                     @foreach ($featured_posts as $post)
                         @if ($loop->iteration > 2 && $loop->iteration <= 4)
                             <div class="w-full lg:w-[50%]">
-                                <img src="{{ $post->featured_image }}" class="w-full h-full max-h-[467px]"
-                                    alt="{{ $post->title }}">
+                                <img src="{{ Storage::url($post->featured_image) }}"
+                                    class="w-full h-full max-h-[467px]" alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
                                     <h1 class="pb-4 leading-[20px] poppins-semibold">
                                         {{ $post->title }}
@@ -89,8 +89,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 @forelse ($posts as $post)
                     <div class="w-full flex flex-col lg:flex-row items-center justify-center">
-                        <img src="{{ $post->featured_image }}" class="w-full lg:w-[50%] max-h-[370px] rounded-3xl"
-                            alt="">
+                        <img src="{{ Storage::url($post->featured_image) }}"
+                            class="w-full lg:w-[50%] max-h-[370px] rounded-3xl" alt="">
                         <div class="w-full lg:w-[50%] px-12 pt-8 pb-5 text-[#26225F]">
                             <h1 class="pb-5 leading-[28px] montserrat-bold text-[18px] md:text-[20px] xl:text-[24px]">
                                 {{ $post->title }}
