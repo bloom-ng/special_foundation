@@ -45,7 +45,8 @@
                             <h1 class="poppins-semibold pb-9">Downloads</h1>
                             <div class="flex flex-col gap-6 poppins-extralight text-xs leading-[18px]">
                                 @foreach ($downloads as $download)
-                                    <a href="{{ $download->url }}" target="_blank">{{ $download->name }}</a>
+                                    <a href="{{ Storage::url($download->url) }}"
+                                        target="_blank">{{ $download->name }}</a>
                                 @endforeach
                             </div>
                         </div>

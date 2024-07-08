@@ -1,5 +1,6 @@
 <x-guest-layout title="Special Foundation - Blogs" page="blog">
-    <div class="relative bg-cover bg-center h-40" style="background-image: url('{{ $post->featured_image }}');">
+    <div class="relative bg-cover bg-center h-40"
+        style="background-image: url('{{ Storage::url($post->featured_image) }}');">
         <div class="h-full bg-[#26225F]/90">
 
         </div>
@@ -74,7 +75,7 @@
             @foreach ($similar_posts as $similar_post)
                 <div class="flex flex-col bg-[#26225F] w-[380px]">
                     <div>
-                        <img class="w-[380px]" src="{{ $similar_post->featured_image }}"
+                        <img class="w-[380px]" src="{{ Storage::url($similar_post->featured_image) }}"
                             alt="{{ $similar_post->title }}" />
                     </div>
                     <div class="mx-12 pt-8 pb-5 text-white">

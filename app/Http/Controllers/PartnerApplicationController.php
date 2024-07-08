@@ -38,7 +38,7 @@ class PartnerApplicationController extends Controller
             'email' => 'required|email',
             'contact_number' => 'required|string',
             'area_of_residence' => 'required|string',
-            'purpose_of_application' => 'string',
+            'purpose_of_application' => 'string|nullable',
         ]);
 
         $application = new PartnerApplication;
@@ -46,7 +46,7 @@ class PartnerApplicationController extends Controller
         $application->email = $request->email;
         $application->contact_number = $request->contact_number;
         $application->area_of_residence = $request->area_of_residence;
-        $application->purpose_of_application = $request->purpose_of_application;
+        $application->purpose_of_application = $request->purpose_of_application ?? null;
         $application->save();
         return back()->with('success', 'Application Submitted Successfully');
     }

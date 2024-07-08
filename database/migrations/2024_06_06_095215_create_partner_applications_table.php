@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('contact_number');
             $table->string('area_of_residence');
-            $table->text('purpose_of_application');
+            $table->text('purpose_of_application')->nullable();
             $table->timestamps();
         });
     }
