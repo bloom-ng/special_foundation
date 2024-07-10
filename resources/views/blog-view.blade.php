@@ -1,4 +1,25 @@
-<x-guest-layout title="Special Foundation - Blogs" page="blog">
+<x-guest-layout title="Special Foundation - {{ $post->title }}" page="blog">
+
+    @push('head')
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="{{ $post->title }}" />
+        <meta name="description" content="{{ $post->summary }}" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thespecialfoundation.org/blog/{{ $post->id }}" />
+        <meta property="og:title" content="{{ $post->title }}" />
+        <meta property="og:description" content="{{ $post->summary }}" />
+        <meta property="og:image" content="{{ Storage::url($post->featured_image) }}" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://thespecialfoundation.org/blog/{{ $post->id }}" />
+        <meta property="twitter:title" content="{{ $post->title }}" />
+        <meta property="twitter:description" content="{{ $post->summary }}" />
+        <meta property="twitter:image" content="{{ Storage::url($post->featured_image) }}" />
+    @endpush
+
     <div class="relative bg-cover bg-center h-40"
         style="background-image: url('{{ Storage::url($post->featured_image) }}');">
         <div class="h-full bg-[#26225F]/90">

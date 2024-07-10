@@ -14,8 +14,8 @@
     <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon">
 
     {{-- CHAT BOT --}}
-    <script type="module" crossorigin src="/chat-assets/index-sGn6lMje.js"></script>
-    <link rel="stylesheet" crossorigin href="/chat-assets/index-CEHLkopw.css">
+    <script type="module" crossorigin src="/chat-assets/index-B3v4waBJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/chat-assets/index-D97TknHB.css">
 
     <!-- Include Poppins Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,6 +42,7 @@
             overflow-x: hidden;
         }
     </style>
+    @stack('head')
 </head>
 
 <body>
@@ -77,6 +78,15 @@
                 onClick: function() {}
             }).showToast();
         </script>
+    @endif
+    @if ($errors->any())
+        <div class="text-red-400 p-2 text-xs font-extralight">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     @endif
     <nav
         class="bg-white text-lg text-black flex flex-col lg:flex-row justify-between gap-4 p-6 lg:py-8 lg:px-8 xl:px-16">
@@ -149,7 +159,7 @@
         {{ $slot }}
     </div>
     {{-- Chat Module --}}
-    {{-- <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div> --}}
+    <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div>
 
     <!-- footer -->
     <x-footer></x-footer>

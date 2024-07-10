@@ -12,6 +12,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -27,6 +28,7 @@ use App\Models\View;
 |
 */
 
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 
 Route::get('homepage', function () {

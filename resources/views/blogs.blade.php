@@ -1,4 +1,4 @@
-<x-guest-layout title="Special Foundation - Blogs" page="blog">
+<x-guest-layout title="Blogs | Special Foundation" page="blog">
 
     <div class="relative bg-cover bg-center h-40"
         style="background-image: url('{{ asset('/images/rectangle-background.png') }}');">
