@@ -8,7 +8,7 @@
     <meta name="description" content="" />
 
     <!-- Tailwind --><!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" /> --}}
     <script src="https://cdn.tailwindcss.com"></script>
     <style>

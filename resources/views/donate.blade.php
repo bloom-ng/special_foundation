@@ -115,11 +115,11 @@
 
                 </form>
 
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-start gap-0 lg:gap-8">
-                    <a class="text-white font-normal w-[308px] h-[54px] py-[15px] pr-[10px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-md leading-[18px] tracking-wider text-center md:text-xl md:leading-[26px] lg:leading-[28px] xl:leading-[30px] mt-10"
+                <div class="flex flex-row items-start lg:items-center justify-start gap-8">
+                    <a class="text-white font-light py-[15px] px-[4%] rounded-full bg-[#25A8D6] montserrat-thin text-sm text-center md:text-lg xl:text-xl 2xl:text-2xl mt-10"
                         href="https://paystack.com/pay/ejyy1q12rf" target="_blank">DONATE ONLINE (NGN)</a>
 
-                    <a class="text-white font-normal w-[308px] h-[54px] py-[15px] pr-[10px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-md leading-[18px] tracking-wider text-center md:text-xl md:leading-[26px] lg:leading-[28px] xl:leading-[30px] mt-10"
+                    <a class="text-white font-light py-[15px] px-[25px] lg:px-[14px] xl:px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm text-center md:text-lg xl:text-xl 2xl:text-2xl mt-10"
                         href="https://paystack.com/pay/md1d9s2p91" target="_blank">DONATE ONLINE (USD)</a>
                 </div>
             </div>
