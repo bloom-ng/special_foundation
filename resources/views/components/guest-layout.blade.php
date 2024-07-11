@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon">
 
     {{-- CHAT BOT --}}
-    <script type="module" crossorigin src="/chat-assets/index-qcxewDPT.js"></script>
+    <script type="module" crossorigin src="/chat-assets/index-7ERj4ebV.js"></script>
     <link rel="stylesheet" crossorigin href="/chat-assets/index-BTRmF25J.css">
 
     <!-- Include Poppins Font -->
