@@ -14,8 +14,8 @@
     <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon">
 
     {{-- CHAT BOT --}}
-    <script type="module" crossorigin src="/chat-assets/index-B3v4waBJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/chat-assets/index-D97TknHB.css">
+    <script type="module" crossorigin src="/chat-assets/index-qcxewDPT.js"></script>
+    <link rel="stylesheet" crossorigin href="/chat-assets/index-BTRmF25J.css">
 
     <!-- Include Poppins Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -159,7 +159,7 @@
         {{ $slot }}
     </div>
     {{-- Chat Module --}}
-    <div class="fixed bottom-0 right-0 mb-4 mr-2 z-50" id="chat"></div>
+    <div class="fixed bottom-0 right-0 mb-4 mr-2 z-10" id="chat"></div>
 
     <!-- footer -->
     <x-footer></x-footer>
