@@ -213,8 +213,7 @@
                     </h1>
                     <p class="montserrat-medium text-xs pb-16">
                         This is a 3-week summer school program for less privileged children in Nigeria. The program is a
-                        free program that selects over a thousand annually to embark on a transformational intellectual
-                        experience that challenges them on who they are and the need for Nation building.
+                        free program that selects over a thousand annually...
                     </p>
                     <div class="">
                         <a href="/summer-school-program"
