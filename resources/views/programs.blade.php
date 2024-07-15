@@ -35,10 +35,10 @@
                 <img class="w-36 h-5" src="/images/the-special-youth-leadership-foundation-02.png" alt="" />
             </a>
         </div>
-        <div class="hidden lg:flex justify-center items-center gap-16 text-base poppins-medium">
+        <div class="hidden lg:flex justify-center items-center gap-16 text-base montserrat-medium">
             <a href="#" class="">HOME</a>
             <div class="flex text-[#25A8D6] gap-2 items-center justify-center">
-                <a href="#" class="poppins-bold">PROGRAMS</a>
+                <a href="#" class="montserrat-bold">PROGRAMS</a>
                 <img class="pt-1" src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
             </div>
             <a href="#">WHO WE ARE</a>
@@ -49,7 +49,7 @@
     </div>
     <div class="relative bg-cover bg-center h-40" style="background-image: url('/images/rectangle-background.png')">
         <div class="absolute z-10 inset-0 bg-[#26225F] bg-opacity-75">
-            <div class="mt-14 flex flex-row justify-center text-[35px] poppins-semibold text-[#25A8D6]">
+            <div class="mt-14 flex flex-row justify-center text-[35px] montserrat-semibold text-[#25A8D6]">
                 Our Programs
             </div>
         </div>
@@ -58,10 +58,10 @@
         <div class="mx-20 py-20 flex flex-row gap-12">
             <div class="basis-3/7">
                 <div class="pb-8">
-                    <h1 class="text-[#25A8D6] -mt-1 text-[36px] pb-3 poppins-bold">
+                    <h1 class="text-[#25A8D6] -mt-1 text-[36px] pb-3 montserrat-bold">
                         The Inspire Scholarship
                     </h1>
-                    <p class="text-xs poppins-medium pb-4">
+                    <p class="text-xs montserrat-medium pb-4">
                         The Inspire Scholarship Program is designed to
                         provide scholarships for children of low-income
                         earners, orphaned children, and families that have
@@ -72,7 +72,7 @@
                         session:
                     </p>
                     <div class="ml-6 pb-4">
-                        <ul class="text-xs poppins-medium list-disc leading-[17px]">
+                        <ul class="text-xs montserrat-medium list-disc leading-[17px]">
                             <li>Tuition</li>
                             <li>UniformCosts</li>
                             <li>Books</li>
@@ -80,17 +80,17 @@
                             <li>Lunch</li>
                         </ul>
                     </div>
-                    <p class="text-xs poppins-medium">
+                    <p class="text-xs montserrat-medium">
                         “He who opens a school door, closes a prison” -
                         Victor Hugo
                     </p>
                 </div>
                 <div class="pb-8">
-                    <h1 class="text-[#26225F] text-lg pb-3 poppins-bold">
+                    <h1 class="text-[#26225F] text-lg pb-3 montserrat-bold">
                         Who Qualifies For The Scholarship?
                     </h1>
                     <div class="ml-6 pb-4">
-                        <ul class="text-xs poppins-medium list-disc leading-[17px]">
+                        <ul class="text-xs montserrat-medium list-disc leading-[17px]">
                             <li class="pb-4">
                                 The applicants must be orphaned (lost one or
                                 both parents) and or a disadvantaged child
@@ -116,11 +116,11 @@
                     </div>
                 </div>
                 <div class="pb-8">
-                    <h1 class="text-[#26225F] text-lg pb-3 poppins-bold">
+                    <h1 class="text-[#26225F] text-lg pb-3 montserrat-bold">
                         Documents Required
                     </h1>
                     <div class="ml-6 pb-4">
-                        <ul class="text-xs poppins-medium list-disc leading-[17px]">
+                        <ul class="text-xs montserrat-medium list-disc leading-[17px]">
                             <li>The applicants birth certificate</li>
                             <li>
                                 Letter from the school confirming enrolment
@@ -136,8 +136,8 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="text-xs pt-3 poppins-medium">
-                        <span class="text-sm text-[#26225F] poppins-semibold">*Note:</span>
+                    <p class="text-xs pt-3 montserrat-medium">
+                        <span class="text-sm text-[#26225F] montserrat-semibold">*Note:</span>
                         the results of the sponsored child must be submitted
                         to the Foundation at the end of each term
                     </p>
@@ -155,10 +155,10 @@
             </div>
             <div class="basis-3/7">
                 <div class="pb-8">
-                    <h1 class="text-[#25A8D6] text-[36px] pb-3 poppins-bold">
+                    <h1 class="text-[#25A8D6] text-[36px] pb-3 montserrat-bold">
                         Lifelong Development
                     </h1>
-                    <p class="text-xs poppins-medium pb-8">
+                    <p class="text-xs montserrat-medium pb-8">
                         The Special Foundation facilitates continuous
                         development of the children we support through a
                         lifelong program. The program includes mentorship
@@ -169,10 +169,10 @@
                     </p>
                 </div>
                 <div class="pb-8">
-                    <h1 class="text-[#25A8D6] text-[36px] leading-[35px] pb-8 poppins-bold">
+                    <h1 class="text-[#25A8D6] text-[36px] leading-[35px] pb-8 montserrat-bold">
                         Mentorship/Career Day Program
                     </h1>
-                    <p class="text-xs poppins-medium pb-6">
+                    <p class="text-xs montserrat-medium pb-6">
                         Our Mentorship/Career Day program is a program where
                         professionals in different fields talk to school
                         students about their careers. The Professionals
@@ -183,10 +183,10 @@
                     </p>
                 </div>
                 <div class="pb-8">
-                    <h1 class="text-[#25A8D6] text-[36px] pb-3 poppins-bold">
+                    <h1 class="text-[#25A8D6] text-[36px] pb-3 montserrat-bold">
                         School Builds
                     </h1>
-                    <p class="text-xs poppins-medium pb-5">
+                    <p class="text-xs montserrat-medium pb-5">
                         At the end of the program, the participants are
                         equipped with various skill sets such as mental
                         mathematics, creative writing, ICT, public speaking,
@@ -194,7 +194,7 @@
                         have a better chance of reaching their best
                         potential.
                     </p>
-                    <div class="text-xs poppins-medium">
+                    <div class="text-xs montserrat-medium">
                         “School is a building which has four walls with
                         tomorrow inside.” - Lon Watters
                     </div>
@@ -206,10 +206,10 @@
         <div class="mx-20 pb-20 flex flex-row gap-12">
             <div class="basis-3/7">
                 <div class="pb-8">
-                    <h1 class="text-[#25A8D6] -mt-1 text-[36px] pb-3 poppins-bold">
+                    <h1 class="text-[#25A8D6] -mt-1 text-[36px] pb-3 montserrat-bold">
                         Special Scholarship
                     </h1>
-                    <p class="text-xs poppins-medium pb-4">
+                    <p class="text-xs montserrat-medium pb-4">
                         Special Scholarship is merit based and targeted at
                         identifying gifted students for local tertiary
                         institutions. This scholarship is available to
@@ -218,14 +218,14 @@
                     </p>
                 </div>
                 <div class="pb-8">
-                    <h1 class="text-[#26225F] text-lg pb-3 poppins-bold">
+                    <h1 class="text-[#26225F] text-lg pb-3 montserrat-bold">
                         Who Qualifies For The Scholarship?
                     </h1>
-                    <p class="text-xs poppins-medium pb-4">
+                    <p class="text-xs montserrat-medium pb-4">
                         Applicants must;
                     </p>
                     <div class="ml-6 pb-4">
-                        <ul class="text-xs poppins-medium list-disc leading-[17px]">
+                        <ul class="text-xs montserrat-medium list-disc leading-[17px]">
                             <li class="pb-4">
                                 Have completed their secondary school
                                 education with exceptional grades.
@@ -250,11 +250,11 @@
                     </div>
                 </div>
                 <div class="pb-8">
-                    <h1 class="text-[#26225F] text-lg pb-3 poppins-bold">
+                    <h1 class="text-[#26225F] text-lg pb-3 montserrat-bold">
                         Documents Required
                     </h1>
                     <div class="ml-6 pb-4">
-                        <ul class="text-xs poppins-medium list-disc leading-[17px]">
+                        <ul class="text-xs montserrat-medium list-disc leading-[17px]">
                             <li>The applicants birth certificate</li>
                             <li>Reference from school authorities</li>
                             <li>
@@ -264,8 +264,8 @@
                             <li>Character reference</li>
                         </ul>
                     </div>
-                    <p class="text-xs pt-3 poppins-medium">
-                        <span class="text-sm text-[#26225F] poppins-semibold">*Note:</span>
+                    <p class="text-xs pt-3 montserrat-medium">
+                        <span class="text-sm text-[#26225F] montserrat-semibold">*Note:</span>
                         the results of the sponsored child must be submitted
                         to the Foundation at the end of each semester
                     </p>
@@ -283,10 +283,10 @@
             </div>
             <div class="basis-3/7">
                 <div class="pb-8">
-                    <h1 class="text-[#25A8D6] -mt-1 text-[36px] pb-3 poppins-bold">
+                    <h1 class="text-[#25A8D6] -mt-1 text-[36px] pb-3 montserrat-bold">
                         Special Summer School
                     </h1>
-                    <p class="text-xs poppins-medium pb-4">
+                    <p class="text-xs montserrat-medium pb-4">
                         This is a 3-week summer school program for less
                         privileged children in  Nigeria. The program is a
                         free program that selects over a thousand annually
@@ -294,13 +294,13 @@
                         experience that challenges them on who they are and
                         the need for Nation building.
                     </p>
-                    <p class="text-xs poppins-medium pb-4">
+                    <p class="text-xs montserrat-medium pb-4">
                         Children are trained on key skills such as mental
                         mathematics, critical thinking, creative writing and
                         public speaking. Patriotism and National values are
                         also ignited in the children.
                     </p>
-                    <p class="text-xs poppins-medium">
+                    <p class="text-xs montserrat-medium">
                         In addition to the learnings provided, pupils are
                         given writing materials and refreshments daily.
                     </p>

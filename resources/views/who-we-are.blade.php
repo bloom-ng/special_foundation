@@ -1,7 +1,8 @@
 <x-guest-layout title="Who We Are" page="who_we_are">
-    <div class="relative bg-cover bg-center h-40" style="background-image: url('/images/rectangle-background.png')">
-        <div class="absolute z-10 inset-0 bg-[#26225F] bg-opacity-75">
-            <div class="mt-14 flex flex-row justify-center text-[35px] poppins-semibold text-[#25A8D6]">
+    <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
+        style="background-image: url('/images/rectangle-background.png')">
+        <div class="absolute z-10 inset-0">
+            <div class="mt-14 flex flex-row justify-center text-[35px] montserrat-semibold text-[#25A8D6]">
                 Who We Are
             </div>
         </div>
@@ -9,7 +10,7 @@
     <div class="bg-white">
         <div class="mx-8 lg:mx-20 py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-light">
+                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         The Special Foundation is a social impact organisation that focuses on raising young African
                         leaders through education by providing platforms and opportunities to fulfil their dreams. We
@@ -39,8 +40,8 @@
                 <div class="basis-full lg:basis-1/2 gap-12 flex flex-col">
                     <div class="flex flex-col bg-[#25A8D6] text-white p-16 rounded-2xl shadow-sm gap-6">
                         <img class="w-16" src="/images/goal-icon.png" alt="" />
-                        <h1 class="text-4xl poppins-bold">Our Mission</h1>
-                        <p class="text-[8px] poppins-light lg:leading-6 xl:text-lg">
+                        <h1 class="text-4xl montserrat-bold">Our Mission</h1>
+                        <p class="text-[8px] montserrat-light lg:leading-6 xl:text-lg">
                             To improve the quality of leadership in Africa
                             by providing a platform where less privileged
                             and highly talented children can be equipped
@@ -51,8 +52,8 @@
                     </div>
                     <div class="flex flex-col bg-[#25A8D6] text-white p-16 rounded-2xl shadow-sm gap-6">
                         <img class="w-16" src="/images/goal-icon.png" alt="" />
-                        <h1 class="text-4xl poppins-bold">Our Vision</h1>
-                        <p class="text-[8px] poppins-light lg:leading-6 xl:text-lg">
+                        <h1 class="text-4xl montserrat-bold">Our Vision</h1>
+                        <p class="text-[8px] montserrat-light lg:leading-6 xl:text-lg">
                             To improve the quality of leadership in Africa
                             by providing a platform where less privileged
                             and highly talented children can be equipped
@@ -67,17 +68,19 @@
                 {{-- OUR TARGET START --}}
                 <div class="basis-full lg:basis-1/2 w-full flex flex-col items-center justify-center gap-12">
                     <div class="flex items-center justify-between w-full">
-                        <h2 class="text-[#25A8D6] poppins-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[50%]">Our
+                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[50%]">
+                            Our
                             Numbers</h2>
-                        <h2 class="text-[#25A8D6] poppins-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[50%]">Our
+                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[50%]">
+                            Our
                             2030 Target</h2>
                     </div>
 
                     {{-- ITEM 1 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">21,000+</h3>
-                            <p class="poppins-thin font-light w-inherit">Nigerian children directly and indirectly
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">21,000+</h3>
+                            <p class="montserrat-thin font-light w-inherit">Nigerian children directly and indirectly
                                 impacted by the
                                 foundation
                                 over the last 5 years</p>
@@ -86,8 +89,8 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">100,000+</h3>
-                            <p class="poppins-thin font-light">Africans directly and indirectly impacted by the
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100,000+</h3>
+                            <p class="montserrat-thin font-light">Africans directly and indirectly impacted by the
                                 Foundation</p>
                         </div>
                     </div>
@@ -96,8 +99,9 @@
                     {{-- ITEM 2 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">460+</h3>
-                            <p class="poppins-thin font-light w-inherit">Nigerian children are given access to education
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">460+</h3>
+                            <p class="montserrat-thin font-light w-inherit">Nigerian children are given access to
+                                education
                                 through
                                 the Inspire Scholarship Pprogram yearly</p>
                         </div>
@@ -105,8 +109,8 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">5,000+</h3>
-                            <p class="poppins-thin font-light">African students given access to education through
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">5,000+</h3>
+                            <p class="montserrat-thin font-light">African students given access to education through
                                 scholarships
                                 every year</p>
                         </div>
@@ -116,8 +120,8 @@
                     {{-- ITEM 3 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">10,672+</h3>
-                            <p class="poppins-thin font-light w-inherit">Nigerian children access educational and
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">10,672+</h3>
+                            <p class="montserrat-thin font-light w-inherit">Nigerian children access educational and
                                 vocational
                                 training through the free Summer School Program yearly</p>
                         </div>
@@ -125,8 +129,8 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">20,000+</h3>
-                            <p class="poppins-thin font-light">African students sponsored through the Summer School
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">20,000+</h3>
+                            <p class="montserrat-thin font-light">African students sponsored through the Summer School
                                 programs</p>
                         </div>
                     </div>
@@ -135,8 +139,9 @@
                     {{-- ITEM 4 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">6,879+</h3>
-                            <p class="poppins-thin font-light w-inherit">Nigerian children accessing mentorship through
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">6,879+</h3>
+                            <p class="montserrat-thin font-light w-inherit">Nigerian children accessing mentorship
+                                through
                                 our
                                 Mentorship/Career Day Program</p>
                         </div>
@@ -144,8 +149,8 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">60,000+</h3>
-                            <p class="poppins-thin font-light">African students on our mentorship program</p>
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">60,000+</h3>
+                            <p class="montserrat-thin font-light">African students on our mentorship program</p>
                         </div>
                     </div>
                     {{-- ITEM 4 END --}}
@@ -153,8 +158,9 @@
                     {{-- ITEM 5 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">5+</h3>
-                            <p class="poppins-thin font-light w-inherit">Nigerian Schools accessing conducive learning
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">5+</h3>
+                            <p class="montserrat-thin font-light w-inherit">Nigerian Schools accessing conducive
+                                learning
                                 environment
                                 through our school build project</p>
                         </div>
@@ -162,8 +168,9 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="poppins-bold text-xl md:text-3xl text-[#26225F]">100+</h3>
-                            <p class="poppins-thin font-light">African schools benefiting from the School Build Program
+                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100+</h3>
+                            <p class="montserrat-thin font-light">African schools benefiting from the School Build
+                                Program
                             </p>
                         </div>
                     </div>
@@ -177,9 +184,9 @@
             <div class="flex flex-col lg:flex-row items-center justify-between my-14 gap-8 w-full">
                 <div class="basis-full lg:basis-1/2"><img src="/images/seyi_who_we_are.png" alt="Seyi Akinwale"></div>
                 <div class="basis-full lg:basis-1/2 ">
-                    <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Meet The
+                    <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Meet The
                         Founder</h2>
-                    <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-light">
+                    <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
 
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6] font-bold">
                             Seyi Akinwale
@@ -207,7 +214,7 @@
 
         {{-- MEET THE TEAM START --}}
         <div class="">
-            <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] poppins-bold text-[38px] leading-[45px]">
+            <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
                 Meet The Team
             </div>
 
@@ -248,8 +255,9 @@
                 <img src="/images/who_we_are_3.png" alt="Who we are image">
             </div>
             <div class="basis-full lg:basis-1/2 ">
-                <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">How We Work</h2>
-                <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-light">
+                <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">How We Work
+                </h2>
+                <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
 
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         Our strategy is anchored on three pillars which are Quality, Life Long Development and Access.
@@ -286,16 +294,16 @@
 
         {{-- OUR FOOTPRINT START --}}
         <div class="w-full p-10 lg:p-20 h-auto bg-[#26225F] my-14">
-            <h2 class="text-center text-[#25A8D6] poppins-bold text-3xl lg:text-4xl mb-8">Our Footprint & Impact
+            <h2 class="text-center text-[#25A8D6] montserrat-bold text-3xl lg:text-4xl mb-8">Our Footprint & Impact
                 Locations
             </h2>
 
-            <p class="text-white text-center poppins-light mb-5">
+            <p class="text-white text-center montserrat-light mb-5">
                 Through cooperation agreements with State and Local Governments, Missionary Societies and Schools. We
                 currently sponsor children across 21 states in Nigeria with the vision to move to other African
                 Countries. We have an operating office in Lagos which coordinates all our activities.
             </p>
-            <p class="text-white text-center poppins-light mb-8">
+            <p class="text-white text-center montserrat-light mb-8">
                 Our impact locations include; Lagos, Niger, Abuja, Kano, Adamawa, Ogun, Osun, Gombe, Kogi, Plateau,
                 Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, and Delta.
             </p>
@@ -307,8 +315,8 @@
 
         {{-- OUR ACCOUNNTABILITY START --}}
         <div class="p-10 lg:p-20 flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-            <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] poppins-thin font-light">
-                <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Our
+            <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-thin font-light">
+                <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Our
                     Accountability Framework</h2>
                 <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                     Our accountability is essential to our continued ability to work and deliver our impact-driven
@@ -345,12 +353,13 @@
 
         {{-- DOWNLOADS START --}}
         <div class="w-full bg-[#25A8D6] p-10 lg:p-20">
-            <h2 class="text-[#26225F] poppins-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Downloads</h2>
+            <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Downloads
+            </h2>
 
             <div class="w-full flex flex-wrap justify-start items-center gap-8">
                 @foreach ($downloads as $download)
                     <a href="{{ Storage::url($download->url) }}"
-                        class="rounded-full text-white poppins-medium px-8 py-2 bg-[#26225F]">{{ $download->name }}</a>
+                        class="rounded-full text-white montserrat-medium px-8 py-2 bg-[#26225F]">{{ $download->name }}</a>
                 @endforeach
             </div>
         </div>

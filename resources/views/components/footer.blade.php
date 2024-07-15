@@ -3,9 +3,9 @@
                 <div class="flex flex-col lg:flex-row pb-12">
                     <div class="flex flex-row gap-14 pb-12">
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
-                            <h1 class="poppins-semibold pb-9">About Us</h1>
+                            <h1 class="montserrat-semibold pb-9">About Us</h1>
                             <img class="md:w-44 w-24 pb-7" src="/images/about-us-logo.png" alt="" />
-                            <p class="poppins-extralight text-xs leading-[18px]">
+                            <p class="montserrat-extralight text-xs leading-[18px]">
                                 The Special Foundation is a privately funded social
                                 impact organization focused on building Africa’s
                                 next set of Leaders by refining their minds through
@@ -13,13 +13,13 @@
                             </p>
                         </div>
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
-                            <h1 class="poppins-semibold pb-9">Featured Blogs</h1>
+                            <h1 class="montserrat-semibold pb-9">Featured Blogs</h1>
                             @foreach ($featured_blogs as $blog)
                                 <a href="/blog/{{ $blog->id }}" class="pb-4 cursor-pointer">
-                                    <p class="poppins-extralight text-xs leading-[18px] pb-3">
+                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
                                         {{ $blog->title }}
                                     </p>
-                                    <p class="poppins-thin text-[9px] leading-[18px]">
+                                    <p class="montserrat-thin text-[9px] leading-[18px]">
                                         {{ \Carbon\Carbon::parse($blog->created_at)->format('F d, Y') }}
                                     </p>
                                 </a>
@@ -28,22 +28,22 @@
                     </div>
                     <div class="flex flex-row gap-14">
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
-                            <h1 class="poppins-semibold pb-9">Contact Details</h1>
-                            <p class="poppins-extralight text-xs leading-[18px] pb-6">
+                            <h1 class="montserrat-semibold pb-9">Contact Details</h1>
+                            <p class="montserrat-extralight text-xs leading-[18px] pb-6">
                                 info@thespecialfoundation.org
                             </p>
-                            <p class="poppins-extralight text-xs leading-[18px] pb-6">
+                            <p class="montserrat-extralight text-xs leading-[18px] pb-6">
                                 +234 906 344 4444
                             </p>
-                            <p class="poppins-extralight text-xs leading-[18px] pb-6">
+                            <p class="montserrat-extralight text-xs leading-[18px] pb-6">
                                 The Special Youth Leadership Foundation. Arkounting
                                 Floor Law Union and Rock Insurance Building, 14
                                 Hughes Avenue, Alagomeji, Yaba, Lagos, Nigeria.
                             </p>
                         </div>
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
-                            <h1 class="poppins-semibold pb-9">Downloads</h1>
-                            <div class="flex flex-col gap-6 poppins-extralight text-xs leading-[18px]">
+                            <h1 class="montserrat-semibold pb-9">Downloads</h1>
+                            <div class="flex flex-col gap-6 montserrat-extralight text-xs leading-[18px]">
                                 @foreach ($downloads as $download)
                                     <a href="{{ Storage::url($download->url) }}"
                                         target="_blank">{{ $download->name }}</a>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-2 poppins-extralight items-center text-xs">
+                    <div class="flex flex-row gap-2 montserrat-extralight items-center text-xs">
                         <img class="w-4 h-4" src="/images/copywright.png" alt="" />
                         <p>
                             2024 The Special Youth Foundation. All Rights

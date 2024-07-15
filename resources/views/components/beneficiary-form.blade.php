@@ -1,9 +1,9 @@
 <div class="bg-[#25A8D6] px-12 lg:px-20 py-20">
     <div>
-        <h1 class="text-[#26225F] text-[35px] pb-2 poppins-bold">
+        <h1 class="text-[#26225F] text-[35px] pb-2 montserrat-bold">
             Apply Now
         </h1>
-        <p class="text-white poppins-medium text-sm">
+        <p class="text-white montserrat-medium text-sm">
             Fill in the form below to initiate application and we’d
             get back to you as soon as possible.
         </p>

@@ -1,9 +1,9 @@
 <x-guest-layout title="Blogs | Special Foundation" page="blog">
 
-    <div class="relative bg-cover bg-center h-40"
+    <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('{{ asset('/images/rectangle-background.png') }}');">
-        <div class="h-full bg-[#26225F]/95">
-            <div class="h-full flex flex-row justify-center items-center text-[35px] poppins-semibold text-[#25A8D6]">
+        <div class="h-full">
+            <div class="h-full flex flex-row justify-center items-center text-[35px] montserrat-semibold text-[#25A8D6]">
                 Blog
             </div>
         </div>
@@ -25,10 +25,10 @@
                                 <img src="{{ Storage::url($post->featured_image) }}" class="w-full max-h-[467px]"
                                     alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
-                                    <h1 class="pb-4 leading-[20px] poppins-semibold">
+                                    <h1 class="pb-4 leading-[20px] montserrat-semibold">
                                         {{ $post->title }}
                                     </h1>
-                                    <p class="poppins-light text-xs pb-4">
+                                    <p class="montserrat-light text-xs pb-4">
                                         {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
                                     </p>
                                     <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
@@ -39,10 +39,10 @@
                                 <img src="{{ Storage::url($post->featured_image) }}" class="w-full h-full max-h-[467px]"
                                     alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
-                                    <h1 class="pb-4 leading-[20px] poppins-semibold">
+                                    <h1 class="pb-4 leading-[20px] montserrat-semibold">
                                         {{ $post->title }}
                                     </h1>
-                                    <p class="poppins-light text-xs pb-4">
+                                    <p class="montserrat-light text-xs pb-4">
                                         {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
                                     </p>
                                     <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
@@ -59,10 +59,10 @@
                                 <img src="{{ Storage::url($post->featured_image) }}"
                                     class="w-full h-full max-h-[467px]" alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
-                                    <h1 class="pb-4 leading-[20px] poppins-semibold">
+                                    <h1 class="pb-4 leading-[20px] montserrat-semibold">
                                         {{ $post->title }}
                                     </h1>
-                                    <p class="poppins-light text-xs pb-4">
+                                    <p class="montserrat-light text-xs pb-4">
                                         {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
                                     </p>
                                     <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
@@ -95,7 +95,7 @@
                             <h1 class="pb-5 leading-[22px] montserrat-bold text-[12px] xl:text-[14px] 2xl:text-[18px]">
                                 {{ $post->title }}
                             </h1>
-                            <p class="poppins-light text-xs pb-5">
+                            <p class="montserrat-light text-xs pb-5">
                                 {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
                             </p>
                             <a class="text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>

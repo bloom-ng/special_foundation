@@ -13,8 +13,8 @@
     <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
         <div class="basis-4/5 flex flex-col gap-16">
             <div class="flex flex-col lg:flex-row gap-10">
-                <div class="poppins-medium text-xs basis-3/5">
-                    <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
+                <div class="montserrat-medium text-xs basis-3/5">
+                    <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
                         Who We Are
                     </h1>
                     <div class="">
@@ -55,9 +55,9 @@
                 </div>
             </div>
         </div>
-        <div class="poppins-medium text-xs basis-1/5">
+        <div class="montserrat-medium text-xs basis-1/5">
             <div class="pb-10">
-                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
+                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     21,000+
                 </h1>
                 <p class="">
@@ -66,7 +66,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
+                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     460+
                 </h1>
                 <p class="">
@@ -75,7 +75,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
+                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     10,672+
                 </h1>
                 <p class="">
@@ -84,7 +84,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
+                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     6,879+
                 </h1>
                 <p class="">
@@ -93,7 +93,7 @@
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
+                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
                     5+
                 </h1>
                 <p class="">
@@ -106,17 +106,17 @@
 
     {{-- OUR PROGRAMS START --}}
     <div class="bg-[#26225F]">
-        <div class="mx-5 lg:mx-20 pt-20 pb-12 text-[#25A8D6] poppins-bold text-[38px] leading-[45px]">
+        <div class="mx-5 lg:mx-20 pt-20 pb-12 text-[#25A8D6] montserrat-bold text-[38px] leading-[45px]">
             Our Programs
         </div>
         <swiper-container slides-per-view="1" speed="500" loop="true" autoplay="true" css-mode="true"
             class="swiper-container-second flex lg:hidden flex-row pb-16 mx-5">
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Inspire Scholarship
                     </h1>
-                    <p class="poppins-medium text-xs pb-16">
+                    <p class="montserrat-medium text-xs pb-16">
                         This scholarship is targeted at orphaned and
                         vulnerable children in disadvantaged communities. We
                         provide tuition (including cost of books and other
@@ -132,10 +132,10 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Lifelong Development
                     </h1>
-                    <p class="poppins-medium text-xs pb-16">
+                    <p class="montserrat-medium text-xs pb-16">
                         The Special Foundation facilitates continuous
                         development of the children we support through a
                         lifelong program. The program includes mentorship
@@ -150,10 +150,10 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Mentorship/Career Day Program
                     </h1>
-                    <p class="poppins-medium text-xs pb-12">
+                    <p class="montserrat-medium text-xs pb-12">
                         This is a merit-based program that focuses on
                         identifying young talents through a rigorous
                         selection process and linking them with
@@ -169,11 +169,11 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         School <br />
                         Builds
                     </h1>
-                    <p class="poppins-medium text-xs pb-12">
+                    <p class="montserrat-medium text-xs pb-12">
                         The Special Foundation seeks to build schools to
                         make sure more children have access to a safe and
                         quality learning environment. We believe this is
@@ -188,11 +188,11 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Special <br />
                         Scholarship
                     </h1>
-                    <p class="poppins-medium text-xs pb-16">
+                    <p class="montserrat-medium text-xs pb-16">
                         Special Scholarship is merit based and targeted at
                         identifying gifted students for local tertiary
                         institutions. This scholarship is available to
@@ -205,16 +205,34 @@
                     </div>
                 </div>
             </swiper-slide>
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
+                        Summer <br />
+                        School
+                    </h1>
+                    <p class="montserrat-medium text-xs pb-16">
+                        This is a 3-week summer school program for less privileged children in Nigeria. The program is a
+                        free program that selects over a thousand annually to embark on a transformational intellectual
+                        experience that challenges them on who they are and the need for Nation building.
+                    </p>
+                    <div class="">
+                        <a href="/summer-school-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
         </swiper-container>
 
         <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
             class="swiper-container-second hidden lg:flex flex-row gap-12 pb-16 mx-8">
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Inspire Scholarship
                     </h1>
-                    <p class="poppins-medium text-xs pb-16">
+                    <p class="montserrat-medium text-xs pb-16">
                         This scholarship is targeted at orphaned and
                         vulnerable children in disadvantaged communities. We
                         provide tuition (including cost of books and other
@@ -230,10 +248,10 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Lifelong Development
                     </h1>
-                    <p class="poppins-medium text-xs pb-16">
+                    <p class="montserrat-medium text-xs pb-16">
                         The Special Foundation facilitates continuous
                         development of the children we support through a
                         lifelong program. The program includes mentorship
@@ -248,10 +266,10 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Mentorship/Career Day Program
                     </h1>
-                    <p class="poppins-medium text-xs pb-12">
+                    <p class="montserrat-medium text-xs pb-12">
                         This is a merit-based program that focuses on
                         identifying young talents through a rigorous
                         selection process and linking them with
@@ -267,11 +285,11 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         School <br />
                         Builds
                     </h1>
-                    <p class="poppins-medium text-xs pb-12">
+                    <p class="montserrat-medium text-xs pb-12">
                         The Special Foundation seeks to build schools to
                         make sure more children have access to a safe and
                         quality learning environment. We believe this is
@@ -287,11 +305,11 @@
             </swiper-slide>
             <swiper-slide class="">
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
-                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl poppins-bold">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         Special <br />
                         Scholarship
                     </h1>
-                    <p class="poppins-medium text-xs pb-16">
+                    <p class="montserrat-medium text-xs pb-16">
                         Special Scholarship is merit based and targeted at
                         identifying gifted students for local tertiary
                         institutions. This scholarship is available to
@@ -304,6 +322,23 @@
                     </div>
                 </div>
             </swiper-slide>
+            <swiper-slide class="">
+                <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
+                    <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
+                        Summer <br />
+                        School
+                    </h1>
+                    <p class="montserrat-medium text-xs pb-16">
+                        This is a 3-week summer school program for less privileged children in Nigeria. The program is a
+                        free program that selects over a thousand annually...
+                    </p>
+                    <div class="">
+                        <a href="/summer-school-program"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                            MORE</a>
+                    </div>
+                </div>
+            </swiper-slide>
         </swiper-container>
     </div>
     {{-- OUR PROGRAMS END --}}
@@ -311,8 +346,8 @@
     {{-- SUPPORT START --}}
     <div class="bg-white mx-5 lg:mx-20 py-20">
         <div class="flex flex-col lg:flex-row gap-28">
-            <div class="poppins-medium text-xs basis-3/5">
-                <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
+            <div class="montserrat-medium text-xs basis-3/5">
+                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
                     Supporting the UN’s SD Goals
                 </h1>
                 <div class="">
@@ -377,7 +412,7 @@
     {{-- OUR PARTNERS START --}}
     <div class="bg-white mx-5 lg:mx-20">
         <div>
-            <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-10">
+            <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-10">
                 Our Partners
             </h1>
         </div>
@@ -446,10 +481,10 @@
         <div class="relative text-white py-20 mx-5 lg:mx-20 flex flex-row gap-8 lg:gap-20">
             <div class="w-full basis-full lg:basis-3/5">
                 <div class="pb-12">
-                    <h1 class="poppins-bold text-[#25A8D6] text-[14px] md::text-[38px] leading-[45px] pb-5">
+                    <h1 class="montserrat-bold text-[#25A8D6] text-[14px] md::text-[38px] leading-[45px] pb-5">
                         Subscribe to our Newsletter
                     </h1>
-                    <p class="poppins-medium text-xs">
+                    <p class="montserrat-medium text-xs">
                         To receive regular updates of the Special
                         Foundation’s work, subscribe below
                     </p>
@@ -489,7 +524,7 @@
     {{-- BLOG START --}}
     <div class="bg-white mx-5 lg:mx-20 py-20">
         <div class="">
-            <h1 class="poppins-bold text-[#26225F] text-[38px] leading-[45px] pb-8">
+            <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-8">
                 Featured Blogs
             </h1>
         </div>
@@ -501,10 +536,10 @@
                             alt="{{ $featured_blog->title }}" />
                     </div>
                     <div class="bg-[#26225F] px-12 pt-8 pb-5">
-                        <h1 class="pb-4 leading-[20px] poppins-semibold">
+                        <h1 class="pb-4 leading-[20px] montserrat-semibold">
                             {{ $featured_blog->title }}
                         </h1>
-                        <p class="poppins-light text-xs pb-4">
+                        <p class="montserrat-light text-xs pb-4">
                             {{ \Carbon\Carbon::parse($featured_blog->created_at)->format('F d, Y') }}
                         </p>
                         <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $featured_blog->id }}">READ MORE</a>

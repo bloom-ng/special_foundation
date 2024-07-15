@@ -20,9 +20,9 @@
         <meta property="twitter:image" content="{{ Storage::url($post->featured_image) }}" />
     @endpush
 
-    <div class="relative bg-cover bg-center h-40"
+    <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('{{ Storage::url($post->featured_image) }}');">
-        <div class="h-full bg-[#26225F]/90">
+        <div class="h-full">
 
         </div>
     </div>
@@ -43,7 +43,7 @@
                 <h3
                     class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9 text-white">
                     Written by <span
-                        class="poppins-bold text-base font-black leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9 text-white">
+                        class="montserrat-bold text-base font-black leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9 text-white">
                         {{ $post->user->name }}
                     </span>
 
@@ -100,10 +100,10 @@
                             alt="{{ $similar_post->title }}" />
                     </div>
                     <div class="mx-12 pt-8 pb-5 text-white">
-                        <h1 class="pb-4 leading-[20px] poppins-semibold">
+                        <h1 class="pb-4 leading-[20px] montserrat-semibold">
                             {{ $similar_post->title }}
                         </h1>
-                        <p class="poppins-light text-xs pb-4">
+                        <p class="montserrat-light text-xs pb-4">
                             {{ \Carbon\Carbon::parse($similar_post->created_at)->format('F d, Y') }}
                         </p>
                         <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $similar_post->id }}">READ MORE</a>

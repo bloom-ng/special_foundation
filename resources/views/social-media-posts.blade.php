@@ -1,8 +1,8 @@
 <x-guest-layout title="Programs - Social Media Posts" page="blog">
-    <div class="relative bg-cover bg-center h-40"
+    <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('{{ asset('/images/rectangle-background.png') }}');">
-        <div class="h-full bg-[#26225F]/75">
-            <div class="h-full flex flex-row justify-center items-center text-[35px] poppins-semibold text-[#25A8D6]">
+        <div class="h-full">
+            <div class="h-full flex flex-row justify-center items-center text-[35px] montserrat-semibold text-[#25A8D6]">
                 Social Media Posts
             </div>
         </div>

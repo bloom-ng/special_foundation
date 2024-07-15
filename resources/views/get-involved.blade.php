@@ -1,8 +1,8 @@
 <x-guest-layout title="Special Foundation - Get Involved" page="get_involved">
-    <div class="relative bg-cover bg-center h-40"
+    <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('{{ asset('/images/rectangle-background.png') }}');">
-        <div class="h-full bg-[#26225F]/95">
-            <div class="h-full flex flex-row justify-center items-center text-[35px] poppins-semibold text-[#25A8D6]">
+        <div class="h-full">
+            <div class="h-full flex flex-row justify-center items-center text-[35px] montserrat-semibold text-[#25A8D6]">
                 Get Involved
             </div>
         </div>
@@ -221,7 +221,7 @@
                         <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Gender</h5>
                         @foreach ($genderMapping as $key => $value)
                             <div class="flex items-center justify-center gap-3">
-                                <input class="poppins-thin font-normal my-4 h-8 w-8" type="radio" name="gender"
+                                <input class="montserrat-thin font-normal my-4 h-8 w-8" type="radio" name="gender"
                                     value="{{ $key }}" id="{{ $key }}">
                                 <label for="{{ $key }}">{{ $value }}</label>
                             </div>
@@ -253,7 +253,7 @@
                         @foreach ($availabilityMapping as $key => $value)
                             <div class="flex items-center justify-center gap-3"s>
                                 <input type="checkbox" name="availability[]"
-                                    class="poppins-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
+                                    class="montserrat-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
                                     id="{{ $key }}">
                                 <label for="{{ $key }}">{{ $value }}</label>
                             </div>
@@ -279,7 +279,7 @@
                         @foreach ($interestMapping as $key => $value)
                             <div class="flex items-center justify-center gap-3"s>
                                 <input type="checkbox" name="interests[]"
-                                    class="poppins-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
+                                    class="montserrat-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
                                     id="{{ $key }}">
                                 <label for="{{ $key }}">{{ $value }}</label>
                             </div>
@@ -296,7 +296,7 @@
                             name="source">
                             <option value="">Select an option</option>
                             @foreach ($sourceMapping as $key => $value)
-                                <option class="poppins-thin font-normal my-4 h-8 w-8" value="{{ $key }}">
+                                <option class="montserrat-thin font-normal my-4 h-8 w-8" value="{{ $key }}">
                                     {{ $value }}</option>
                             @endforeach
                         </select>
