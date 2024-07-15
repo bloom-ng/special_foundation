@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="w-full p-20 flex flex-col gap-16">
+    <div class="w-full py-20 px-8 lg:px-20 flex flex-col gap-16">
         <div class="w-full sm:flex lg:flex-row sm:flex-col items-center space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full lg:w-1/2 space-y-12">
                 <p class="text-lg montserrat-light">

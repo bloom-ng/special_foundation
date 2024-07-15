@@ -1,4 +1,4 @@
-<div class="bg-[#25A8D6] px-12 lg:px-20 py-20">
+<div class="bg-[#25A8D6] px-8 lg:px-20 py-20">
     <div>
         <h1 class="text-[#26225F] text-[35px] pb-2 montserrat-bold">
             Apply Now

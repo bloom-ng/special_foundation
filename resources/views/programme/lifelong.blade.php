@@ -9,7 +9,8 @@
     </div>
 
 
-    <div class="w-full px-20 py-20 sm:flex lg:flex-row sm:flex-col items-center space-y-10 lg:space-y-0 lg:space-x-10">
+    <div
+        class="w-full py-20 px-8 lg:px-20 sm:flex lg:flex-row sm:flex-col items-center space-y-10 lg:space-y-0 lg:space-x-10">
         <div class="w-full lg:w-1/2 space-y-8">
             <p class="text-lg montserrat-light">
                 The Special Foundation facilitates continuous development of the children we support through a lifelong
