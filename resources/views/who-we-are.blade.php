@@ -2,15 +2,16 @@
     <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('/images/rectangle-background.png')">
         <div class="absolute z-10 inset-0">
-            <div class="mt-14 flex flex-row justify-center text-[35px] montserrat-semibold text-[#25A8D6]">
+            <div
+                class="mt-14 flex flex-row justify-center text-[30px] lg:text-[48px] montserrat-bold font-extrabold text-[#25A8D6]">
                 Who We Are
             </div>
         </div>
     </div>
     <div class="bg-white">
-        <div class="mx-8 lg:mx-20 py-20">
+        <div class="px-8 lg:px-20 py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
+                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-thin font-normal">
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         The Special Foundation is a social impact organisation that focuses on raising young African
                         leaders through education by providing platforms and opportunities to fulfil their dreams. We
@@ -25,8 +26,7 @@
                         opportunities.
                     </p>
                 </div>
-                <div class="basis-1/2 pl-6">
-                    {{-- <img src="/images/who_we_are_1.png" alt="" /> --}}
+                <div class="basis-full xl:basis-1/2 lg:pl-6">
                     <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/GlMndYS_rY0?si=9VKzjWgqGAR672bq"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -233,7 +233,7 @@
             {{-- MOBILE VIEW END --}}
 
             {{-- PC VIEW START --}}
-            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
+            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="hidden lg:flex flex-row gap-12 pb-16">
                 @foreach ($teams as $index => $team)
                     <swiper-slide class="">

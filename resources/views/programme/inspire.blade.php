@@ -2,7 +2,8 @@
     <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('{{ asset('/images/rectangle-background.png') }}');">
         <div class="h-full">
-            <div class="h-full flex flex-row justify-center items-center text-[35px] montserrat-semibold text-[#25A8D6]">
+            <div
+                class="h-full flex flex-row justify-center items-center text-[30px] lg:text-[48px] montserrat-bold font-extrabold text-[#25A8D6]">
                 The Inspire Scholarship
             </div>
         </div>
@@ -11,7 +12,7 @@
     <div class="w-full flex flex-col py-20 px-8 lg:px-20 gap-14">
         <div class="w-full sm:flex lg:flex-row sm:flex-col items-center space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full lg:w-1/2">
-                <p class="text-lg montserrat-light mb-4">
+                <p class="text-lg montserrat-light font-normal mb-4">
                     The Inspire Scholarship Program is designed to
                     provide scholarships for children of low-income
                     earners, orphaned children, and families that have
@@ -22,7 +23,7 @@
                     session:
                 </p>
                 <div class="ml-6 mb-4">
-                    <ul class="text-lg  montserrat-light list-disc leading-[17px] space-y-2">
+                    <ul class="text-lg  montserrat-light font-normal list-disc leading-[17px] space-y-2">
                         <li>Tuition</li>
                         <li>UniformCosts</li>
                         <li>Books</li>
@@ -45,7 +46,7 @@
                     Who Qualifies For The Scholarship?
                 </h1>
                 <div class="ml-6 my-4">
-                    <ul class="lg:text-lg montserrat-thin list-disc lg:leading-[24px] text-white">
+                    <ul class="lg:text-lg montserrat-thin font-normal list-disc lg:leading-[24px] text-white">
                         <li class="pb-4">
                             The applicants must be orphaned (lost one or
                             both parents) and or a disadvantaged child
@@ -113,7 +114,9 @@
             </div>
         </div>
 
-        <p class="montserrat-thin"><span class="montserrat-medium text-[#26225F]">*Note:</span> the results of the
+        <p class="montserrat-thin font-semibold"><span
+                class="montserrat-medium font-semibold text-[#26225F]">*Note:</span> the
+            results of the
             sponsored
             child must be
             submitted to the Foundation at the end of each term</p>

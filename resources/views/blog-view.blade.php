@@ -92,7 +92,7 @@
             You may also like
         </h2>
 
-        <div class="w-full flex flex-col lg:flex-row items-center justify-around gap-6 lg:gap-0">
+        <div class="w-full flex flex-col lg:flex-row items-start justify-around gap-6 lg:gap-0">
             @foreach ($similar_posts as $similar_post)
                 <div class="flex flex-col bg-[#26225F] w-[380px]">
                     <div>

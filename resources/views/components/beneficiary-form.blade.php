@@ -1,9 +1,9 @@
 <div class="bg-[#25A8D6] px-8 lg:px-20 py-20">
     <div>
-        <h1 class="text-[#26225F] text-[35px] pb-2 montserrat-bold">
+        <h1 class="text-[#26225F] text-[48px] pb-2 montserrat-bold font-extrabold">
             Apply Now
         </h1>
-        <p class="text-white montserrat-medium text-sm">
+        <p class="text-white montserrat-medium text-[20] font-semibold">
             Fill in the form below to initiate application and we’d
             get back to you as soon as possible.
         </p>

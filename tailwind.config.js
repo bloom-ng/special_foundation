@@ -12,6 +12,7 @@ export default {
             lg: "1024px", // Large screens, laptops
             xl: "1280px", // Extra large screens, desktops
             "2xl": "1536px", // Extra extra large screens, wide desktops
+            "3xl": "1792px", // Extra extra extra large screens, large desktops
             // Add custom screen sizes as needed
             ph1: "320px", // Example of a custom screen size
             ph2: "375px", // Example of a custom screen size

@@ -412,7 +412,7 @@
     <div class="bg-white mx-5 lg:mx-20">
         <div>
             <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-10">
-                Our Partners
+                Our Select Partners
             </h1>
         </div>
         <div>
@@ -494,12 +494,12 @@
                         @csrf
                         <div>
                             <input
-                                class="w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
+                                class="bg-white/70 w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
                                 type="text" name="name" placeholder="Full Name" required />
                         </div>
                         <div>
                             <input
-                                class="w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
+                                class="bg-white/70 w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
                                 type="text" name="email" placeholder="Your Email" required />
                         </div>
                         <div class="pt-12 lg:pt-14">
@@ -527,7 +527,7 @@
                 Featured Blogs
             </h1>
         </div>
-        <div class="flex flex-col md:flex-row no-wrap md:flex-wrap gap-10 md:gap-2 lg:gap-10 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-2 lg:gap-10 text-white">
             @foreach ($featured_posts as $featured_blog)
                 <div class="flex flex-col w-[380px]">
                     <div>

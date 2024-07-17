@@ -27,7 +27,7 @@ class HomeController extends Controller
         $featured_posts = Post::where('is_featured', 1)
                                 ->get();
         return view('homepage', [
-            'featured_posts' => $featured_posts->shuffle()->take(4)
+            'featured_posts' => $featured_posts->shuffle()->take(3)
         ]);
     }
 }

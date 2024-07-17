@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Include Tailwind CSS -->
-    {{-- @vite('resources/css/app.css') --}}
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']); --}}
 
     <link rel="stylesheet" href="{{ asset('css/font.css') }}" />
-    {{-- <link rel="stylesheet" href="resources/css/app.css" /> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}" /> --}}
 
     <title>{{ $title }}</title>
     <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon">
@@ -17,19 +17,13 @@
     <script type="module" crossorigin src="/chat-assets/index-7ERj4ebV.js"></script>
     <link rel="stylesheet" crossorigin href="/chat-assets/index-BTRmF25J.css">
 
-    <!-- Include Poppins Font -->
+    <!-- Include Mont Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
-    <!-- Include Mont Font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        /> -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -109,10 +103,11 @@
         </div>
         <div id="menu"
             class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-6 xl:gap-14 lg:text-sm xl:text-sm montserrat-medium w-full lg:w-auto">
-            <a href="/" class="{{ $page == 'home' ? 'text-[#25A8D6] montserrat-bold' : 'text-black' }}">HOME</a>
+            <a href="/"
+                class="{{ $page == 'home' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}">HOME</a>
             <div class="relative">
                 <button id="programs-button"
-                    class="{{ $page == 'programs' ? 'text-[#25A8D6] montserrat-bold' : 'text-black' }} flex gap-2 items-center justify-center focus:outline-none">
+                    class="{{ $page == 'programs' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }} flex gap-2 items-center justify-center focus:outline-none">
                     <span>PROGRAMS</span>
                     <img id="programs-icon" class="pt-1 transform transition-transform" src="/images/collapse-arrow.svg"
                         alt="Collapse Arrow" />
@@ -131,14 +126,14 @@
                     <a href="/school-build" class="block px-4 py-2 text-black hover:bg-gray-200">School Build</a>
                 </div>
             </div>
-            <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] montserrat-bold' : 'text-black' }}"
+            <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}"
                 href="/who-we-are">WHO
                 WE
                 ARE</a>
 
             <div class="relative">
                 <button id="communications-button"
-                    class="{{ $page == 'blog' ? 'text-[#25A8D6] montserrat-bold' : 'text-black' }} flex gap-2 items-center justify-center focus:outline-none">
+                    class="{{ $page == 'blog' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }} flex gap-2 items-center justify-center focus:outline-none">
                     <span>COMMUNICATIONS</span>
                     <img id="communications-icon" class="pt-1 transform transition-transform"
                         src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
@@ -149,10 +144,10 @@
                         Posts</a>
                 </div>
             </div>
-            <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] montserrat-bold' : 'text-black' }}"
+            <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}"
                 href="/get-involved">GET
                 INVOLVED</a>
-            <a class="{{ $page == 'donate' ? 'montserrat-bold' : '' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white text-center"
+            <a class="{{ $page == 'donate' ? 'montserrat-bold font-extrabold' : 'font-medium' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white text-center"
                 href="/donate">DONATE</a>
         </div>
     </nav>
