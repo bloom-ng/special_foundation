@@ -222,7 +222,7 @@
                         'Content-Type': 'application/json'
                     };
                     const data = {
-                        model: model || 'gpt-3.5-turbo',
+                        model: model || 'gpt-3.5-turbo', // gpt-4o-mini
                         temperature: temperature || 0.4,
                         messages: messages || []
                     };

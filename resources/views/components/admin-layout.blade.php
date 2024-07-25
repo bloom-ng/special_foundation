@@ -45,12 +45,38 @@
         .account-link:hover {
             background: #6366F1;
         }
+
+
+        /* SCROLLBAR */
+
+        ::-webkit-scrollbar {
+        width: 7px; /* Width of the scrollbar */
+        height: 7px; /* Height of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background-color: #ccc; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Color of the scrollbar track */
+        border-radius: 10px; /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: #aaa; /* Color of the scrollbar thumb on hover */
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+        background-color: #999; /* Color of the scrollbar thumb on active */
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 font-family-karla flex">
-    <aside class="relative bg-indigo-600 h-screen w-64 hidden sm:block shadow-xl">
-        <div class="p-6">
+    <aside class="relative bg-indigo-600 max-h-screen overflow-y-auto w-64 hidden sm:block shadow-xl">
+        <div class="p-6 overflow-y-auto">
             <a href="/admin/dashboard" class="text-white text-xl font-semibold uppercase hover:text-gray-300"><img
                     class="w-12 lg:w-16" src="/images/the-special-youth-leadership-foundation-03.png"
                     alt="" /></a>
@@ -76,6 +102,11 @@
                 class="flex items-center {{ $page == 'downloads' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-download mr-3"></i>
                 Documents
+            </a>
+            <a href="/admin/galleries"
+                class="flex items-center {{ $page == 'gallery' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-images mr-3"></i>
+                Gallery
             </a>
             <a href="/admin/beneficiaries"
                 class="flex items-center {{ $page == 'beneficiary' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
@@ -192,6 +223,11 @@
                     class="flex items-center {{ $page == 'downloads' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-download mr-3"></i>
                     Documents
+                </a>
+                <a href="/admin/galleries"
+                    class="flex items-center {{ $page == 'gallery' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-images mr-3"></i>
+                    Gallery
                 </a>
                 <a href="/admin/beneficiaries"
                     class="flex items-center {{ $page == 'beneficiary' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">

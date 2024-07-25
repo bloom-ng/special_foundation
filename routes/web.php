@@ -12,11 +12,13 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
 use App\Models\View;
+use App\Models\Gallery;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -180,6 +182,14 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
      Route::delete('/users/{id}', [UserController::class, 'destroy']);
      
      Route::get('/users/edit/me', [UserController::class, 'me']);
+
+     // Gallery routes
+    Route::get('/galleries', [GalleryController::class, 'index']);
+    Route::get('/galleries/create', [GalleryController::class, 'create']);
+    Route::post('/galleries', [GalleryController::class, 'store']);
+    Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
+    Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
+
 });
 
 

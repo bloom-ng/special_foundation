@@ -21,7 +21,7 @@ class CMS extends Model
     const TYPE_FORMATTED_TEXT = 2;
     const TYPE_NUMBER = 3;
 
-    public static function getProgrammeMapping()
+    public static function getTypeMapping()
     {
         return [
             self::TYPE_TEXT => 'Text',
