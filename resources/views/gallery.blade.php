@@ -26,6 +26,6 @@
                 </video>
             @endif
         @endforeach
-        {{ $posts->links() }}
+        {{ $galleries->links() }}
     </div>
 </x-guest-layout>
