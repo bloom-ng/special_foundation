@@ -26,7 +26,7 @@ Route::post('/chat', function (Request $request) {
     $response = Http::withHeaders([
         'Authorization' => 'Bearer ' . $apiKey,
     ])->post($url . "/v1/chat/completions", [
-        'model' => $request->input('model', 'gpt-3.5-turbo'),
+        'model' => $request->input('model', 'gpt-4o-mini'),
         'temperature' => $request->input('temperature', 0),
         'messages' => $request->input('messages', []),
     ]);
