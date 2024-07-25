@@ -25,7 +25,7 @@
                 <div class="ml-6 mb-4">
                     <ul class="text-lg  montserrat-light font-normal list-disc leading-[17px] space-y-2">
                         <li>Tuition</li>
-                        <li>UniformCosts</li>
+                        <li>Uniform Costs</li>
                         <li>Books</li>
                         <li>Stationery</li>
                         <li>Lunch</li>

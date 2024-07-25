@@ -134,14 +134,15 @@
             <div class="relative">
                 <button id="communications-button"
                     class="{{ $page == 'blog' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }} flex gap-2 items-center justify-center focus:outline-none">
-                    <span>COMMUNICATIONS</span>
+                    <span>MEDIA</span>
                     <img id="communications-icon" class="pt-1 transform transition-transform"
                         src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
                 </button>
                 <div id="communications-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20">
-                    <a href="/blogs" class="block px-4 py-2 text-black hover:bg-gray-200">Blogs</a>
+                    <a href="/blogs" class="block px-4 py-2 text-black hover:bg-gray-200">Blog</a>
                     <a href="/social-media-posts" class="block px-4 py-2 text-black hover:bg-gray-200">Social Media
                         Posts</a>
+                    <a href="/gallery" class="block px-4 py-2 text-black hover:bg-gray-200">Gallery</a>
                 </div>
             </div>
             <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}"

@@ -5,7 +5,7 @@
         <div class="h-full">
             <div
                 class="h-full flex flex-row justify-center items-center text-[30px] lg:text-[48px] montserrat-bold font-extrabold text-[#25A8D6]">
-                Blog
+                Blog Posts
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
             @if (count($featured_posts) > 1)
                 <h2
                     class="font-montserrat text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#26225F] mb-12">
-                    Featured Blogs
+                    Featured Blog Posts
                 </h2>
 
                 <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12">
@@ -84,7 +84,7 @@
         <div class="w-full flex flex-col my-12">
             <h2
                 class="font-montserrat text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#26225F] mb-12">
-                Blogs
+                Blog Posts
             </h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">

@@ -47,7 +47,7 @@
         </p>
 
         {{-- PARTNER WITH US START --}}
-        <div class="flex flex-col lg:flex-row items-center justify-center my-12 lg:my-24 gap-10">
+        <div class="flex flex-col lg:flex-row items-center justify-center my-12 lg:my-24 2xl:justify-between gap-10">
             <div class="w-full lg:w-[40%]">
                 <h2
                     class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:leading-none text-[#25A8D6] mb-10">
@@ -68,65 +68,7 @@
             </div>
 
             <div class="w-full lg:w-[60%]">
-                {{-- MOBILE PARTNER START --}}
-                <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
-                    class="swiper-container-second flex lg:hidden flex-row gap-12 pb-24">
-                    <swiper-slide class="">
-                        <img src="/images/microsoft_home.png" alt="" />
-                    </swiper-slide>
-                    <swiper-slide class="pl-16">
-                        <img src="/images/2-google-logo.png" alt="" />
-                    </swiper-slide>
-                    <swiper-slide class="pl-16">
-                        <img src="/images/3-logo.png" alt="" />
-                    </swiper-slide>
-                    <swiper-slide class="">
-                        <img src="/images/4-firstep_lg.png" alt="" />
-                    </swiper-slide>
-                    <swiper-slide class="pl-16">
-                        <img src="/images/garda_home.png" alt="" />
-                    </swiper-slide>
-                    <swiper-slide class="pl-16">
-                        <img src="/images/graychapel_home.png" alt="" />
-                    </swiper-slide>
-                    <swiper-slide class="pl-16">
-                        <img src="/images/rif_trust_home.png" alt="" />
-                    </swiper-slide>
-                </swiper-container>
-                {{-- MOBILE PARTNER END --}}
-
-                {{-- PC PARTNER START --}}
-                <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                    class="swiper-container-second hidden lg:flex flex-row gap-12 pb-24">
-                    <swiper-slide class="">
-                        <img src="/images/microsoft_home.png" alt="" />
-                    </swiper-slide>
-
-                    <swiper-slide class="pl-16">
-                        <img src="/images/2-google-logo.png" alt="" />
-                    </swiper-slide>
-
-                    <swiper-slide class="pl-16">
-                        <img src="/images/3-logo.png" alt="" />
-                    </swiper-slide>
-
-                    <swiper-slide class="">
-                        <img src="/images/4-firstep_lg.png" alt="" />
-                    </swiper-slide>
-
-                    <swiper-slide class="pl-16">
-                        <img src="/images/garda_home.png" alt="" />
-                    </swiper-slide>
-
-                    <swiper-slide class="pl-16">
-                        <img src="/images/graychapel_home.png" alt="" />
-                    </swiper-slide>
-
-                    <swiper-slide class="pl-16">
-                        <img src="/images/rif_trust_home.png" alt="" />
-                    </swiper-slide>
-                </swiper-container>
-                {{-- PC PARTNER END --}}
+                <img src="/images/new-partner.png" class="w-full" alt="Our Partners">
             </div>
         </div>
         {{-- PARTNER WITH US END --}}
@@ -211,8 +153,7 @@
                     Volunteer Now
                 </h2>
 
-                <form action="/volunteer" method="POST"
-                    class="w-full flex flex-col items-center justify-center gap-8">
+                <form action="/volunteer" method="POST" class="w-full flex flex-col items-center justify-center gap-8">
                     @csrf
                     <input type="text" name="full_name"
                         class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"

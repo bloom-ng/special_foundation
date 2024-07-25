@@ -64,6 +64,14 @@
 
                 </div>
 
+                <div class="flex flex-row items-start lg:items-center justify-start gap-8">
+                    <a class="text-white font-light py-[15px] px-[4%] rounded-full bg-[#25A8D6] montserrat-thin text-sm text-center md:text-lg xl:text-xl 2xl:text-2xl mt-10"
+                        href="https://paystack.com/pay/ejyy1q12rf" target="_blank">DONATE ONLINE (NGN)</a>
+
+                    <a class="text-white font-light py-[15px] px-[25px] lg:px-[14px] xl:px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm text-center md:text-lg xl:text-xl 2xl:text-2xl mt-10"
+                        href="https://paystack.com/pay/md1d9s2p91" target="_blank">DONATE ONLINE (USD)</a>
+                </div>
+
                 <p
                     class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:leading-8 xl:leading-9 my-8">
                     You can also fill the form below and we will contact you to complete your donation
@@ -115,14 +123,6 @@
                         href="https://paystack.com/pay/ejyy1q12rf" target="_blank">SUBMIT</button>
 
                 </form>
-
-                <div class="flex flex-row items-start lg:items-center justify-start gap-8">
-                    <a class="text-white font-light py-[15px] px-[4%] rounded-full bg-[#25A8D6] montserrat-thin text-sm text-center md:text-lg xl:text-xl 2xl:text-2xl mt-10"
-                        href="https://paystack.com/pay/ejyy1q12rf" target="_blank">DONATE ONLINE (NGN)</a>
-
-                    <a class="text-white font-light py-[15px] px-[25px] lg:px-[14px] xl:px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm text-center md:text-lg xl:text-xl 2xl:text-2xl mt-10"
-                        href="https://paystack.com/pay/md1d9s2p91" target="_blank">DONATE ONLINE (USD)</a>
-                </div>
             </div>
             <div class="w-full lg:w-[40%]">
                 <img src="/images/donate.png" alt="Image of a girl holding a The Special Youth Book">

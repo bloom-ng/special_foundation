@@ -51,15 +51,16 @@
                         </p>
                     </div>
                     <div class="flex flex-col bg-[#25A8D6] text-white p-16 rounded-2xl shadow-sm gap-6">
-                        <img class="w-16" src="/images/goal-icon.png" alt="" />
+                        <img class="w-16" src="/images/eye-icon.svg" alt="" />
                         <h1 class="text-4xl montserrat-bold">Our Vision</h1>
                         <p class="text-[8px] montserrat-light lg:leading-6 xl:text-lg">
-                            To improve the quality of leadership in Africa
-                            by providing a platform where less privileged
-                            and highly talented children can be equipped
-                            with an education, mentoring and leadership
-                            training to bring about a positive influence to
-                            their world.
+                            “Making dreams come true”
+                            <br />
+                            <br />
+
+                            We dream of an Africa where more young people have access to an education and the essential
+                            tools that provide them with a foundation to be positive change agents to their respective
+                            communities, the African continent and the World.
                         </p>
                     </div>
                 </div>
@@ -80,7 +81,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">21,000+</h3>
-                            <p class="montserrat-thin font-light w-inherit">Nigerian children directly and indirectly
+                            <p class="montserrat-thin font-light w-inherit">Nigerian children directly
                                 impacted by the
                                 foundation
                                 over the last 5 years</p>
@@ -90,7 +91,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100,000+</h3>
-                            <p class="montserrat-thin font-light">Africans directly and indirectly impacted by the
+                            <p class="montserrat-thin font-light">Africans directly impacted by the
                                 Foundation</p>
                         </div>
                     </div>
@@ -103,7 +104,7 @@
                             <p class="montserrat-thin font-light w-inherit">Nigerian children are given access to
                                 education
                                 through
-                                the Inspire Scholarship Pprogram yearly</p>
+                                the Inspire Scholarship Program yearly</p>
                         </div>
                         <div class="w-[5%] mr-4 ml-8">
                             <img src="/images/arrow.svg" alt="arrow image">
@@ -212,6 +213,57 @@
         </div>
         {{-- MEET THE FOUNDER END --}}
 
+        {{-- MEET THE ADVISORY BOARD START --}}
+        <div class="">
+            <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
+                Meet The Advisory Board
+            </div>
+
+            {{-- MOBILE VIEW START --}}
+            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="flex lg:hidden flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-8 rounded-3xl board-img">
+                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[100px] w-auto h-36" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- MOBILE VIEW END --}}
+
+            {{-- PC VIEW START --}}
+            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden lg:flex xl:hidden flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-10 rounded-3xl board-img">
+                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- PC VIEW END --}}
+
+            {{-- PC VIEW START --}}
+            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden lg:hidden xl:flex flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-10 rounded-3xl board-img">
+                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- PC VIEW END --}}
+
+        </div>
+        {{-- MEET THE ADVISORY BOARD END --}}
+
         {{-- MEET THE TEAM START --}}
         <div class="">
             <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
@@ -308,7 +360,7 @@
                 Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, and Delta.
             </p>
 
-            <img src="/images/who_we_are_map.png" alt="Map Of Nigeria With indicators of footprint">
+            <img src="/images/new-map.png" alt="Map Of Nigeria With indicators of footprint">
 
         </div>
         {{-- OUR FOOTPRINT END --}}
@@ -319,25 +371,29 @@
                 <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Our
                     Accountability Framework</h2>
                 <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                    Our accountability is essential to our continued ability to work and deliver our impact-driven
-                    objectives. We apply the resources at our disposal the experience skills and knowledge of our team
-                    personal and third-party contributions, and our networks and leverage value-adding support for our
-                    army of Volunteers and Ambassadors.
+                    Our accountability is essential to our continued ability to work and deliver our impact-
+                    driven objectives. We apply the resources at our disposal: the experience, skills, and
+                    knowledge of our team members and third-party contributors, our networks, and
+                    leverage value-adding support from our army of volunteers and ambassadors.
                 </p>
                 <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                    We have pledged to tackle the time Educational deficit in Africa through our various scholarship
-                    interventions. mentorship and infrastructure development programs Our accountability is maintained
-                    through:
+                    We have pledged to tackle the educational deficit in Africa through our various
+                    scholarship interventions, mentorship programs, and infrastructure development
+                    initiatives.
                 </p>
 
-                <ul class="border-[#25A8D6] pl-14 border-l-[14px] space-y-3 text-sm list-disc">
-                    <li>A vibrant board of trustees and Advisory council who provide general oversight to the activities
-                        of the Foundation.</li>
-                    <li>A set of operating principles to which our team board advisory council and ambassadors are held
-                        accountable and is supported by a robust control framework to ensure these principles are
-                        followed.</li>
-                    <li>Regular reports that assess our performance against pre-defined impact targets and milestones.
-                    </li>
+                <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
+                    Our accountability is maintained through:
+                </p>
+
+                <ul class="border-[#25A8D6] pl-14 border-l-[14px] space-y-3 list-disc">
+                    <li>A vibrant board of trustees and advisory council that provides general oversight
+                        of the activities of the foundation.</li>
+                    <li>A set of operating principles to which our team, board, advisory council and
+                        ambassadors are held accountable, supported by a robust control framework to
+                        ensure these principles are followed.</li>
+                    <li>Regular reports that assess our performance against pre-defined impact targets
+                        and milestones.</li>
                 </ul>
             </div>
             <div class="basis-1/2 px-8 lg:pl-6 h-full">
@@ -370,6 +426,12 @@
             class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
         </div>
         {{-- TEAM MODAL END --}}
+
+        {{-- BOARDS MODAL START --}}
+        <div id="boards-modal"
+            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
+        </div>
+        {{-- BOARDS MODAL END --}}
     </div>
     </div>
 
@@ -378,6 +440,35 @@
         document.addEventListener('DOMContentLoaded', function() {
             const teams = @json($teams);
             const modal = document.getElementById('team-modal');
+
+            const boards = @json($boards);
+            const Admodal = document.getElementById('boards-modal');
+
+            document.querySelectorAll('.board-img img').forEach(img => {
+                img.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    const board = boards[index];
+
+                    const content =
+                        `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
+                            <img src="${board.image}" alt="${board.name}">
+                            <div class="flex flex-col items-start gap-8">
+                                <div>
+                                    <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${board.name}</h3>
+                                </div>
+                                <p class="montserrat-thin font-light">
+                                    ${board.content}
+                                </p>
+                                <a href="${board.link}">
+                                    <img src="/images/detail_icon.svg" alt="Linkedin Icon">
+                                </a>
+                            </div>
+                        </div>`;
+
+                    Admodal.innerHTML = content;
+                    Admodal.classList.remove('hidden');
+                });
+            });
 
             document.querySelectorAll('.team-img img').forEach(img => {
                 img.addEventListener('click', function() {
@@ -409,6 +500,12 @@
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
                     modal.classList.add('hidden');
+                }
+            });
+
+            Admodal.addEventListener('click', function(e) {
+                if (e.target === Admodal) {
+                    Admodal.classList.add('hidden');
                 }
             });
         });

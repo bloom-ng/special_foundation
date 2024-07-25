@@ -27,7 +27,8 @@
                 value="{{ $programme }}" placeholder="Program Applying To" hidden name="programme" />
             <div class="w-full">
                 <textarea class="w-full h-72 rounded-3xl ps-10 placeholder-start-0 placeholder:text-xs py-3.5"
-                    placeholder="Purpose for Application" name="purpose_of_application" required></textarea>
+                    placeholder="Please share your motivation for applying for this program in no more than word 500"
+                    name="purpose_of_application" required></textarea>
             </div>
         </div>
 
