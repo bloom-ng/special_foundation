@@ -105,6 +105,15 @@ Route::get('who-we-are', function () {
             , 
             'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
         ],
+        
+        [
+            'name' => 'Olatomi Popoola',
+            'position' => 'Head of Strategy',
+            'list_image' => '/images/team_7.png', 
+            'image' => '/images/team_detail_7.png', 
+            'content' => "Strategic whiz who turns challenges into seamless collaboration. Expert at driving teamwork and boosting communication with style. A relationship builder who keeps teams sharp and adaptable. Master communicator and inventive problem-solver with a flair for strategic planning. Known for charming execs and partners while delivering stellar results.", 
+            'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
+        ],
     ];
     $boards = [
         [
@@ -215,7 +224,7 @@ Route::get('who-we-are', function () {
         ],
         // Add more ambassadors as needed
     ];
-    return view('who-we-are', compact('teams', 'boards'))->with('downloads', $downloads);
+    return view('who-we-are', compact('teams'))->with('boards', $boards)->with('downloads', $downloads);
 });
 
 Route::post('/newsletters', [NewsletterController::class, 'create']);
