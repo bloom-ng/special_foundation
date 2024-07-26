@@ -1,14 +1,14 @@
-<x-admin-layout title="Admin | Add Media" page="gallery">
+<x-admin-layout title="Admin | Edit Media" page="gallery">
 
     <main class="w-full flex-grow p-6">
         <div class="flex justify-between md:items-center gap-y-4 flex-col md:flex-row w-full">
             <div>
                 <p class="block antialiased font-sans text-base font-light leading-relaxed text-inherit font-bold">
-                    New Media
+                    Update Media
                 </p>
                 <p
                     class="block antialiased text-sm font-sans text-base font-light leading-relaxed text-inherit font-normal text-gray-600">
-                    Upload a new media
+                    Upload a media
                 </p>
             </div>
             <div>
@@ -26,19 +26,20 @@
                 <p class="text-xl pb-6 flex items-center">
                 </p>
                 <div class="leading-loose">
-                    <form class="" method="POST" action="/admin/galleries" enctype="multipart/form-data">
+                    <form class="" method="POST" action="/admin/galleries/{{$gallery->id}}" enctype="multipart/form-data">
                         @csrf
+                        @method('PUT')
                         <div class="pb-2">
                             <label class=" block  text-sm pb-1" for="title">Caption</label>
                             <input class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 " 
-                                    id="title" name="title" type="text" required placeholder="Caption" aria-label="Caption">
+                                    id="title" name="title" value="{{$gallery->title}}" type="text" required placeholder="Caption" aria-label="Caption">
                         </div>
                         <div class="pb-2">
                             <label class=" block  text-sm pb-1" for="name">Media Type</label>
                             <select class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 " 
                                     id="type" name="type" type="type" required placeholder="" aria-label="Media Type">
                                 @foreach (\App\Models\Gallery::getTypeMapping() as $key => $value)
-                                    <option value="{{$key}}">{{$value}}</option>
+                                    <option @if($gallery->type == $key) selected @endif value="{{$key}}">{{$value}}</option>
                                     
                                 @endforeach
                                     
@@ -49,7 +50,7 @@
 
                        
 
-                        <div class="col-span-full mt-6 hidden" id="media-container">
+                        <div class="col-span-full mt-6  {{$gallery->type === \App\Models\Gallery::TYPE_YOUTUBE ? 'hidden' : ''}}" id="media-container">
                             <label for="document"
                                 class="block text-sm font-medium leading-6 text-gray-900">Media
                             </label>
@@ -72,12 +73,13 @@
 
                         </div>
 
-                        <div class="col-span-full mt-8 " id="embed-container">
+                        <div class="col-span-full mt-8 {{$gallery->type !== \App\Models\Gallery::TYPE_YOUTUBE ? 'hidden' : ''}}" id="embed-container">
                             <label for="summary"
                                 class="block text-sm font-medium leading-6 text-gray-900">Embed Code </label>
                                 
                             <textarea id="value" name="value" rows="6"
-                                class="block w-full font-mono border-0 bg-transparent px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                class="block w-full font-mono border-0 bg-transparent px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                >@if($gallery->type == \App\Models\Gallery::TYPE_YOUTUBE)  {!! \App\Models\Gallery::updateEmbedCode($gallery->value, 300, 200) !!} @endif</textarea>
                         </div>
 
                         <div class="mt-6">

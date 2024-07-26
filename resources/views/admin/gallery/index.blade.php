@@ -26,7 +26,7 @@
                         </div>
 
                     </div>
-                    <div class="flex justify-start md:justify-end gap-2">
+                    <div class=" justify-start md:justify-end gap-2 hidden">
                         <form method="GET">
                             <div class="lg:w-96">
                                 <div class="relative w-full min-w-[200px] h-10">
@@ -90,16 +90,29 @@
                                 {{ $gallery->id }}
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $gallery->id }}
+                                @if ($gallery->type == \App\Models\Gallery::TYPE_IMAGE)
+                                    <img src="{{ Storage::url($gallery->url) }}" class="w-72 h-48 rounded-md">
+                                @elseif ($gallery->type == \App\Models\Gallery::TYPE_VIDEO)
+                                    <video src="{{ Storage::url($gallery->url) }}" controls class="w-72 h-48 rounded-md">
+                                    </video>
+                                @elseif ($gallery->type == \App\Models\Gallery::TYPE_YOUTUBE)
+                                    {!! \App\Models\Gallery::updateEmbedCode($gallery->value, 300, 200) !!}
+                                @endif
+                                <p class="text-xs text-gray-500 mt-2">
+                                    {{$gallery->title}}
+                                </p>
                             </td>
                             <td class="w-1/3 text-left py-3 px-4">
-                                {{ $gallery->id }}
+                                {{ \App\Models\Gallery::getTypeMapping()[$gallery->type] }}
                             </td>
                             {{-- <td class="w-1/3 text-left py-3 px-4">
                                 <a href="{{ Storage::url($download->url) }}" class="text-indigo-600" target="_blank" >Link</a>
                             </td> --}}
                            
                             <td class="w-1/3 text-left py-3 px-4">
+                                <a class="pr-2 text-blue-300 hover:text-blue-500" href="/admin/galleries/{{$gallery->id}}/edit">
+                                    Edit
+                                </a>
                                 <form
                                     id="gallery-delete-{{$gallery->id}}"
                                     action="/admin/galleries/{{$gallery->id}}"

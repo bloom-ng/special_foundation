@@ -27,21 +27,28 @@ class GalleryController extends Controller
         return view('admin.gallery.create');
     }
 
+    public function edit(Gallery $gallery)
+    {
+        return view('admin.gallery.edit', ['gallery' => $gallery]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'nullable',
+
            
         ]);
         
         $gallery = new Gallery;
         if ($request->hasFile('doc')) {
             $url = $request->file('doc');
-            $path = $request->file('doc')->storeAs('public/galleries', $url->getClientOriginalName());
+            $path = $request->file('doc')->storeAs('public/galleries', rand(1000,9999) .  $url->getClientOriginalName());
             $gallery->url = $path;
         }
-        $gallery->title = $request->title;
+        $gallery->title = $request->title ?? '...';
         $gallery->type = $request->type;
+        $gallery->value = $request->value;
         $gallery->save();
 
         return back()->with('success', 'Media Added');
@@ -51,16 +58,16 @@ class GalleryController extends Controller
     public function update(Request $request, Gallery $gallery)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'nullable',
             
         ]);
         
         if ($request->hasFile('doc')) {
             $url = $request->file('doc');
-            $path = $request->file('doc')->storeAs('public/galleries', $url->getClientOriginalName());
+            $path = $request->file('doc')->storeAs('public/galleries', rand(1000,9999) . $url->getClientOriginalName());
             $gallery->url = $path;
         }
-        $gallery->title = $request->title;
+        $gallery->title = $request->title ?? '...';
         $gallery->type = $request->type;
         $gallery->save();
 

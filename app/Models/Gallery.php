@@ -15,6 +15,19 @@ class Gallery extends Model
     const TYPE_YOUTUBE = 2;
     const TYPE_VIDEO = 3;
 
+    public static function updateEmbedCode($embedCode, $newWidth, $newHeight) {
+        $pattern = '/<iframe.*?width="(\d+)" height="(\d+)".*?<\/iframe>/';
+        preg_match($pattern, $embedCode, $match);
+        
+        if ($match) {
+          $updatedEmbedCode = str_replace($match[1], $newWidth, $embedCode);
+          $updatedEmbedCode = str_replace($match[2], $newHeight, $updatedEmbedCode);
+          return $updatedEmbedCode;
+        } else {
+          return $embedCode;
+        }
+      }
+
     public static function getTypeMapping()
     {
         return [

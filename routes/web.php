@@ -295,6 +295,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
      // Gallery routes
     Route::get('/galleries', [GalleryController::class, 'index']);
     Route::get('/galleries/create', [GalleryController::class, 'create']);
+    Route::get('/galleries/{gallery}/edit', [GalleryController::class, 'edit']);
     Route::post('/galleries', [GalleryController::class, 'store']);
     Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
     Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
