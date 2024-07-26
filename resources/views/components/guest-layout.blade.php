@@ -138,7 +138,7 @@
                     <img id="communications-icon" class="pt-1 transform transition-transform"
                         src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
                 </button>
-                <div id="communications-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20">
+                <div id="communications-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20 w-40">
                     <a href="/blogs" class="block px-4 py-2 text-black hover:bg-gray-200">Blog</a>
                     <a href="/social-media-posts" class="block px-4 py-2 text-black hover:bg-gray-200">Social Media
                         Posts</a>

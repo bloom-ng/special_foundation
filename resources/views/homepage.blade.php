@@ -480,7 +480,7 @@
         <div class="relative text-white py-20 mx-5 lg:mx-20 flex flex-row gap-8 lg:gap-20">
             <div class="w-full basis-full lg:basis-3/5">
                 <div class="pb-12">
-                    <h1 class="montserrat-bold text-[#25A8D6] text-[14px] md::text-[38px] leading-[45px] pb-5">
+                    <h1 class="montserrat-bold text-[#25A8D6] text-[28px] md:text-[38px] leading-[45px] pb-5">
                         Subscribe to our Newsletter
                     </h1>
                     <p class="montserrat-medium text-xs">

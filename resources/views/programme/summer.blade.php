@@ -10,7 +10,7 @@
     </div>
 
     <div class="w-full px-8 py-20 lg:px-20 flex flex-col gap-16">
-        <div class="w-full sm:flex lg:flex-row sm:flex-col items-center space-y-10 lg:space-y-0 lg:space-x-10">
+        <div class="w-full sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full lg:w-1/2 rounded-2xl">
                 <img src="/images/summer_1.png" alt="">
             </div>

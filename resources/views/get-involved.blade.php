@@ -47,7 +47,7 @@
         </p>
 
         {{-- PARTNER WITH US START --}}
-        <div class="flex flex-col lg:flex-row items-center justify-center my-12 lg:my-24 2xl:justify-between gap-10">
+        <div class="flex flex-col lg:flex-row items-start justify-center my-12 lg:my-24 2xl:justify-between gap-10">
             <div class="w-full lg:w-[40%]">
                 <h2
                     class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:leading-none text-[#25A8D6] mb-10">
@@ -61,7 +61,7 @@
                 </p>
 
                 <button id="partner-button"
-                    class="text-white font-normal w-[308px] h-[54px] pt-[15px] pr-[10px] pb-[15px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
+                    class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
                     PARTNER WITH US
                 </button>
 
@@ -74,7 +74,7 @@
         {{-- PARTNER WITH US END --}}
 
         {{-- VOLUNTEER START --}}
-        <div class="flex flex-col lg:flex-row items-center justify-center my-12 lg:my-24 gap-10">
+        <div class="flex flex-col lg:flex-row items-start justify-center my-12 lg:my-24 gap-10">
             <div class="w-full lg:w-[60%]">
                 <img src="/images/involved_1.png" alt="Group Picture of Special Youths">
             </div>
@@ -91,7 +91,7 @@
                 </p>
 
                 <button id="volunteer-button"
-                    class="text-white font-normal w-[308px] h-[54px] pt-[15px] pr-[10px] pb-[15px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
+                    class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
                     VOLUNTEER NOW
                 </button>
             </div>

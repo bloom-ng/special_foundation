@@ -10,8 +10,8 @@
     </div>
     <div class="bg-white">
         <div class="px-8 lg:px-20 py-20">
-            <div class="flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-                <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-thin font-normal">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-10 xl:gap-28">
+                <div class="basis-1/2 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-thin font-normal">
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         The Special Foundation is a social impact organisation that focuses on raising young African
                         leaders through education by providing platforms and opportunities to fulfil their dreams. We
@@ -69,10 +69,15 @@
                 {{-- OUR TARGET START --}}
                 <div class="basis-full lg:basis-1/2 w-full flex flex-col items-center justify-center gap-12">
                     <div class="flex items-center justify-between w-full">
-                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[50%]">
+                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[45%]">
                             Our
                             Numbers</h2>
-                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[50%]">
+
+                        <div>
+                            <img src="/images/arrow.svg" alt="arrow image">
+                        </div>
+
+                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[45%]">
                             Our
                             2030 Target</h2>
                     </div>
@@ -214,7 +219,7 @@
         {{-- MEET THE FOUNDER END --}}
 
         {{-- MEET THE ADVISORY BOARD START --}}
-        <div class="">
+        <div class="w-full">
             <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
                 Meet The Advisory Board
             </div>
@@ -225,7 +230,7 @@
                 @foreach ($boards as $index => $team)
                     <swiper-slide class="">
                         <div class=" py-10 px-8 rounded-3xl board-img">
-                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="max-w-[100px] w-auto h-36" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
@@ -239,7 +244,7 @@
                 @foreach ($boards as $index => $team)
                     <swiper-slide class="">
                         <div class=" py-10 px-10 rounded-3xl board-img">
-                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
@@ -253,7 +258,7 @@
                 @foreach ($boards as $index => $team)
                     <swiper-slide class="">
                         <div class=" py-10 px-10 rounded-3xl board-img">
-                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
