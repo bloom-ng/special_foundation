@@ -419,56 +419,87 @@
             <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="swiper-container-second flex lg:hidden flex-row gap-12 pb-24">
                 <swiper-slide class="">
-                    <img src="/images/microsoft_home.png" alt="" />
+                    <img src="/images/new-pat-1.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="pl-16">
-                    <img src="/images/2-google-logo.png" alt="" />
+                    <img src="/images/new-pat-2.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="pl-16">
-                    <img src="/images/3-logo.png" alt="" />
+                    <img src="/images/new-pat-3.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="">
-                    <img src="/images/4-firstep_lg.png" alt="" />
+                    <img src="/images/new-pat-4.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="pl-16">
-                    <img src="/images/garda_home.png" alt="" />
+                    <img src="/images/new-pat-5.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="pl-16">
-                    <img src="/images/graychapel_home.png" alt="" />
+                    <img src="/images/new-pat-6.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="pl-16">
-                    <img src="/images/rif_trust_home.png" alt="" />
+                    <img src="/images/new-pat-7.png" alt="" />
+                </swiper-slide>
+            </swiper-container>
+
+            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="swiper-container-second hidden lg:flex xl:hidden flex-row gap-12 pb-24">
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-1.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-2.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-3.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="">
+                    <img src="/images/new-pat-4.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-5.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-6.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-7.png" alt="" />
                 </swiper-slide>
             </swiper-container>
 
             <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="swiper-container-second hidden lg:flex flex-row gap-12 pb-24">
+                class="swiper-container-second hidden xl:flex flex-row gap-12 pb-24">
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-1.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-2.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16">
+                    <img src="/images/new-pat-3.png" alt="" />
+                </swiper-slide>
+
                 <swiper-slide class="">
-                    <img src="/images/microsoft_home.png" alt="" />
+                    <img src="/images/new-pat-4.png" alt="" />
                 </swiper-slide>
 
                 <swiper-slide class="pl-16">
-                    <img src="/images/2-google-logo.png" alt="" />
+                    <img src="/images/new-pat-5.png" alt="" />
                 </swiper-slide>
 
                 <swiper-slide class="pl-16">
-                    <img src="/images/3-logo.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="">
-                    <img src="/images/4-firstep_lg.png" alt="" />
+                    <img src="/images/new-pat-6.png" alt="" />
                 </swiper-slide>
 
                 <swiper-slide class="pl-16">
-                    <img src="/images/garda_home.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16">
-                    <img src="/images/graychapel_home.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16">
-                    <img src="/images/rif_trust_home.png" alt="" />
+                    <img src="/images/new-pat-7.png" alt="" />
                 </swiper-slide>
             </swiper-container>
         </div>
