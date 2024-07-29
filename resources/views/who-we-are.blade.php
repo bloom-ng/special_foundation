@@ -41,7 +41,7 @@
                     <div class="flex flex-col bg-[#25A8D6] text-white p-16 rounded-2xl shadow-sm gap-6">
                         <img class="w-16" src="/images/goal-icon.png" alt="" />
                         <h1 class="text-4xl montserrat-bold">Our Mission</h1>
-                        <p class="text-[8px] montserrat-light lg:leading-6 xl:text-lg">
+                        <p class="text-[8px] montserrat-light font-normal lg:leading-6 xl:text-lg">
                             To improve the quality of leadership in Africa
                             by providing a platform where less privileged
                             and highly talented children can be equipped
@@ -53,7 +53,7 @@
                     <div class="flex flex-col bg-[#25A8D6] text-white p-16 rounded-2xl shadow-sm gap-6">
                         <img class="w-16" src="/images/eye-icon.svg" alt="" />
                         <h1 class="text-4xl montserrat-bold">Our Vision</h1>
-                        <p class="text-[8px] montserrat-light lg:leading-6 xl:text-lg">
+                        <p class="text-[8px] montserrat-light font-normal lg:leading-6 xl:text-lg">
                             “Making dreams come true”
                             <br />
                             <br />
@@ -69,7 +69,7 @@
                 {{-- OUR TARGET START --}}
                 <div class="basis-full lg:basis-1/2 w-full flex flex-col items-center justify-center gap-12">
                     <div class="flex items-center justify-between w-full">
-                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[45%]">
+                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl w-[45%]">
                             Our
                             Numbers</h2>
 
@@ -77,7 +77,7 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
 
-                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-[45%]">
+                        <h2 class="text-[#25A8D6] montserrat-bold text-2xl md:text-3xl lg:text-4xl w-[45%]">
                             Our
                             2030 Target</h2>
                     </div>
@@ -86,7 +86,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">21,000+</h3>
-                            <p class="montserrat-thin font-light w-inherit">Nigerian children directly
+                            <p class="montserrat-thin font-normal w-inherit">Nigerian children directly
                                 impacted by the
                                 foundation
                                 over the last 5 years</p>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100,000+</h3>
-                            <p class="montserrat-thin font-light">Africans directly impacted by the
+                            <p class="montserrat-thin font-normal">Africans directly impacted by the
                                 Foundation</p>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">460+</h3>
-                            <p class="montserrat-thin font-light w-inherit">Nigerian children are given access to
+                            <p class="montserrat-thin font-normal w-inherit">Nigerian children are given access to
                                 education
                                 through
                                 the Inspire Scholarship Program yearly</p>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">5,000+</h3>
-                            <p class="montserrat-thin font-light">African students given access to education through
+                            <p class="montserrat-thin font-normal">African students given access to education through
                                 scholarships
                                 every year</p>
                         </div>
@@ -127,7 +127,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">10,672+</h3>
-                            <p class="montserrat-thin font-light w-inherit">Nigerian children access educational and
+                            <p class="montserrat-thin font-normal w-inherit">Nigerian children access educational and
                                 vocational
                                 training through the free Summer School Program yearly</p>
                         </div>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">20,000+</h3>
-                            <p class="montserrat-thin font-light">African students sponsored through the Summer School
+                            <p class="montserrat-thin font-normal">African students sponsored through the Summer School
                                 programs</p>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">6,879+</h3>
-                            <p class="montserrat-thin font-light w-inherit">Nigerian children accessing mentorship
+                            <p class="montserrat-thin font-normal w-inherit">Nigerian children accessing mentorship
                                 through
                                 our
                                 Mentorship/Career Day Program</p>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">60,000+</h3>
-                            <p class="montserrat-thin font-light">African students on our mentorship program</p>
+                            <p class="montserrat-thin font-normal">African students on our mentorship program</p>
                         </div>
                     </div>
                     {{-- ITEM 4 END --}}
@@ -165,7 +165,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">5+</h3>
-                            <p class="montserrat-thin font-light w-inherit">Nigerian Schools accessing conducive
+                            <p class="montserrat-thin font-normal w-inherit">Nigerian Schools accessing conducive
                                 learning
                                 environment
                                 through our school build project</p>
@@ -175,7 +175,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100+</h3>
-                            <p class="montserrat-thin font-light">African schools benefiting from the School Build
+                            <p class="montserrat-thin font-normal">African schools benefiting from the School Build
                                 Program
                             </p>
                         </div>
@@ -190,9 +190,9 @@
             <div class="flex flex-col lg:flex-row items-center justify-between my-14 gap-8 w-full">
                 <div class="basis-full lg:basis-1/2"><img src="/images/seyi_who_we_are.png" alt="Seyi Akinwale"></div>
                 <div class="basis-full lg:basis-1/2 ">
-                    <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Meet The
+                    <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl">Meet The
                         Founder</h2>
-                    <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
+                    <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light font-normal">
 
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6] font-bold">
                             Seyi Akinwale
@@ -226,45 +226,59 @@
 
             {{-- MOBILE VIEW START --}}
             <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="flex lg:hidden flex-row gap-12 pb-16">
-                @foreach ($boards as $index => $team)
+                class="flex md:hidden flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $board)
                     <swiper-slide class="">
                         <div class=" py-10 px-8 rounded-3xl board-img">
-                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[100px] w-auto h-36" data-index="{{ $index }}">
+                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
+                                class="max-w-[300px] w-auto h-52" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
                 @endforeach
             </swiper-container>
             {{-- MOBILE VIEW END --}}
 
-            {{-- PC VIEW START --}}
-            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden lg:flex xl:hidden flex-row gap-12 pb-16">
-                @foreach ($boards as $index => $team)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-10 rounded-3xl board-img">
-                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- PC VIEW END --}}
-
-            {{-- PC VIEW START --}}
+            {{-- TABLET VIEW START --}}
             <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden lg:hidden xl:flex flex-row gap-12 pb-16">
-                @foreach ($boards as $index => $team)
+                class="hidden md:flex xl:hidden flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $board)
                     <swiper-slide class="">
-                        <div class=" py-10 px-10 rounded-3xl board-img">
-                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
+                        <div class=" py-10 px-8 rounded-3xl board-img">
+                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
+                                class="max-w-[400px] w-auto h-72" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
                 @endforeach
             </swiper-container>
-            {{-- PC VIEW END --}}
+            {{-- TABLET VIEW END --}}
+
+            {{-- SMALL PC VIEW START --}}
+            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden lg:hidden xl:flex 2xl:hidden flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $board)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-6 rounded-3xl board-img">
+                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
+                                class="max-w-[350px] w-auto h-80" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- SMALL PC VIEW END --}}
+
+            {{-- LARGE PC VIEW START --}}
+            <swiper-container slides-per-view="6" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden xl:hidden 2xl:flex flex-row gap-12 pb-16">
+                @foreach ($boards as $index => $board)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-6 rounded-3xl board-img">
+                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
+                                class="max-w-[400px] w-auto h-96" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- LARGE PC VIEW END --}}
 
         </div>
         {{-- MEET THE ADVISORY BOARD END --}}
@@ -282,7 +296,7 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-8 rounded-3xl team-img">
                             <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[100px] w-auto h-36" data-index="{{ $index }}">
+                                class="max-w-[200px] w-auto h-56" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
                 @endforeach
@@ -296,7 +310,7 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-10 rounded-3xl team-img">
                             <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[370px] w-auto h-80" data-index="{{ $index }}">
+                                class="max-w-[400px] w-auto h-96" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
                 @endforeach
@@ -309,9 +323,9 @@
         {{-- HOW WE WORK START --}}
         <div class="flex flex-col lg:flex-row items-center justify-around gap-8 w-full p-10 lg:px-20 py-20">
             <div class="basis-full lg:basis-1/2 ">
-                <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">How We Work
+                <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl">How We Work
                 </h2>
-                <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
+                <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light font-normal">
 
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         Our strategy is anchored on three pillars which are Quality, Life Long Development and Access.
@@ -372,8 +386,8 @@
 
         {{-- OUR ACCOUNNTABILITY START --}}
         <div class="p-10 lg:p-20 flex flex-col lg:flex-row items-center gap-12 xl:gap-28">
-            <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-thin font-light">
-                <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Our
+            <div class="basis-1/2 pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-thin font-normal">
+                <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl mb-4">Our
                     Accountability Framework</h2>
                 <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                     Our accountability is essential to our continued ability to work and deliver our impact-
@@ -414,7 +428,7 @@
 
         {{-- DOWNLOADS START --}}
         <div class="w-full bg-[#25A8D6] p-10 lg:p-20">
-            <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-4">Downloads
+            <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl mb-4">Downloads
             </h2>
 
             <div class="w-full flex flex-wrap justify-start items-center gap-8">

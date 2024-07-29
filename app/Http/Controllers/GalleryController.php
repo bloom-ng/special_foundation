@@ -69,6 +69,7 @@ class GalleryController extends Controller
         }
         $gallery->title = $request->title ?? '...';
         $gallery->type = $request->type;
+        $gallery->value = $request->value;
         $gallery->save();
 
         return back()->with('success', 'Media Updated');
@@ -77,7 +78,7 @@ class GalleryController extends Controller
 
     public function destroy(Gallery $gallery)
     {
-        Storage::delete($gallery->url);
+        Storage::delete($gallery->id);
         $gallery->delete();
         return back()->with('success', 'Media Deleted');
     }

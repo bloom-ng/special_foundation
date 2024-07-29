@@ -15,7 +15,7 @@
         <div class="w-full flex flex-col">
             @if (count($featured_posts) > 1)
                 <h2
-                    class="font-montserrat text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#26225F] mb-12">
+                    class="font-montserrat text-4xl font-extrabold leading-none text-left md:leading-tight lg:leading-none xl:leading-none text-[#26225F] mb-12">
                     Featured Blog Posts
                 </h2>
 
@@ -83,7 +83,7 @@
         {{-- BLOGS START --}}
         <div class="w-full flex flex-col my-12">
             <h2
-                class="font-montserrat text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#26225F] mb-12">
+                class="font-montserrat text-4xl font-extrabold leading-none text-left md:leading-tight lg:leading-none xl:leading-none text-[#26225F] mb-12">
                 Blog Posts
             </h2>
 
