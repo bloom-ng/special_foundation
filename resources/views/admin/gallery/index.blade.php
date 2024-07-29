@@ -1,5 +1,5 @@
 <x-admin-layout title="Admin | Gallery" page="gallery">
- 
+
     <main class="w-full flex-grow p-6">
 
         <div class="w-full my-4">
@@ -85,48 +85,51 @@
                     </thead>
                     <tbody class="text-gray-700 text-xs">
                         @foreach ($galleries as $gallery)
-                        <tr>
-                            <td class="w-1/3 text-left py-3 px-4">
-                                {{ $gallery->id }}
-                            </td>
-                            <td class="w-1/3 text-left py-3 px-4">
-                                @if ($gallery->type == \App\Models\Gallery::TYPE_IMAGE)
-                                    <img src="{{ Storage::url($gallery->url) }}" class="w-72 h-48 rounded-md">
-                                @elseif ($gallery->type == \App\Models\Gallery::TYPE_VIDEO)
-                                    <video src="{{ Storage::url($gallery->url) }}" controls class="w-72 h-48 rounded-md">
-                                    </video>
-                                @elseif ($gallery->type == \App\Models\Gallery::TYPE_YOUTUBE)
-                                    {!! \App\Models\Gallery::updateEmbedCode($gallery->value, 300, 200) !!}
-                                @endif
-                                <p class="text-xs text-gray-500 mt-2">
-                                    {{$gallery->title}}
-                                </p>
-                            </td>
-                            <td class="w-1/3 text-left py-3 px-4">
-                                {{ \App\Models\Gallery::getTypeMapping()[$gallery->type] }}
-                            </td>
-                            {{-- <td class="w-1/3 text-left py-3 px-4">
+                            <tr>
+                                <td class="w-1/3 text-left py-3 px-4">
+                                    {{ $gallery->id }}
+                                </td>
+                                <td class="w-1/3 text-left py-3 px-4">
+                                    @if ($gallery->type == \App\Models\Gallery::TYPE_IMAGE)
+                                        <img src="{{ Storage::url($gallery->url) }}" class="w-72 h-48 rounded-md">
+                                    @elseif ($gallery->type == \App\Models\Gallery::TYPE_VIDEO)
+                                        <video src="{{ Storage::url($gallery->url) }}" controls
+                                            class="w-72 h-48 rounded-md">
+                                        </video>
+                                    @elseif ($gallery->type == \App\Models\Gallery::TYPE_YOUTUBE)
+                                        <iframe class="w-full h-full" src="{{ $gallery->value }}"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        {{-- {!! \App\Models\Gallery::updateEmbedCode($gallery->value, 300, 200) !!} --}}
+                                    @endif
+                                    <p class="text-xs text-gray-500 mt-2">
+                                        {{ $gallery->title }}
+                                    </p>
+                                </td>
+                                <td class="w-1/3 text-left py-3 px-4">
+                                    {{ \App\Models\Gallery::getTypeMapping()[$gallery->type] }}
+                                </td>
+                                {{-- <td class="w-1/3 text-left py-3 px-4">
                                 <a href="{{ Storage::url($download->url) }}" class="text-indigo-600" target="_blank" >Link</a>
                             </td> --}}
-                           
-                            <td class="w-1/3 text-left py-3 px-4">
-                                <a class="pr-2 text-blue-300 hover:text-blue-500" href="/admin/galleries/{{$gallery->id}}/edit">
-                                    Edit
-                                </a>
-                                <form
-                                    id="gallery-delete-{{$gallery->id}}"
-                                    action="/admin/galleries/{{$gallery->id}}"
-                                    method="POST"
-                                    style="display: inline"
-                                >
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="text-red-500">
-                                        Delete
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
+
+                                <td class="w-1/3 text-left py-3 px-4">
+                                    <a class="pr-2 text-blue-300 hover:text-blue-500"
+                                        href="/admin/galleries/{{ $gallery->id }}/edit">
+                                        Edit
+                                    </a>
+                                    <form id="gallery-delete-{{ $gallery->id }}"
+                                        action="/admin/galleries/{{ $gallery->id }}" method="POST"
+                                        style="display: inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-500">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
@@ -136,17 +139,17 @@
     </main>
 
     <script>
-        @foreach($galleries as $gallery)
-            const form{{$gallery->id}} = document.getElementById('gallery-delete-{{$gallery->id}}');
-        
-            form{{$gallery->id}}.addEventListener('submit', (e) => {
-            e.preventDefault(); 
-            const confirmSubmit = confirm('Proceed to delete?');
-            if (confirmSubmit) {
-                form{{$gallery->id}}.submit(); 
-            }
+        @foreach ($galleries as $gallery)
+            const form{{ $gallery->id }} = document.getElementById('gallery-delete-{{ $gallery->id }}');
+
+            form{{ $gallery->id }}.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const confirmSubmit = confirm('Proceed to delete?');
+                if (confirmSubmit) {
+                    form{{ $gallery->id }}.submit();
+                }
             });
         @endforeach
-      </script>
+    </script>
 
 </x-admin-layout>

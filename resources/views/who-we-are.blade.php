@@ -309,9 +309,6 @@
         {{-- HOW WE WORK START --}}
         <div class="flex flex-col lg:flex-row items-center justify-around gap-8 w-full p-10 lg:px-20 py-20">
             <div class="basis-full lg:basis-1/2 ">
-                <img src="/images/who_we_are_3.png" alt="Who we are image">
-            </div>
-            <div class="basis-full lg:basis-1/2 ">
                 <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">How We Work
                 </h2>
                 <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light">
@@ -345,6 +342,9 @@
                     </p>
 
                 </div>
+            </div>
+            <div class="basis-full lg:basis-1/2 ">
+                <img src="/images/who_we_are_3.png" alt="Who we are image">
             </div>
         </div>
         {{-- HOW WE WORK END --}}

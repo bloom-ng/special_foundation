@@ -12,14 +12,14 @@
     <div class="w-full py-20 px-8 lg:px-20 flex flex-col gap-16">
         <div class="w-full sm:flex lg:flex-row sm:flex-col items-center space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full lg:w-1/2 space-y-12">
-                <p class="text-lg montserrat-light">
+                <p class="text-lg montserrat-light font-normal">
                     Our Mentorship/Career Day program is a program where professionals from different fields talk to
                     school students about their careers. The Professionals share the realities of working in
                     different industries and jobs with the children as well as life skills, guidance on how to make
                     career choices, tips on how to excel in the workplace, personal success stories and career
                     opportunities.
                 </p>
-                <div class="py-4 px-14 bg-[#26225F] text-white montserrat-thin w-fit">
+                <div class="py-4 px-14 bg-[#26225F] text-white montserrat-thin font-normal w-fit">
                     <p>“I am not a teacher, but an awakener.” - Robert Frost</p>
                 </div>
             </div>

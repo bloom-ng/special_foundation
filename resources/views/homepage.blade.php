@@ -1,12 +1,12 @@
 <x-guest-layout title="Special Foundation - Home" page="home">
     <div class="max-h-[100vh] max-w-[100vw]">
-        <swiper-container slides-per-view="1" speed="900" loop="true" autoPlay="true" css-mode="true"
+        <swiper-container pagination="true" slides-per-view="1" speed="900" loop="true" autoPlay="true" css-mode="true"
             class="flex max-w-[100vw] justify-between items-center">
-            <swiper-slide class=""><img src="/images/carousel-1.png" alt=""
+            <swiper-slide class=""><img src="/images/hero_1.png" alt=""
                     class="w-[100vw]" /></swiper-slide>
-            <swiper-slide class=""><img src="/images/carousel-2.png" alt=""
+            <swiper-slide class=""><img src="/images/hero_2.png" alt=""
                     class="w-[100vw]" /></swiper-slide>
-            <swiper-slide class=""><img src="/images/carousel-3.png" alt=""
+            <swiper-slide class=""><img src="/images/hero_3.png" alt=""
                     class="w-[100vw]" /></swiper-slide>
         </swiper-container>
     </div>
@@ -374,7 +374,7 @@
                 </div>
             </div>
             <div class="basis-2/5">
-                <div class="w-96 grid grid-cols-4 gap-2">
+                <div class="w-96 grid grid-cols-4 gap-2 items-center justify-center">
                     <div>
                         <img class="" src="/images/sdg-1.png" alt="" />
                     </div>
@@ -400,8 +400,8 @@
                         <img class="" src="/images/sdg-13.png" alt="" />
                     </div>
                 </div>
-                <div class="flex flex-row pt-2 items-center justify-center">
-                    <img class="w-[90px] -ml-12" src="/images/sdg-16.png" alt="" />
+                <div class="w-96 flex items-center justify-center mt-2">
+                    <img class="" src="/images/sdg-16.png" alt="" />
                 </div>
             </div>
         </div>
@@ -427,7 +427,7 @@
                 <swiper-slide class="pl-16">
                     <img src="/images/new-pat-3.png" alt="" />
                 </swiper-slide>
-                <swiper-slide class="">
+                <swiper-slide class="pl-16">
                     <img src="/images/new-pat-4.png" alt="" />
                 </swiper-slide>
                 <swiper-slide class="pl-16">
@@ -436,7 +436,7 @@
                 <swiper-slide class="pl-16">
                     <img src="/images/new-pat-6.png" alt="" />
                 </swiper-slide>
-                <swiper-slide class="pl-16">
+                <swiper-slide class="pl-8">
                     <img src="/images/new-pat-7.png" alt="" />
                 </swiper-slide>
             </swiper-container>
@@ -455,7 +455,7 @@
                     <img src="/images/new-pat-3.png" alt="" />
                 </swiper-slide>
 
-                <swiper-slide class="">
+                <swiper-slide class="pl-16">
                     <img src="/images/new-pat-4.png" alt="" />
                 </swiper-slide>
 
@@ -467,13 +467,13 @@
                     <img src="/images/new-pat-6.png" alt="" />
                 </swiper-slide>
 
-                <swiper-slide class="pl-16">
+                <swiper-slide class="pl-8">
                     <img src="/images/new-pat-7.png" alt="" />
                 </swiper-slide>
             </swiper-container>
 
-            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="swiper-container-second hidden xl:flex flex-row gap-12 pb-24">
+            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="swiper-container-second hidden xl:flex items-center justify-center flex-row gap-12 pb-24">
                 <swiper-slide class="pl-16">
                     <img src="/images/new-pat-1.png" alt="" />
                 </swiper-slide>
@@ -486,7 +486,7 @@
                     <img src="/images/new-pat-3.png" alt="" />
                 </swiper-slide>
 
-                <swiper-slide class="">
+                <swiper-slide class="pl-16">
                     <img src="/images/new-pat-4.png" alt="" />
                 </swiper-slide>
 
@@ -498,7 +498,7 @@
                     <img src="/images/new-pat-6.png" alt="" />
                 </swiper-slide>
 
-                <swiper-slide class="pl-16">
+                <swiper-slide class="pl-8">
                     <img src="/images/new-pat-7.png" alt="" />
                 </swiper-slide>
             </swiper-container>

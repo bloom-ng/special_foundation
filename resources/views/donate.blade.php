@@ -80,16 +80,16 @@
                 <form action="/donate" method="POST" class="w-full flex flex-col space-y-8">
                     @csrf
                     <input
-                        class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
+                        class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
                         type="text" name="name" placeholder="Your Full Name" required />
 
                     <div class="w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-2">
                         <input
-                            class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
+                            class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
                             type="email" name="email" placeholder="Email Address" required />
 
                         <input
-                            class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
+                            class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
                             type="text" name="contact_number" placeholder="Contact Number" required />
                     </div>
 
@@ -99,7 +99,7 @@
                     </p>
 
                     <select
-                        class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black"
+                        class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
                         type="text" name="source" placeholder="Select an option" required>
                         <option disabled value="">Select an option</option>
                         <option value="1">Social Media</option>
@@ -115,11 +115,11 @@
                     </select>
 
                     <textarea
-                        class="max-w-[852px] min-h-[172px] pt-[25px] pb-[25px] pl-[50px] rounded-3xl border-[#25A8D6] border-[1px] text-black placeholder:text-black"
+                        class="max-w-[852px] min-h-[172px] pt-[25px] pb-[25px] pl-[50px] rounded-3xl border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
                         type="text" name="comments" placeholder="Comments [Optional]"></textarea>
 
                     <button
-                        class="text-white font-normal w-[308px] h-[54px] py-[15px] pr-[10px] pl-[10px] rounded-full bg-[#26225F] montserrat-light text-md leading-[18px] tracking-wider text-center md:text-xl md:leading-[26px] lg:leading-[28px] xl:leading-[30px] mt-10"
+                        class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#26225F] montserrat-light text-md leading-[18px] tracking-wider text-center md:text-xl md:leading-[26px] lg:leading-[28px] xl:leading-[30px] mt-10 montserrat-thin"
                         href="https://paystack.com/pay/ejyy1q12rf" target="_blank">SUBMIT</button>
 
                 </form>

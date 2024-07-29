@@ -77,26 +77,26 @@
             <h3 class="text-[#26225F] montserrat-medium leading-7 text-[24px]">Documents Required</h3>
             <div class="flex flex-wrap gap-8">
                 <div
-                    class="flex rounded-full text-white montserrat-thin py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
+                    class="flex rounded-full text-white montserrat-thin font-normal py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
                     <span class="bg-white text-black rounded-[100%] py-1 px-3 montserrat-medium">1</span> The applicants
                     birth
                     certificate
                 </div>
                 <div
-                    class="flex rounded-full text-white montserrat-thin py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
+                    class="flex rounded-full text-white montserrat-thin font-normal py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
                     <span class="bg-white text-black rounded-[100%] py-1 px-3 montserrat-medium">2</span> Letter from
                     the
                     school confirming
                     enrolment
                 </div>
                 <div
-                    class="flex rounded-full text-white montserrat-thin py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
+                    class="flex rounded-full text-white montserrat-thin font-normal py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
                     <span class="bg-white text-black rounded-[100%] py-1 px-3 montserrat-medium">3</span> Most recent
                     results
                     from the school
                 </div>
                 <div
-                    class="flex rounded-full text-white montserrat-thin py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
+                    class="flex rounded-full text-white montserrat-thin font-normal py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
                     <span class="bg-white text-black rounded-[100%] py-1 px-3 montserrat-medium">4</span> Death
                     certificate
                     or
@@ -104,7 +104,7 @@
                     local authority confirming death of one parent
                 </div>
                 <div
-                    class="flex rounded-full text-white montserrat-thin py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
+                    class="flex rounded-full text-white montserrat-thin font-normal py-2 pl-2 pr-6 bg-[#25A8D6] items-center w-fit gap-4">
                     <span class="bg-white text-black rounded-[100%] py-1 px-3 montserrat-medium">5</span> Demonstration
                     of
                     lack
@@ -121,7 +121,7 @@
             child must be
             submitted to the Foundation at the end of each term</p>
 
-        <div class="p-4 bg-[#26225F] text-white montserrat-thin w-fit">
+        <div class="p-4 bg-[#26225F] text-white montserrat-thin font-normal w-fit">
             <p>“He who opens a school door, closes a prison” -
                 Victor Hugo</p>
         </div>

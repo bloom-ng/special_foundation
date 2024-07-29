@@ -12,7 +12,7 @@
     <div class="w-full py-20 px-8 lg:px-20 flex flex-col gap-16">
         <div class="w-full sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full lg:w-1/2 space-y-12">
-                <p class="text-lg montserrat-light">
+                <p class="text-lg montserrat-light font-normal">
                     A lot of public schools in Africa lack basic infrastructure. The Special Foundation seeks to build
                     schools to make sure more children have access to a safe and quality learning environment. We
                     believe this is critical to ensuring more children gain access to quality education.<br>
@@ -23,7 +23,7 @@
                     infrastructure including formal walls, windows, and doors to enhance ventilation and lighting.<br>
                     We employ the use of local contractors, building materials and techniques to support local economies
                 </p>
-                <div class="py-4 px-14 bg-[#26225F] text-white montserrat-thin w-fit">
+                <div class="py-4 px-14 bg-[#26225F] text-white montserrat-thin font-normal w-fit">
                     <p>“School is a building which has four walls with
                         tomorrow inside.” - Lon Watters</p>
                 </div>

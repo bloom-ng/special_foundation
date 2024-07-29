@@ -30,7 +30,7 @@
     {{-- BLOG TITLE START --}}
     <div class="w-full flex items-center justify-center p-8 lg:p-10">
         <h1
-            class="font-montserrat text-4xl font-extrabold leading-none text-center md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] my-12 xl:w-[60%]">
+            class="montserrat-bold text-3xl font-extrabold leading-none text-center md:text-4xl md:leading-tight lg:text-5xl lg:leading-none xl:text-6xl xl:leading-none text-[#25A8D6] my-12 xl:w-[70%]">
             {{ $post->title }}
         </h1>
     </div>
@@ -53,7 +53,7 @@
 
             <div class="flex items-center justify-center gap-2">
                 <p
-                    class="font-montserrat text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9 text-white">
+                    class="montserrat-bold text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9 text-white">
                     Share |
                 </p>
                 <div class="flex items-center justify-center gap-4">
@@ -88,7 +88,7 @@
 
     <div class="flex flex-col items-center justify-center p-8 lg:p-20 bg-[#25A8D6]">
         <h2
-            class="font-montserrat text-4xl font-extrabold leading-none text-center md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none mb-8 lg:mb-12 text-[#26225F]">
+            class="montserrat-bold text-[48px] font-extrabold leading-none text-center md:leading-tight lg:leading-none xl:leading-none mb-8 lg:mb-12 text-[#26225F]">
             You may also like
         </h2>
 
