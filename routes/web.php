@@ -107,7 +107,7 @@ Route::get('who-we-are', function () {
         ],
         
         [
-            'name' => 'Olatomi Popoola',
+            'name' => 'Tomi Popoola',
             'position' => 'Head of Strategy',
             'list_image' => '/images/team_7.png', 
             'image' => '/images/team_detail_7.png', 
