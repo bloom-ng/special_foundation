@@ -225,7 +225,7 @@
             </div>
 
             {{-- MOBILE VIEW START --}}
-            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
+            <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="flex md:hidden flex-row gap-12 pb-16">
                 @foreach ($boards as $index => $board)
                     <swiper-slide class="">
@@ -239,7 +239,7 @@
             {{-- MOBILE VIEW END --}}
 
             {{-- TABLET VIEW START --}}
-            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
+            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="hidden md:flex xl:hidden flex-row gap-12 pb-16">
                 @foreach ($boards as $index => $board)
                     <swiper-slide class="">
@@ -253,7 +253,7 @@
             {{-- TABLET VIEW END --}}
 
             {{-- SMALL PC VIEW START --}}
-            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
+            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="hidden lg:hidden xl:flex 2xl:hidden flex-row gap-12 pb-16">
                 @foreach ($boards as $index => $board)
                     <swiper-slide class="">
@@ -267,7 +267,7 @@
             {{-- SMALL PC VIEW END --}}
 
             {{-- LARGE PC VIEW START --}}
-            <swiper-container slides-per-view="6" speed="500" loop="true" autoplay="true" css-mode="true"
+            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="hidden xl:hidden 2xl:flex flex-row gap-12 pb-16">
                 @foreach ($boards as $index => $board)
                     <swiper-slide class="">
@@ -284,38 +284,66 @@
         {{-- MEET THE ADVISORY BOARD END --}}
 
         {{-- MEET THE TEAM START --}}
-        <div class="">
+        <div class="w-full">
             <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
                 Meet The Team
             </div>
 
             {{-- MOBILE VIEW START --}}
-            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="flex lg:hidden flex-row gap-12 pb-16">
+            <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="flex md:hidden flex-row gap-12 pb-16">
                 @foreach ($teams as $index => $team)
                     <swiper-slide class="">
                         <div class=" py-10 px-8 rounded-3xl team-img">
-                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[200px] w-auto h-56" data-index="{{ $index }}">
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[300px] w-auto h-52" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
                 @endforeach
             </swiper-container>
             {{-- MOBILE VIEW END --}}
 
-            {{-- PC VIEW START --}}
-            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden lg:flex flex-row gap-12 pb-16">
+            {{-- TABLET VIEW START --}}
+            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden md:flex xl:hidden flex-row gap-12 pb-16">
                 @foreach ($teams as $index => $team)
                     <swiper-slide class="">
-                        <div class=" py-10 px-10 rounded-3xl team-img">
-                            <img src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                        <div class=" py-10 px-8 rounded-3xl team-img">
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[400px] w-auto h-72" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- TABLET VIEW END --}}
+
+            {{-- SMALL PC VIEW START --}}
+            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden lg:hidden xl:flex 2xl:hidden flex-row gap-12 pb-16">
+                @foreach ($teams as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-6 rounded-3xl team-img">
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
+                                class="max-w-[350px] w-auto h-80" data-index="{{ $index }}">
+                        </div>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
+            {{-- SMALL PC VIEW END --}}
+
+            {{-- LARGE PC VIEW START --}}
+            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
+                class="hidden xl:hidden 2xl:flex flex-row gap-12 pb-16">
+                @foreach ($teams as $index => $team)
+                    <swiper-slide class="">
+                        <div class=" py-10 px-6 rounded-3xl team-img">
+                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="max-w-[400px] w-auto h-96" data-index="{{ $index }}">
                         </div>
                     </swiper-slide>
                 @endforeach
             </swiper-container>
-            {{-- PC VIEW END --}}
+            {{-- LARGE PC VIEW END --}}
 
         </div>
         {{-- MEET THE TEAM END --}}
