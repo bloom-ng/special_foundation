@@ -129,7 +129,7 @@ Route::get('who-we-are', function () {
         ],
 
         [
-            'name' => 'Akinbamidel Akintola', 
+            'name' => 'Akinbamidele Akintola', 
             'list_image' => '/images/ambassador_2.png', 
             'image' => '/images/detail_2.png', 
             'content' => "Dele, a seasoned executive with 15+ years in Equity Capital Markets (ECM) and investment banking across Sub-Saharan Africa, has raised over USD10bn for African-focused corporates. Currently, as Chief Commercial Officer at Alerzo, an innovative Technology Distribution Startup, he tackles FMCG supply chain issues in Nigeria, empowering informal retailers, especially working mothers. 
@@ -390,7 +390,7 @@ Route::get('/get-involved', function () {
         ],
 
         [
-            'name' => 'Akinbamidel Akintola', 
+            'name' => 'Akinbamidele Akintola', 
             'list_image' => '/images/ambassador_2.png', 
             'image' => '/images/detail_2.png', 
             'content' => "Dele, a seasoned executive with 15+ years in Equity Capital Markets (ECM) and investment banking across Sub-Saharan Africa, has raised over USD10bn for African-focused corporates. Currently, as Chief Commercial Officer at Alerzo, an innovative Technology Distribution Startup, he tackles FMCG supply chain issues in Nigeria, empowering informal retailers, especially working mothers. 

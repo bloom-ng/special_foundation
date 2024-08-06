@@ -57,45 +57,60 @@
         </div>
         <div class="montserrat-medium text-xs basis-1/5">
             <div class="pb-10">
-                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
-                    21,000+
-                </h1>
+                <div class="flex">
+                    <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-1">
+                        {{-- 21,000+ --}}0
+                    </h1>
+                    <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
+                </div>
                 <p class="">
                     Nigerian children directly and indirectly impacted by
                     the foundation over the last 5 years
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
-                    460+
-                </h1>
+                <div class="flex">
+                    <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-2">
+                        {{-- 460+ --}}0
+                    </h1>
+                    <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
+                </div>
                 <p class="">
                     Nigerian children are given access to education through
                     the Inspire Scholarship Pprogram yearly
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
-                    10,672+
-                </h1>
+                <div class="flex">
+                    <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-3">
+                        {{-- 10,672+ --}}0
+                    </h1>
+                    <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
+                </div>
                 <p class="">
                     Nigerian children access educational and vocational
                     training through the free Summer School Program yearly
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
-                    6,879+
-                </h1>
+                <div class="flex">
+                    <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-4">
+                        {{-- 6,879+ --}}0
+                    </h1>
+                    <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
+                </div>
                 <p class="">
                     Nigerian children accessing mentorship through our
                     Mentorship/Career Day Program
                 </p>
             </div>
             <div class="pb-10">
-                <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3">
-                    5+
-                </h1>
+                <div class="flex">
+                    <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-5">
+                        {{-- 5+ --}}0
+                    </h1>
+                    <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
+                </div>
                 <p class="">
                     Nigerian Schools accessing conducive learning
                     environment through our school build project
@@ -580,5 +595,4 @@
         </div>
     </div>
     {{-- BLOG END --}}
-
 </x-guest-layout>

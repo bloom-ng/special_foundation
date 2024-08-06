@@ -85,7 +85,10 @@
                     {{-- ITEM 1 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">21,000+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">21,000</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children directly
                                 impacted by the
                                 foundation
@@ -95,7 +98,10 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100,000+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-6">100,000</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal">Africans directly impacted by the
                                 Foundation</p>
                         </div>
@@ -105,7 +111,10 @@
                     {{-- ITEM 2 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">460+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-2">460</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children are given access to
                                 education
                                 through
@@ -115,7 +124,10 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">5,000+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] meter-2">5,000</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal">African students given access to education through
                                 scholarships
                                 every year</p>
@@ -126,7 +138,10 @@
                     {{-- ITEM 3 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">10,672+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">10,672</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children access educational and
                                 vocational
                                 training through the free Summer School Program yearly</p>
@@ -135,7 +150,10 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">20,000+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] meter-3">20,000</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal">African students sponsored through the Summer School
                                 programs</p>
                         </div>
@@ -145,7 +163,10 @@
                     {{-- ITEM 4 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">6,879+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-4">6,879</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children accessing mentorship
                                 through
                                 our
@@ -155,7 +176,10 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">60,000+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] meter-4">60,000</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal">African students on our mentorship program</p>
                         </div>
                     </div>
@@ -164,7 +188,10 @@
                     {{-- ITEM 5 START --}}
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">5+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-5">5</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian Schools accessing conducive
                                 learning
                                 environment
@@ -174,7 +201,10 @@
                             <img src="/images/arrow.svg" alt="arrow image">
                         </div>
                         <div class="flex flex-col w-[40%]">
-                            <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F]">100+</h3>
+                            <div class="flex items-center">
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] meter-5">100</h3>
+                                <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
+                            </div>
                             <p class="montserrat-thin font-normal">African schools benefiting from the School Build
                                 Program
                             </p>
@@ -188,7 +218,8 @@
 
             {{-- MEET THE FOUNDER START --}}
             <div class="flex flex-col lg:flex-row items-center justify-between my-14 gap-8 w-full">
-                <div class="basis-full lg:basis-1/2"><img src="/images/seyi_who_we_are.png" alt="Seyi Akinwale"></div>
+                <div class="basis-full lg:basis-1/2"><img src="/images/seyi_who_we_are.png" alt="Seyi Akinwale">
+                </div>
                 <div class="basis-full lg:basis-1/2 ">
                     <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl">Meet The
                         Founder</h2>
@@ -198,25 +229,26 @@
                             Seyi Akinwale
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                            Seyi Akinwale has extensive experience originating, developing and executing infrastructure
-                            related projects in Sub Saharan Africa. He has corporate experience leading the finance
-                            teams in Sub-Sahara Africa currently at GE Capital and previously at PricewaterhouseCoopers
-                            (PwC), and is passionate about the Infrastructural development of developing economies.
+                            Seyi is a solutionist and passionate about developing sustainable solutions that address
+                            societal challenges. He is a trained board member and has extensive experience originating,
+                            developing and executing infrastructure projects in Sub-Saharan Africa. He is an Alumni of
+                            the prestigious University of Chicago Booth School of Business and has corporate experience
+                            leading finance teams at General Electric and Pricewaterhouse Coopers (PwC).
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                             His understanding of the key role education plays in the development of nations has led to
-                            the decision to set up the Foundation to provide a platform to improve the quality of
-                            leadership in Africa by increasing access to education for less privileged children.
+                            the decision to set up the Foundation as a platform to improve the quality of leadership in
+                            Africa by increasing access to education for less privileged children.
                         </p>
                         <p class="border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6]">
-                            …Every Child is SPECIAL, if only we can present them with a chance to demonstrate their
-                            unique abilities.
+                            .. Every Child is SPECIAL, and it is our joint responsibility to unearth the unique
+                            possibilities in them...
                         </p>
                     </div>
                 </div>
             </div>
+            {{-- MEET THE FOUNDER END --}}
         </div>
-        {{-- MEET THE FOUNDER END --}}
 
         {{-- MEET THE ADVISORY BOARD START --}}
         <div class="w-full">

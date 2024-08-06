@@ -27,6 +27,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css"
+        integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <style>
@@ -189,6 +193,68 @@
                 communicationsIcon.classList.toggle('rotate-180');
             });
         });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"
+        integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const createOdometer = (el, value) => {
+            const odometer = new Odometer({
+                el: el,
+                value: 0,
+            });
+
+            let hasRun = false;
+
+            const options = {
+                threshold: [0, 0.9],
+            };
+
+            const callback = (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (!hasRun) {
+                            odometer.update(value);
+                            hasRun = true;
+                        }
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(callback, options);
+            observer.observe(el);
+        };
+
+        const odometer1 = document.querySelector(".odometer-1");
+        createOdometer(odometer1, 21000);
+
+        const odometer2 = document.querySelector(".odometer-2");
+        createOdometer(odometer2, 460);
+
+        const odometer3 = document.querySelector(".odometer-3");
+        createOdometer(odometer3, 10672);
+
+        const odometer4 = document.querySelector(".odometer-4");
+        createOdometer(odometer4, 6879);
+
+        const odometer5 = document.querySelector(".odometer-5");
+        createOdometer(odometer5, 5);
+
+        const meter1 = document.querySelector(".odometer-6");
+        createOdometer(meter1, 100000);
+
+        const meter2 = document.querySelector(".meter-2");
+        createOdometer(meter2, 5000);
+
+        const meter3 = document.querySelector(".meter-3");
+        createOdometer(meter3, 20000);
+
+        const meter4 = document.querySelector(".meter-4");
+        createOdometer(meter4, 60000);
+
+        const meter5 = document.querySelector(".meter-5");
+        createOdometer(meter5, 100);
     </script>
 </body>
 

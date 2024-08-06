@@ -184,7 +184,7 @@
                 </div>
                 <div class="pb-8">
                     <h1 class="text-[#25A8D6] text-[36px] pb-3 montserrat-bold">
-                        School Builds
+                        School Build
                     </h1>
                     <p class="text-xs montserrat-medium pb-5">
                         At the end of the program, the participants are
