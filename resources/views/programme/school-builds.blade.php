@@ -29,7 +29,12 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 rounded-2xl">
-                <img src="/images/school_build_1.png" alt="">
+                {{-- <img src="/images/school_build_1.png" alt=""> --}}
+                <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/J3Aukrn86BU?si=ijhz-Iq_3BcPmbAx"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
             </div>
         </div>
 
