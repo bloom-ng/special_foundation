@@ -10,7 +10,7 @@
     </div>
 
     <div class="p-8 lg:p-20">
-        <h2
+        {{-- <h2
             class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] mb-12">
             Ambassadors
         </h2>
@@ -29,25 +29,25 @@
             <br>
 
             We are pleased to introduce our Ambassadors for the current year:
-        </p>
+        </p> --}}
 
         {{-- AMBASSADORS LIST START --}}
-        <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 my-12">
+        {{-- <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 my-12">
             @foreach ($ambassadors as $index => $ambassador)
                 <img src="{{ $ambassador['list_image'] }}" alt="{{ $ambassador['name'] }}" class="my-5 cursor-pointer"
                     data-index="{{ $index }}">
             @endforeach
-        </div>
+        </div> --}}
         {{-- AMBASSADORS LIST END --}}
 
-        <p
+        {{-- <p
             class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9">
             You may identify with us by volunteering for our activities, donating/securing donations for the foundation
             and/or proactively publicizing the activities and objectives of the Foundation.
-        </p>
+        </p> --}}
 
         {{-- PARTNER WITH US START --}}
-        <div class="flex flex-col lg:flex-row items-start justify-center my-12 lg:my-24 2xl:justify-between gap-10">
+        <div class="flex flex-col lg:flex-row items-start justify-center 2xl:justify-between gap-10">
             <div class="w-full lg:w-[40%]">
                 <h2
                     class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:leading-none text-[#25A8D6] mb-10">
@@ -68,7 +68,7 @@
             </div>
 
             <div class="w-full lg:w-[60%]">
-                <img src="/images/new-partner.png" class="w-full" alt="Our Partners">
+                <img src="/images/new_partners.png" class="w-full" alt="Our Partners">
             </div>
         </div>
         {{-- PARTNER WITH US END --}}
@@ -252,10 +252,10 @@
         {{-- VOLUNTEER NOW MODAL END --}}
 
     </div>
-
+    {{-- // const ambassadors = @json($ambassadors); --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const ambassadors = @json($ambassadors);
+
             const modal = document.getElementById('ambassador-modal');
             const partner = document.getElementById('partner-modal');
             const volunteer = document.getElementById('volunteer-modal');
