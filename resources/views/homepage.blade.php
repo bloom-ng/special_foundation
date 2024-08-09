@@ -649,7 +649,7 @@
                             <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${sdg.title}</h3>
                             <h3 class="montserrat-light font-semibold text-black text-xl">${sdg.subtitle}</h3>
                         </div>
-                        <p class="montserrat-thin font-light">
+                        <p class="montserrat-light font-normal">
                             ${sdg.description}
                         </p>
                     </div>
