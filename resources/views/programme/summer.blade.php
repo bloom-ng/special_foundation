@@ -16,8 +16,8 @@
             </div>
             <div class="w-full lg:w-1/2 space-y-12 bg-[#25A8D6] p-12 text-white">
                 <p class="text-sm lg:text-lg montserrat-thin font-normal">
-                    This is a 3-week summer school program for less privileged children in  Nigeria. The program is a
-                    free program that selects over a thousand annually to embark on a transformational intellectual
+                    This is a 3-week summer school program for less privileged children in  Nigeria. It is a free
+                    program that selects over a thousand annually to embark on a transformational intellectual
                     experience that challenges them on who they are and the need for Nation building.
 
 
