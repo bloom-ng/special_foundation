@@ -13,37 +13,29 @@
     <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
         <div class="basis-4/5 flex flex-col gap-16">
             <div class="flex flex-col lg:flex-row gap-10">
-                <div class="montserrat-medium text-xs basis-3/5">
+                <div class="montserrat-light font-normal text-sm 2xl:text-base basis-3/5">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
                         Who We Are
                     </h1>
                     <div class="">
                         <p class="border-[#25A8D6] pl-5 border-l-[14px]">
-                            The Special Foundation is a social impact
-                            organisation that focuses on raising young
-                            African leaders through education by providing
-                            platforms and opportunities to fulfil their
-                            dreams. We are a community of young
-                            professionals with a vision to improve the
-                            quality of leadership in all spheres of
-                            governance in Africa by creating access for more
-                            children to get an education. <br />
+                            The Special Foundation is a social impact organisation that focuses on raising young African
+                            leaders through education by providing platforms and opportunities to fulfil their dreams.
+                            We are a community of young professionals with a vision to improve the quality of leadership
+                            in all spheres of governance in Africa by creating access for more children to get an
+                            education.
                             <br />
-
-                            Founded by Seyi Akinwale in 2018 through his
-                            vision to improve the quality of leadership in
-                            all spheres of governance in Africa and ensure
-                            the creation of a platform where more young
-                            people can maximize their potential by gaining
-                            access to education. The foundation has
-                            empowered over 21,000 less privileged, gifted
-                            African Children through education, mentorship,
-                            and leadership opportunities.
+                            <br />
+                            Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
+                            all spheres of governance in Africa and ensure the creation of a platform where more young
+                            people can maximize their potential by gaining access to education. The foundation has
+                            empowered over 21,000 less privileged, gifted African children through education,
+                            mentorship, and leadership opportunities.
                         </p>
                     </div>
                 </div>
                 <div class="basis-2/5">
-                    <img class="w-full h-[278px]" src="/images/home_1.png" alt="" />
+                    <img class="w-full min-h-[278px] h-auto 2xl:h-full" src="/images/home_1.png" alt="" />
                 </div>
             </div>
             <div class="relative w-full h-[350px] lg:h-[550px] rounded-3xl"
@@ -55,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="montserrat-medium text-xs basis-1/5">
+        <div class="montserrat-light font-normal text-sm 2xl:text-base basis-1/5">
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-1">
@@ -120,7 +112,7 @@
     </div>
 
     {{-- OUR PROGRAMS START --}}
-    <div class="bg-[#26225F]">
+    <div id="programs" class="bg-[#26225F]">
         <div class="mx-5 lg:mx-20 pt-20 pb-12 text-[#25A8D6] montserrat-bold text-[38px] leading-[45px]">
             Our Programs
         </div>
@@ -186,7 +178,7 @@
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
                     <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         School <br />
-                        Builds
+                        Build
                     </h1>
                     <p class="montserrat-medium text-xs pb-12">
                         The Special Foundation seeks to build schools to
@@ -301,7 +293,7 @@
                 <div class="bg-white py-10 px-10 rounded-3xl w-72 h-80">
                     <h1 class="text-[#25A8D6] leading-[22px] pb-4 text-xl montserrat-bold">
                         School <br />
-                        Builds
+                        Build
                     </h1>
                     <p class="montserrat-medium text-xs pb-12">
                         The Special Foundation seeks to build schools to
@@ -360,62 +352,57 @@
     {{-- SUPPORT START --}}
     <div class="bg-white mx-5 lg:mx-20 py-20">
         <div class="flex flex-col lg:flex-row gap-28">
-            <div class="montserrat-medium text-xs basis-3/5">
+            <div class="montserrat-light font-normal text-sm 2xl:text-base basis-3/5">
                 <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
                     Supporting the UN’s SD Goals
                 </h1>
                 <div class="">
                     <p class="border-[#25A8D6] pl-5 border-l-[14px]">
-                        Africa has the youngest population in the world,
-                        with 70% of sub-Saharan Africa under the age of 30.
-                        Such a high number of young people is an opportunity
-                        for the continent’s growth – but only if these new
-                        generations are fully empowered to realize their
-                        best potential. It is especially important that
-                        young people are included in decision making and
-                        given appropriate opportunities for work and to
-                        innovate. The Special Foundation’s programs provide
-                        the youths lifelong skills that empowers them to
-                        realize their potentials. <br /><br />
-                        The Special Foundation is committed to helping the
-                        United Nations achieve its Sustainable Development
-                        Goals (SDGs) by tailoring our programs to promote
-                        and contribute towards its goals and helping to
-                        build a sustainable future for all. <br /><br />
-                        Here are some of the goals we are focused on. Click
-                        on each one to know how you can support the goals we
-                        feel most passionately about:
+                        Africa has the youngest population in the world, with 70% of sub-Saharan Africa under the age of
+                        30. Such a high number of young people is an opportunity for the continent’s growth – but only
+                        if these new generations are fully empowered to realize their best potential. It is especially
+                        important that young people are included in decision making and given appropriate opportunities
+                        for work and to innovate. The Special Foundation’s programs provide the youths lifelong skills
+                        that empowers them to realize their potentials.
+                        <br />
+                        <br />
+                        The Special Foundation is committed to helping the United Nations achieve its Sustainable
+                        Development Goals (SDGs) by tailoring our programs to promote and contribute towards its goals
+                        and helping to build a sustainable future for all.
+                        <br />
+                        <br />
+                        Here are some of the goals we are focused on:
                     </p>
                 </div>
             </div>
             <div class="basis-2/5">
                 <div class="w-96 grid grid-cols-4 gap-2 items-center justify-center">
-                    <div>
+                    <div onclick="showSdgModal(1)">
                         <img class="" src="/images/sdg-1.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(2)">
                         <img class="" src="/images/sdg-2.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(3)">
                         <img class="" src="/images/sdg-4.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(4)">
                         <img class="" src="/images/sdg-5.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(5)">
                         <img class="" src="/images/sdg-8.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(6)">
                         <img class="" src="/images/sdg-9.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(7)">
                         <img class="" src="/images/sdg-11.png" alt="" />
                     </div>
-                    <div>
+                    <div onclick="showSdgModal(8)">
                         <img class="" src="/images/sdg-13.png" alt="" />
                     </div>
                 </div>
-                <div class="w-96 flex items-center justify-center mt-2">
+                <div onclick="showSdgModal(9)" class="w-96 flex items-center justify-center mt-2">
                     <img class="" src="/images/sdg-16.png" alt="" />
                 </div>
             </div>
@@ -454,11 +441,23 @@
                 <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-7.png" alt="" />
                 </swiper-slide>
+                <swiper-slide class="pl-16 self-center">
+                    <img src="/images/new-pat-8.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-9.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-10.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-11.png" alt="" />
+                </swiper-slide>
             </swiper-container>
 
             <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="swiper-container-second hidden lg:flex xl:hidden flex-row gap-10 pb-24">
-                <swiper-slide class="pl-16 self-center">
+                <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-1.png" alt="" />
                 </swiper-slide>
 
@@ -484,12 +483,28 @@
 
                 <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-7.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16 self-center">
+                    <img src="/images/new-pat-8.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-9.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-10.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-11.png" alt="" />
                 </swiper-slide>
             </swiper-container>
 
             <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="swiper-container-second hidden xl:flex items-center justify-center flex-row gap-8 pb-24">
-                <swiper-slide class="pl-16 self-center">
+                <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-1.png" alt="" />
                 </swiper-slide>
 
@@ -515,6 +530,22 @@
 
                 <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-7.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-16 self-center">
+                    <img src="/images/new-pat-8.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-9.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-10.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-11.png" alt="" />
                 </swiper-slide>
             </swiper-container>
         </div>
@@ -560,7 +591,7 @@
                 </div>
             </div>
 
-            <img class="hidden lg:block lg:absolute -mt-40 -mr-20 right-0 top-0 basis-2/5 z-20 xl:w-[750px] lg:w-[600px]"
+            <img class="hidden lg:block lg:absolute -mt-40 -mr-20 right-0 top-0 basis-2/5 z-10 xl:w-[750px] lg:w-[600px]"
                 src="/images/email-symbol.png" alt="" />
         </div>
     </div>
@@ -595,4 +626,44 @@
         </div>
     </div>
     {{-- BLOG END --}}
+
+    {{-- AMBASSADORS MODAL START --}}
+    <div id="sdg-modal"
+        class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
+
+    </div>
+    {{-- AMBASSADORS MODAL END --}}
+
+    <script>
+        //show modal on click
+        const sdgs = @json($sdgs);
+
+        function showSdgModal(id) {
+            const sdg = sdgs[id - 1];
+
+            const content =
+                `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
+                    <img src="${sdg.image}" alt="${sdg.title}">
+                    <div class="flex flex-col items-start gap-8">
+                        <div>
+                            <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${sdg.title}</h3>
+                            <h3 class="montserrat-light font-semibold text-black text-xl">${sdg.subtitle}</h3>
+                        </div>
+                        <p class="montserrat-thin font-light">
+                            ${sdg.description}
+                        </p>
+                    </div>
+                </div>`;
+
+            let modal = document.getElementById("sdg-modal");
+            modal.innerHTML = content;
+            modal.classList.toggle('hidden');
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </x-guest-layout>
