@@ -16,14 +16,14 @@
                         The Special Foundation is a social impact organisation that focuses on raising young African
                         leaders through education by providing platforms and opportunities to fulfil their dreams. We
                         are a community of young professionals with a vision to improve the quality of leadership in all
-                        spheres of governance in Africa by creating access for more children to get an education.
+                        spheres of governance in Africa by creating access for more children to get an education
                     </p>
                     <p class="border-[#25A8D6] pl-5 border-l-[14px]">
                         Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in all
                         spheres of governance in Africa and ensure the creation of a platform where more young people
-                        can maximize their potential by gaining access to education. The foundation has empowered over
-                        21,000 less privileged, gifted African Children through education, mentorship, and leadership
-                        opportunities.
+                        can maximize their potential by gaining access to education. The foundation now has over 400
+                        active partners and volunteers and has empowered over 21,000 less privileged, gifted African
+                        Children through education, mentorship, and leadership opportunities.
                     </p>
                 </div>
                 <div class="basis-full xl:basis-1/2 lg:pl-6">

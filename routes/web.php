@@ -114,8 +114,25 @@ Route::get('who-we-are', function () {
             'content' => "Strategic whiz who turns challenges into seamless collaboration. Expert at driving teamwork and boosting communication with style. A relationship builder who keeps teams sharp and adaptable. Master communicator and inventive problem-solver with a flair for strategic planning. Known for charming execs and partners while delivering stellar results.", 
             'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
         ],
+        
+        [
+            'name' => 'EseOghene Okagbare',
+            'position' => 'Head of Media Operations',
+            'list_image' => '/images/team_8.png', 
+            'image' => '/images/team_detail_8.png', 
+            'content' => "EseOghene brings diverse experience across education, banking, and technology sectors, driving innovative media strategies and brand awareness with his technical knowledge and creative vision. Holding a Bachelor's in Computer Science and multiple tech certifications, Elson has advanced rapidly, showcasing his versatility and leadership. He rose to Head Customer Service Officer in banking before becoming a Senior Software Engineer at Interswitch Nigeria Limited. There, he discovered his passion for media, directing a film and a documentary, and later founded a wedding media company and corporate media enterprise. He has produced commercials, documentaries, and films for diverse clients.", 
+            'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
+        ],
     ];
     $boards = [
+        [
+            'name' => 'Seyi Akinwale', 
+            'list_image' => '/images/ambassador_10.png', 
+            'image' => '/images/detail_10.png', 
+            'content' => "Seyi Akinwale, Senior VP at GE Vernova’s Financial Services, has 18+ years of experience in infrastructure project development in Sub Saharan Africa. Skilled in debt and equity markets, he secures financing for complex projects. Seyi has held roles in GE’s Industrial Finance and Treasury Capital Markets. Previously, he was a Director at PwC, growing the Deals practice, and a VP at FCMB Capital. Seyi holds degrees from Obafemi Awolowo University, Cranfield University, and the University of Chicago Booth School of Business. He is a fellow of the Association of Certified Chartered Accountants of UK & Ireland and the Institute of Chartered Accountants of Nigeria. Seyi serves on multiple boards, including as a non-executive Director of the Ibadan Electricity Distribution Company. Passionate about infrastructural development and education, he founded the Special Foundation to empower gifted African children through education and mentorship.", 
+            'link' => 'https://www.linkedin.com/in/seyi-akinwale/'
+        ],
+
         [
             'name' => 'Abimbola Ayinde', 
             'list_image' => '/images/ambassador_1.png', 
@@ -126,26 +143,6 @@ Route::get('who-we-are', function () {
                 <br><br>
                 Abimbola is dedicated to supporting the education and wellbeing of children with absent or underprivileged parents, volunteering and advocating for multiple NGOs.", 
             'link' => 'https://www.linkedin.com/in/abimbola-ayinde-0ab79018/'
-        ],
-
-        [
-            'name' => 'Akinbamidele Akintola', 
-            'list_image' => '/images/ambassador_2.png', 
-            'image' => '/images/detail_2.png', 
-            'content' => "Dele, a seasoned executive with 15+ years in Equity Capital Markets (ECM) and investment banking across Sub-Saharan Africa, has raised over USD10bn for African-focused corporates. Currently, as Chief Commercial Officer at Alerzo, an innovative Technology Distribution Startup, he tackles FMCG supply chain issues in Nigeria, empowering informal retailers, especially working mothers. 
-                Previously, as Senior VP at Stanbic IBTC Stockbrokers Limited, he fortified the firm's position as the top brokerage for over a decade, executing landmark ECM deals. Dele's tenure at Renaissance Capital also saw pivotal growth, where he managed Africa Equity Sales and served as an Equity Research Analyst.<br>
-                He's renowned for capital raises like the $200M MTN Nigeria Secondary Sale, $500M Seplat IPO, and $5B MTN Nigeria Listing by Introduction. Academically, he holds a bachelor’s degree from Babcock University, an MSc from Loughborough University, and recently completed an Executive MBA at MIT.", 
-            'link' => 'https://www.linkedin.com/mwlite/in/akinbamidele-akintola-90aa2546'
-        ],
-
-        [
-            'name' => 'Chukwuma Nwanze', 
-            'list_image' => '/images/ambassador_3.png', 
-            'image' => '/images/detail_3.png', 
-            'content' => "Chukwuma Nwanze is the Managing Director/Chief Executive Officer at Credit Direct Ltd, Nigeria's premier consumer lending finance company. Prior to joining Credit Direct, Chukwuma had worked in different sectors of the economy including Banking, Management Consulting, Oil and Gas, ICT and the Public Sector as a Chief Finance Officer in many prestigious companies.<br>
-                He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) with over 22 years of working experience. He holds an MBA from the prestigious Warwick Business School, University of Warwick, Coventry, United Kingdom. He is an alumnus of Oxford Business School, UK, Nanyang Business School, Singapore and the Stellenbosch Business School, Cape Town, South Africa and the Lagos Business School, Lagos, Nigeria.<br>
-                Chukwuma is a doctoral candidate at Edinburgh Business School and is a big advocate of equal learning opportunities for every child.", 
-            'link' => 'https://www.linkedin.com/in/chukwuma-nwanze-9b002a18/'
         ],
 
         [
@@ -161,6 +158,16 @@ Route::get('who-we-are', function () {
             'link' => 'https://www.linkedin.com/in/lola-akinwale-2002472/'
         ],
 
+        [
+            'name' => 'Akinbamidele Akintola', 
+            'list_image' => '/images/ambassador_2.png', 
+            'image' => '/images/detail_2.png', 
+            'content' => "Dele, a seasoned executive with 15+ years in Equity Capital Markets (ECM) and investment banking across Sub-Saharan Africa, has raised over USD10bn for African-focused corporates. Currently, as Chief Commercial Officer at Alerzo, an innovative Technology Distribution Startup, he tackles FMCG supply chain issues in Nigeria, empowering informal retailers, especially working mothers. 
+            Previously, as Senior VP at Stanbic IBTC Stockbrokers Limited, he fortified the firm's position as the top brokerage for over a decade, executing landmark ECM deals. Dele's tenure at Renaissance Capital also saw pivotal growth, where he managed Africa Equity Sales and served as an Equity Research Analyst.<br>
+            He's renowned for capital raises like the $200M MTN Nigeria Secondary Sale, $500M Seplat IPO, and $5B MTN Nigeria Listing by Introduction. Academically, he holds a bachelor’s degree from Babcock University, an MSc from Loughborough University, and recently completed an Executive MBA at MIT.", 
+            'link' => 'https://www.linkedin.com/mwlite/in/akinbamidele-akintola-90aa2546'
+        ],
+        
         [
             'name' => 'Funlola Adegoke', 
             'list_image' => '/images/ambassador_5.png', 
@@ -181,6 +188,16 @@ Route::get('who-we-are', function () {
                 Ifeoma holds a bachelor’s in mass communication from the University of Lagos, Prince2 certification in Project Management from the UK, and Executive Leadership Education from the University of Stellenbosch. She earned her Executive Coaching Certification from Henley Business School Denmark.<br>
                 An avid traveller, Ifeoma loves connecting people and ideas for impactful encounters. She supports professionals through mentoring, coaching, and equipping them with career development tools.", 
             'link' => 'https://www.linkedin.com/in/ifeoma-okpala/'
+        ],
+
+        [
+            'name' => 'Chukwuma Nwanze', 
+            'list_image' => '/images/ambassador_3.png', 
+            'image' => '/images/detail_3.png', 
+            'content' => "Chukwuma Nwanze is the Managing Director/Chief Executive Officer at Credit Direct Ltd, Nigeria's premier consumer lending finance company. Prior to joining Credit Direct, Chukwuma had worked in different sectors of the economy including Banking, Management Consulting, Oil and Gas, ICT and the Public Sector as a Chief Finance Officer in many prestigious companies.<br>
+                He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) with over 22 years of working experience. He holds an MBA from the prestigious Warwick Business School, University of Warwick, Coventry, United Kingdom. He is an alumnus of Oxford Business School, UK, Nanyang Business School, Singapore and the Stellenbosch Business School, Cape Town, South Africa and the Lagos Business School, Lagos, Nigeria.<br>
+                Chukwuma is a doctoral candidate at Edinburgh Business School and is a big advocate of equal learning opportunities for every child.", 
+            'link' => 'https://www.linkedin.com/in/chukwuma-nwanze-9b002a18/'
         ],
 
         [
@@ -211,15 +228,6 @@ Route::get('who-we-are', function () {
             'content' => 'Oluwole Coker', 
             'link' => 'https://www.linkedin.com/in/oluwole-coker-49499a121/'
         ],
-
-        [
-            'name' => 'Seyi Akinwale', 
-            'list_image' => '/images/ambassador_10.png', 
-            'image' => '/images/detail_10.png', 
-            'content' => "Seyi Akinwale, Senior VP at GE Vernova’s Financial Services, has 18+ years of experience in infrastructure project development in Sub Saharan Africa. Skilled in debt and equity markets, he secures financing for complex projects. Seyi has held roles in GE’s Industrial Finance and Treasury Capital Markets. Previously, he was a Director at PwC, growing the Deals practice, and a VP at FCMB Capital. Seyi holds degrees from Obafemi Awolowo University, Cranfield University, and the University of Chicago Booth School of Business. He is a fellow of the Association of Certified Chartered Accountants of UK & Ireland and the Institute of Chartered Accountants of Nigeria. Seyi serves on multiple boards, including as a non-executive Director of the Ibadan Electricity Distribution Company. Passionate about infrastructural development and education, he founded the Special Foundation to empower gifted African children through education and mentorship.", 
-            'link' => 'https://www.linkedin.com/in/seyi-akinwale/'
-        ],
-        // Add more ambassadors as needed
     ];
     return view('who-we-are', compact('teams'))->with('boards', $boards)->with('downloads', $downloads);
 });
