@@ -24,6 +24,7 @@ class SitemapController extends Controller
             URL::to('/school-build'),
             URL::to('/get-involved'),
             URL::to('/donate'),
+            URL::to('/gallery'),
             URL::to('/blogs')
         ];
 
