@@ -642,7 +642,7 @@
             const sdg = sdgs[id - 1];
 
             const content =
-                `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
+                `<div class="flex flex-col lg:flex-row 2xl:w-[60%] items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
                     <img src="${sdg.image}" alt="${sdg.title}">
                     <div class="flex flex-col items-start gap-8">
                         <div>

@@ -36,9 +36,7 @@
                                 +234 906 344 4444
                             </p>
                             <p class="montserrat-extralight text-xs leading-[18px] pb-6">
-                                The Special Youth Leadership Foundation. Arkounting
-                                Floor Law Union and Rock Insurance Building, 14
-                                Hughes Avenue, Alagomeji, Yaba, Lagos, Nigeria.
+                                Plot 28, Daniyan Natalia Street, lekki phase one, Lagos State.
                             </p>
                         </div>
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
