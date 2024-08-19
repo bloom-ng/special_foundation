@@ -20,7 +20,7 @@
                                         {{ $blog->title }}
                                     </p>
                                     <p class="montserrat-thin text-[9px] leading-[18px]">
-                                        {{ \Carbon\Carbon::parse($blog->created_at)->format('F d, Y') }}
+                                        {{ \Carbon\Carbon::parse($blog->published_at)->format('F d, Y') }}
                                     </p>
                                 </a>
                             @endforeach
