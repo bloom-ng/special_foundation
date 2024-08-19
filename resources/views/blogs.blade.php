@@ -97,7 +97,7 @@
                                 {{ $post->title }}
                             </h1>
                             <p class="montserrat-light text-xs pb-5">
-                                {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
+                                {{ \Carbon\Carbon::parse($post->published_at)->format('F d, Y') }}
                             </p>
                             <a class="text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
                         </div>

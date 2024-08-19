@@ -365,7 +365,7 @@ Route::get('/blog/{id}', function ($id) {
             foreach ($words as $word) {
                 $query->orWhere('title', 'LIKE', "%{$word}%");
             }
-        })->get()
+        })->take(3)->get()
         ->filter(function ($post, $key) use($id) {
             return $post->id != $id;
         });
