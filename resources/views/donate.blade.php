@@ -40,7 +40,8 @@
                         <p
                             class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:leading-8 xl:leading-9">
                             Zenith Bank
-                            5071271021
+                            1016058609
+                            
                             <br><br>
                             FCMB
                             8763293012

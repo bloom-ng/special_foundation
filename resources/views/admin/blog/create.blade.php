@@ -127,7 +127,7 @@
                                     <div class="col-span-full mt-6">
                                         <label for="is_featured" class="flex items-center">
                                             <input type="checkbox" id="is_featured" name="is_featured"
-                                                value="{{ old('is_featured', isset($post) && $post->is_featured ? $post->is_featured : '0') }}"
+                                                value="{{ old('is_featured', isset($post) && $post->is_featured ? $post->is_featured : '1') }}"
                                                 {{ old('is_featured', isset($post) && $post->is_featured ? 'checked' : '') }}
                                                 class="form-checkbox accent-indigo-500">
                                             <span class="ml-2 text-gray-900">Featured Post</span>
@@ -156,10 +156,23 @@
                     modules: {
                         toolbar: [
                             ['bold', 'italic', 'underline', 'strike'],
-                            ['link', '', ''],
+                            ['link', '', 'image', "video", "" ,"formula"],
                             ['code-block', 'blockquote'],
                             ['list-ol', 'list-ul'],
-                            ['align-left', 'align-center', 'align-right']
+                            ['align-left', 'align-center', 'align-right'],
+
+                            [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+                            [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+                            [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                            [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+                            [{ 'direction': 'rtl' }],
+                            [{ 'size': ['small', false, 'large', 'huge'] }],                       // text direction
+
+                            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+                            [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                            [{ 'font': [] }],
+                            
                         ]
                     }
                 });

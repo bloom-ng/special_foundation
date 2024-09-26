@@ -27,6 +27,12 @@
         </div>
     </div>
 
+    @if(Request::query('preview'))
+    <div class="fixed top-0 left-0 w-full bg-orange-500 text-white p-8 text-center">
+        <span class="font-bold">Preview Mode</span>
+    </div>
+    @endif
+
     {{-- BLOG TITLE START --}}
     <div class="w-full flex items-center justify-center p-8 lg:p-10">
         <h1

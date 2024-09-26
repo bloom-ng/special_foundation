@@ -88,7 +88,7 @@ class PostController extends Controller
     public function store(PostRequest $request, $id)
     {
         $data = $request->validated();
-
+        
         $post = Post::query()
                     ->with('tags', 'topic')
                     ->find($id);
@@ -102,7 +102,7 @@ class PostController extends Controller
 
 
         $post->fill($data);
-        $post->is_featured = !empty($data['is_featured']) ? $data['is_featured'] : 0;
+        $post->is_featured = empty($data['is_featured']) ? 0 : 1;
 
         $post->user_id = $post->user_id ?? request()->user()->id;
 

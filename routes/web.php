@@ -70,7 +70,7 @@ Route::get('who-we-are', function () {
             'content' => "Cynthia is the Programs Manager of the Special Foundation.  She is also the co-founder of ACEYSA; a youth-led NGO focused on poverty alleviation.<br><br>
                 Although Cynthia has worked in different sectors including the finance and medical sector, she has devoted the past few years of her life to human capital development, health and wellness programs and improving educational opportunities for vulnerable people in society as she believes that everyone deserves a chance at a better life. She does these by planning and executing projects that ensure children have basic education and better learning conditions and youths are empowered through education or skill acquisition."
             , 
-            'link' => 'https://linkedin.com/in/team2'
+            'link' => 'https://www.linkedin.com/in/cynthia-amakiri-b679418a/'
         ],
         
         [
@@ -81,7 +81,7 @@ Route::get('who-we-are', function () {
             'content' => "Feyikoya Kamson is the Innovation Manager at the Foundation. She is an IT nerd turned Travel enthusiast. With a degree in Industrial Physics and over 6years work experience as a Business consultant for notable companies like IBM UK, Huawei Nigeria and Etisalat Nigeria, Feyikoya founded FNP Travel- A Travel Company committed to helping others see the world differently.<br><br>
                 She found a way to merge her passion for helping people and creating aesthetically pleasing storytelling content. Feyikoya strongly believes in self actualisation and is passionate about driving the message."
             , 
-            'link' => 'https://linkedin.com/in/team2'
+            'link' => 'https://www.linkedin.com/in/feyikoya-kamson-66a31870/?originalSubdomain=ng'
         ],
         
         [
@@ -92,7 +92,7 @@ Route::get('who-we-are', function () {
             'content' => "Gloria currently serves as the Administrative and Engagement Manager at The Special Foundation, where she plays a pivotal role in managing all administrative operations and curating content to boost engagement across various platforms.<br><br>
                 A committed graduate of Covenant University, Gloria brings a wealth of experience with a solid background in data management, product management, and client relationship management, spanning over 5 years. Her versatile professional journey across multiple industries has honed her ability to approach daily operations with a critical, strategic, and creative mindset."
             , 
-            'link' => 'https://linkedin.com/in/team2'
+            'link' => 'https://www.linkedin.com/in/gloria-odigili-8353441a5/'
         ],
         
         [
@@ -112,7 +112,7 @@ Route::get('who-we-are', function () {
             'list_image' => '/images/team_7.png', 
             'image' => '/images/team_detail_7.png', 
             'content' => "Strategic whiz who turns challenges into seamless collaboration. Expert at driving teamwork and boosting communication with style. A relationship builder who keeps teams sharp and adaptable. Master communicator and inventive problem-solver with a flair for strategic planning. Known for charming execs and partners while delivering stellar results.", 
-            'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
+            'link' => 'https://www.linkedin.com/in/olatomipopoola'
         ],
         
         [
@@ -121,7 +121,7 @@ Route::get('who-we-are', function () {
             'list_image' => '/images/team_8.png', 
             'image' => '/images/team_detail_8.png', 
             'content' => "EseOghene brings diverse experience across education, banking, and technology sectors, driving innovative media strategies and brand awareness with his technical knowledge and creative vision. Holding a Bachelor's in Computer Science and multiple tech certifications, Elson has advanced rapidly, showcasing his versatility and leadership. He rose to Head Customer Service Officer in banking before becoming a Senior Software Engineer at Interswitch Nigeria Limited. There, he discovered his passion for media, directing a film and a documentary, and later founded a wedding media company and corporate media enterprise. He has produced commercials, documentaries, and films for diverse clients.", 
-            'link' => 'https://www.linkedin.com/in/roli-edoja-98607a263/'
+            'link' => 'https://www.linkedin.com'
         ],
     ];
     $boards = [
@@ -345,7 +345,7 @@ Route::get('/school-build', function () {
 });
 
 Route::get('/blogs', function () {
-    $posts = App\Models\Post::latest()->paginate();
+    $posts = App\Models\Post::published()->latest('published_at')->paginate(); // Order by published_at descending
     $featured_posts = App\Models\Post::where('is_featured', 1)
                                 ->get();
 
@@ -365,7 +365,7 @@ Route::get('/blog/{id}', function ($id) {
             foreach ($words as $word) {
                 $query->orWhere('title', 'LIKE', "%{$word}%");
             }
-        })->get()
+        })->take(3)->get()
         ->filter(function ($post, $key) use($id) {
             return $post->id != $id;
         });

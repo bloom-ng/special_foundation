@@ -76,6 +76,9 @@
                             <p class="mt-1 text-xs leading-5 text-gray-500">
                                 {{ \Carbon\Carbon::parse($post->published_at)->format('M d, Y') }} - <time
                                     datetime="$post->published_at"> {{ $post->read_time }}</time></p>
+                                <a target="_blank"  href="/blog/{{ $post->id }}?preview=true" class="text-blue-500 text-xs">
+                                    Preview
+                                </a>
                                 <form
                                     id="post-delete-{{ $post->id }}"
                                     action="/admin/blogs/{{$post->id}}"

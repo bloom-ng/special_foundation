@@ -13,7 +13,7 @@
     <div class="p-8 lg:p-20">
         {{-- FEATURED BLOG START --}}
         <div class="w-full flex flex-col">
-            @if (count($featured_posts) > 1)
+            @if (count($featured_posts) >= 1)
                 <h2
                     class="font-montserrat text-4xl font-extrabold leading-none text-left md:leading-tight lg:leading-none xl:leading-none text-[#26225F] mb-12">
                     Featured Blog Posts
@@ -22,7 +22,7 @@
                 <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12">
                     @foreach ($featured_posts as $post)
                         @if ($loop->iteration == 1)
-                            <div class="w-full lg:w-[60%]">
+                            <div onclick="navigateTo('/blog/{{ $post->id }}')"  class="cursor-pointer w-full lg:w-[60%]">
                                 <img src="{{ Storage::url($post->featured_image) }}" class="w-full max-h-[467px]"
                                     alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         @elseif ($loop->iteration == 2)
-                            <div class="w-full lg:w-[40%]">
+                            <div onclick="navigateTo('/blog/{{ $post->id }}')"  class=" cursor-pointer w-full lg:w-[40%]">
                                 <img src="{{ Storage::url($post->featured_image) }}" class="w-full h-full max-h-[467px]"
                                     alt="{{ $post->title }}">
                                 <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
@@ -56,18 +56,18 @@
                 <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 my-12">
                     @foreach ($featured_posts as $post)
                         @if ($loop->iteration > 2 && $loop->iteration <= 4)
-                            <div class="w-full lg:w-[50%]">
-                                <img src="{{ Storage::url($post->featured_image) }}"
-                                    class="w-full h-full max-h-[467px]" alt="{{ $post->title }}">
-                                <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
-                                    <h1 class="pb-4 leading-[20px] montserrat-semibold">
-                                        {{ $post->title }}
-                                    </h1>
-                                    <p class="montserrat-light text-xs pb-4">
-                                        {{ \Carbon\Carbon::parse($post->published_at)->format('F d, Y') }}
-                                    </p>
-                                    <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
-                                </div>
+                            <div onclick="navigateTo('/blog/{{ $post->id }}')"  class="cursor-pointer w-full lg:w-[50%]">
+                                    <img src="{{ Storage::url($post->featured_image) }}"
+                                        class="w-full h-full max-h-[467px]" alt="{{ $post->title }}">
+                                    <div class="w-full px-12 pt-8 pb-5 text-white bg-[#26225F]">
+                                        <h1 class="pb-4 leading-[20px] montserrat-semibold">
+                                            {{ $post->title }}
+                                        </h1>
+                                        <p class="montserrat-light text-xs pb-4">
+                                            {{ \Carbon\Carbon::parse($post->published_at)->format('F d, Y') }}
+                                        </p>
+                                        <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
+                                    </div>
                             </div>
                         @endif
                     @endforeach
@@ -89,7 +89,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 @forelse ($posts as $post)
-                    <div class="w-full flex flex-col lg:flex-row items-center justify-center">
+                    <div onclick="navigateTo('/blog/{{ $post->id }}')"   class="w-full flex flex-col lg:flex-row items-center justify-center cursor-pointer">
                         <img src="{{ Storage::url($post->featured_image) }}"
                             class="w-full lg:w-[50%] max-h-[370px] rounded-3xl" alt="">
                         <div class="w-full lg:w-[50%] px-12 pt-8 pb-5 text-[#26225F]">
@@ -97,10 +97,11 @@
                                 {{ $post->title }}
                             </h1>
                             <p class="montserrat-light text-xs pb-5">
-                                {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
+                                {{ \Carbon\Carbon::parse($post->published_at)->format('F d, Y') }}
                             </p>
                             <a class="text-[8px]" href="/blog/{{ $post->id }}">READ MORE</a>
                         </div>
+                        
                     </div>
                 @empty
                     <div class="w-full text-[#26225F]">
@@ -115,6 +116,12 @@
             {{ $posts->links() }}
         </div>
         {{-- BLOGS END --}}
+
+        <script>
+            function navigateTo(url) {
+                window.location.href = url;
+            }
+        </script>
     </div>
 
 </x-guest-layout>
