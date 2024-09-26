@@ -33,7 +33,7 @@ class SitemapController extends Controller
             $urls[] = URL::to('/blog/' . $post->id);
         }
 
-        $sitemap = view('sitemap', compact('urls'))->render();
-        return response($sitemap, 200)->header('Content-Type', 'application/xml');
+        $sitemap = view('sitemap', ["urls" => $urls])->render();
+        return response($sitemap, 200)->header('Content-Type', 'text/xml');
     }
 }
