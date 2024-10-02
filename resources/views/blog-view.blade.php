@@ -1,6 +1,17 @@
 <x-guest-layout title="Special Foundation - {{ $post->title }}" page="blog">
 
     @push('head')
+  
+  		@php
+            $imagePath = Storage::url($post->featured_image);
+            $encodedImagePath = preg_replace_callback(
+                '/[^\/]+/', 
+                function ($matches) { 
+                    return rawurlencode($matches[0]); 
+                }, 
+                $imagePath
+            );
+        @endphp
         <!-- Primary Meta Tags -->
         <meta name="title" content="{{ $post->title }}" />
         <meta name="description" content="{{ $post->summary }}" />
@@ -10,14 +21,14 @@
         <meta property="og:url" content="https://thespecialfoundation.org/blog/{{ $post->id }}" />
         <meta property="og:title" content="{{ $post->title }}" />
         <meta property="og:description" content="{{ $post->summary }}" />
-        <meta property="og:image" content="{{ Storage::url($post->featured_image) }}" />
+        <meta property="og:image" content="{{  url( $encodedImagePath )}}" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://thespecialfoundation.org/blog/{{ $post->id }}" />
         <meta property="twitter:title" content="{{ $post->title }}" />
         <meta property="twitter:description" content="{{ $post->summary }}" />
-        <meta property="twitter:image" content="{{ Storage::url($post->featured_image) }}" />
+        <meta property="twitter:image" content="{{ url( $encodedImagePath ) }}" />
     @endpush
 
     <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
@@ -110,7 +121,7 @@
                             {{ $similar_post->title }}
                         </h1>
                         <p class="montserrat-light text-xs pb-4">
-                            {{ \Carbon\Carbon::parse($similar_post->published_at)->format('F d, Y') }}
+                            {{ \Carbon\Carbon::parse($similar_post->publised_at)->format('F d, Y') }}
                         </p>
                         <a class="text-[#25A8D6] text-[8px]" href="/blog/{{ $similar_post->id }}">READ MORE</a>
                     </div>
