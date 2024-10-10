@@ -14,6 +14,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\ProjectScheduleController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -265,6 +266,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/downloads', [DownloadController::class, 'store']);
     Route::delete('/downloads/{download}', [DownloadController::class, 'destroy']);
 
+    // Project Schedules routes
+    Route::get('/project-schedules', [ProjectScheduleController::class, 'index']);
+    Route::get('/project-schedules/create', [ProjectScheduleController::class, 'create']);
+    Route::post('/project-schedules', [ProjectScheduleController::class, 'store']);
+    Route::get('/project-schedules/{id}/edit', [ProjectScheduleController::class, 'edit']);
+    Route::delete('/project-schedules/{project}', [ProjectScheduleController::class, 'destroy']);
+
     // Beneficiary Applications routes
     Route::get('/beneficiaries', [BeneficiaryApplicationController::class, 'index']);
     Route::get('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'show']);
@@ -315,6 +323,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
 
 });
+
+Route::get('/project-schedules', [ProjectScheduleController::class, 'projects']);
 
 
 Route::get('/social-media-posts', function () {
@@ -508,3 +518,6 @@ Route::get('/gallery', function () {
 });
 
 Route::post('/donate', [DonationController::class, 'store']);
+
+Route::get('/admin/project-schedule/projects', [ProjectScheduleController::class, 'getCurrentAndNextYearProjects'])
+    ->name('admin.project-schedule.projects');
