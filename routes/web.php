@@ -517,6 +517,10 @@ Route::get('/gallery', function () {
     return view('gallery', compact('galleries'));
 });
 
+Route::get('/project', function () {
+    return view('project');
+});
+
 Route::post('/donate', [DonationController::class, 'store']);
 
 Route::get('/admin/project-schedule/projects', [ProjectScheduleController::class, 'getCurrentAndNextYearProjects'])
