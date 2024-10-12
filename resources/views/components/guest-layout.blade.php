@@ -147,7 +147,7 @@
                     <a href="/social-media-posts" class="block px-4 py-2 text-black hover:bg-gray-200">Social Media
                         Posts</a>
                     <a href="/gallery" class="block px-4 py-2 text-black hover:bg-gray-200">Gallery</a>
-                    <a href="/gallery" class="block px-4 py-2 text-black hover:bg-gray-200">Project Schedule</a>
+                    <a href="/project" class="block px-4 py-2 text-black hover:bg-gray-200">Project Schedule</a>
                 </div>
             </div>
             <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}"

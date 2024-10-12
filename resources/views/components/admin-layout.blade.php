@@ -128,6 +128,11 @@
                 <i class="fas fa-file-invoice mr-3"></i>
                 Prospective Volunteers
             </a>
+            <a href="/admin/project-schedules"
+                class="flex items-center {{ $page == 'projects' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-calendar-alt mr-3"></i>
+                Project Schedules
+            </a>
             <a href="/admin/users"
                 class="flex items-center {{ $page == 'users' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-users mr-3"></i>
@@ -244,9 +249,14 @@
                     <i class="fas fa-money-bill-wave mr-3"></i>
                     Prospective Donors
                 </a>
+                <a href="/admin/project-schedules"
+                    class="flex items-center {{ $page == 'projects' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-calendar-alt mr-3"></i>
+                    Project Schedules
+                </a>
 
                 <a href="/admin/users"
-                    class="flex items-center {{ $page == 'donation' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == 'users' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-users mr-3"></i>
                     Users
                 </a>

@@ -270,7 +270,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/project-schedules', [ProjectScheduleController::class, 'index']);
     Route::get('/project-schedules/create', [ProjectScheduleController::class, 'create']);
     Route::post('/project-schedules', [ProjectScheduleController::class, 'store']);
-    Route::get('/project-schedules/{id}/edit', [ProjectScheduleController::class, 'edit']);
+    Route::put('/project-schedules/{project}', [ProjectScheduleController::class, 'update']);
+    Route::get('/project-schedules/{project}/edit', [ProjectScheduleController::class, 'edit']);
     Route::delete('/project-schedules/{project}', [ProjectScheduleController::class, 'destroy']);
 
     // Beneficiary Applications routes
@@ -324,7 +325,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 });
 
-Route::get('/project-schedules', [ProjectScheduleController::class, 'projects']);
+Route::get('/project', [ProjectScheduleController::class, 'projects']);
 
 
 Route::get('/social-media-posts', function () {
@@ -517,9 +518,7 @@ Route::get('/gallery', function () {
     return view('gallery', compact('galleries'));
 });
 
-Route::get('/project', function () {
-    return view('project');
-});
+
 
 Route::post('/donate', [DonationController::class, 'store']);
 
