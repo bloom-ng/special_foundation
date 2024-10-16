@@ -1,8 +1,37 @@
 <x-admin-layout title="Admin | Blog View" page="blogs">
 
     <!-- Add the theme's stylesheet -->
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+    {{-- <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet"> --}}
+
+    <script
+    type="text/javascript"
+    src='/js/tinymce/tinymce.min.js'
+    >
+  </script>
+  <script type="text/javascript">
+  tinymce.init({
+    selector: '#body',
+    // width: 600,
+    height: 500,
+    plugins: [
+      'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+      'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+      'media', 'table', 'emoticons', 'help'
+    ],
+    toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+      'bullist numlist outdent indent | link image | print preview media fullscreen  code | ' +
+      'forecolor backcolor emoticons | help',
+    menu: {
+      favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+    },
+    menubar: 'favs file edit view insert format tools table help',
+    content_css: 'tinymce-5',
+    images_upload_url: '{{ route("upload-img") }}',
+    license_key: 'gpl',
+    promotion: false
+  });
+  </script>
 
 
     <main class="w-full flex-grow p-6">
@@ -95,8 +124,8 @@
                                             class="block text-sm font-medium leading-6 text-gray-900">Body</label>
                                         <div id="editor-container"
                                             class="block w-full border-0 bg-transparent py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                            {!! old('body', $post->body ?? '') !!}</div>
-                                        <input type="hidden" id="body" name="body">
+                                            </div>
+                                        <textarea id="body" name="body">{!! $post->body ?? '' !!}</textarea>
                                     </div>
 
 
@@ -151,37 +180,37 @@
             <!-- Quill JS Initialization -->
             <!-- Include the Quill library -->
             <script>
-                const quill = new Quill('#editor-container', {
-                    theme: 'snow',
-                    modules: {
-                        toolbar: [
-                            ['bold', 'italic', 'underline', 'strike'],
-                            ['link', '', 'image', "video", "" ,"formula"],
-                            ['code-block', 'blockquote'],
-                            ['list-ol', 'list-ul'],
-                            ['align-left', 'align-center', 'align-right'],
+                // const quill = new Quill('#editor-container', {
+                //     theme: 'snow',
+                //     modules: {
+                //         toolbar: [
+                //             ['bold', 'italic', 'underline', 'strike'],
+                //             ['link', '', 'image', "video", "" ,"formula"],
+                //             ['code-block', 'blockquote'],
+                //             ['list-ol', 'list-ul'],
+                //             ['align-left', 'align-center', 'align-right'],
 
-                            [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-                            [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
-                            [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-                            [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-                            [{ 'direction': 'rtl' }],
-                            [{ 'size': ['small', false, 'large', 'huge'] }],                       // text direction
+                //             [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+                //             [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+                //             [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                //             [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+                //             [{ 'direction': 'rtl' }],
+                //             [{ 'size': ['small', false, 'large', 'huge'] }],                       // text direction
 
-                            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                //             [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
 
-                            [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-                            [{ 'font': [] }],
+                //             [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                //             [{ 'font': [] }],
                             
-                        ]
-                    }
-                });
-                quill.on('text-change', () => {
-                    document.getElementById('body').value = quill.root.innerHTML;
-                });
+                //         ]
+                //     }
+                // });
+                // quill.on('text-change', () => {
+                //     document.getElementById('body').value = quill.root.innerHTML;
+                // });
 
                 // Set Data
-                document.getElementById('body').value = quill.root.innerHTML
+                // document.getElementById('body').value = quill.root.innerHTML
 
 
 

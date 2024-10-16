@@ -14,6 +14,8 @@ use Illuminate\Routing\Controller;
 use Ramsey\Uuid\Uuid;
 use Illuminate\Support\Str;
 
+use Illuminate\Http\Request;
+
 $uuid = Str::uuid()->toString();
 
 class PostController extends Controller
@@ -210,5 +212,11 @@ class PostController extends Controller
         $post->delete();
 
         return back()->with('success', 'Action Successful');
+    }
+
+    public function upload(Request $request)
+    {
+        $path = $request->file('file')->store('products', 'public');
+        return response()->json(['location' => asset('storage/' . $path)]);
     }
 }

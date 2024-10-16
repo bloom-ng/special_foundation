@@ -327,6 +327,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 Route::get('/project', [ProjectScheduleController::class, 'projects']);
 
+Route::post('/upload-images', [PostCOntroller::class, 'upload'])->name('upload-img')->middleware('auth');
+
 
 Route::get('/social-media-posts', function () {
     return view('social-media-posts');
