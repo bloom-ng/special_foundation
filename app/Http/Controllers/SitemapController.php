@@ -25,12 +25,13 @@ class SitemapController extends Controller
             URL::to('/get-involved'),
             URL::to('/donate'),
             URL::to('/gallery'),
-            URL::to('/blogs')
+            URL::to('/blogs'),
+            URL::to('/project')
         ];
 
-        $posts = Post::all();
+        $posts = Post::published()->get();
         foreach ($posts as $post) {
-            $urls[] = URL::to('/blog/' . $post->id);
+            $urls[] = URL::to('/blog/' . $post->slug);
         }
 
         $sitemap = view('sitemap', ["urls" => $urls])->render();

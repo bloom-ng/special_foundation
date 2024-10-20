@@ -30,10 +30,26 @@ class NewsletterController extends Controller
             'email' => 'required|email',
         ]);
 
+        // Check if the email already exists
+        $existingNewsletter = Newsletter::where('email', $request->email)->first();
+        
+        if ($existingNewsletter) {
+            return back()->with('success', 'You are already subscribed to our newsletter.');
+        }
+
         Newsletter::create([
             'name' => $request->name,
             'email' => $request->email,
         ]);
+        try {
+            \Illuminate\Support\Facades\Notification::route('mail', env('MAIL_ADMIN_ADDRESS'))
+                ->notify(new \App\Notifications\AppEvent([
+                'action' => $request->name . ' has subscribed to the newsletter',
+                'link' => '/admin/newsletters',
+            ]));
+        } catch (\Exception $e) {
+            \Log::error('Error sending newsletter notification: ' . $e->getMessage());
+        }
         return back()->with('success', 'Successfully Subscribed To Our Newsletter');
     }
 

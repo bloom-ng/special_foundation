@@ -606,12 +606,12 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-2 lg:gap-10 text-white">
             @foreach ($featured_posts as $featured_blog)
-                <div class="flex flex-col w-[380px]">
+                <div onclick="navigateTo('/blog/{{ $featured_blog->slug }}')"  class="flex flex-col w-[380px]">
                     <div>
-                        <img class="w-[380px]" src="{{ Storage::url($featured_blog->featured_image) }}"
+                        <img class="w-[380px] cursor-pointer" src="{{ Storage::url($featured_blog->featured_image) }}"
                             alt="{{ $featured_blog->title }}" />
                     </div>
-                    <div class="bg-[#26225F] px-12 pt-8 pb-5">
+                    <div class="bg-[#26225F] px-12 pt-8 pb-5 cursor-pointer">
                         <h1 class="pb-4 leading-[20px] montserrat-semibold">
                             {{ $featured_blog->title }}
                         </h1>
@@ -665,5 +665,9 @@
                 }
             });
         }
+
+        function navigateTo(url) {
+                window.location.href = url;
+            }
     </script>
 </x-guest-layout>

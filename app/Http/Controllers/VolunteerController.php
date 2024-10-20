@@ -68,6 +68,17 @@ class VolunteerController extends Controller
         $volunteer->religious_affirmation = $request->religious_affirmation ?? "";
         $volunteer->source = $request->source ?? Volunteer::SOURCE_OTHER;
         $volunteer->save();
+
+        try {
+            \Illuminate\Support\Facades\Notification::route('mail', env('MAIL_ADMIN_ADDRESS'))
+                ->notify(new \App\Notifications\AppEvent([
+                'action' => "New volunteer application",
+                'link' => '/admin/volunteers',
+            ]));
+        } catch (\Exception $e) {
+            \Log::error('Error sending volunteer application notification: ' . $e->getMessage());
+        }
+
         return back()->with('success', 'Submitted Successfully');
     }
 

@@ -33,3 +33,16 @@ Route::post('/chat', function (Request $request) {
 
     return $response->body();
 });
+
+Route::get('/projects', function () {
+    $currentYear = \Carbon\Carbon::now()->year;
+    $nextYear = $currentYear + 1;
+
+    $current = App\Models\ProjectSchedule::where('year', $currentYear)->orderBy('month')->get();
+    $next = App\Models\ProjectSchedule::where('year', $nextYear)->orderBy('month')->get();
+
+    return response()->json([
+        'current' => $current,
+        'next' => $next,
+    ]);
+});

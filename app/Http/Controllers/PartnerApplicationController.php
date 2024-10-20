@@ -48,6 +48,17 @@ class PartnerApplicationController extends Controller
         $application->area_of_residence = $request->area_of_residence;
         $application->purpose_of_application = $request->purpose_of_application ?? null;
         $application->save();
+
+        try {
+            \Illuminate\Support\Facades\Notification::route('mail', env('MAIL_ADMIN_ADDRESS'))
+                ->notify(new \App\Notifications\AppEvent([
+                'action' => "New partner application",
+                'link' => '/admin/partners',
+            ]));
+        } catch (\Exception $e) {
+            \Log::error('Error sending partner application notification: ' . $e->getMessage());
+        }
+
         return back()->with('success', 'Application Submitted Successfully');
     }
 

@@ -17,6 +17,7 @@ function App() {
 		},
 	]);
 	const [message, setMessage] = useState("");
+	const [projects, setProjects] = useState([]);
 	const messageEndRef = useRef(null);
 
 	const handleSend = async (message) => {
@@ -243,6 +244,16 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 			link: "https://www.thespecialfoundation.org/blogs/",
 		},
 		{
+			title: "Gallery",
+			description: "Gallery",
+			link: "https://www.thespecialfoundation.org/gallery/",
+		},
+		{
+			title: "Project schedule",
+			description: "View upcoming programmes/projects schedule",
+			link: "https://www.thespecialfoundation.org/project/",
+		},
+		{
 			title: "Social media posts",
 			description: "Social media posts",
 			link: "https://www.thespecialfoundation.org/social-media-posts/",
@@ -294,9 +305,15 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 		If you also get a question also compare the question with the pages knowledge base and give user your initial response while also giving the user the option to click on the link to the page to see more information and if your are ever suggesting a link to a page or a program always make sure the link is in the pages knowledge base or the programs knowledge base and make the text bold, underlined and clickable.
 		When you think you don't know an answer look through the pages, knowledge base and programs knowledge base once again to make sure it's not there.
 
+		Current Date: ${new Date().toLocaleDateString()}
 		knowledge base: '''${knowledgeBase}'''
 		program knowledge base: '''${programs}''' 
 		pages knowledge base: '''${pages}'''
+		
+		These are the upcoming projects, events or programmes. Be conscious of the date. because it might be outdated, so let them know.
+		Here is a link for more information on projects: https://www.thespecialfoundation.org/project
+		upcoming projects/programs: '''${JSON.stringify(projects)}'''
+
 	`;
 
 	const processMessageToLlama = async () => {
@@ -304,16 +321,13 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 			return { role: messageObj.sender, content: messageObj.message };
 		});
 
-		console.log("windows.origin :>> ", window.origin);
 
 		const url = `${window.origin}/api/chat`;
-		// const url = `https://specialfoundation.bloomdigitmedia.com/api/chat`;
-		// const url = "https://api.openai.com/v1/chat/completions";
 		const headers = {
 			"Content-Type": "application/json",
 		};
 		const data = {
-			model: "gpt-3.5-turbo",
+			model: "gpt-4o-mini",
 			messages: [
 				{ role: "system", content: systemMessage },
 				...apiMessages,
@@ -349,6 +363,15 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 		});
 	}, [typing, messages]);
 
+	useEffect(() => {
+		fetch(`${window.origin}/api/projects`)
+			.then((res) => res.json())
+			.then((data) => {
+				const mergedData = [...data.current, ...data.next];
+				setProjects(mergedData)
+			});
+	}, []);
+
 	return (
 		<div className=" h-full w-full ">
 			<div className="relative h-auto w-screen">
@@ -360,8 +383,8 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 				/>
 
 				{openChatbot && (
-					<div
-						className="absolute bottom-0 flex flex-col z-50   right-0 m-5  mr-3 bg-[#EDEDED] w-[97vw] h-[95vh] sm:w-[75vw] md:w-[65vw]  lg:w-[36vw] lg:h-[95vh] rounded-xl drop-shadow-md
+					<div style={{zIndex: 99999}}
+						className="absolute bottom-0 flex flex-col z-90   right-0 m-5  mr-3 bg-[#EDEDED] w-[97vw] h-[95vh] sm:w-[75vw] md:w-[65vw]  lg:w-[36vw] lg:h-[95vh] rounded-xl drop-shadow-md
            md:drop-shadow-xl items-start"
 					>
 						<div className="p-4  w-full flex items-center gap-4 justify-between bg-[#26225F] rounded-t-xl">

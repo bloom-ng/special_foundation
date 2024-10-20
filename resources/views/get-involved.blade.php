@@ -119,7 +119,7 @@
                     <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
                         <input type="text" name="name"
                             class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
-                            placeholder="Name of Beneficiary" />
+                            placeholder="Name" />
                         <input type="email" name="email"
                             class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
                             placeholder="Email Address" />

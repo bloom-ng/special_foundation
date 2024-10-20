@@ -52,6 +52,17 @@ class BeneficiaryApplicationController extends Controller
         $application->purpose_of_application = $request->purpose_of_application;
         $application->programme = $request->programme;
         $application->save();
+
+        try {
+            \Illuminate\Support\Facades\Notification::route('mail', env('MAIL_ADMIN_ADDRESS'))
+                ->notify(new \App\Notifications\AppEvent([
+                'action' => "New beneficiary application",
+                'link' => '/admin/beneficiaries',
+            ]));
+        } catch (\Exception $e) {
+            \Log::error('Error sending beneficiary application notification: ' . $e->getMessage());
+        }
+
         return back()->with('success', 'Application Created');
     }
 

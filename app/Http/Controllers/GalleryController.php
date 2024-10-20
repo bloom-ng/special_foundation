@@ -49,11 +49,16 @@ class GalleryController extends Controller
         $gallery->title = $request->title ?? '...';
         $gallery->type = $request->type;
         $gallery->value = $request->value;
+        if ($request->type == Gallery::TYPE_YOUTUBE) {
+            $gallery->value = $this->getSrcFromEmbed($request->value);
+        }
         $gallery->save();
 
         return back()->with('success', 'Media Added');
         
     }
+
+
 
     public function update(Request $request, Gallery $gallery)
     {
@@ -70,6 +75,9 @@ class GalleryController extends Controller
         $gallery->title = $request->title ?? '...';
         $gallery->type = $request->type;
         $gallery->value = $request->value;
+        if ($request->type == Gallery::TYPE_YOUTUBE) {
+            $gallery->value = $this->getSrcFromEmbed($request->value);
+        }
         $gallery->save();
 
         return back()->with('success', 'Media Updated');
@@ -81,5 +89,20 @@ class GalleryController extends Controller
         Storage::delete($gallery->id);
         $gallery->delete();
         return back()->with('success', 'Media Deleted');
+    }
+
+    public function getSrcFromEmbed($embed)
+    {
+        $embed = trim($embed);
+        
+        if (strpos($embed, 'https') === 0) {
+            return $embed;
+        }
+        
+        if (preg_match('/src="([^"]+)"/', $embed, $matches)) {
+            return $matches[1];
+        }
+        
+        return '';
     }
 }

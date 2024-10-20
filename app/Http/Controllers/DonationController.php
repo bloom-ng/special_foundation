@@ -47,6 +47,17 @@ class DonationController extends Controller
         $donation->comments = $request->comments;
         $donation->source = $request->source ?? 10;
         $donation->save();
+
+        try {
+            \Illuminate\Support\Facades\Notification::route('mail', env('MAIL_ADMIN_ADDRESS'))
+                ->notify(new \App\Notifications\AppEvent([
+                'action' => "New prospective donor application",
+                'link' => '/admin/donation-leads',
+            ]));
+        } catch (\Exception $e) {
+            \Log::error('Error sending prospective donor application notification: ' . $e->getMessage());
+        }
+
         return back()->with('success', 'Submitted Successfully');
     }
 

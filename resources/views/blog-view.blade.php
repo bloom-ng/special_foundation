@@ -18,14 +18,14 @@
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://thespecialfoundation.org/blog/{{ $post->id }}" />
+        <meta property="og:url" content="https://thespecialfoundation.org/blog/{{ $post->slug }}" />
         <meta property="og:title" content="{{ $post->title }}" />
         <meta property="og:description" content="{{ $post->summary }}" />
         <meta property="og:image" content="{{  url( $encodedImagePath )}}" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://thespecialfoundation.org/blog/{{ $post->id }}" />
+        <meta property="twitter:url" content="https://thespecialfoundation.org/blog/{{ $post->slug }}" />
         <meta property="twitter:title" content="{{ $post->title }}" />
         <meta property="twitter:description" content="{{ $post->summary }}" />
         <meta property="twitter:image" content="{{ url( $encodedImagePath ) }}" />
@@ -111,13 +111,13 @@
 
         <div class="w-full flex flex-col lg:flex-row items-start justify-around gap-6 lg:gap-0">
             @foreach ($similar_posts as $similar_post)
-                <div class="flex flex-col bg-[#26225F] w-[380px]">
+                <div onclick="navigateTo('/blog/{{ $similar_post->slug }}')"  class="flex flex-col bg-[#26225F] w-[380px]">
                     <div>
-                        <img class="w-[380px]" src="{{ Storage::url($similar_post->featured_image) }}"
+                        <img class="w-[380px] cursor-pointer" src="{{ Storage::url($similar_post->featured_image) }}"
                             alt="{{ $similar_post->title }}" />
                     </div>
                     <div class="mx-12 pt-8 pb-5 text-white">
-                        <h1 class="pb-4 leading-[20px] montserrat-semibold">
+                        <h1 class="pb-4 leading-[20px] montserrat-semibold cursor-pointer">
                             {{ $similar_post->title }}
                         </h1>
                         <p class="montserrat-light text-xs pb-4">
@@ -129,6 +129,12 @@
             @endforeach
         </div>
 
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
     </div>
+
 
 </x-guest-layout>

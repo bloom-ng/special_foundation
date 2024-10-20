@@ -103,7 +103,7 @@ class Volunteer extends Model
             self::SOURCE_EVENT_OR_CONFERENCE => 'Event or Conference',
             self::SOURCE_REFERRAL_PARTNER_AFFILIATE => 'Partner or Affiliate',
             self::SOURCE_ONLINE_DIRECTORY_LISTING => 'Online Directory or Listing',
-            self::SOURCE_OTHER => 'Other (specify in comment)',
+            self::SOURCE_OTHER => 'Other',
         ];
     }
 }
