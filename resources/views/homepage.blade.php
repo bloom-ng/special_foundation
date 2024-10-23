@@ -453,6 +453,12 @@
                 <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-11.png" alt="" />
                 </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-12.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-13.png" alt="" />
+                </swiper-slide>
             </swiper-container>
 
             <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
@@ -500,6 +506,12 @@
                 <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-11.png" alt="" />
                 </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-12.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-13.png" alt="" />
+                </swiper-slide>
             </swiper-container>
 
             <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
@@ -546,6 +558,13 @@
 
                 <swiper-slide class="pl-8 self-center">
                     <img src="/images/new-pat-11.png" alt="" />
+                </swiper-slide>
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-12.png" alt="" />
+                </swiper-slide>
+
+                <swiper-slide class="pl-8 self-center">
+                    <img src="/images/new-pat-13.png" alt="" />
                 </swiper-slide>
             </swiper-container>
         </div>
