@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\CMS;
 
 class HomeController extends Controller
 {
@@ -108,9 +109,13 @@ class HomeController extends Controller
         ];
         $featured_posts = Post::where('is_featured', 1)
                                 ->get();
+
+        $partners = CMS::query()->where('type', CMS::TYPE_PARTNERS)->get();
+
         return view('homepage', [
             'featured_posts' => $featured_posts->shuffle()->take(3),
-            'sdgs' => $sdgs
+            'sdgs' => $sdgs,
+            'partners' => $partners
         ]);
     }
 }

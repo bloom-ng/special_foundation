@@ -68,7 +68,7 @@
             </div>
 
             <div class="w-full lg:w-[60%]">
-                <img src="/images/new_partners.png" class="" alt="Our Partners">
+                <img src="{{ Storage::url($cloud->value)}}" class="" alt="Our Partners">
             </div>
         </div>
         {{-- PARTNER WITH US END --}}

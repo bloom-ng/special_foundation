@@ -15,6 +15,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ProjectScheduleController;
+use App\Http\Controllers\CMSController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -41,8 +42,8 @@ Route::get('homepage', function () {
 
 Route::get('who-we-are', function () {
     $downloads = Download::all();
-    $teams = CMS::getTeams();
-    $boards = CMS::getBoards();
+    $teams = CMS::getDynamicTeams();
+    $boards = CMS::getDynamicBoards();
     return view('who-we-are', compact('teams'))->with('boards', $boards)->with('downloads', $downloads);
 });
 
@@ -136,6 +137,28 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
     Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
 
+    //Partners Logo
+    Route::get('/cms-data/partners', [CMSController::class, 'indexPartners']);
+    Route::get('/cms-data/partners/create', [CMSController::class, 'createPartners']);
+    Route::get('/cms-data/partners/{cms}/edit', [CMSController::class, 'editPartners']);
+    Route::post('/cms-data/partners', [CMSController::class, 'storePartners']);
+    Route::put('/cms-data/partners/{cms}', [CMSController::class, 'updatePartners']);
+
+    //Team Logo
+    Route::get('/cms-data/teams', [CMSController::class, 'indexTeams']);
+    Route::get('/cms-data/teams/create', [CMSController::class, 'createTeams']);
+    Route::get('/cms-data/teams/{cms}/edit', [CMSController::class, 'editTeams']);
+    Route::post('/cms-data/teams', [CMSController::class, 'storeTeams']);
+    Route::put('/cms-data/teams/{cms}', [CMSController::class, 'updateTeams']);
+
+    //AI Data
+    Route::get('/cms-data/ai/edit', [CMSController::class, 'editAi']);
+    Route::put('/cms-data/ai/{cms}', [CMSController::class, 'updateAi']);
+
+
+    //CMS DELETE
+    Route::delete('/cms/{cms}', [CMSController::class, 'destroy']);
+
 });
 
 Route::get('/project', [ProjectScheduleController::class, 'projects']);
@@ -211,7 +234,10 @@ Route::get('/blog/{id}', function ($id) {
 
 Route::get('/get-involved', function () {
 
+    $cloud = CMS::where("type", CMS::TYPE_PARTNERS_CLOUD)->first();
+
     return view('get-involved')
+                ->with("cloud", $cloud)
                 ->with("genderMapping", Volunteer::getGenderMapping())
                 ->with("sourceMapping", Volunteer::getSourceMapping())
                 ->with("availabilityMapping", Volunteer::getAvailabilityMapping())

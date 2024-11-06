@@ -18,6 +18,7 @@ function App() {
 	]);
 	const [message, setMessage] = useState("");
 	const [projects, setProjects] = useState([]);
+	const [additionalInfo, setAdditionalInfo] = useState([]);
 	const messageEndRef = useRef(null);
 
 	const handleSend = async (message) => {
@@ -314,6 +315,8 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 		Here is a link for more information on projects: https://www.thespecialfoundation.org/project
 		upcoming projects/programs: '''${JSON.stringify(projects)}'''
 
+		Additionl Info: '''${additionalInfo}'''
+
 	`;
 
 	const processMessageToLlama = async () => {
@@ -369,6 +372,15 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 			.then((data) => {
 				const mergedData = [...data.current, ...data.next];
 				setProjects(mergedData)
+			});
+	}, []);
+
+	useEffect(() => {
+		fetch(`${window.origin}/api/knowledge-base`)
+			.then((res) => res.json())
+			.then((data) => {
+				const info = data.value;
+				setAdditionalInfo(info)
 			});
 	}, []);
 

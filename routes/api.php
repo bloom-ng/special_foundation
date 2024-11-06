@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\CMS;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,19 @@ Route::get('/projects', function () {
         'current' => $current,
         'next' => $next,
     ]);
+});
+
+Route::get('/knowledge-base', function () {
+    $cms = CMS::where('type', CMS::TYPE_AI)->firstOrCreate(
+        ['type' => CMS::TYPE_AI],
+        [
+            'name' => 'AI DATA',
+            'slug' => 'ai-data',
+            'page' => 'ai-data',
+            'value' => 'Knowledge Base',
+            'type' => CMS::TYPE_AI,
+        ]
+    );
+
+    return response()->json($cms);
 });

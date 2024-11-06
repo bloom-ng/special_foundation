@@ -420,152 +420,31 @@
         <div>
             <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="swiper-container-second flex lg:hidden flex-row gap-12 pb-24">
-                <swiper-slide class="">
-                    <img src="/images/new-pat-1.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-2.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-3.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-4.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-5.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-6.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-7.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-8.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-9.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-10.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-11.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-12.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-13.png" alt="" />
-                </swiper-slide>
+                @foreach ($partners as $partner)
+                    <swiper-slide class="pl-8 self-center">
+                        <img src="{{ Storage::url($partner->value) }}" alt="" />
+                    </swiper-slide>
+                @endforeach
+      
+            
             </swiper-container>
 
             <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="swiper-container-second hidden lg:flex xl:hidden flex-row gap-10 pb-24">
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-1.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-2.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-3.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-4.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-5.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-6.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-7.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-8.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-9.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-10.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-11.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-12.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-13.png" alt="" />
-                </swiper-slide>
+                @foreach ($partners as $partner)
+                    <swiper-slide class="pl-8 self-center">
+                        <img src="{{ Storage::url($partner->value) }}" alt="" />
+                    </swiper-slide>
+                @endforeach
             </swiper-container>
 
             <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
                 class="swiper-container-second hidden xl:flex items-center justify-center flex-row gap-8 pb-24">
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-1.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-2.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-3.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-4.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-5.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-6.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-7.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-16 self-center">
-                    <img src="/images/new-pat-8.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-9.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-10.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-11.png" alt="" />
-                </swiper-slide>
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-12.png" alt="" />
-                </swiper-slide>
-
-                <swiper-slide class="pl-8 self-center">
-                    <img src="/images/new-pat-13.png" alt="" />
-                </swiper-slide>
+                @foreach ($partners as $partner)
+                    <swiper-slide class="pl-8 self-center">
+                        <img src="{{ Storage::url($partner->value) }}" alt="" />
+                    </swiper-slide>
+                @endforeach
             </swiper-container>
         </div>
     </div>

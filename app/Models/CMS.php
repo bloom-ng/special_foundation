@@ -20,6 +20,13 @@ class CMS extends Model
     const TYPE_TEXT = 1;
     const TYPE_FORMATTED_TEXT = 2;
     const TYPE_NUMBER = 3;
+    const TYPE_PARTNERS = 4;
+    const TYPE_PARTNERS_CLOUD = 5;
+
+    const TYPE_TEAM = 6;
+    const TYPE_BOARD = 7;
+
+    const TYPE_AI = 8;
 
     public static function getTeams()
     {
@@ -253,4 +260,49 @@ class CMS extends Model
             self::TYPE_NUMBER => 'Number'
         ];
     }
+
+    public static function getTeamTypeMapping()
+    {
+        return [
+            self::TYPE_TEAM => 'Team Member',
+            self::TYPE_BOARD => 'Board Member'
+        ];
+    }
+
+    public static function getDynamicTeams()
+    {
+        return self::where('type', self::TYPE_TEAM)
+            ->get()
+            ->map(function($team) {
+                $value = json_decode($team->value, true);
+                return [
+                    'name' => $team->name,
+                    'position' => $team->slug,
+                    'list_image' => str_replace('public', '/storage', $value['image']),
+                    'image' => str_replace('public', '/storage', $value['image']),
+                    'content' => $value['content'],
+                    'link' => $team->page
+                ];
+            })
+            ->toArray();
+    }
+
+    public static function getDynamicBoards()
+    {
+        return self::where('type', self::TYPE_BOARD)
+            ->get()
+            ->map(function($board) {
+                $value = json_decode($board->value, true);
+                return [
+                    'name' => $board->name,
+                    'list_image' => str_replace('public', '/storage', $value['image']),
+                    'image' => str_replace('public', '/storage', $value['image']),
+                    'content' => $value['content'],
+                    'link' => $board->page
+                ];
+            })
+            ->toArray();
+    }
+
+   
 }
