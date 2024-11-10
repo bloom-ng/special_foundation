@@ -24,6 +24,8 @@ class Volunteer extends Model
         'source',
     ];
 
+   
+
     const SOURCE_SOCIAL_MEDIA = 1;
     const SOURCE_GOOGLE_SEARCH = 2;
     const SOURCE_WORD_OF_MOUTH = 3;
@@ -54,6 +56,29 @@ class Volunteer extends Model
     const INTEREST_IT = 8;
     const INTEREST_TEACHING = 9;
     const INTEREST_HEALTH = 10;
+
+  
+    const TIMES_PER_WEEK_ONCE = 1;
+    const TIMES_PER_WEEK_TWICE = 2;
+    const TIMES_PER_WEEK_THRICE = 3;
+    const TIMES_PER_WEEK_MONTH_ONCE = 4;
+    const TIMES_PER_WEEK_MONTH_TWICE = 5;
+    const TIMES_PER_WEEK_MONTH_THRICE = 6;
+    const TIMES_PER_WEEK_OFTEN = 7;
+
+
+    public static function getTimesPerWeekMapping()
+    {
+        return [
+            self::TIMES_PER_WEEK_ONCE => "Once a week",
+            self::TIMES_PER_WEEK_TWICE => "Twice a week",
+            self::TIMES_PER_WEEK_THRICE => "Thrice a week",
+            self::TIMES_PER_WEEK_MONTH_ONCE => "Once a month",
+            self::TIMES_PER_WEEK_MONTH_TWICE => "Twice a month",
+            self::TIMES_PER_WEEK_MONTH_THRICE => "Thrice a month",
+            self::TIMES_PER_WEEK_OFTEN => "As often as i am needed",
+        ];
+    }
 
     public static function getInterestMapping()
     {
@@ -104,6 +129,31 @@ class Volunteer extends Model
             self::SOURCE_REFERRAL_PARTNER_AFFILIATE => 'Partner or Affiliate',
             self::SOURCE_ONLINE_DIRECTORY_LISTING => 'Online Directory or Listing',
             self::SOURCE_OTHER => 'Other',
+        ];
+    }
+
+    public function toMappedArray()
+    {
+        return [
+            'id' => $this->id,
+            'full_name' => $this->full_name,
+            'gender' => self::getGenderMapping()[$this->gender] ?? $this->gender,
+            'email' => $this->email,
+            'contact_number' => $this->contact_number,
+            'area_of_residence' => $this->area_of_residence,
+            'religious_affirmation' => $this->religious_affirmation,
+            'availability' => is_array($decodedAvailability = json_decode($this->availability, true)) ? implode(' | ', array_map(function($a) {
+                return self::getAvailabilityMapping()[intval($a)] ?? $a . ' ';
+            }, $decodedAvailability)) : '',
+            'specify_time' => $this->specify_time,
+            'times_per_week_month' => self::getTimesPerWeekMapping()[$this->times_per_week_month] ?? $this->times_per_week_month,
+            'other' => $this->other,
+            'interests' => is_array($decodedInterests = json_decode($this->interests, true)) ? implode(' | ', array_map(function($interest) {
+                return self::getInterestMapping()[intval($interest)] ?? $interest . ' ';
+            }, $decodedInterests)) : '',
+            'source' => self::getSourceMapping()[$this->source] ?? $this->source,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

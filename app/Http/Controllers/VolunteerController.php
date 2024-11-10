@@ -33,6 +33,7 @@ class VolunteerController extends Controller
             ->with('genderMapping', Volunteer::getGenderMapping())
             ->with('availabilityMapping', Volunteer::getAvailabilityMapping())
             ->with('interestMapping', Volunteer::getInterestMapping())
+            ->with("timesPerWeekMapping", Volunteer::getTimesPerWeekMapping())
             ;
     }
 

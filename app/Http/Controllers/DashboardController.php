@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\StatsAggregator;
+use App\Models\Post;
 
 class DashboardController extends Controller
 {
@@ -19,6 +21,15 @@ class DashboardController extends Controller
 
         $beneficiaryStats = $this->getMonthStat($current_month_beneficiaries, $last_month_beneficiaries);
 
+        $stats = new StatsAggregator(request()->user());
+
+        $results = $stats->getStatsForPosts(Post::published()->get(), 30);
+        $results90 = $stats->getStatsForPosts(Post::published()->get(), 90);
+        $results180 = $stats->getStatsForPosts(Post::published()->get(), 180);
+        $results365 = $stats->getStatsForPosts(Post::published()->get(), 365);
+
+        
+
         return view("admin.dashboard", [
             "subscribers" => \App\Models\Newsletter::count(),
             "subStats" => $subStats,
@@ -27,6 +38,10 @@ class DashboardController extends Controller
             "posts" => \App\Models\Post::published()->count(),
             "latest_posts" => \App\Models\Post::published()->latest()->take(2)->get(),
             "documents" => \App\Models\Download::count(),
+            "postStats" => $results,
+            "postStats90" => $results90,
+            "postStats180" => $results180,
+            "postStats365" => $results365
         ]);
     }
 

@@ -1,4 +1,5 @@
 <x-admin-layout title="Admin | Dashboard" page="dashboard">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <main class="w-full flex-grow p-6">
         <section class="container mx-auto py-8 px-8">
@@ -101,7 +102,80 @@
                         </p>
                     </div>
                 </div>
+                <div
+                    class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md shadow-sm border border-gray-200 !rounded-lg">
+                    <div class="p-6 p-4">
+                        <div class="flex justify-between items-center">
+                            <p
+                                class="block antialiased font-sans text-base font-light leading-relaxed text-inherit !font-medium !text-xs text-gray-600">
+                                Post Views (last 30 days)
+                            </p>
+                            
+                        </div>
+                        <p
+                            class="block antialiased font-sans text-base font-light leading-relaxed text-blue-gray-900 mt-1 font-bold text-2xl">
+                            {{ $postStats['views'] }}
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md shadow-sm border border-gray-200 !rounded-lg">
+                    <div class="p-6 p-4">
+                        <div class="flex justify-between items-center">
+                            <p
+                                class="block antialiased font-sans text-base font-light leading-relaxed text-inherit !font-medium !text-xs text-gray-600">
+                                Post Views (last 3 months)
+                            </p>
+                            
+                        </div>
+                        <p
+                            class="block antialiased font-sans text-base font-light leading-relaxed text-blue-gray-900 mt-1 font-bold text-2xl">
+                            {{ $postStats90['views'] }}
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md shadow-sm border border-gray-200 !rounded-lg">
+                    <div class="p-6 p-4">
+                        <div class="flex justify-between items-center">
+                            <p
+                                class="block antialiased font-sans text-base font-light leading-relaxed text-inherit !font-medium !text-xs text-gray-600">
+                                Post Views (last 6 months)
+                            </p>
+                            
+                        </div>
+                        <p
+                            class="block antialiased font-sans text-base font-light leading-relaxed text-blue-gray-900 mt-1 font-bold text-2xl">
+                            {{ $postStats180['views'] }}
+                        </p>
+                    </div>
+                </div>
               
+                <div
+                    class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md shadow-sm border border-gray-200 !rounded-lg">
+                    <div class="p-6 p-4">
+                        <div class="flex justify-between items-center">
+                            <p
+                                class="block antialiased font-sans text-base font-light leading-relaxed text-inherit !font-medium !text-xs text-gray-600">
+                                Post Views (last 12 months)
+                            </p>
+                            
+                        </div>
+                        <p
+                            class="block antialiased font-sans text-base font-light leading-relaxed text-blue-gray-900 mt-1 font-bold text-2xl">
+                            {{ $postStats365['views'] }}
+                        </p>
+                    </div>
+                </div>
+              
+            </div>
+
+            <div class=" justify-between md:items-center mb-4 mt-12">
+                <p class="block antialiased font-sans text-base font-light leading-relaxed text-inherit font-bold">
+                    Post Views over last 30 days
+                </p>
+                <canvas class="w-full h-32" id="posts-chart"></canvas>
+    
             </div>
 
 
@@ -130,7 +204,9 @@
                             <div class="min-w-0 flex-auto">
                                 <a href="/admin/blogs/{{ $post->id }}" class="text-decoration-none">
                                     <p class="text-sm font-semibold leading-6 text-gray-900">{{ $post->title }}
-                                        {{ $post->getPublishedAttribute() ? '' : '[Draft]' }} </p>
+                                        {{ $post->getPublishedAttribute() ? '' : '[Draft]' }} 
+                                        <p class="flex italic text-xs"> {{$post->views->count()}} views </p>
+                                    </p>
                                     <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{ $post->summary }}</p>
                                 </a>
                             </div>
@@ -152,5 +228,45 @@
 
 
     </main>
+
+    
+    <script>
+        const postStats = JSON.parse(@json($postStats['graph']['views']));
+        const labels = Object.keys(postStats);
+        const data = Object.values(postStats);
+
+        const ctx = document.getElementById('posts-chart').getContext('2d');
+        const postsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Post Views',
+                    data: data,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Number of Views'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 
 </x-admin-layout>

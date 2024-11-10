@@ -236,11 +236,13 @@ Route::get('/get-involved', function () {
 
     $cloud = CMS::where("type", CMS::TYPE_PARTNERS_CLOUD)->first();
 
+
     return view('get-involved')
                 ->with("cloud", $cloud)
                 ->with("genderMapping", Volunteer::getGenderMapping())
                 ->with("sourceMapping", Volunteer::getSourceMapping())
                 ->with("availabilityMapping", Volunteer::getAvailabilityMapping())
+                ->with("timesPerWeekMapping", Volunteer::getTimesPerWeekMapping())
                 ->with("interestMapping", Volunteer::getInterestMapping());
 });
 

@@ -16,7 +16,9 @@ class CSVController extends Controller
         $headers = array_keys($records->first()->getAttributes());
         $csv = [];
         foreach ($records as $record) {
-            $csv[] = $record->getAttributes();
+            // Check if the mapping function exists
+            $csv[] = method_exists($record, 'toMappedArray') ? $record->toMappedArray()
+                                                             : $record->getAttributes();
         }
 
         $csvData = implode(',', $headers) . "\n" . implode("\n", array_map(function ($row) {

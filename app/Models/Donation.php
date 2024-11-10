@@ -43,4 +43,18 @@ class Donation extends Model
             self::SOURCE_OTHER => 'Other (specify in comment)',
         ];
     }
+
+public function toMappedArray()
+{
+    return [
+        'id' => $this->id,
+        'name' => $this->name,
+        'email' => $this->email,
+        'contact_number' => $this->contact_number,
+        'comments' => $this->comments,
+        'source' => self::getSourceMapping()[$this->source] ?? 'Unknown Source',
+        'created_at' => $this->created_at,
+        'updated_at' => $this->updated_at,
+    ];
+}
 }

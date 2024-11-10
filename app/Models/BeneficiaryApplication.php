@@ -37,4 +37,19 @@ class BeneficiaryApplication extends Model
             self::PROGRAMME_SPECIAL_SUMMER_SCHOOL => 'Special Summer School',
         ];
     }
+
+    public function toMappedArray()
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email,
+            'contact_number' => $this->contact_number,
+            'area_of_residence' => $this->area_of_residence,
+            'purpose_of_application' => $this->purpose_of_application,
+            'programme' => self::getProgrammeMapping()[$this->programme] ?? 'Unknown Programme',
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+        ];
+    }
 }

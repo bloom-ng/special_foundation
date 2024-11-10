@@ -202,14 +202,27 @@
                         @endforeach
                     </div>
 
-                    <div class="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
-                        <input type="text" name="specify_time"
-                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                    <div class="w-full flex flex-col  gap-8">
+                        <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Specify Time</h5>
+                        <input type="time" name="specify_time"
+                            class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
                             placeholder="Specify Time" />
 
-                        <input type="text" name="times_per_week_month"
-                            class="w-full lg:w-[50%] rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
-                            placeholder="Number of times per week/month" />
+                    </div>
+
+                    <div class="w-full flex flex-col  gap-8">
+                        
+                        <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Specify Frequency</h5>
+                        <select
+                            class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            name="times_per_week_month">
+                            <option value="">Select an option</option>
+                            @foreach ($timesPerWeekMapping as $key => $value)
+                                <option class="montserrat-thin font-normal my-4 h-8 w-8" value="{{ $key }}">
+                                    {{ $value }}</option>
+                            @endforeach
+                        </select>
+
                     </div>
 
                     <input type="text" name="other"
