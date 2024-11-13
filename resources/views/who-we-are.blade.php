@@ -263,8 +263,8 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-8 rounded-3xl board-img">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
-                                class="w-[125px] max-w-[200px] h-52" data-index="{{ $index }}">
-                                <div class="bg-[#26225F] w-[125px] max-w-[200px] h-24  flex  items-center p-2 py-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
+                                class="w-[150px] max-w-[230px] h-52" data-index="{{ $index }}">
+                                <div class="bg-[#26225F] w-[150px] max-w-[230px] h-24  flex  items-center p-2 py-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
                                     <a href="{{ $board['link'] }}">
                                         <img src="/images/Linkedin.png" alt="Linkedin Icon">
                                     </a>
@@ -325,8 +325,8 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-6 rounded-3xl board-img">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
-                                class="w-[400px] max-w-[400px] h-96" data-index="{{ $index }}">
-                                <div class="bg-[#26225F] flex w-[400px] max-w-[400px] items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
+                                class="w-[300px] max-w-[400px] h-96" data-index="{{ $index }}">
+                                <div class="bg-[#26225F] flex w-[300px] max-w-[400px] items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
                                     <a href="{{ $board['link'] }}">
                                         <img src="/images/Linkedin.png" alt="Linkedin Icon">
                                     </a>
@@ -354,9 +354,9 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-8 rounded-3xl team-img">
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="w-[135px] max-w-[205px] h-52" data-index="{{ $index }}">
+                                class="w-[150px] max-w-[230px] h-52" data-index="{{ $index }}">
 
-                            <div class="bg-[#25A8D6] flex-col w-[135px] max-w-[205px] h-28 items-center p-2 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
+                            <div class="bg-[#25A8D6] flex-col w-[150px] max-w-[230px] h-28 items-center p-2 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
                                 <h3 class="montserrat-bold text-[#FFFFFF] text-sm text-center ">{{ $team['name'] }}</h3>
                                 <h3 class="font-montserrat  text-[#FFFFFF] text-xs text-center ">{{ $team['position'] }}</h3>
                             </div>
@@ -391,8 +391,8 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-6 rounded-3xl team-img">
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="w-[230px] max-w-[350px] h-76" data-index="{{ $index }}">
-                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[350px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
+                                class="w-[230px] max-w-[300px] h-76" data-index="{{ $index }}">
+                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[300px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
                                 <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}</h3>
                                 <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">{{ $team['position'] }}</h3>
                             </div>
@@ -409,9 +409,9 @@
                     <swiper-slide class="">
                         <div class=" py-10 px-6 rounded-3xl team-img">
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[400px] w-[400px]  h-80" data-index="{{ $index }}">
+                                class="max-w-[300px] w-[400px]  h-80" data-index="{{ $index }}">
 
-                            <div class="bg-[#25A8D6] flex-col w-[400px] max-w-[400px] h-32  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
+                            <div class="bg-[#25A8D6] flex-col w-[300px] max-w-[400px] h-32  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
                                 
                                 <h3 class="montserrat-bold text-[#FFFFFF] text-xl text-center ">{{ $team['name'] }}</h3>
                                 <h3 class="montserrat-bold text-[#FFFFFF] text-lg text-center ">{{ $team['position'] }}</h3>
