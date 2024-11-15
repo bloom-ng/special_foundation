@@ -22,6 +22,10 @@ use App\Models\Volunteer;
 use App\Models\View;
 use App\Models\Gallery;
 use App\Models\CMS;
+
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -196,11 +200,12 @@ Route::get('/school-build', function () {
 Route::get('/blogs', function () {
     $posts = App\Models\Post::published()->latest('published_at')->paginate(); // Order by published_at descending
     $featured_posts = App\Models\Post::where('is_featured', 1)
+      							->latest('published_at')
                                 ->get();
 
     return view('blogs', [
         'posts' => $posts,
-        'featured_posts' => $featured_posts->shuffle()->take(4)
+        'featured_posts' => $featured_posts->take(4)
     ]
     );
 });
@@ -221,6 +226,10 @@ Route::get('/blog/{id}', function ($id) {
         ->filter(function ($post, $key) use($id) {
             return $post->id != $id;
         });
+    }
+  
+    if (empty($post)) {
+      throw new NotFoundHttpException();
     }
 
     // increase view
