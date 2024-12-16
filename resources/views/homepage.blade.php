@@ -465,7 +465,7 @@
                 </div>
 
                 <div class="flex items-center w-full">
-                    <form action="/newsletters" method="POST" class="flex flex-col gap-4 w-full">
+                    <form id="newsletterForm" action="/newsletters" method="POST" class="flex flex-col gap-4 w-full">
                         @csrf
                         <div>
                             <input
@@ -477,6 +477,9 @@
                                 class="bg-white/70 w-full text-black bg-white-70 placeholder:text-slate-600 placeholder:text-xs placeholder:poppins px-6 lg:ps-12 py-3 lg:py-4 rounded-full border border-1 border-[#25A8D6]"
                                 type="text" name="email" placeholder="Your Email" required />
                         </div>
+                        {{-- Math CAPTCHA --}}
+                        <div id="captchaQuestion" class="mt-2 font-bold"></div>
+                        <input type="text" id="captchaAnswer" placeholder="Your Answer" required class="mt-2 bg-white/70 w-full text-black placeholder:text-slate-600 placeholder:text-xs px-6 py-3 rounded-full border border-1 border-[#25A8D6]" />
                         <div class="pt-12 lg:pt-14">
                             <button type="submit"
                                 class="text-center rounded-full w-full py-3 text-white bg-[#25A8D6]">
@@ -567,5 +570,26 @@
         function navigateTo(url) {
                 window.location.href = url;
             }
+
+        // Generate a simple math question
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10);
+            const num2 = Math.floor(Math.random() * 10);
+            const noise = Math.random() < 0.5 ? '?' : '!'; // Random noise character
+            const question = `What is ${num1} + ${num2}${noise}`; // Add noise to the question
+            document.getElementById('captchaQuestion').innerText = question;
+            return num1 + num2; // Return the correct answer
+        }
+
+        let correctAnswer = generateCaptcha();
+
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            const userAnswer = parseInt(document.getElementById('captchaAnswer').value);
+            if (userAnswer !== correctAnswer) {
+                event.preventDefault(); // Prevent form submission
+                alert('Incorrect answer. Please try again.');
+                correctAnswer = generateCaptcha(); // Regenerate question
+            }
+        });
     </script>
 </x-guest-layout>

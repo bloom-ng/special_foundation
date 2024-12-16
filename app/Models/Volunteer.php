@@ -111,8 +111,8 @@ class Volunteer extends Model
             self::AVAILABILITY_FLEXIBLE => "I am flexible",
             self::AVAILABILITY_WEEKDAYS => "Weekdays",
             self::AVAILABILITY_WEEKENDS => "Weekends",
-            self::AVAILABILITY_MORNINGS => "Mornings",
-            self::AVAILABILITY_EVENINGS => "Evenings",
+            // self::AVAILABILITY_MORNINGS => "Mornings",
+            // self::AVAILABILITY_EVENINGS => "Evenings",
         ];
     }
 

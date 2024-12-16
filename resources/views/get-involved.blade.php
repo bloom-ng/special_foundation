@@ -189,12 +189,12 @@
                             placeholder="Religious Affirmation" />
                     </div>
 
-                    <div class="w-full flex flex-col items-start ml-16">
+                    <div class="w-full flex flex-col items-start gap-8">
                         <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Availability</h5>
-                        <p>During which hours are you available for volunteering? (Select all that apply)</p>
+                        <p>Please confirm your availability for volunteering? (Select only one)</p>
                         @foreach ($availabilityMapping as $key => $value)
                             <div class="flex items-center justify-center gap-3"s>
-                                <input type="checkbox" name="availability[]"
+                                <input type="radio" name="availability"
                                     class="montserrat-thin font-normal my-4 h-8 w-8" value="{{ $key }}"
                                     id="{{ $key }}">
                                 <label for="{{ $key }}">{{ $value }}</label>
@@ -204,8 +204,13 @@
 
                     <div class="w-full flex flex-col  gap-8">
                         <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Specify Time</h5>
+                        <label for="specify_time">From</label>
                         <input type="time" name="specify_time"
-                            class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
+                            class="w-full rounded-full border border-[#25A8D6] px-6 py-2 montserrat-thin font-light text-black"
+                            placeholder="Specify Time" />
+                        <label for="specify_time_to">To</label>
+                        <input type="time" name="specify_time_to"
+                            class="w-full rounded-full border border-[#25A8D6] px-6 py-2 montserrat-thin font-light text-black"
                             placeholder="Specify Time" />
 
                     </div>

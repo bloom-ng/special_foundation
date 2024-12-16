@@ -48,6 +48,7 @@ class VolunteerController extends Controller
             'area_of_residence' => 'required|string',
             'availability*' => 'required',
             'specify_time' => 'nullable',
+            'specify_time_to' => 'nullable',
             'times_per_week_month' => 'nullable',
             'other' => 'nullable',
             'interests*' => 'nullable',
@@ -55,14 +56,18 @@ class VolunteerController extends Controller
             'source' => 'string',
         ]);
 
+        $from = $request->specify_time ?? "00:00";
+        $to = $request->specify_time_to ?? "00:00";
+        $availability = [$request->availability];
+
         $volunteer = new Volunteer;
         $volunteer->full_name = $request->full_name;
         $volunteer->email = $request->email;
         $volunteer->gender = $request->gender;
         $volunteer->contact_number = $request->contact_number;
         $volunteer->area_of_residence = $request->area_of_residence;
-        $volunteer->availability = json_encode($request->availability);
-        $volunteer->specify_time = $request->specify_time ?? "";
+        $volunteer->availability = json_encode($availability);
+        $volunteer->specify_time = $from . " - " . $to;
         $volunteer->times_per_week_month = $request->times_per_week_month ?? "";
         $volunteer->other = $request->other ?? "";
         $volunteer->interests = json_encode($request->interests) ?? "";
