@@ -10,6 +10,11 @@
                     class="w-[100vw]" /></swiper-slide>
         </swiper-container>
     </div>
+
+    <a href="https://app.jotform.com/the-special-foundation/the-special-foundation-thought-lead"
+        class="max=w-[100vw] h-auto">
+        <img src="/images/event_banner.jpg" alt="" class="w-full object-contain" />
+    </a>
     <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
         <div class="basis-4/5 flex flex-col gap-16">
             <div class="flex flex-col lg:flex-row gap-10">
@@ -188,7 +193,8 @@
                         quality education.
                     </p>
                     <div class="">
-                        <a href="/school-build" class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
+                        <a href="/school-build"
+                            class="text-white text-base bg-[#25A8D6] px-10 py-3 rounded-full">LEARN
                             MORE</a>
                     </div>
                 </div>
@@ -425,8 +431,8 @@
                         <img src="{{ Storage::url($partner->value) }}" alt="" />
                     </swiper-slide>
                 @endforeach
-      
-            
+
+
             </swiper-container>
 
             <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
@@ -465,7 +471,8 @@
                 </div>
 
                 <div class="flex items-center w-full">
-                    <form id="newsletterForm" action="/newsletters" method="POST" class="flex flex-col gap-4 w-full">
+                    <form id="newsletterForm" action="/newsletters" method="POST"
+                        class="flex flex-col gap-4 w-full">
                         @csrf
                         <div>
                             <input
@@ -479,7 +486,8 @@
                         </div>
                         {{-- Math CAPTCHA --}}
                         <div id="captchaQuestion" class="mt-2 font-bold"></div>
-                        <input type="text" id="captchaAnswer" placeholder="Your Answer" required class="mt-2 bg-white/70 w-full text-black placeholder:text-slate-600 placeholder:text-xs px-6 py-3 rounded-full border border-1 border-[#25A8D6]" />
+                        <input type="text" id="captchaAnswer" placeholder="Your Answer" required
+                            class="mt-2 bg-white/70 w-full text-black placeholder:text-slate-600 placeholder:text-xs px-6 py-3 rounded-full border border-1 border-[#25A8D6]" />
                         <div class="pt-12 lg:pt-14">
                             <button type="submit"
                                 class="text-center rounded-full w-full py-3 text-white bg-[#25A8D6]">
@@ -507,7 +515,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-2 lg:gap-10 text-white">
             @foreach ($featured_posts as $featured_blog)
-                <div onclick="navigateTo('/blog/{{ $featured_blog->slug }}')"  class="flex flex-col w-[380px]">
+                <div onclick="navigateTo('/blog/{{ $featured_blog->slug }}')" class="flex flex-col w-[380px]">
                     <div>
                         <img class="w-[380px] cursor-pointer" src="{{ Storage::url($featured_blog->featured_image) }}"
                             alt="{{ $featured_blog->title }}" />
@@ -568,8 +576,8 @@
         }
 
         function navigateTo(url) {
-                window.location.href = url;
-            }
+            window.location.href = url;
+        }
 
         // Generate a simple math question
         function generateCaptcha() {
