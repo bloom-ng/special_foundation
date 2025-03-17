@@ -11,20 +11,19 @@
         </swiper-container>
     </div>
 
-    <div class="w-full">
-        <div id="countdown" class="text-center text-4xl font-bold mt-5 mb-3 text-[#25A8D6] montserrat-bold"></div>
+    @if($activeEvent)
+    <div class="text-center py-10">
+        <div id="countdown" class="text-4xl font-bold mt-5 mb-3 text-[#25A8D6] montserrat-bold"></div>
         <h3 class="text-center text-2xl font-bold py-4 text-[#25A8D6] montserrat-bold">To</h3>
-        <a href="https://app.jotform.com/the-special-foundation/the-special-foundation-thought-lead"
-            class="max=w-[100vw] h-auto">
-            <img src="/images/event_banner.jpg" alt="" class="w-full object-contain" />
+        <a href="{{ route('events.register', $activeEvent->id) }}" class="max-w-[100vw] h-auto block">
+            <img src="{{ Storage::url($activeEvent->image) }}" alt="{{ $activeEvent->name }}" class="w-full object-contain" />
         </a>
         <script>
             // Set the date we're counting down to
-            var countDownDate = new Date("May 8, 2025 16:00:00").getTime();
+            var countDownDate = new Date("{{ date('M d, Y H:i:s', strtotime($activeEvent->date)) }}").getTime();
 
             // Update the count down every 1 second
             var x = setInterval(function() {
-
                 // Get today's date and time
                 var now = new Date().getTime();
 
@@ -49,8 +48,8 @@
             }, 1000);
         </script>
     </div>
+    @endif
 
-    </div>
     <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
         <div class="basis-4/5 flex flex-col gap-16">
             <div class="flex flex-col lg:flex-row gap-10">

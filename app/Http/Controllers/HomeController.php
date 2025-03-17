@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\CMS;
+use App\Models\Event;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $activeEvent = Event::where('status', 'active')->first();
         $sdgs = [
             [
                 "image" => "/images/sdg-1.png",
@@ -111,11 +113,12 @@ class HomeController extends Controller
                                 ->get();
 
         $partners = CMS::query()->where('type', CMS::TYPE_PARTNERS)->get();
-
+        
         return view('homepage', [
             'featured_posts' => $featured_posts->shuffle()->take(3),
             'sdgs' => $sdgs,
-            'partners' => $partners
+            'partners' => $partners,
+            'activeEvent' => $activeEvent
         ]);
     }
 }

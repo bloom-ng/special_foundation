@@ -63,6 +63,10 @@ Route::post('/partners', [PartnerApplicationController::class, 'store']);
 Route::post('/donation-lead', [DonationController::class, 'store']);
 Route::post('/volunteer', [VolunteerController::class, 'store']);
 
+// Event registration routes (must be before admin routes)
+Route::get('/events/{event}/register', [EventController::class, 'showRegistration'])->name('events.register');
+Route::post('/events/{eventId}/register', [EventController::class, 'submitRegistration'])->name('events.submit-registration');
+
 Route::get('/project', [ProjectScheduleController::class, 'projects']);
 
 Route::post('/upload-images', [PostController::class, 'upload'])->name('upload-img')->middleware('auth');
@@ -169,6 +173,14 @@ Route::get('/admin/project-schedule/projects', [ProjectScheduleController::class
 Auth::routes(['register' => false]);
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
+    // Admin event routes
+    Route::get('/events', [EventController::class, 'index'])->name('admin.events.index');
+    Route::get('/events/create', [EventController::class, 'create'])->name('admin.events.create');
+    Route::post('/events', [EventController::class, 'store'])->name('admin.events.store');
+    Route::get('/events/download-csv', [EventController::class, 'downloadCsv'])->name('admin.events.download-csv');
+    Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('admin.events.edit');
+    Route::put('/events/{event}', [EventController::class, 'update'])->name('admin.events.update');
+    Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('admin.events.destroy');
     // Add other routes that require authentication here
 
     Route::get('/download/{model}/csv', [CSVController::class, 'download'])->where('model', '[A-Za-z]+');
@@ -241,22 +253,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
     Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
 
-    // Event routes
-    Route::get('/events', [EventController::class, 'index']);
-    Route::get('/events/create', [EventController::class, 'create']);
-    Route::post('/events', [EventController::class, 'store']);
-    Route::get('/events/{event}/edit', [EventController::class, 'edit']);
-    Route::put('/events/{event}', [EventController::class, 'update']);
-    Route::delete('/events/{event}', [EventController::class, 'destroy']);
-
     //Partners Logo
     Route::get('/cms-data/partners', [CMSController::class, 'indexPartners']);
     Route::get('/cms-data/partners/create', [CMSController::class, 'createPartners']);
     Route::get('/cms-data/partners/{cms}/edit', [CMSController::class, 'editPartners']);
     Route::post('/cms-data/partners', [CMSController::class, 'storePartners']);
     Route::put('/cms-data/partners/{cms}', [CMSController::class, 'updatePartners']);
-
-    
 
     //Team Logo
     Route::get('/cms-data/teams', [CMSController::class, 'indexTeams']);
