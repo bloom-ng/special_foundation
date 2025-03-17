@@ -16,6 +16,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ProjectScheduleController;
 use App\Http\Controllers\CMSController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -24,7 +25,6 @@ use App\Models\Gallery;
 use App\Models\CMS;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -39,9 +39,12 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
-
 Route::get('homepage', function () {
-    return view('homepage');
+    $activeEvent = \App\Models\Event::where('status', 'active')->latest()->first();
+    $downloads = Download::all();
+    $teams = CMS::getDynamicTeams();
+    $boards = CMS::getDynamicBoards();
+    return view('homepage', compact('activeEvent'))->with('teams', $teams)->with('boards', $boards)->with('downloads', $downloads);
 });
 
 Route::get('who-we-are', function () {
@@ -53,9 +56,6 @@ Route::get('who-we-are', function () {
 
 Route::post('/newsletters', [NewsletterController::class, 'create']);
 
-
-
-
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
@@ -63,112 +63,9 @@ Route::post('/partners', [PartnerApplicationController::class, 'store']);
 Route::post('/donation-lead', [DonationController::class, 'store']);
 Route::post('/volunteer', [VolunteerController::class, 'store']);
 
-
-Auth::routes();
-
-Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    // Add other routes that require authentication here
-
-    Route::get('/download/{model}/csv', [CSVController::class, 'download'])->where('model', '[A-Za-z]+');
-
-    Route::get('dashboard', [DashboardController::class, 'show']);
-
-    Route::get('/newsletters', [NewsletterController::class, 'index']);
-    Route::delete('/newsletters/{newsletter}', [NewsletterController::class, 'delete']);
-
-    // Downloads routes
-    Route::get('/downloads', [DownloadController::class, 'index']);
-    Route::get('/downloads/create', [DownloadController::class, 'create']);
-    Route::post('/downloads', [DownloadController::class, 'store']);
-    Route::delete('/downloads/{download}', [DownloadController::class, 'destroy']);
-
-    // Project Schedules routes
-    Route::get('/project-schedules', [ProjectScheduleController::class, 'index']);
-    Route::get('/project-schedules/create', [ProjectScheduleController::class, 'create']);
-    Route::post('/project-schedules', [ProjectScheduleController::class, 'store']);
-    Route::put('/project-schedules/{project}', [ProjectScheduleController::class, 'update']);
-    Route::get('/project-schedules/{project}/edit', [ProjectScheduleController::class, 'edit']);
-    Route::delete('/project-schedules/{project}', [ProjectScheduleController::class, 'destroy']);
-
-    // Beneficiary Applications routes
-    Route::get('/beneficiaries', [BeneficiaryApplicationController::class, 'index']);
-    Route::get('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'show']);
-    Route::get('/beneficiaries/create', [BeneficiaryApplicationController::class, 'create']);
-    Route::delete('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'destroy']);
-
-    // Partner Applications routes
-    Route::get('/partners', [PartnerApplicationController::class, 'index']);
-    Route::get('/partners/{id}', [PartnerApplicationController::class, 'show']);
-    Route::get('/partners/create', [PartnerApplicationController::class, 'create']);
-    Route::delete('/partners/{id}', [PartnerApplicationController::class, 'destroy']);
-
-    // Donation Lead routes
-    Route::get('/donation-leads', [DonationController::class, 'index']);
-    Route::get('/donation-leads/{id}', [DonationController::class, 'show']);
-    Route::delete('/donation-leads/{donation}', [DonationController::class, 'destroy']);
-
-     // Volunteer Applications routes
-     Route::get('/volunteers', [VolunteerController::class, 'index']);
-     Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
-     Route::get('/volunteers/create', [VolunteerController::class, 'create']);
-     Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
-
-     // Blog routes
-     Route::get('/blogs', [PostController::class, 'index']);
-     Route::get('/blogs/create', [PostController::class, 'create']);
-     Route::get('/blogs/{id}', [PostController::class, 'show']);
-     Route::post('/blogs/{id}', [PostController::class, 'store']);
-     Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
-
-     // User routes
-     Route::get('/users', [UserController::class, 'index']);
-     Route::get('/users/create', [UserController::class, 'create']);
-     Route::get('/users/{id}/edit', [UserController::class, 'edit']);
-     Route::get('/users/{id}', [UserController::class, 'show']);
-     Route::put('/users/{id}', [UserController::class, 'update']);
-     Route::post('/users', [UserController::class, 'store']);
-     Route::delete('/users/{id}', [UserController::class, 'destroy']);
-     
-     Route::get('/users/edit/me', [UserController::class, 'me']);
-
-     // Gallery routes
-    Route::get('/galleries', [GalleryController::class, 'index']);
-    Route::get('/galleries/create', [GalleryController::class, 'create']);
-    Route::get('/galleries/{gallery}/edit', [GalleryController::class, 'edit']);
-    Route::post('/galleries', [GalleryController::class, 'store']);
-    Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
-    Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
-
-    //Partners Logo
-    Route::get('/cms-data/partners', [CMSController::class, 'indexPartners']);
-    Route::get('/cms-data/partners/create', [CMSController::class, 'createPartners']);
-    Route::get('/cms-data/partners/{cms}/edit', [CMSController::class, 'editPartners']);
-    Route::post('/cms-data/partners', [CMSController::class, 'storePartners']);
-    Route::put('/cms-data/partners/{cms}', [CMSController::class, 'updatePartners']);
-
-    //Team Logo
-    Route::get('/cms-data/teams', [CMSController::class, 'indexTeams']);
-    Route::get('/cms-data/teams/create', [CMSController::class, 'createTeams']);
-    Route::get('/cms-data/teams/{cms}/edit', [CMSController::class, 'editTeams']);
-    Route::post('/cms-data/teams', [CMSController::class, 'storeTeams']);
-    Route::put('/cms-data/teams/{cms}', [CMSController::class, 'updateTeams']);
-
-    //AI Data
-    Route::get('/cms-data/ai/edit', [CMSController::class, 'editAi']);
-    Route::put('/cms-data/ai/{cms}', [CMSController::class, 'updateAi']);
-
-
-    //CMS DELETE
-    Route::delete('/cms/{cms}', [CMSController::class, 'destroy']);
-
-});
-
 Route::get('/project', [ProjectScheduleController::class, 'projects']);
 
-Route::post('/upload-images', [PostCOntroller::class, 'upload'])->name('upload-img')->middleware('auth');
-
+Route::post('/upload-images', [PostController::class, 'upload'])->name('upload-img')->middleware('auth');
 
 Route::get('/social-media-posts', function () {
     return view('social-media-posts');
@@ -264,9 +161,116 @@ Route::get('/gallery', function () {
     return view('gallery', compact('galleries'));
 });
 
-
-
 Route::post('/donate', [DonationController::class, 'store']);
 
 Route::get('/admin/project-schedule/projects', [ProjectScheduleController::class, 'getCurrentAndNextYearProjects'])
     ->name('admin.project-schedule.projects');
+
+Auth::routes(['register' => false]);
+
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    // Add other routes that require authentication here
+
+    Route::get('/download/{model}/csv', [CSVController::class, 'download'])->where('model', '[A-Za-z]+');
+
+    Route::get('dashboard', [DashboardController::class, 'show']);
+
+    Route::get('/newsletters', [NewsletterController::class, 'index']);
+    Route::delete('/newsletters/{newsletter}', [NewsletterController::class, 'delete']);
+
+    // Downloads routes
+    Route::get('/downloads', [DownloadController::class, 'index']);
+    Route::get('/downloads/create', [DownloadController::class, 'create']);
+    Route::post('/downloads', [DownloadController::class, 'store']);
+    Route::delete('/downloads/{download}', [DownloadController::class, 'destroy']);
+
+    // Project Schedules routes
+    Route::get('/project-schedules', [ProjectScheduleController::class, 'index']);
+    Route::get('/project-schedules/create', [ProjectScheduleController::class, 'create']);
+    Route::post('/project-schedules', [ProjectScheduleController::class, 'store']);
+    Route::put('/project-schedules/{project}', [ProjectScheduleController::class, 'update']);
+    Route::get('/project-schedules/{project}/edit', [ProjectScheduleController::class, 'edit']);
+    Route::delete('/project-schedules/{project}', [ProjectScheduleController::class, 'destroy']);
+
+    // Beneficiary Applications routes
+    Route::get('/beneficiaries', [BeneficiaryApplicationController::class, 'index']);
+    Route::get('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'show']);
+    Route::get('/beneficiaries/create', [BeneficiaryApplicationController::class, 'create']);
+    Route::delete('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'destroy']);
+
+    // Partner Applications routes
+    Route::get('/partners', [PartnerApplicationController::class, 'index']);
+    Route::get('/partners/{id}', [PartnerApplicationController::class, 'show']);
+    Route::get('/partners/create', [PartnerApplicationController::class, 'create']);
+    Route::delete('/partners/{id}', [PartnerApplicationController::class, 'destroy']);
+
+    // Donation Lead routes
+    Route::get('/donation-leads', [DonationController::class, 'index']);
+    Route::get('/donation-leads/{id}', [DonationController::class, 'show']);
+    Route::delete('/donation-leads/{donation}', [DonationController::class, 'destroy']);
+
+     // Volunteer Applications routes
+     Route::get('/volunteers', [VolunteerController::class, 'index']);
+     Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
+     Route::get('/volunteers/create', [VolunteerController::class, 'create']);
+     Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
+
+     // Blog routes
+     Route::get('/blogs', [PostController::class, 'index']);
+     Route::get('/blogs/create', [PostController::class, 'create']);
+     Route::get('/blogs/{id}', [PostController::class, 'show']);
+     Route::post('/blogs/{id}', [PostController::class, 'store']);
+     Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
+
+     // User routes
+     Route::get('/users', [UserController::class, 'index']);
+     Route::get('/users/create', [UserController::class, 'create']);
+     Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+     Route::get('/users/{id}', [UserController::class, 'show']);
+     Route::put('/users/{id}', [UserController::class, 'update']);
+     Route::post('/users', [UserController::class, 'store']);
+     Route::delete('/users/{id}', [UserController::class, 'destroy']);
+     
+     Route::get('/users/edit/me', [UserController::class, 'me']);
+
+     // Gallery routes
+    Route::get('/galleries', [GalleryController::class, 'index']);
+    Route::get('/galleries/create', [GalleryController::class, 'create']);
+    Route::get('/galleries/{gallery}/edit', [GalleryController::class, 'edit']);
+    Route::post('/galleries', [GalleryController::class, 'store']);
+    Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
+    Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
+
+    // Event routes
+    Route::get('/events', [EventController::class, 'index']);
+    Route::get('/events/create', [EventController::class, 'create']);
+    Route::post('/events', [EventController::class, 'store']);
+    Route::get('/events/{event}/edit', [EventController::class, 'edit']);
+    Route::put('/events/{event}', [EventController::class, 'update']);
+    Route::delete('/events/{event}', [EventController::class, 'destroy']);
+
+    //Partners Logo
+    Route::get('/cms-data/partners', [CMSController::class, 'indexPartners']);
+    Route::get('/cms-data/partners/create', [CMSController::class, 'createPartners']);
+    Route::get('/cms-data/partners/{cms}/edit', [CMSController::class, 'editPartners']);
+    Route::post('/cms-data/partners', [CMSController::class, 'storePartners']);
+    Route::put('/cms-data/partners/{cms}', [CMSController::class, 'updatePartners']);
+
+    
+
+    //Team Logo
+    Route::get('/cms-data/teams', [CMSController::class, 'indexTeams']);
+    Route::get('/cms-data/teams/create', [CMSController::class, 'createTeams']);
+    Route::get('/cms-data/teams/{cms}/edit', [CMSController::class, 'editTeams']);
+    Route::post('/cms-data/teams', [CMSController::class, 'storeTeams']);
+    Route::put('/cms-data/teams/{cms}', [CMSController::class, 'updateTeams']);
+
+    //AI Data
+    Route::get('/cms-data/ai/edit', [CMSController::class, 'editAi']);
+    Route::put('/cms-data/ai/{cms}', [CMSController::class, 'updateAi']);
+
+
+    //CMS DELETE
+    Route::delete('/cms/{cms}', [CMSController::class, 'destroy']);
+
+});
