@@ -285,11 +285,6 @@
                     <i class="fas fa-images mr-3"></i>
                     Partners logo
                 </a>
-                <a href="/admin/events"
-                    class="flex items-center {{ $page == 'events' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
-                    <i class="fas fa-calendar mr-3"></i>
-                    Events
-                </a>
                 <a href="/admin/cms-data/ai/edit"
                     class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-info mr-3"></i>

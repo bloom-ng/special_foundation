@@ -146,7 +146,7 @@ class EventController extends Controller
                 "Company: " . ($request->company ?? 'Not provided') . "\n" .
                 "Will Attend: " . ($request->will_attend ? 'Yes' : 'No'), 
                 function($message) use ($event) {
-                    $message->to('olusanuemmanuel@gmail.com')
+                    $message->to('info@specialfoundation.com')
                             ->subject("New Registration for {$event->name}");
                 }
             );
