@@ -15,6 +15,9 @@
                     <h1 class="text-[#26225F] text-[32px] pb-2 montserrat-bold font-extrabold">
                         Register for {{ $event->name }}
                     </h1>
+                    <div class="text-white montserrat-medium text-lg mb-8">
+                        {!! nl2br(e($event->content)) !!}
+                    </div>
                     <p class="text-white montserrat-medium text-lg font-semibold">
                         Fill in the form below to register for this event. We'll get back to you with more details.
                     </p>

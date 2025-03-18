@@ -17,6 +17,7 @@ use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ProjectScheduleController;
 use App\Http\Controllers\CMSController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventEntryController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -181,7 +182,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('admin.events.edit');
     Route::put('/events/{event}', [EventController::class, 'update'])->name('admin.events.update');
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('admin.events.destroy');
-    // Add other routes that require authentication here
+
+    // Event entries routes
+    Route::get('/event-entries', [EventEntryController::class, 'index'])->name('admin.event-entries.index');
+    Route::get('/event-entries/download-csv', [EventEntryController::class, 'downloadCsv'])->name('admin.event-entries.download-csv');
 
     Route::get('/download/{model}/csv', [CSVController::class, 'download'])->where('model', '[A-Za-z]+');
 

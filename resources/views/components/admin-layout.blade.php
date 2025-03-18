@@ -143,10 +143,15 @@
                 <i class="fas fa-images mr-3"></i>
                 Partners Logo
             </a>
-            <a href="/admin/events"
-                class="flex items-center {{ $page == 'events' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+            <a href="{{ route('admin.events.index') }}"
+                class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
                 <i class="fas fa-calendar mr-3"></i>
                 Events
+            </a>
+            <a href="{{ route('admin.event-entries.index') }}"
+                class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">
+                <i class="fas fa-users mr-3"></i>
+                Event Entries
             </a>
             <a href="/admin/cms-data/ai/edit"
                 class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
@@ -284,6 +289,16 @@
                     class="flex items-center {{ $page == 'cms-partners' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-images mr-3"></i>
                     Partners logo
+                </a>
+                <a href="{{ route('admin.events.index') }}"
+                    class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
+                    <i class="fas fa-calendar mr-3"></i>
+                    Events
+                </a>
+                <a href="{{ route('admin.event-entries.index') }}"
+                    class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">
+                    <i class="fas fa-users mr-3"></i>
+                    Event Entries
                 </a>
                 <a href="/admin/cms-data/ai/edit"
                     class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">

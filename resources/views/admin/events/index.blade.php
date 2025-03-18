@@ -3,9 +3,9 @@
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-3xl text-black pb-6">Events</h1>
             <div class="flex space-x-4">
-                <a href="{{ route('admin.events.download-csv') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+                <!-- <a href="{{ route('admin.events.download-csv') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
                     Download CSV
-                </a>
+                </a> -->
                 <a href="{{ route('admin.events.create') }}" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
                     Create New Event
                 </a>
