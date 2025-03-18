@@ -10,72 +10,85 @@ return new class extends Migration
 {
     public function up()
     {
-        // Add UUID column without unique constraint
-        Schema::table('events', function (Blueprint $table) {
-            $table->string('uuid', 36)->after('id')->nullable();
+        // Drop the event_entries table temporarily
+        Schema::dropIfExists('event_entries');
+        
+        // Create a new events table with UUID
+        Schema::create('events_new', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('name');
+            $table->string('image');
+            $table->dateTime('date');
+            $table->text('content');
+            $table->enum('status', ['active', 'inactive'])->default('inactive');
+            $table->timestamps();
         });
 
-        // Generate UUIDs for existing records and store the mapping
-        $idMapping = [];
-        DB::table('events')->get()->each(function ($event) use (&$idMapping) {
-            $uuid = Str::uuid()->toString();
-            $idMapping[$event->id] = $uuid;
-            
-            DB::table('events')
-                ->where('id', $event->id)
-                ->update(['uuid' => $uuid]);
-        });
-
-        // Update event_entries to reference new UUIDs
-        foreach ($idMapping as $oldId => $uuid) {
-            DB::table('event_entries')
-                ->where('event_id', $oldId)
-                ->update(['event_id' => $uuid]);
+        // Copy data from old events table to new one
+        $events = DB::table('events')->get();
+        foreach ($events as $event) {
+            DB::table('events_new')->insert([
+                'id' => Str::uuid(),
+                'name' => $event->name,
+                'image' => $event->image,
+                'date' => $event->date,
+                'content' => $event->content,
+                'status' => $event->status,
+                'created_at' => $event->created_at,
+                'updated_at' => $event->updated_at
+            ]);
         }
 
-        // Update event_entries foreign key
-        Schema::table('event_entries', function (Blueprint $table) {
-            $table->dropForeign(['event_id']);
-        });
+        // Drop the old events table
+        Schema::dropIfExists('events');
 
-        // Make event_id UUID in event_entries
-        Schema::table('event_entries', function (Blueprint $table) {
-            $table->string('event_id', 36)->change();
-        });
+        // Rename the new events table to events
+        Schema::rename('events_new', 'events');
 
-        // Drop old ID column and make UUID primary
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('id');
-            $table->renameColumn('uuid', 'id');
-            $table->primary('id');
-        });
-
-        // Restore foreign key with UUID
-        Schema::table('event_entries', function (Blueprint $table) {
+        // Recreate event_entries table with UUID foreign key
+        Schema::create('event_entries', function (Blueprint $table) {
+            $table->id();
+            $table->uuid('event_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('company');
+            $table->string('phone_number');
+            $table->boolean('will_attend');
+            $table->timestamps();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
         });
     }
 
     public function down()
     {
-        // This is a destructive change, so we'll just provide a basic rollback
-        Schema::table('event_entries', function (Blueprint $table) {
-            $table->dropForeign(['event_id']);
-        });
+        // Drop both tables
+        Schema::dropIfExists('event_entries');
+        Schema::dropIfExists('events');
 
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropPrimary();
-            $table->renameColumn('id', 'uuid');
+        // Recreate events table with auto-increment ID
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('image');
+            $table->dateTime('date');
+            $table->text('content');
+            $table->enum('status', ['active', 'inactive'])->default('inactive');
+            $table->timestamps();
         });
 
-        Schema::table('event_entries', function (Blueprint $table) {
-            $table->unsignedBigInteger('event_id')->change();
+        // Recreate event_entries with integer foreign key
+        Schema::create('event_entries', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('event_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('company');
+            $table->string('phone_number');
+            $table->boolean('will_attend');
+            $table->timestamps();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
-        });
-
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('uuid');
         });
     }
 };
