@@ -10,9 +10,9 @@ return new class extends Migration
 {
     public function up()
     {
-        // Add UUID column
+        // Add UUID column without unique constraint
         Schema::table('events', function (Blueprint $table) {
-            $table->uuid('uuid')->after('id')->nullable();
+            $table->string('uuid', 36)->after('id')->nullable();
         });
 
         // Generate UUIDs for existing records and store the mapping
@@ -40,7 +40,7 @@ return new class extends Migration
 
         // Make event_id UUID in event_entries
         Schema::table('event_entries', function (Blueprint $table) {
-            $table->uuid('event_id')->change();
+            $table->string('event_id', 36)->change();
         });
 
         // Drop old ID column and make UUID primary
