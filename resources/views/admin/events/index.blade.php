@@ -56,6 +56,10 @@
                                            class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
                                             Edit
                                         </a>
+                                        <a href="{{ route('admin.events.entries', $event->id) }}" 
+                                           class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+                                            View Entries
+                                        </a>
                                         <form action="{{ url('/admin/events/'.$event->id) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')

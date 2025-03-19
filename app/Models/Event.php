@@ -19,7 +19,9 @@ class Event extends Model
         'image',
         'date',
         'content',
-        'status'
+        'status',
+        'image_width',
+        'image_height'
     ];
 
     protected static function boot()
@@ -27,12 +29,19 @@ class Event extends Model
         parent::boot();
         
         static::creating(function ($model) {
-            $model->id = Str::uuid();
+            if (!$model->id) {
+                $model->id = (string) Str::uuid();
+            }
         });
     }
 
     public function entries()
     {
         return $this->hasMany(EventEntry::class);
+    }
+
+    public function getDateAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->format('Y-m-d\TH:i');
     }
 }

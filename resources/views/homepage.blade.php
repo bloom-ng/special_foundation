@@ -12,12 +12,25 @@
     </div>
 
     @if($activeEvent)
-    <div class="text-center py-10">
+    <div class="text-center">
         <div id="countdown" class="text-4xl font-bold mt-5 mb-3 text-[#25A8D6] montserrat-bold"></div>
         <h3 class="text-center text-2xl font-bold py-4 text-[#25A8D6] montserrat-bold">To</h3>
-        <a href="{{ route('events.register', $activeEvent->id) }}" class="max-w-[100vw] h-auto block">
-            <img src="{{ Storage::url($activeEvent->image) }}" alt="{{ $activeEvent->name }}" class="w-full object-contain" />
-        </a>
+        <div class="max-w-[100%] mx-auto">
+        <a href="{{ route('events.register', $activeEvent->id) }}" class="block">
+            <div class="relative w-full h-0 pb-[25%] overflow-hidden">
+                @if($activeEvent->image_width && $activeEvent->image_height)
+                <img src="{{ Storage::url($activeEvent->image) }}" 
+                     alt="{{ $activeEvent->name }}" 
+                     width="{{ $activeEvent->image_width }}"
+                     height="{{ $activeEvent->image_height }}"
+                     class="absolute top-0 left-0 w-full h-full object-cover" />
+            @else
+                <img src="{{ Storage::url($activeEvent->image) }}" 
+                     alt="{{ $activeEvent->name }}" 
+                     class="absolute top-0 left-0 w-full h-full object-cover" />
+            @endif
+            </div>
+        </a></div>
         <script>
             // Set the date we're counting down to
             var countDownDate = new Date("{{ date('M d, Y H:i:s', strtotime($activeEvent->date)) }}").getTime();

@@ -182,6 +182,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('admin.events.edit');
     Route::put('/events/{event}', [EventController::class, 'update'])->name('admin.events.update');
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('admin.events.destroy');
+    Route::get('/events/{event}/entries', [EventController::class, 'entries'])->name('admin.events.entries');
+    Route::get('/events/{id}/entries/view', [EventController::class, 'viewEntries'])->name('admin.events.entries.view');
+    Route::get('/events/{event}/entries/download', [EventController::class, 'downloadEntries'])->name('admin.events.entries.download');
 
     // Event entries routes
     Route::get('/event-entries', [EventEntryController::class, 'index'])->name('admin.event-entries.index');

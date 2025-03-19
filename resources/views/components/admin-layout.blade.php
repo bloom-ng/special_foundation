@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }}</title>
     <meta name="description" content="" />
 
@@ -148,11 +149,11 @@
                 <i class="fas fa-calendar mr-3"></i>
                 Events
             </a>
-            <a href="{{ route('admin.event-entries.index') }}"
+            <!-- <a href="{{ route('admin.event-entries.index') }}"
                 class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">
                 <i class="fas fa-users mr-3"></i>
                 Event Entries
-            </a>
+            </a> -->
             <a href="/admin/cms-data/ai/edit"
                 class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-info mr-3"></i>
@@ -295,11 +296,11 @@
                     <i class="fas fa-calendar mr-3"></i>
                     Events
                 </a>
-                <a href="{{ route('admin.event-entries.index') }}"
+                <!-- <a href="{{ route('admin.event-entries.index') }}"
                     class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">
                     <i class="fas fa-users mr-3"></i>
                     Event Entries
-                </a>
+                </a> -->
                 <a href="/admin/cms-data/ai/edit"
                     class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-info mr-3"></i>
