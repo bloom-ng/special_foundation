@@ -2,7 +2,7 @@
     <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
         style="background-image: url('{{ asset('/images/rectangle-background.png') }}');">
         <div class="h-full">
-            <div class="h-full flex flex-row justify-center items-center text-[30px] lg:text-[48px] montserrat-bold font-extrabold text-[#25A8D6]">
+            <div class="h-full flex flex-row justify-center items-center text-center text-[30px] lg:text-[48px] montserrat-bold font-extrabold text-[#25A8D6]">
                 {{ $event->name }}
             </div>
         </div>
