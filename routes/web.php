@@ -102,20 +102,22 @@ Route::get('/school-build', function () {
 Route::get('/blogs', function () {
     $posts = App\Models\Post::published()->latest('published_at')->paginate(); // Order by published_at descending
     $featured_posts = App\Models\Post::where('is_featured', 1)
-      							->latest('published_at')
-                                ->get();
+        ->latest('published_at')
+        ->get();
 
-    return view('blogs', [
-        'posts' => $posts,
-        'featured_posts' => $featured_posts->take(4)
-    ]
+    return view(
+        'blogs',
+        [
+            'posts' => $posts,
+            'featured_posts' => $featured_posts->take(4)
+        ]
     );
 });
 
 Route::get('/blog/{id}', function ($id) {
     $post = App\Models\Post::with(['user'])->find($id);
     if (empty($post)) {
-       $post = App\Models\Post::with(['user'])->where('slug', $id)->first();
+        $post = App\Models\Post::with(['user'])->where('slug', $id)->first();
     }
     $similarPosts = [];
     if (!empty($post)) {
@@ -125,13 +127,13 @@ Route::get('/blog/{id}', function ($id) {
                 $query->orWhere('title', 'LIKE', "%{$word}%");
             }
         })->take(3)->get()
-        ->filter(function ($post, $key) use($id) {
-            return $post->id != $id;
-        });
+            ->filter(function ($post, $key) use ($id) {
+                return $post->id != $id;
+            });
     }
-  
+
     if (empty($post)) {
-      throw new NotFoundHttpException();
+        throw new NotFoundHttpException();
     }
 
     // increase view
@@ -149,12 +151,12 @@ Route::get('/get-involved', function () {
 
 
     return view('get-involved')
-                ->with("cloud", $cloud)
-                ->with("genderMapping", Volunteer::getGenderMapping())
-                ->with("sourceMapping", Volunteer::getSourceMapping())
-                ->with("availabilityMapping", Volunteer::getAvailabilityMapping())
-                ->with("timesPerWeekMapping", Volunteer::getTimesPerWeekMapping())
-                ->with("interestMapping", Volunteer::getInterestMapping());
+        ->with("cloud", $cloud)
+        ->with("genderMapping", Volunteer::getGenderMapping())
+        ->with("sourceMapping", Volunteer::getSourceMapping())
+        ->with("availabilityMapping", Volunteer::getAvailabilityMapping())
+        ->with("timesPerWeekMapping", Volunteer::getTimesPerWeekMapping())
+        ->with("interestMapping", Volunteer::getInterestMapping());
 });
 
 Route::get('/donate', function () {
@@ -184,7 +186,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('admin.events.destroy');
     Route::get('/events/{event}/entries', [EventController::class, 'entries'])->name('admin.events.entries');
     Route::get('/events/{id}/entries/view', [EventController::class, 'viewEntries'])->name('admin.events.entries.view');
-    Route::get('/events/{event}/entries/download', [EventController::class, 'downloadEntries'])->name('admin.events.entries.download');
+    Route::get('/events/{event}/entries/download', [EventController::class, 'downloadCsv'])->name('admin.events.entries.download');
 
     // Event entries routes
     Route::get('/event-entries', [EventEntryController::class, 'index'])->name('admin.event-entries.index');
@@ -228,31 +230,31 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/donation-leads/{id}', [DonationController::class, 'show']);
     Route::delete('/donation-leads/{donation}', [DonationController::class, 'destroy']);
 
-     // Volunteer Applications routes
-     Route::get('/volunteers', [VolunteerController::class, 'index']);
-     Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
-     Route::get('/volunteers/create', [VolunteerController::class, 'create']);
-     Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
+    // Volunteer Applications routes
+    Route::get('/volunteers', [VolunteerController::class, 'index']);
+    Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
+    Route::get('/volunteers/create', [VolunteerController::class, 'create']);
+    Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
 
-     // Blog routes
-     Route::get('/blogs', [PostController::class, 'index']);
-     Route::get('/blogs/create', [PostController::class, 'create']);
-     Route::get('/blogs/{id}', [PostController::class, 'show']);
-     Route::post('/blogs/{id}', [PostController::class, 'store']);
-     Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
+    // Blog routes
+    Route::get('/blogs', [PostController::class, 'index']);
+    Route::get('/blogs/create', [PostController::class, 'create']);
+    Route::get('/blogs/{id}', [PostController::class, 'show']);
+    Route::post('/blogs/{id}', [PostController::class, 'store']);
+    Route::delete('/blogs/{id}', [PostController::class, 'destroy']);
 
-     // User routes
-     Route::get('/users', [UserController::class, 'index']);
-     Route::get('/users/create', [UserController::class, 'create']);
-     Route::get('/users/{id}/edit', [UserController::class, 'edit']);
-     Route::get('/users/{id}', [UserController::class, 'show']);
-     Route::put('/users/{id}', [UserController::class, 'update']);
-     Route::post('/users', [UserController::class, 'store']);
-     Route::delete('/users/{id}', [UserController::class, 'destroy']);
-     
-     Route::get('/users/edit/me', [UserController::class, 'me']);
+    // User routes
+    Route::get('/users', [UserController::class, 'index']);
+    Route::get('/users/create', [UserController::class, 'create']);
+    Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+    Route::get('/users/{id}', [UserController::class, 'show']);
+    Route::put('/users/{id}', [UserController::class, 'update']);
+    Route::post('/users', [UserController::class, 'store']);
+    Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
-     // Gallery routes
+    Route::get('/users/edit/me', [UserController::class, 'me']);
+
+    // Gallery routes
     Route::get('/galleries', [GalleryController::class, 'index']);
     Route::get('/galleries/create', [GalleryController::class, 'create']);
     Route::get('/galleries/{gallery}/edit', [GalleryController::class, 'edit']);
@@ -281,5 +283,4 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     //CMS DELETE
     Route::delete('/cms/{cms}', [CMSController::class, 'destroy']);
-
 });
