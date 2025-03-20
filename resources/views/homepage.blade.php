@@ -11,56 +11,58 @@
         </swiper-container>
     </div>
 
-    @if($activeEvent)
-    <div class="text-center py-8">
-        <div id="countdown" class="text-[60px] font-bold mt-5 mb-3 text-[#25A8D6] orbitron-bold"></div>
-        <h3 class="text-center text-[40px] font-bold py-4 text-[#25A8D6] montserrat-bold">To</h3>
-        <div class="max-w-[100%] mx-auto">
-        <a href="{{ route('events.register', $activeEvent->id) }}" class="block">
-            <div class="relative w-full h-0 pb-[25%] overflow-hidden">
-                @if($activeEvent->image_width && $activeEvent->image_height)
-                <img src="{{ Storage::url($activeEvent->image) }}" 
-                     alt="{{ $activeEvent->name }}" 
-                     width="{{ $activeEvent->image_width }}"
-                     height="{{ $activeEvent->image_height }}"
-                     class="absolute top-0 left-0 w-full h-full object-cover" />
-            @else
-                <img src="{{ Storage::url($activeEvent->image) }}" 
-                     alt="{{ $activeEvent->name }}" 
-                     class="absolute top-0 left-0 w-full h-full object-cover" />
-            @endif
+    @if ($activeEvent)
+        <div class="text-center py-8">
+            <div id="countdown"
+                class="text-[30px] md:text-[45px] lg:text-[60px] font-bold mt-5 mb-3 text-[#25A8D6] orbitron-bold">
             </div>
-        </a></div>
-        <script>
-            // Set the date we're counting down to
-            var countDownDate = new Date("{{ date('M d, Y H:i:s', strtotime($activeEvent->date)) }}").getTime();
+            <h3
+                class="text-center text-[25px] md:text-[35px] lg:text-[40px] font-bold py-4 text-[#25A8D6] montserrat-bold">
+                To</h3>
+            <div class="max-w-[100%] mx-auto">
+                <a href="{{ route('events.register', $activeEvent->id) }}" class="block">
+                    <div class="relative w-full h-0 pb-[25%] overflow-hidden">
+                        @if ($activeEvent->image_width && $activeEvent->image_height)
+                            <img src="{{ Storage::url($activeEvent->image) }}" alt="{{ $activeEvent->name }}"
+                                width="{{ $activeEvent->image_width }}" height="{{ $activeEvent->image_height }}"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                        @else
+                            <img src="{{ Storage::url($activeEvent->image) }}" alt="{{ $activeEvent->name }}"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                        @endif
+                    </div>
+                </a>
+            </div>
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("{{ date('M d, Y H:i:s', strtotime($activeEvent->date)) }}").getTime();
 
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-                // Get today's date and time
-                var now = new Date().getTime();
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                    // Get today's date and time
+                    var now = new Date().getTime();
 
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the element with id="countdown"
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-                    minutes + "m " + seconds + "s ";
+                    // Display the result in the element with id="countdown"
+                    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                        minutes + "m " + seconds + "s ";
 
-                // If the count down is over, write some text 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                }
-            }, 1000);
-        </script>
-    </div>
+                    // If the count down is over, write some text 
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdown").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            </script>
+        </div>
     @endif
 
     <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
@@ -565,7 +567,8 @@
             @foreach ($featured_posts as $featured_blog)
                 <div onclick="navigateTo('/blog/{{ $featured_blog->slug }}')" class="flex flex-col w-[380px]">
                     <div>
-                        <img class="w-[380px] cursor-pointer" src="{{ Storage::url($featured_blog->featured_image) }}"
+                        <img class="w-[380px] cursor-pointer"
+                            src="{{ Storage::url($featured_blog->featured_image) }}"
                             alt="{{ $featured_blog->title }}" />
                     </div>
                     <div class="bg-[#26225F] px-12 pt-8 pb-5 cursor-pointer">
