@@ -19,7 +19,7 @@
                         {!! Str::markdown($event->content) !!}
                     </div>
                     <p class="text-white montserrat-medium text-lg font-semibold">
-                        Fill in the form below to register for this event. We'll get back to you with more details.
+                        Fill in the form below to register for this event
                     </p>
                 </div>
 
@@ -84,11 +84,15 @@
                         <div class="flex items-center px-6">
                             <label class="text-white mr-4 montserrat-medium">Will you attend?</label>
                             <label class="inline-flex items-center mr-4">
-                                <input type="radio" name="will_attend" value="1" checked class="text-[#26225F]">
+                                <input type="radio" name="will_attend" value="yes" checked class="text-[#26225F]">
                                 <span class="ml-2 text-white">Yes</span>
                             </label>
+                            <label class="inline-flex items-center mr-4">
+                                <input type="radio" name="will_attend" value="maybe" class="text-[#26225F]">
+                                <span class="ml-2 text-white">Maybe</span>
+                            </label>
                             <label class="inline-flex items-center">
-                                <input type="radio" name="will_attend" value="0" class="text-[#26225F]">
+                                <input type="radio" name="will_attend" value="no" class="text-[#26225F]">
                                 <span class="ml-2 text-white">No</span>
                             </label>
                             @error('will_attend')

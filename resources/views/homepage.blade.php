@@ -12,9 +12,9 @@
     </div>
 
     @if($activeEvent)
-    <div class="text-center">
-        <div id="countdown" class="text-4xl font-bold mt-5 mb-3 text-[#25A8D6] montserrat-bold"></div>
-        <h3 class="text-center text-2xl font-bold py-4 text-[#25A8D6] montserrat-bold">To</h3>
+    <div class="text-center py-8">
+        <div id="countdown" class="text-[60px] font-bold mt-5 mb-3 text-[#25A8D6] orbitron-bold"></div>
+        <h3 class="text-center text-[40px] font-bold py-4 text-[#25A8D6] montserrat-bold">To</h3>
         <div class="max-w-[100%] mx-auto">
         <a href="{{ route('events.register', $activeEvent->id) }}" class="block">
             <div class="relative w-full h-0 pb-[25%] overflow-hidden">

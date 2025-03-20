@@ -17,6 +17,7 @@
             },
             menubar: 'favs file edit view insert format tools table help',
             content_css: 'tinymce-5',
+            images_upload_url: '{{ route("upload-img") }}',
             promotion: false
         });
 

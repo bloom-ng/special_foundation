@@ -180,7 +180,7 @@ class EventController extends Controller
             'email' => 'required|email|max:255',
             'phone_number' => 'required|string|max:20',
             'company' => 'nullable|string|max:255',
-            'will_attend' => 'required|boolean'
+            'will_attend' => 'required|string|in:yes,no,maybe'
         ]);
 
         try {
@@ -203,7 +203,7 @@ class EventController extends Controller
                     "Email: {$request->email}\n" .
                     "Phone: {$request->phone_number}\n" .
                     "Company: " . ($request->company ?? 'Not provided') . "\n" .
-                    "Will Attend: " . ($request->will_attend ? 'Yes' : 'No'), 
+                    "Will Attend: " . ($request->will_attend), 
                     function($message) use ($event) {
                         $message->to('info@specialfoundation.com')
                                 ->subject("New Registration for {$event->name}");
@@ -265,7 +265,7 @@ class EventController extends Controller
                     $entry->email,
                     $entry->phone_number,
                     $entry->company ?: 'Not provided',
-                    $entry->will_attend ? 'Yes' : 'No',
+                    $entry->will_attend,
                     $entry->created_at->format('Y-m-d H:i:s')
                 ]);
             }

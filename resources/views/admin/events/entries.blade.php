@@ -41,8 +41,11 @@
                                 <td class="text-left py-3 px-4">{{ $entry->company }}</td>
                                 <td class="text-left py-3 px-4">{{ $entry->phone_number }}</td>
                                 <td class="text-left py-3 px-4">
-                                    <span class="px-2 py-1 rounded-full text-xs {{ $entry->will_attend ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800' }}">
-                                        {{ $entry->will_attend ? 'Yes' : 'No' }}
+                                    <span class="px-2 py-1 rounded-full text-xs {{ 
+                                        $entry->will_attend === 'yes' ? 'bg-green-200 text-green-800' : 
+                                        ($entry->will_attend === 'maybe' ? 'bg-yellow-200 text-yellow-800' : 'bg-red-200 text-red-800') 
+                                    }}">
+                                        {{ ucfirst($entry->will_attend) }}
                                     </span>
                                 </td>
                                 <td class="text-left py-3 px-4">{{ $entry->created_at->format('M d, Y H:i') }}</td>
