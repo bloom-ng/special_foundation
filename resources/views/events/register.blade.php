@@ -14,7 +14,7 @@
             <div class="bg-[#25A8D6] rounded-lg p-8">
                 <div class="mb-8">
                     <h1 class="text-[#26225F] text-[32px] pb-2 montserrat-bold font-extrabold">
-                        Register for this event
+                        Please Register
                     </h1>
                     <div class="text-white montserrat-medium text-lg mb-8">
                         {!! Str::markdown($event->content) !!}
