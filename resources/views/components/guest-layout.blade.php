@@ -233,19 +233,19 @@
         };
 
         const odometer1 = document.querySelector(".odometer-1");
-        createOdometer(odometer1, 21000);
+        createOdometer(odometer1, 35595);
 
         const odometer2 = document.querySelector(".odometer-2");
-        createOdometer(odometer2, 460);
+        createOdometer(odometer2, 600);
 
         const odometer3 = document.querySelector(".odometer-3");
-        createOdometer(odometer3, 10672);
+        createOdometer(odometer3, 18086);
 
         const odometer4 = document.querySelector(".odometer-4");
-        createOdometer(odometer4, 6879);
+        createOdometer(odometer4, 10165);
 
         const odometer5 = document.querySelector(".odometer-5");
-        createOdometer(odometer5, 5);
+        createOdometer(odometer5, 13);
 
         const meter1 = document.querySelector(".odometer-6");
         createOdometer(meter1, 100000);
