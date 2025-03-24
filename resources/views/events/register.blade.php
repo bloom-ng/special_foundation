@@ -69,7 +69,7 @@
                         <div>
                             <input
                                 class="w-full rounded-full px-6 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#26225F]"
-                                name="company" type="text" placeholder="Company/Organization (Optional)" />
+                                name="company" type="text" placeholder="Company/Designation" required />
                             @error('company')
                                 <p class="text-red-800 text-xs mt-1">{{ $message }}</p>
                             @enderror

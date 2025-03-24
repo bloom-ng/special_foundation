@@ -179,7 +179,7 @@ class EventController extends Controller
             'last_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone_number' => 'required|string|max:20',
-            'company' => 'nullable|string|max:255',
+            'company' => 'required|string|max:255',
             'will_attend' => 'required|string|in:yes,no,maybe'
         ]);
 
