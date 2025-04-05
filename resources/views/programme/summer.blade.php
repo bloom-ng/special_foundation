@@ -10,9 +10,13 @@
     </div>
 
     <div class="w-full px-8 py-20 lg:px-20 flex flex-col gap-16">
-        <div class="w-full sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
-            <div class="w-full lg:w-1/2 rounded-2xl">
-                <img src="/images/summer_1.png" alt="">
+        <div class="w-full flex-grow sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
+            <div class="w-full h-full lg:w-1/2 rounded-2xl">
+                <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/Ox9WqmhQsR8?si=g2uvvhm-DtvkqyBK"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
             </div>
             <div class="w-full lg:w-1/2 space-y-12 bg-[#25A8D6] p-12 text-white">
                 <p class="text-sm lg:text-lg montserrat-thin font-normal">
@@ -35,16 +39,35 @@
 
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/summer_2.png" alt="">
+                <img src="/images/v1_summer_1.jpg" alt="" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/summer_3.png" alt="">
+                <img src="/images/v1_summer_2.jpg" alt="" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/summer_4.png" alt="">
+                <img src="/images/v1_summer_3.jpg" alt="" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/summer_5.png" alt="">
+                <img src="/images/v1_summer_4.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+        </div>
+        <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_5.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_6.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_7.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_8.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+        </div>
+        <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_9.jpg" alt="" class="rounded-3xl" loading="lazy">
             </div>
         </div>
     </div>
