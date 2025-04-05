@@ -10,42 +10,6 @@
     </div>
 
     <div class="p-8 lg:p-20">
-        {{-- <h2
-            class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:text-7xl xl:leading-none text-[#25A8D6] mb-12">
-            Ambassadors
-        </h2>
-
-        <p
-            class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9">
-            Our Ambassadors are carefully selected members of the public who have, in the year of review, identified
-            with, and consistently exemplify our values in promoting the objectives of the Foundation.
-            <br>
-            <br>
-
-            They constantly contribute time, effort and resources to achieve the objectives of the Foundation thereby
-            ensuring that underprivileged talented children are equipped with adequate education, mentoring and
-            leadership training to transform them to be positive change agents within their respective communities.
-            <br>
-            <br>
-
-            We are pleased to introduce our Ambassadors for the current year:
-        </p> --}}
-
-        {{-- AMBASSADORS LIST START --}}
-        {{-- <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 my-12">
-            @foreach ($ambassadors as $index => $ambassador)
-                <img src="{{ $ambassador['list_image'] }}" alt="{{ $ambassador['name'] }}" class="my-5 cursor-pointer"
-                    data-index="{{ $index }}">
-            @endforeach
-        </div> --}}
-        {{-- AMBASSADORS LIST END --}}
-
-        {{-- <p
-            class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8 xl:text-2xl xl:leading-9">
-            You may identify with us by volunteering for our activities, donating/securing donations for the foundation
-            and/or proactively publicizing the activities and objectives of the Foundation.
-        </p> --}}
-
         {{-- PARTNER WITH US START --}}
         <div class="flex flex-col lg:flex-row items-start justify-center 2xl:justify-between gap-10">
             <div class="w-full lg:w-[40%]">
@@ -68,10 +32,65 @@
             </div>
 
             <div class="w-full lg:w-[60%]">
-                <img src="{{ Storage::url($cloud->value)}}" class="" alt="Our Partners">
+                <img src="{{ Storage::url($cloud->value) }}" class="" alt="Our Partners">
             </div>
         </div>
         {{-- PARTNER WITH US END --}}
+
+        <div class="flex flex-col items-center justify-center my-12 lg:my-24 gap-10 w-full">
+            <h3 class="text-center text-4xl font-extrabold text-[#26225F]">How to partner with us</h3>
+
+            <div class="flex flex-col lg:flex-row items-start justify-center my-12 lg:my-24 gap-10">
+                <div class="w-full lg:w-[60%]">
+                    <img src="/images/sponsor_a_child.jpg" class="md:h-[400px] h-[200px] w-full rounded-3xl"
+                        alt="Group Picture of Special Youths">
+                </div>
+                <div class="w-full lg:w-[40%]">
+                    <h2
+                        class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:leading-none text-[#25A8D6] mb-10">
+                        Sponsor a child
+                    </h2>
+                    <p
+                        class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8">
+                        You can make an annual contribution of N300,000 to cover tuition, uniforms, books, and
+                        stationery for a child for a school session or N100,000 to cover tuition, uniforms, books, and
+                        stationery for a child for a term.
+                    </p>
+
+                    <a href="/donate">
+                        <button
+                            class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
+                            Sponsor Now
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-start justify-center my-12 lg:my-24 gap-10">
+                <div class="w-full lg:w-[40%]">
+                    <h2
+                        class="montserrat-bold text-4xl font-extrabold leading-none text-left md:text-5xl md:leading-tight lg:text-6xl lg:leading-none xl:leading-none text-[#25A8D6] mb-10">
+                        One-off donation
+                    </h2>
+                    <p
+                        class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:text-xl lg:leading-8">
+                        You can donate any amount to a specific project or general activities of the foundation, e.g.,
+                        Mentorship or School Build Programs.
+                    </p>
+
+                    <a href="/donate">
+                        <button
+                            class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#25A8D6] montserrat-light text-lg leading-[24.38px] tracking-wider text-center md:text-xl md:leading-[26px] lg:text-xl lg:leading-[28px] xl:text-xl xl:leading-[30px] mt-10">
+                            Donate Now
+                        </button>
+                    </a>
+                </div>
+                <div class="w-full lg:w-[60%]">
+                    <img src="/images/one_off_donation.jpg" class="md:h-[400px] h-[200px] w-full rounded-3xl"
+                        alt="Group Picture of Special Youths">
+                </div>
+            </div>
+        </div>
 
         {{-- VOLUNTEER START --}}
         <div class="flex flex-col lg:flex-row items-start justify-center my-12 lg:my-24 gap-10">
@@ -216,7 +235,7 @@
                     </div>
 
                     <div class="w-full flex flex-col  gap-8">
-                        
+
                         <h5 class="montserrat-thin font-semibold text-base text-[#25A8D6] mb-3">Specify Frequency</h5>
                         <select
                             class="w-full rounded-full border border-[#25A8D6] px-6 py-4 montserrat-thin font-light text-black"
