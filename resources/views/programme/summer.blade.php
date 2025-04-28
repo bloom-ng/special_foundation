@@ -69,6 +69,15 @@
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
                 <img src="/images/v1_summer_9.jpg" alt="" class="rounded-3xl" loading="lazy">
             </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_10.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_11.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_12.jpg" alt="" class="rounded-3xl" loading="lazy">
+            </div>
         </div>
     </div>
 
