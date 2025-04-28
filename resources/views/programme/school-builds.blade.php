@@ -63,6 +63,9 @@
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
                 <img src="/images/v1_school_build_4.png" alt="" loading="lazy" class="rounded-3xl">
             </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_school_build_8.png" alt="" loading="lazy" class="rounded-3xl h-full">
+            </div>
         </div>
     </div>
 
