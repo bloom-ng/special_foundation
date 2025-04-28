@@ -1,15 +1,14 @@
 <x-guest-layout title="Special Foundation - {{ $post->title }}" page="blog">
 
     @push('head')
-  
-  		@php
+        @php
             $imagePath = Storage::url($post->featured_image);
             $encodedImagePath = preg_replace_callback(
-                '/[^\/]+/', 
-                function ($matches) { 
-                    return rawurlencode($matches[0]); 
-                }, 
-                $imagePath
+                '/[^\/]+/',
+                function ($matches) {
+                    return rawurlencode($matches[0]);
+                },
+                $imagePath,
             );
         @endphp
         <!-- Primary Meta Tags -->
@@ -21,14 +20,16 @@
         <meta property="og:url" content="https://thespecialfoundation.org/blog/{{ $post->slug }}" />
         <meta property="og:title" content="{{ $post->title }}" />
         <meta property="og:description" content="{{ $post->summary }}" />
-        <meta property="og:image" content="{{  url( $encodedImagePath )}}" />
+        {{-- <meta property="og:image" content="{{  url( $encodedImagePath )}}" /> --}}
+        <meta property="og:image" content="{{ asset('images/og_graph.png') }}" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://thespecialfoundation.org/blog/{{ $post->slug }}" />
         <meta property="twitter:title" content="{{ $post->title }}" />
         <meta property="twitter:description" content="{{ $post->summary }}" />
-        <meta property="twitter:image" content="{{ url( $encodedImagePath ) }}" />
+        {{-- <meta property="twitter:image" content="{{ url($encodedImagePath) }}" /> --}}
+        <meta property="twitter:image" content="{{ asset('images/og_graph.png') }}" />
     @endpush
 
     <div class="relative bg-cover bg-center h-40 bg-[#26225F] bg-blend-multiply"
@@ -38,10 +39,10 @@
         </div>
     </div>
 
-    @if(Request::query('preview'))
-    <div class="fixed top-0 left-0 w-full bg-orange-500 text-white p-8 text-center">
-        <span class="font-bold">Preview Mode</span>
-    </div>
+    @if (Request::query('preview'))
+        <div class="fixed top-0 left-0 w-full bg-orange-500 text-white p-8 text-center">
+            <span class="font-bold">Preview Mode</span>
+        </div>
     @endif
 
     {{-- BLOG TITLE START --}}
@@ -111,7 +112,8 @@
 
         <div class="w-full flex flex-col lg:flex-row items-start justify-around gap-6 lg:gap-0">
             @foreach ($similar_posts as $similar_post)
-                <div onclick="navigateTo('/blog/{{ $similar_post->slug }}')"  class="flex flex-col bg-[#26225F] w-[380px]">
+                <div onclick="navigateTo('/blog/{{ $similar_post->slug }}')"
+                    class="flex flex-col bg-[#26225F] w-[380px]">
                     <div>
                         <img class="w-[380px] cursor-pointer" src="{{ Storage::url($similar_post->featured_image) }}"
                             alt="{{ $similar_post->title }}" />
@@ -129,11 +131,11 @@
             @endforeach
         </div>
 
-    <script>
-        function navigateTo(url) {
-            window.location.href = url;
-        }
-    </script>
+        <script>
+            function navigateTo(url) {
+                window.location.href = url;
+            }
+        </script>
     </div>
 
 

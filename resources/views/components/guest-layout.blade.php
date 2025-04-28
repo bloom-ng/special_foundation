@@ -38,6 +38,27 @@
         integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{ config('app.name', 'Special Foundation') }}" />
+    <meta name="description" content="Special Foundation - Empowering Communities" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="{{ config('app.name', 'Special Foundation') }}" />
+    <meta property="og:description" content="Special Foundation - Empowering Communities" />
+    <meta property="og:image" content="{{ asset('images/og_graph.png') }}" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ url()->current() }}" />
+    <meta property="twitter:title" content="{{ config('app.name', 'Special Foundation') }}" />
+    <meta property="twitter:description" content="Special Foundation - Empowering Communities" />
+    <meta property="twitter:image" content="{{ asset('images/og_graph.png') }}" />
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <style>
         html,
         body {
@@ -147,7 +168,8 @@
                     <img id="communications-icon" class="pt-1 transform transition-transform"
                         src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
                 </button>
-                <div id="communications-dropdown" class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20 w-40">
+                <div id="communications-dropdown"
+                    class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20 w-40">
                     <a href="/blogs" class="block px-4 py-2 text-black hover:bg-gray-200">Blog</a>
                     <a href="/social-media-posts" class="block px-4 py-2 text-black hover:bg-gray-200">Social Media
                         Posts</a>
