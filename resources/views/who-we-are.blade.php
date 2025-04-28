@@ -21,8 +21,8 @@
                     <p class="border-[#25A8D6] pl-5 border-l-[14px]">
                         Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in all
                         spheres of governance in Africa and ensure the creation of a platform where more young people
-                        can maximize their potential by gaining access to education. The foundation now has over 400
-                        active partners and volunteers and has empowered over 21,000 less privileged, gifted African
+                        can maximize their potential by gaining access to education. The foundation now has over 600
+                        active partners and volunteers and has empowered over 35,000 less privileged, gifted African
                         Children through education, mentorship, and leadership opportunities.
                     </p>
                 </div>
@@ -264,12 +264,13 @@
                         <div class=" py-10 px-8 rounded-3xl board-img">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
                                 class="w-[150px] max-w-[230px] h-52" data-index="{{ $index }}">
-                                <div class="bg-[#26225F] w-[150px] max-w-[230px] h-24  flex  items-center p-2 py-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                    <a href="{{ $board['link'] }}">
-                                        <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                    </a>
-                                    <h5 class="montserrat-bold text-[#FFFFFF] text-xs ml-1 ">{{ $board['name'] }}</h5>
-                                </div>
+                            <div class="bg-[#26225F] w-[150px] max-w-[230px] h-24  flex  items-center p-2 py-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <a href="{{ $board['link'] }}">
+                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
+                                </a>
+                                <h5 class="montserrat-bold text-[#FFFFFF] text-xs ml-1 ">{{ $board['name'] }}</h5>
+                            </div>
                         </div>
                     </swiper-slide>
                 @endforeach
@@ -284,12 +285,13 @@
                         <div class=" py-10 px-8 rounded-3xl board-img">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
                                 class="w-[230px] max-w-[280px] h-72" data-index="{{ $index }}">
-                                <div class="bg-[#26225F] w-[230px] max-w-[280px] flex  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                    <a href="{{ $board['link'] }}">
-                                        <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                    </a>
-                                    <h3 class="montserrat-bold text-[#FFFFFF] text-lg ml-3 ">{{ $board['name'] }}</h3>
-                                </div>
+                            <div class="bg-[#26225F] w-[230px] max-w-[280px] flex  items-center p-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <a href="{{ $board['link'] }}">
+                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
+                                </a>
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-lg ml-3 ">{{ $board['name'] }}</h3>
+                            </div>
                         </div>
                     </swiper-slide>
                 @endforeach
@@ -304,14 +306,15 @@
                         <div class=" py-10 px-6 rounded-3xl board-img ">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
                                 class="w-[230px] max-w-[300px] h-72" data-index="{{ $index }}">
-                            
-                                <div class="bg-[#26225F] w-[230px] max-w-[300px] flex  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                    <a href="{{ $board['link'] }}">
-                                        <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                    </a>
-                                    <h3 class="montserrat-bold text-[#FFFFFF] text-xl ml-3 ">{{ $board['name'] }}</h3>
-                                </div>
-                           
+
+                            <div class="bg-[#26225F] w-[230px] max-w-[300px] flex  items-center p-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <a href="{{ $board['link'] }}">
+                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
+                                </a>
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl ml-3 ">{{ $board['name'] }}</h3>
+                            </div>
+
                         </div>
                     </swiper-slide>
                 @endforeach
@@ -326,12 +329,13 @@
                         <div class=" py-10 px-6 rounded-3xl board-img">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
                                 class="w-[300px] max-w-[400px] h-96" data-index="{{ $index }}">
-                                <div class="bg-[#26225F] flex w-[300px] max-w-[400px] items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                    <a href="{{ $board['link'] }}">
-                                        <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                    </a>
-                                    <h3 class="montserrat-bold text-[#FFFFFF] text-xl ml-3 ">{{ $board['name'] }}</h3>
-                                </div>
+                            <div class="bg-[#26225F] flex w-[300px] max-w-[400px] items-center p-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <a href="{{ $board['link'] }}">
+                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
+                                </a>
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl ml-3 ">{{ $board['name'] }}</h3>
+                            </div>
                         </div>
                     </swiper-slide>
                 @endforeach
@@ -356,9 +360,12 @@
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="w-[150px] max-w-[230px] h-52" data-index="{{ $index }}">
 
-                            <div class="bg-[#25A8D6] flex-col w-[150px] max-w-[230px] h-28 items-center p-2 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-sm text-center ">{{ $team['name'] }}</h3>
-                                <h3 class="font-montserrat  text-[#FFFFFF] text-xs text-center ">{{ $team['position'] }}</h3>
+                            <div class="bg-[#25A8D6] flex-col w-[150px] max-w-[230px] h-28 items-center p-2 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-sm text-center ">{{ $team['name'] }}
+                                </h3>
+                                <h3 class="font-montserrat  text-[#FFFFFF] text-xs text-center ">
+                                    {{ $team['position'] }}</h3>
                             </div>
                         </div>
                     </swiper-slide>
@@ -374,9 +381,12 @@
                         <div class=" py-10 px-8 rounded-3xl team-img">
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="w-[230px] max-w-[280px] h-76" data-index="{{ $index }}">
-                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[280px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}</h3>
-                                <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">{{ $team['position'] }}</h3>
+                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[280px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}
+                                </h3>
+                                <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">
+                                    {{ $team['position'] }}</h3>
                             </div>
                         </div>
                     </swiper-slide>
@@ -392,9 +402,12 @@
                         <div class=" py-10 px-6 rounded-3xl team-img">
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="w-[230px] max-w-[300px] h-76" data-index="{{ $index }}">
-                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[300px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}</h3>
-                                <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">{{ $team['position'] }}</h3>
+                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[300px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}
+                                </h3>
+                                <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">
+                                    {{ $team['position'] }}</h3>
                             </div>
                         </div>
                     </swiper-slide>
@@ -411,10 +424,13 @@
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
                                 class="max-w-[300px] w-[400px]  h-80" data-index="{{ $index }}">
 
-                            <div class="bg-[#25A8D6] flex-col w-[300px] max-w-[400px] h-32  items-center p-4 -mt-10 z-20 rounded-b-3xl" style="position: relative;">
-                                
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl text-center ">{{ $team['name'] }}</h3>
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-lg text-center ">{{ $team['position'] }}</h3>
+                            <div class="bg-[#25A8D6] flex-col w-[300px] max-w-[400px] h-32  items-center p-4 -mt-10 z-20 rounded-b-3xl"
+                                style="position: relative;">
+
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl text-center ">{{ $team['name'] }}
+                                </h3>
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-lg text-center ">
+                                    {{ $team['position'] }}</h3>
                             </div>
                         </div>
                     </swiper-slide>

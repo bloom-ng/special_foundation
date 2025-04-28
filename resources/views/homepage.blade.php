@@ -84,7 +84,7 @@
                             Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
                             all spheres of governance in Africa and ensure the creation of a platform where more young
                             people can maximize their potential by gaining access to education. The foundation has
-                            empowered over 21,000 less privileged, gifted African children through education,
+                            empowered over 35,000 less privileged, gifted African children through education,
                             mentorship, and leadership opportunities.
                         </p>
                     </div>
@@ -124,7 +124,7 @@
                 </div>
                 <p class="">
                     Nigerian children are given access to education through
-                    the Inspire Scholarship Pprogram yearly
+                    the Inspire Scholarship Program yearly
                 </p>
             </div>
             <div class="pb-10">
