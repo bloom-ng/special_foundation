@@ -31,60 +31,72 @@
 
                         <div class="pb-2">
                             @error('project')
-                            <div class="text-red-500">
-                                <strong>{{ $message }}</strong>
-                            </div>
+                                <div class="text-red-500">
+                                    <strong>{{ $message }}</strong>
+                                </div>
                             @enderror
                             <label class=" block  text-sm pb-1" for="project">Project</label>
-                            <input class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 " 
-                                    id="project" name="project" type="text" required placeholder="Project name i.e School Build Program" aria-label="Project">
+                            <input
+                                class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 "
+                                id="project" name="project" type="text" required
+                                placeholder="Project name i.e School Build Program" aria-label="Project">
                         </div>
-                       
+
                         <div class="pb-2">
                             @error('year')
-                            <div class="text-red-500">
-                                <strong>{{ $message }}</strong>
-                            </div>
+                                <div class="text-red-500">
+                                    <strong>{{ $message }}</strong>
+                                </div>
                             @enderror
                             <label class="block text-sm pb-1" for="year">Year</label>
-                            <select class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
-                                    id="year" name="year" required aria-label="Year">
+                            <select
+                                class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                id="year" name="year" required aria-label="Year">
                                 <option value="">Select Year</option>
-                                @foreach($years as $year)
+                                @foreach ($years as $year)
                                     <option value="{{ $year }}">{{ $year }}</option>
                                 @endforeach
                             </select>
                         </div>
-                       
+
                         <div class="pb-2">
                             @error('month')
-                            <div class="text-red-500">
-                                <strong>{{ $message }}</strong>
-                            </div>
+                                <div class="text-red-500">
+                                    <strong>{{ $message }}</strong>
+                                </div>
                             @enderror
                             <label class="block text-sm pb-1" for="month">Month</label>
-                            <select class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
-                                    id="month" name="month" required aria-label="Month">
+                            <select
+                                class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                id="month" name="month" required aria-label="Month">
                                 <option value="">Select Month</option>
-                                @foreach($months as $value => $label)
+                                @foreach ($months as $value => $label)
                                     <option value="{{ $value }}">{{ $label }}</option>
                                 @endforeach
                             </select>
                         </div>
-                       
 
+                        <div class="mb-4">
+                            <label for="link" class="block text-sm font-medium text-gray-700">Project Link
+                                (Optional)</label>
+                            <input type="url" name="link" id="link"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                placeholder="https://example.com">
+                        </div>
 
                         <div class="mt-6">
-                            <button class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="submit">Save</button>
+                            <button
+                                class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                type="submit">Save</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-           
+
         </div>
 
 
-     
-  
+
+
 </x-admin-layout>

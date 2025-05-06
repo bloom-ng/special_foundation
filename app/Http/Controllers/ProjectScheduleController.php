@@ -12,13 +12,13 @@ class ProjectScheduleController extends Controller
     public function index()
     {
         $projects = ProjectSchedule::query()
-                                ->when(request()->query('search','') != '', function ($query) {
-                                    $query->where('project', 'like', '%' . request()->query('search') . '%');
-                                    return $query;
-                                })
-                                ->orderBy('year', 'desc')
-                                ->orderBy('month', 'asc')
-                                ->paginate(30);
+            ->when(request()->query('search', '') != '', function ($query) {
+                $query->where('project', 'like', '%' . request()->query('search') . '%');
+                return $query;
+            })
+            ->orderBy('year', 'desc')
+            ->orderBy('month', 'asc')
+            ->paginate(30);
 
         $years = ProjectSchedule::getYears();
         $months = ProjectSchedule::getMonths();
@@ -57,10 +57,11 @@ class ProjectScheduleController extends Controller
     {
         $request->validate([
             'project' => 'required',
+            'link' => 'nullable|url',
             'year'    => 'required|integer',
-            'month'   => 'required|integer|between:1,12' // Updated validation rule
+            'month'   => 'required|integer|between:1,12'
         ]);
-        
+
         ProjectSchedule::create($request->all());
 
         return back()->with('success', 'Project Created');
@@ -70,13 +71,13 @@ class ProjectScheduleController extends Controller
     {
         $request->validate([
             'project' => 'nullable',
+            'link' => 'nullable|url',
             'year' => 'nullable',
             'month' => 'nullable',
-            
         ]);
-        
-        
+
         $project->project = $request->project ?? $project->project;
+        $project->link = $request->link ?? $project->link;
         $project->year = $request->year ?? $project->year;
         $project->month = $request->month ?? $project->month;
         $project->save();

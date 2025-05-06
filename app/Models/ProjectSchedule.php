@@ -12,6 +12,7 @@ class ProjectSchedule extends Model
 
     protected $fillable = [
         'project',
+        'link',
         'year',
         'month'
     ];
