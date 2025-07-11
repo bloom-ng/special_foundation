@@ -106,7 +106,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-1">
-                        {{-- 21,000+ --}}0
+                        {{-- 38,095+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -118,7 +118,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-2">
-                        {{-- 460+ --}}0
+                        {{-- 619+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -130,7 +130,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-3">
-                        {{-- 10,672+ --}}0
+                        {{-- 18,086+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -142,7 +142,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-4">
-                        {{-- 6,879+ --}}0
+                        {{-- 10,165+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -154,7 +154,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-5">
-                        {{-- 5+ --}}0
+                        {{-- 14+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -275,7 +275,7 @@
                         School
                     </h1>
                     <p class="montserrat-medium text-xs pb-16">
-                        This is a 3-week summer school program for less privileged children in Nigeria. The program is a
+                        This is a 4-6 weeks summer school program for less privileged children in Nigeria. The program is a
                         free program that selects over a thousand annually...
                     </p>
                     <div class="">
@@ -391,7 +391,7 @@
                         School
                     </h1>
                     <p class="montserrat-medium text-xs pb-16">
-                        This is a 3-week summer school program for less privileged children in Nigeria. The program is a
+                        This is a 4-6 weeks summer school program for less privileged children in Nigeria. The program is a
                         free program that selects over a thousand annually...
                     </p>
                     <div class="">

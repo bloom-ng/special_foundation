@@ -287,7 +287,7 @@
                         Special Summer School
                     </h1>
                     <p class="text-xs montserrat-medium pb-4">
-                        This is a 3-week summer school program for less
+                        This is a 4-6 weeks summer school program for less
                         privileged children in  Nigeria. The program is a
                         free program that selects over a thousand annually
                         to embark on a transformational intellectual
