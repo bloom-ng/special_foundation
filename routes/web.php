@@ -42,10 +42,11 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 Route::get('homepage', function () {
     $activeEvent = \App\Models\Event::where('status', 'active')->latest()->first();
+    $activeSummerSchool = \App\Models\SummerSchool::where('status', 'active')->latest()->first();
     $downloads = Download::all();
     $teams = CMS::getDynamicTeams();
     $boards = CMS::getDynamicBoards();
-    return view('homepage', compact('activeEvent'))->with('teams', $teams)->with('boards', $boards)->with('downloads', $downloads);
+    return view('homepage', compact('activeEvent', 'activeSummerSchool'))->with('teams', $teams)->with('boards', $boards)->with('downloads', $downloads);
 });
 
 Route::get('who-we-are', function () {
@@ -175,6 +176,10 @@ Route::get('/admin/project-schedule/projects', [ProjectScheduleController::class
 
 Auth::routes(['register' => false]);
 
+// Summer School volunteer registration routes (public)
+Route::get('/summer-school/{program}/register', [App\Http\Controllers\Admin\SummerSchoolController::class, 'showRegistration'])->name('summer-school.register');
+Route::post('/summer-school/{programId}/register', [App\Http\Controllers\Admin\SummerSchoolController::class, 'submitRegistration'])->name('summer-school.submit-registration');
+
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Admin event routes
     Route::get('/events', [EventController::class, 'index'])->name('admin.events.index');
@@ -191,6 +196,16 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Event entries routes
     Route::get('/event-entries', [EventEntryController::class, 'index'])->name('admin.event-entries.index');
     Route::get('/event-entries/download-csv', [EventEntryController::class, 'downloadCsv'])->name('admin.event-entries.download-csv');
+
+    // Admin summer school routes
+    Route::get('/summer-school', [\App\Http\Controllers\Admin\SummerSchoolController::class, 'index'])->name('admin.summer-school.index');
+    Route::get('/summer-school/create', [\App\Http\Controllers\Admin\SummerSchoolController::class, 'create'])->name('admin.summer-school.create');
+    Route::post('/summer-school', [\App\Http\Controllers\Admin\SummerSchoolController::class, 'store'])->name('admin.summer-school.store');
+    Route::get('/summer-school/{program}/edit', [\App\Http\Controllers\Admin\SummerSchoolController::class, 'edit'])->name('admin.summer-school.edit');
+    Route::put('/summer-school/{program}', [\App\Http\Controllers\Admin\SummerSchoolController::class, 'update'])->name('admin.summer-school.update');
+    Route::delete('/summer-school/{program}', [\App\Http\Controllers\Admin\SummerSchoolController::class, 'destroy'])->name('admin.summer-school.destroy');
+    Route::get('/summer-school/{program}/entries', [\App\Http\Controllers\Admin\SummerSchoolEntryController::class, 'entries'])->name('admin.summer-school.entries');
+    Route::get('/summer-school/{program}/entries/download', [\App\Http\Controllers\Admin\SummerSchoolEntryController::class, 'downloadCsv'])->name('admin.summer-school.entries.download');
 
     Route::get('/download/{model}/csv', [CSVController::class, 'download'])->where('model', '[A-Za-z]+');
 
