@@ -145,9 +145,14 @@
                 Partners Logo
             </a>
             <a href="{{ route('admin.events.index') }}"
-                class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
+                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
                 <i class="fas fa-calendar mr-3"></i>
                 Events
+            </a>
+            <a href="{{ route('admin.summer-school.index') }}"
+                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === 'summer-school' ? 'active-nav-link' : '' }}">
+                <i class="fas fa-sun mr-3"></i>
+                Summer School
             </a>
             <!-- <a href="{{ route('admin.event-entries.index') }}"
                 class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">

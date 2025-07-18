@@ -27,6 +27,7 @@ class HomeController extends Controller
     public function index()
     {
         $activeEvent = Event::where('status', 'active')->first();
+        $activeSummerSchool = \App\Models\SummerSchool::where('status', 'active')->latest()->first();
         $sdgs = [
             [
                 "image" => "/images/sdg-1.png",
@@ -118,7 +119,8 @@ class HomeController extends Controller
             'featured_posts' => $featured_posts->shuffle()->take(3),
             'sdgs' => $sdgs,
             'partners' => $partners,
-            'activeEvent' => $activeEvent
+            'activeEvent' => $activeEvent,
+            'activeSummerSchool' => $activeSummerSchool
         ]);
     }
 }

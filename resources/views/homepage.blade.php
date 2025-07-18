@@ -65,6 +65,22 @@
         </div>
     @endif
 
+    @if ($activeSummerSchool)
+        <div class="text-center py-8">
+            <h3 class="text-center text-[25px] md:text-[35px] lg:text-[40px] font-bold py-4 text-[#25A8D6] montserrat-bold">
+                Summer School Volunteer Sign-Up
+            </h3>
+            <div class="max-w-[100%] mx-auto">
+                <a href="{{ route('summer-school.register', $activeSummerSchool->id) }}" class="block">
+                    <div class="relative w-full h-0 pb-[25%] overflow-hidden">
+                        <img src="{{ Storage::url($activeSummerSchool->banner) }}" alt="Summer School Banner"
+                            class="absolute top-0 left-0 w-full h-full object-cover" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    @endif
+
     <div class="mx-5 lg:mx-20 py-20 flex flex-col lg:flex-row gap-20">
         <div class="basis-4/5 flex flex-col gap-16">
             <div class="flex flex-col lg:flex-row gap-10">
