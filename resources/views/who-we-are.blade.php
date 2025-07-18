@@ -86,7 +86,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">21,000</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">38,095</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children directly
@@ -112,7 +112,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-2">460</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-2">619</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children are given access to
@@ -139,7 +139,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">10,672</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">18,086</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children access educational and
@@ -164,7 +164,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-4">6,879</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-4">10,165</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children accessing mentorship
@@ -189,7 +189,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-5">5</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-5">14</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian Schools accessing conducive
