@@ -35,6 +35,7 @@ class SummerSchoolController extends Controller
             'volunteer_locations' => 'required|array|min:1',
             'volunteer_locations.*' => 'string|max:255',
             'status' => 'required|in:active,inactive',
+            'content' => 'nullable|string',
         ]);
 
         if ($request->status === 'active') {
@@ -49,6 +50,7 @@ class SummerSchoolController extends Controller
             'end_date' => $request->end_date,
             'volunteer_locations' => json_encode($request->volunteer_locations),
             'status' => $request->status,
+            'content' => $request->content,
         ]);
 
         return redirect()->route('admin.summer-school.index')->with('success', 'Summer School program created successfully');
@@ -74,6 +76,7 @@ class SummerSchoolController extends Controller
             'volunteer_locations' => 'required|array|min:1',
             'volunteer_locations.*' => 'string|max:255',
             'status' => 'required|in:active,inactive',
+            'content' => 'nullable|string',
         ]);
 
         if ($request->status === 'active') {
@@ -87,6 +90,7 @@ class SummerSchoolController extends Controller
             'end_date' => $request->end_date,
             'volunteer_locations' => json_encode($request->volunteer_locations),
             'status' => $request->status,
+            'content' => $request->content,
         ];
 
         if ($request->hasFile('banner')) {
@@ -134,7 +138,7 @@ class SummerSchoolController extends Controller
             'preferred_locations.*' => 'string|max:255',
             'volunteering_with' => 'nullable|string',
             'tshirt_size' => 'required|in:XS,S,M,L,XL,XXL',
-            'available_dates' => 'required|string',
+            'available_dates' => 'nullable|string',
         ]);
         try {
             $entry = \App\Models\SummerSchoolVolunteerEntry::create([

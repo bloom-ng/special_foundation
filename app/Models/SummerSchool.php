@@ -15,6 +15,7 @@ class SummerSchool extends Model
         'end_date',
         'volunteer_locations',
         'status',
+        'content',
     ];
 
     public function volunteerEntries()

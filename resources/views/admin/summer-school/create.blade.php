@@ -87,6 +87,19 @@
                     </div>
 
                     <div class="w-full px-3 mb-6">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
+                            Registration Page Content
+                        </label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('content') border-red-500 @enderror tinymce"
+                            id="content"
+                            name="content"
+                            rows="5">{{ old('content') }}</textarea>
+                        @error('content')
+                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="w-full px-3 mb-6">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="status">
                             Status
                         </label>
@@ -154,6 +167,34 @@
                     alert('Please add at least one location.');
                 }
             });
+        });
+    </script>
+    <script type="text/javascript" src='/js/tinymce/tinymce.min.js'></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: '#content',
+            height: 500,
+            plugins: [
+                'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+                'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+                'media', 'table', 'emoticons', 'help'
+            ],
+            toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+                'forecolor backcolor emoticons | help',
+            menu: {
+                favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+            },
+            menubar: 'favs file edit view insert format tools table help',
+            content_css: 'tinymce-5',
+            images_upload_url: '{{ route("upload-img") }}',
+            promotion: false
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            if (tinymce.activeEditor) {
+                tinymce.activeEditor.save();
+            }
         });
     </script>
 </x-admin-layout> 

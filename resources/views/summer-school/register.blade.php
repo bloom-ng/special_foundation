@@ -17,7 +17,7 @@
                         Volunteer Sign-Up Form
                     </h1>
                     <div class="text-white montserrat-medium text-lg mb-8">
-                        Thank you for your interest in volunteering with The Special Foundation’s Summer School Program. Please fill out the form below so we can match you with the right center and dates.
+                        {!! $program->content !!}
                     </div>
                     <p class="text-white montserrat-medium text-lg font-semibold">
                         Fill in the form below to sign up as a volunteer
@@ -106,6 +106,7 @@
                         @enderror
                     </div>
 
+                    
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div class=mr-4">
                             <label class="block text-white mb-2">T-shirt Size (for branded gear, if available)</label>
@@ -127,13 +128,13 @@
                                 <p class="text-red-800 text-xs mt-1">{{ $message }}</p>
                             @enderror
                         </div>
-                        <div>
+                        <!-- <div>
                             <label class="block text-white mb-2">Dates Available</label>
-                            <input id="available_dates" class="w-full rounded-full px-6 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#26225F]" name="available_dates" type="text" placeholder="Select your available dates" required readonly />
+                            <input id="available_dates" class="w-full rounded-full px-6 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#26225F]" name="available_dates" type="text" placeholder="Select your available dates" readonly />
                             @error('available_dates')
                                 <p class="text-red-800 text-xs mt-1">{{ $message }}</p>
                             @enderror
-                        </div>
+                        </div> -->
                     </div>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
                     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
