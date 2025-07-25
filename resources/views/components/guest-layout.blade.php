@@ -149,7 +149,7 @@
                         Scholarship</a>
                     <a href="/mentorship-program" class="block px-4 py-2 text-black hover:bg-gray-200">Mentorship
                         Program</a>
-                    <a href="/summer-school-program" class="block px-4 py-2 text-black hover:bg-gray-200">Summer
+                    <a href="/summer-school-program" class="block px-4 py-2 text-black hover:bg-gray-200">Special Summer
                         School</a>
                     <a href="/life-long-program" class="block px-4 py-2 text-black hover:bg-gray-200">Lifelong
                         Development</a>
