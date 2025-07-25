@@ -108,7 +108,7 @@
 
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div class=mr-4">
+                        <div class="mr-4">
                             <label class="block text-white mb-2">T-shirt Size (for branded gear, if available)</label>
                             <select
                                 class="w-full rounded-full px-6 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#26225F] appearance-none"
