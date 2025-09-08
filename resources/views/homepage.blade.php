@@ -522,6 +522,76 @@
     </div>
     {{-- OUR PARTNERS END --}}
 
+    {{-- TESTIMONIALS START --}}
+    <div class="py-16 px-4 sm:px-6 lg:px-20 bg-white">
+        <div class="text-left mb-16">
+            <h2 class="montserrat-bold text-4xl md:text-[38px] md:leading-[45px] text-[#26225F] mb-4">What People Say</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[2000px] mx-auto">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
+                <div class="p-6 ">
+                    <div class="flex flex-col gap-4 items-center mb-4">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-1.jpg" alt="Abubakar Suleiman">
+                        
+                        <div class="ml-4">
+                            <h3 class="text-lg text-center font-semibold text-gray-800">Abubakar Suleiman</h3>
+                            <p class="text-sm text-center text-gray-600">CEO, Sterling Bank</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-center">"Let us give through the foundation that has demonstrated that it really does get to the people in most need and that with the least amount, they are bringing out the most value that I have seen."</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
+                <div class="p-6 ">
+                    <div class="flex flex-col gap-4 items-center mb-4">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-2.png" alt="Abubakar Suleiman">
+                        
+                        <div class="ml-4">
+                            <h3 class="text-lg text-center font-semibold text-gray-800">Victor Akinlade</h3>
+                            <p class="text-sm text-center text-gray-600">Special Scholarship Beneficiary</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-center">“They took away a very big baggage from my family. I want to say thank you to my sponsors.”</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
+                <div class="p-6 ">
+                    <div class="flex flex-col gap-4 items-center mb-4">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-3.png" alt="Abubakar Suleiman">
+                        
+                        <div class="ml-4">
+                            <h3 class="text-lg text-center font-semibold text-gray-800">Oluwashindara Moronfolu</h3>
+                            <p class="text-sm text-center text-gray-600">Inspire Scholarship Beneficiary</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-center">“Thank you to the special foundation for paying my school fees."</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
+                <div class="p-6 ">
+                    <div class="flex flex-col gap-4 items-center mb-4">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-4.jpg" alt="Abubakar Suleiman">
+                        
+                        <div class="ml-4">
+                            <h3 class="text-lg text-center font-semibold text-gray-800">Mrs Danso</h3>
+                            <p class="text-sm text-center text-gray-600">Head Teacher, Hope Primary School</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-center">“They came and they renovated our library and classrooms and painted murals. They also brought solar and now we don’t have to worry about Nepa again. Thank you to the Special Foundation.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- TESTIMONIALS END --}}
+
     {{-- NEWSLETTER START --}}
     <div class="bg-[#26225F]">
         <div class="relative text-white py-20 mx-5 lg:mx-20 flex flex-row gap-8 lg:gap-20">

@@ -26,6 +26,51 @@
                             @endforeach
                         </div>
                     </div>
+                    <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                        <div>
+                            <h1 class="montserrat-semibold pb-9">Media Mentions Section</h1>
+                            <div class="flex flex-row gap-1">
+                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                    Kaleidoscope (Channels TV): 
+                                </p>
+                                <a href="https://youtu.be/Uj8_jmI8r4M?si=dI7HLWK6thLq5vDz" class="pb-4 cursor-pointer">
+                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                </a>
+                            </div>
+                            <div class="flex flex-row gap-1">
+                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                    Eye Witness Report (Channels TV)
+                                </p>
+                                <a href="https://youtu.be/BXHs5Osrr1M?si=dUhOIeawX6VHvjjH" class="pb-4 cursor-pointer">
+                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                </a>
+                            </div>
+                            <div class="flex flex-row gap-1">
+                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                    Nairametrics: 
+                                </p>
+                                <a href="https://nairametrics.com/2025/05/21/the-special-foundation-hosts-2025-summit-champions-a-future-of-inclusive-education/" class="pb-4 cursor-pointer">
+                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                </a>
+                            </div>  
+                            <div class="flex flex-row gap-1">
+                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                PunchNG
+                                </p>
+                                <a href="https://punchng.com/foundation-seeks-urgent-education-reforms/?amp" class="pb-4 cursor-pointer">
+                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                </a>
+                            </div>  
+                            <div class="flex flex-row gap-1">
+                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                The Sun NG
+                                </p>
+                                <a href="https://thesun.ng/the-special-foundation-hosts-partners-reiterates-commitment-to-quality-education/" class="pb-4 cursor-pointer">
+                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="flex flex-row gap-14">
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
                             <h1 class="montserrat-semibold pb-9">Contact Details</h1>
