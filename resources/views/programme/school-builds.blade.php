@@ -40,31 +40,31 @@
 
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_1.png" alt="" loading="lazy" class="rounded-3xl">
+                <img src="/images/v1_school_build_1.png" alt="A Brightly Decorated Classroom for the Students" loading="lazy" class="rounded-3xl">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_6.png" alt="" loading="lazy" class="rounded-3xl">
+                <img src="/images/v1_school_build_6.png" alt="Smiling Children in the Classroom" loading="lazy" class="rounded-3xl">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
                 <img src="/images/v1_school_build_7.png" alt="" loading="lazy" class="rounded-3xl">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_5.png" alt="" loading="lazy" class="rounded-3xl">
+                <img src="/images/v1_school_build_5.png" alt="An Aerial View of the School Compound" loading="lazy" class="rounded-3xl">
             </div>
         </div>
 
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_2.png" alt="" loading="lazy" class="rounded-3xl">
+                <img src="/images/v1_school_build_2.png" alt="A Clear View of the Before and After of the School Playground" loading="lazy" class="rounded-3xl">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_3.png" alt="" loading="lazy" class="rounded-3xl">
+                <img src="/images/v1_school_build_3.png" alt="A Clear View of the Before and After of the School Classrooms" loading="lazy" class="rounded-3xl">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_4.png" alt="" loading="lazy" class="rounded-3xl">
+                <img src="/images/v1_school_build_4.png" alt="A Side View of the Long School Blocks With Classrooms" loading="lazy" class="rounded-3xl">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_school_build_8.png" alt="" loading="lazy" class="rounded-3xl h-full">
+                <img src="/images/v1_school_build_8.png" alt="Students Learning in the Classroom" loading="lazy" class="rounded-3xl h-full">
             </div>
         </div>
     </div>
