@@ -2,11 +2,11 @@
     <div class="max-h-[100vh] max-w-[100vw]">
         <swiper-container pagination="true" slides-per-view="1" speed="900" loop="true" autoPlay="true" css-mode="true"
             class="flex max-w-[100vw] justify-between items-center">
-            <swiper-slide class=""><img src="/images/hero_1.png" alt=""
+            <swiper-slide class=""><img src="/images/hero_1.png" alt="Every Child has a Right to Dream"
                     class="w-[100vw]" /></swiper-slide>
-            <swiper-slide class=""><img src="/images/hero_2.png" alt=""
+            <swiper-slide class=""><img src="/images/hero_2.png" alt="Every Child has a Right to Education"
                     class="w-[100vw]" /></swiper-slide>
-            <swiper-slide class=""><img src="/images/hero_3.png" alt=""
+            <swiper-slide class=""><img src="/images/hero_3.png" alt="Every Child is your Child"
                     class="w-[100vw]" /></swiper-slide>
         </swiper-container>
     </div>
@@ -106,12 +106,12 @@
                     </div>
                 </div>
                 <div class="basis-2/5">
-                    <img class="w-full min-h-[278px] h-auto 2xl:h-full" src="/images/home_1.png" alt="" />
+                    <img class="w-full min-h-[278px] h-auto 2xl:h-full" src="/images/home_1.png" alt="Educating the future of Africa" />
                 </div>
             </div>
             <div class="relative w-full h-[350px] lg:h-[550px] rounded-3xl"
                 style="background-image: url('{{ asset('/images/home_2.png') }}'); background-repeat: no-repeat; background-size: cover;">
-                {{-- <img src="/images/home_2.png" alt="" /> --}}
+                {{-- <img src="/images/home_2.png" alt="Photo of team in branded Tee" /> --}}
                 <div class="absolute z-10 right-0 bottom-0 p-5 lg:p-20">
                     <a href="/who-we-are" class="text-white text-base bg-[#25A8D6] px-10 py-3 -mt-2 rounded-full">READ
                         MORE</a>
@@ -450,32 +450,32 @@
             <div class="basis-2/5">
                 <div class="w-96 grid grid-cols-4 gap-2 items-center justify-center">
                     <div onclick="showSdgModal(1)">
-                        <img class="" src="/images/sdg-1.png" alt="" />
+                        <img class="" src="/images/sdg-1.png" alt="No poverty" />
                     </div>
                     <div onclick="showSdgModal(2)">
-                        <img class="" src="/images/sdg-2.png" alt="" />
+                        <img class="" src="/images/sdg-2.png" alt="Zero Hunger" />
                     </div>
                     <div onclick="showSdgModal(3)">
-                        <img class="" src="/images/sdg-4.png" alt="" />
+                        <img class="" src="/images/sdg-4.png" alt="Quality Education" />
                     </div>
                     <div onclick="showSdgModal(4)">
-                        <img class="" src="/images/sdg-5.png" alt="" />
+                        <img class="" src="/images/sdg-5.png" alt="Gender Equality" />
                     </div>
                     <div onclick="showSdgModal(5)">
-                        <img class="" src="/images/sdg-8.png" alt="" />
+                        <img class="" src="/images/sdg-8.png" alt="Decent Work and Economic Growth" />
                     </div>
                     <div onclick="showSdgModal(6)">
-                        <img class="" src="/images/sdg-9.png" alt="" />
+                        <img class="" src="/images/sdg-9.png" alt="Industry, Innovation and Infrastructure" />
                     </div>
                     <div onclick="showSdgModal(7)">
-                        <img class="" src="/images/sdg-11.png" alt="" />
+                        <img class="" src="/images/sdg-11.png" alt="Sustainable Cities and Communities" />
                     </div>
                     <div onclick="showSdgModal(8)">
-                        <img class="" src="/images/sdg-13.png" alt="" />
+                        <img class="" src="/images/sdg-13.png" alt="Climate Action" />
                     </div>
                 </div>
                 <div onclick="showSdgModal(9)" class="w-96 flex items-center justify-center mt-2">
-                    <img class="" src="/images/sdg-16.png" alt="" />
+                    <img class="" src="/images/sdg-16.png" alt="Peace, Justice and Strong Institutions" />
                 </div>
             </div>
         </div>
@@ -494,7 +494,7 @@
                 class="swiper-container-second flex lg:hidden flex-row gap-12 pb-24">
                 @foreach ($partners as $partner)
                     <swiper-slide class="pl-8 self-center">
-                        <img src="{{ Storage::url($partner->value) }}" alt="" />
+                        <img src="{{ Storage::url($partner->value) }}" alt="Partner Info" />
                     </swiper-slide>
                 @endforeach
 
@@ -505,7 +505,7 @@
                 class="swiper-container-second hidden lg:flex xl:hidden flex-row gap-10 pb-24">
                 @foreach ($partners as $partner)
                     <swiper-slide class="pl-8 self-center">
-                        <img src="{{ Storage::url($partner->value) }}" alt="" />
+                        <img src="{{ Storage::url($partner->value) }}" alt="Partner Info" />
                     </swiper-slide>
                 @endforeach
             </swiper-container>
@@ -514,7 +514,7 @@
                 class="swiper-container-second hidden xl:flex items-center justify-center flex-row gap-8 pb-24">
                 @foreach ($partners as $partner)
                     <swiper-slide class="pl-8 self-center">
-                        <img src="{{ Storage::url($partner->value) }}" alt="" />
+                        <img src="{{ Storage::url($partner->value) }}" alt="Partner Info" />
                     </swiper-slide>
                 @endforeach
             </swiper-container>
@@ -533,7 +533,7 @@
             <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
                 <div class="p-6 ">
                     <div class="flex flex-col gap-4 items-center mb-4">
-                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-1.jpg" alt="Abubakar Suleiman">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-1.jpg" alt="Abubakar Suleiman Testimonial">
                         
                         <div class="ml-4">
                             <h3 class="text-lg text-center font-semibold text-gray-800">Abubakar Suleiman</h3>
@@ -548,7 +548,7 @@
             <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
                 <div class="p-6 ">
                     <div class="flex flex-col gap-4 items-center mb-4">
-                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-2.png" alt="Abubakar Suleiman">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-2.png" alt="Victor Akinlade Testimonial">
                         
                         <div class="ml-4">
                             <h3 class="text-lg text-center font-semibold text-gray-800">Victor Akinlade</h3>
@@ -563,7 +563,7 @@
             <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
                 <div class="p-6 ">
                     <div class="flex flex-col gap-4 items-center mb-4">
-                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-3.png" alt="Abubakar Suleiman">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-3.png" alt="Oluwashindara Moronfolu Testimonial">
                         
                         <div class="ml-4">
                             <h3 class="text-lg text-center font-semibold text-gray-800">Oluwashindara Moronfolu</h3>
@@ -578,7 +578,7 @@
             <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
                 <div class="p-6 ">
                     <div class="flex flex-col gap-4 items-center mb-4">
-                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-4.jpg" alt="Abubakar Suleiman">
+                        <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="/images/testimonial-4.jpg" alt="Mrs Danso Testimonial">
                         
                         <div class="ml-4">
                             <h3 class="text-lg text-center font-semibold text-gray-800">Mrs Danso</h3>
@@ -632,12 +632,12 @@
                         </div>
                     </form>
 
-                    <img class="block lg:hidden w-36" src="/images/mail.png" alt="" />
+                    <img class="block lg:hidden w-36" src="/images/mail.png" alt="Newsletter Image" />
                 </div>
             </div>
 
             <img class="hidden lg:block lg:absolute -mt-40 -mr-20 right-0 top-0 basis-2/5 z-10 xl:w-[750px] lg:w-[600px]"
-                src="/images/email-symbol.png" alt="" />
+                src="/images/email-symbol.png" alt="Newsletter" />
         </div>
     </div>
     {{-- NEWSLETTER END --}}

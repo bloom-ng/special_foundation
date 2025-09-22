@@ -33,13 +33,13 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 rounded-2xl">
-                <img src="/images/inspire_1.png" alt="">
+                <img src="/images/inspire_1.png" alt="Inspire Scholarship Beneficiary">
             </div>
         </div>
 
         <div class="w-full sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full lg:w-1/2 rounded-2xl">
-                <img src="/images/inspire_2.png" alt="">
+                <img src="/images/inspire_2.png" alt="Inspire Scholarship Beneficiary">
             </div>
             <div class="w-full lg:w-1/2 bg-[#25A8D6] p-14 h-auto lg:h-[456px]">
                 <h1 class="text-[#26225F] lg:text-2xl pb-3 montserrat-bold">

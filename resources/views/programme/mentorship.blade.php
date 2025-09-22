@@ -24,22 +24,22 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 rounded-2xl">
-                <img src="/images/mentorship_1.png" alt="">
+                <img src="/images/mentorship_1.png" alt="Mentor and mentees Image">
             </div>
         </div>
 
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/mentorship_2.png" alt="">
+                <img src="/images/mentorship_2.png" alt="Mentor visually mentoring students">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/mentorship_3.png" alt="">
+                <img src="/images/mentorship_3.png" alt="Mentors visually mentoring students">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/mentorship_4.png" alt="">
+                <img src="/images/mentorship_4.png" alt="Mentor visually mentoring students">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/mentorship_5.png" alt="">
+                <img src="/images/mentorship_5.png" alt="Mentor visually mentoring students">
             </div>
         </div>
     </div>
