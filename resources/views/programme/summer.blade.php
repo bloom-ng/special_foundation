@@ -39,44 +39,44 @@
 
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_1.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_1.jpg" alt="Students Learning at Summer School" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_2.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_2.jpg" alt="Students Racing at Summer School" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_3.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_3.jpg" alt="Students Learning From Their Teacher at Summer School" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_4.jpg" alt="" class="rounded-3xl" loading="lazy">
-            </div>
-        </div>
-        <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_5.jpg" alt="" class="rounded-3xl" loading="lazy">
-            </div>
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_6.jpg" alt="" class="rounded-3xl" loading="lazy">
-            </div>
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_7.jpg" alt="" class="rounded-3xl" loading="lazy">
-            </div>
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_8.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_4.jpg" alt="Students Doing Different Skills at Summer School" class="rounded-3xl" loading="lazy">
             </div>
         </div>
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_9.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_5.jpg" alt="Teacher Educating The Students at Summer School" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_10.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_6.jpg" alt="Students Playing at Summer School" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_11.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_7.jpg" alt="Students Playing Games at Summer School" class="rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/v1_summer_12.jpg" alt="" class="rounded-3xl" loading="lazy">
+                <img src="/images/v1_summer_8.jpg" alt="student Presenting at Summer School" class="rounded-3xl" loading="lazy">
+            </div>
+        </div>
+        <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_9.jpg" alt="Students Displaying Their Work at Summer School" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_10.jpg" alt="Students Learning at Summer School" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_11.jpg" alt="Students Learning at Summer School" class="rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/v1_summer_12.jpg" alt="Students Displaying Their Work at Summer School" class="rounded-3xl" loading="lazy">
             </div>
         </div>
     </div>

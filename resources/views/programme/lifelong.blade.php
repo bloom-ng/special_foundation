@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="w-full lg:w-1/2 rounded-2xl">
-            <img src="/images/lifelong.png" alt="">
+            <img src="/images/lifelong.png" alt="Mentor Encouraging the Mentee">
         </div>
     </div>
 
