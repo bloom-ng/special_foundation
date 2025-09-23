@@ -142,12 +142,12 @@ Impact Locations:
 14. Ondo
 
 Our Numbers
-+38,095
++61,983
 Nigerian children directly and indirectly impacted by the foundation over the last 5years
 +619
 Nigerian children are given access to education through the inspire scholarship program
 yearly
-+18,086
++41,974
 Nigerian children access educational and vocational training through the free summer school
 program yearly
 +10,165

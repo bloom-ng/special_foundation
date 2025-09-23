@@ -86,7 +86,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">38,095</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">61,983</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children directly
@@ -139,7 +139,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">18,086</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">41,974</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children access educational and
@@ -229,16 +229,16 @@
                             Seyi Akinwale
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                            Seyi is a solutionist and passionate about developing sustainable solutions that address
-                            societal challenges. He is a trained board member and has extensive experience originating,
-                            developing and executing infrastructure projects in Sub-Saharan Africa. He is an Alumni of
-                            the prestigious University of Chicago Booth School of Business and has corporate experience
-                            leading finance teams at General Electric and Pricewaterhouse Coopers (PwC).
+                        Seyi is a solutionist who is passionate about developing sustainable solutions that 
+                        address societal challenges. He is a trained board member and has extensive experience 
+                        originating, developing, and executing infrastructure projects in Sub-Saharan Africa. 
+                        He is an alumnus of the prestigious University of Chicago Booth School of Business and 
+                        has corporate experience leading finance teams at General Electric and PricewaterhouseCoopers (PwC).
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                            His understanding of the key role education plays in the development of nations has led to
-                            the decision to set up the Foundation as a platform to improve the quality of leadership in
-                            Africa by increasing access to education for less privileged children.
+                        His understanding of the key role education plays in national development inspired 
+                        him to establish the Foundation as a platform to improve the quality of leadership 
+                        in Africa by increasing access to education for underprivileged children.”
                         </p>
                         <p class="border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6]">
                             .. Every Child is SPECIAL, and it is our joint responsibility to unearth the unique
