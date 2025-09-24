@@ -100,7 +100,7 @@
                             Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
                             all spheres of governance in Africa and ensure the creation of a platform where more young
                             people can maximize their potential by gaining access to education. The foundation has
-                            empowered over 38,000 less privileged, gifted African children through education,
+                            empowered over 61,000 less privileged, gifted African children through education,
                             mentorship, and leadership opportunities.
                         </p>
                     </div>

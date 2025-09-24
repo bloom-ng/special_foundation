@@ -1,4 +1,4 @@
-        <div class="bg-[#26225F]">
+<div class="bg-[#26225F]">
             <div class="mx-10 lg:mx-20 py-20 text-white">
                 <div class="flex flex-col lg:flex-row pb-12">
                     <div class="flex flex-row gap-14 pb-12">
@@ -29,44 +29,35 @@
                     <div class="basis-1/2 lg:basis-1/4 flex flex-col">
                         <div>
                             <h1 class="montserrat-semibold pb-9">Media Mentions Section</h1>
-                            <div class="flex flex-row gap-1">
-                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                    Kaleidoscope (Channels TV): 
-                                </p>
-                                <a href="https://youtu.be/Uj8_jmI8r4M?si=dI7HLWK6thLq5vDz" class="pb-4 cursor-pointer">
-                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                            <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
+                                <a href="https://youtu.be/Uj8_jmI8r4M?si=dI7HLWK6thLq5vDz" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open Kaleidoscope on YouTube">
+                                    <span class="flex-1 min-w-0 truncate">Kaleidoscope (Channels TV)</span>
+                                </a>
+                            </div>
+                            <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
+                                <a href="https://youtu.be/BXHs5Osrr1M?si=dUhOIeawX6VHvjjH" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open Eye Witness Report on YouTube">
+                                    <span class="flex-1 min-w-0 truncate">Eye Witness Report (Channels TV)</span>
                                 </a>
                             </div>
                             <div class="flex flex-row gap-1">
-                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                    Eye Witness Report (Channels TV)
-                                </p>
-                                <a href="https://youtu.be/BXHs5Osrr1M?si=dUhOIeawX6VHvjjH" class="pb-4 cursor-pointer">
-                                    <img class="w-3 h-3" src="/images/link.png" alt="">
-                                </a>
-                            </div>
-                            <div class="flex flex-row gap-1">
-                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                    Nairametrics: 
-                                </p>
-                                <a href="https://nairametrics.com/2025/05/21/the-special-foundation-hosts-2025-summit-champions-a-future-of-inclusive-education/" class="pb-4 cursor-pointer">
-                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                <a href="https://nairametrics.com/2025/05/21/the-special-foundation-hosts-2025-summit-champions-a-future-of-inclusive-education/" target="_blank" class="pb-4 cursor-pointer hover:underline">
+                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                        Nairametrics
+                                    </p>
                                 </a>
                             </div>  
                             <div class="flex flex-row gap-1">
-                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                PunchNG
-                                </p>
-                                <a href="https://punchng.com/foundation-seeks-urgent-education-reforms/?amp" class="pb-4 cursor-pointer">
-                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                <a href="https://punchng.com/foundation-seeks-urgent-education-reforms/?amp" target="_blank" class="pb-4 cursor-pointer hover:underline">
+                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                        PunchNG
+                                    </p>
                                 </a>
                             </div>  
                             <div class="flex flex-row gap-1">
-                                <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                The Sun NG
-                                </p>
-                                <a href="https://thesun.ng/the-special-foundation-hosts-partners-reiterates-commitment-to-quality-education/" class="pb-4 cursor-pointer">
-                                    <img class="w-3 h-3" src="/images/link.png" alt="">
+                                <a href="https://thesun.ng/the-special-foundation-hosts-partners-reiterates-commitment-to-quality-education/" target="_blank" class="pb-4 cursor-pointer hover:underline">
+                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
+                                        The Sun NG
+                                    </p>
                                 </a>
                             </div>
                         </div>
