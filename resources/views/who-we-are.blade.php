@@ -22,7 +22,7 @@
                         Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in all
                         spheres of governance in Africa and ensure the creation of a platform where more young people
                         can maximize their potential by gaining access to education. The foundation now has over 600
-                        active partners and volunteers and has empowered over 61,000 less privileged, gifted African
+                        active partners and volunteers and has empowered over 62,000 less privileged, gifted African
                         Children through education, mentorship, and leadership opportunities.
                     </p>
                 </div>
@@ -86,7 +86,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">61,983</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-1">62,623</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children directly
@@ -139,7 +139,7 @@
                     <div class="flex items-start">
                         <div class="flex flex-col w-[40%] items-start">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">41,974</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-3">24,258</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal w-inherit">Nigerian children access educational and

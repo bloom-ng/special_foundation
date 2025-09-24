@@ -100,7 +100,7 @@
                             Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
                             all spheres of governance in Africa and ensure the creation of a platform where more young
                             people can maximize their potential by gaining access to education. The foundation has
-                            empowered over 61,000 less privileged, gifted African children through education,
+                            empowered over 62,000 less privileged, gifted African children through education,
                             mentorship, and leadership opportunities.
                         </p>
                     </div>
@@ -122,7 +122,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-1">
-                        {{-- 61,983+ --}}0
+                        {{-- 62,623+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -146,7 +146,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-3">
-                        {{-- 41,974+ --}}0
+                        {{-- 24,258+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
