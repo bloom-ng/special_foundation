@@ -31,12 +31,12 @@
                             <h1 class="montserrat-semibold pb-9">Media Mentions Section</h1>
                             <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
                                 <a href="https://youtu.be/Uj8_jmI8r4M?si=dI7HLWK6thLq5vDz" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open Kaleidoscope on YouTube">
-                                    <span class="flex-1 min-w-0 truncate">Kaleidoscope (Channels TV)</span>
+                                    <span class="flex-1 min-w-0">Kaleidoscope (Channels TV)</span>
                                 </a>
                             </div>
                             <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
                                 <a href="https://youtu.be/BXHs5Osrr1M?si=dUhOIeawX6VHvjjH" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open Eye Witness Report on YouTube">
-                                    <span class="flex-1 min-w-0 truncate">Eye Witness Report (Channels TV)</span>
+                                    <span class="flex-1 min-w-0">Eye Witness Report <br> (Channels TV)</span>
                                 </a>
                             </div>
                             <div class="flex flex-row gap-1">
