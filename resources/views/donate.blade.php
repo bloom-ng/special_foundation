@@ -33,7 +33,7 @@
                 </p>
 
                 <div class="flex items-start justify-start gap-10">
-                    <div class="w-[179px] min-h-[204px] bg-[#25A8D6] p-8 text-white">
+                    <div class="w-[187px] min-h-[204px] bg-[#25A8D6] p-8 text-white">
                         <p
                             class="montserrat-thin text-base font-bold leading-6 text-left md:text-lg md:leading-7 lg:leading-8 xl:leading-9">
                             Naira</p>
@@ -45,6 +45,10 @@
                             <br><br>
                             FCMB
                             8763293012
+
+                            <br><br>
+                            Sterling Bank
+                            0131522788
 
                         </p>
 

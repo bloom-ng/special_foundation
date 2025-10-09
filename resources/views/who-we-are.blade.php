@@ -99,7 +99,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-6">100,000</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] odometer-6">500,000</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal">Africans directly impacted by the
@@ -151,7 +151,7 @@
                         </div>
                         <div class="flex flex-col w-[40%]">
                             <div class="flex items-center">
-                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] meter-3">20,000</h3>
+                                <h3 class="montserrat-bold text-xl md:text-3xl text-[#26225F] meter-3">50,000</h3>
                                 <span class="montserrat-bold text-[#26225F] text-xl md:text-3xl ml-1">+</span>
                             </div>
                             <p class="montserrat-thin font-normal">African students sponsored through the Summer School
