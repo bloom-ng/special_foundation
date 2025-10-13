@@ -7,11 +7,15 @@ use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use App\Models\Download;
 use App\Models\Post;
+use App\Models\MediaMention;
+use App\Models\Accreditation;
 
 class Footer extends Component
 {
     public $downloads;
     public $featured_blogs;
+    public $media_mentions;
+    public $accreditations;
     /**
      * Create a new component instance.
      */
@@ -21,6 +25,8 @@ class Footer extends Component
         $this->featured_blogs = Post::where('is_featured', 1)
                                 ->published()->latest('published_at')
                                 ->get();
+        $this->media_mentions = MediaMention::latest()->take(10)->get();
+        $this->accreditations = Accreditation::where('status', 'active')->latest()->take(4)->get();
     }
 
     /**
@@ -30,7 +36,9 @@ class Footer extends Component
     {
         return view('components.footer', [
             'downloads' => $this->downloads,
-            'featured_blogs' => $this->featured_blogs->shuffle()->take(4)
+            'featured_blogs' => $this->featured_blogs->shuffle()->take(4),
+            'media_mentions' => $this->media_mentions,
+            'accreditations' => $this->accreditations,
         ]);
     }
 }

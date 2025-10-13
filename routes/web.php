@@ -18,6 +18,9 @@ use App\Http\Controllers\ProjectScheduleController;
 use App\Http\Controllers\CMSController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventEntryController;
+use App\Http\Controllers\MediaMentionController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\AccreditationController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Download;
 use App\Models\Volunteer;
@@ -46,7 +49,11 @@ Route::get('homepage', function () {
     $downloads = Download::all();
     $teams = CMS::getDynamicTeams();
     $boards = CMS::getDynamicBoards();
-    return view('homepage', compact('activeEvent', 'activeSummerSchool'))->with('teams', $teams)->with('boards', $boards)->with('downloads', $downloads);
+    $testimonials = \App\Models\Testimonial::where('status', 'active')->latest()->take(4)->get();
+    return view('homepage', compact('activeEvent', 'activeSummerSchool', 'testimonials'))
+        ->with('teams', $teams)
+        ->with('boards', $boards)
+        ->with('downloads', $downloads);
 });
 
 Route::get('who-we-are', function () {
@@ -276,6 +283,30 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/galleries', [GalleryController::class, 'store']);
     Route::put('/galleries/{gallery}', [GalleryController::class, 'update']);
     Route::delete('/galleries/{gallery}', [GalleryController::class, 'destroy']);
+
+    // Media Mentions routes
+    Route::get('/media-mentions', [MediaMentionController::class, 'index']);
+    Route::get('/media-mentions/create', [MediaMentionController::class, 'create']);
+    Route::post('/media-mentions', [MediaMentionController::class, 'store']);
+    Route::get('/media-mentions/{mediaMention}/edit', [MediaMentionController::class, 'edit']);
+    Route::put('/media-mentions/{mediaMention}', [MediaMentionController::class, 'update']);
+    Route::delete('/media-mentions/{mediaMention}', [MediaMentionController::class, 'destroy']);
+
+    // Accreditations routes
+    Route::get('/accreditations', [AccreditationController::class, 'index'])->name('admin.accreditations.index');
+    Route::get('/accreditations/create', [AccreditationController::class, 'create'])->name('admin.accreditations.create');
+    Route::post('/accreditations', [AccreditationController::class, 'store'])->name('admin.accreditations.store');
+    Route::get('/accreditations/{accreditation}/edit', [AccreditationController::class, 'edit'])->name('admin.accreditations.edit');
+    Route::put('/accreditations/{accreditation}', [AccreditationController::class, 'update'])->name('admin.accreditations.update');
+    Route::delete('/accreditations/{accreditation}', [AccreditationController::class, 'destroy'])->name('admin.accreditations.destroy');
+
+    // Testimonials routes
+    Route::get('/testimonials', [TestimonialController::class, 'index'])->name('admin.testimonials.index');
+    Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('admin.testimonials.create');
+    Route::post('/testimonials', [TestimonialController::class, 'store'])->name('admin.testimonials.store');
+    Route::get('/testimonials/{testimonial}/edit', [TestimonialController::class, 'edit'])->name('admin.testimonials.edit');
+    Route::put('/testimonials/{testimonial}', [TestimonialController::class, 'update'])->name('admin.testimonials.update');
+    Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('admin.testimonials.destroy');
 
     //Partners Logo
     Route::get('/cms-data/partners', [CMSController::class, 'indexPartners']);

@@ -28,38 +28,27 @@
                     </div>
                     <div class="basis-1/2 lg:basis-1/4 flex flex-col">
                         <div>
+                            <h1 class="montserrat-semibold pb-9">Accreditations</h1>
+                            <div class="flex flex-col gap-2 text-xs">
+                                @foreach ($accreditations as $accreditation)
+                                    <div class="flex flex-row items-center gap-1">
+                                        <img class="w-10 h-10" src="{{ asset('storage/' . $accreditation->image) }}" alt="{{ $accreditation->name }}">
+                                        <p class="montserrat-extralight">{{ $accreditation->name }}</p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                        <div>
                             <h1 class="montserrat-semibold pb-9">Media Mentions Section</h1>
-                            <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
-                                <a href="https://youtu.be/Uj8_jmI8r4M?si=dI7HLWK6thLq5vDz" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open Kaleidoscope on YouTube">
-                                    <span class="flex-1 min-w-0">Kaleidoscope (Channels TV)</span>
-                                </a>
-                            </div>
-                            <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
-                                <a href="https://youtu.be/BXHs5Osrr1M?si=dUhOIeawX6VHvjjH" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open Eye Witness Report on YouTube">
-                                    <span class="flex-1 min-w-0">Eye Witness Report <br> (Channels TV)</span>
-                                </a>
-                            </div>
-                            <div class="flex flex-row gap-1">
-                                <a href="https://nairametrics.com/2025/05/21/the-special-foundation-hosts-2025-summit-champions-a-future-of-inclusive-education/" target="_blank" class="pb-4 cursor-pointer hover:underline">
-                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                        Nairametrics
-                                    </p>
-                                </a>
-                            </div>  
-                            <div class="flex flex-row gap-1">
-                                <a href="https://punchng.com/foundation-seeks-urgent-education-reforms/?amp" target="_blank" class="pb-4 cursor-pointer hover:underline">
-                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                        PunchNG
-                                    </p>
-                                </a>
-                            </div>  
-                            <div class="flex flex-row gap-1">
-                                <a href="https://thesun.ng/the-special-foundation-hosts-partners-reiterates-commitment-to-quality-education/" target="_blank" class="pb-4 cursor-pointer hover:underline">
-                                    <p class="montserrat-extralight text-xs leading-[18px] pb-3">
-                                        The Sun NG
-                                    </p>
-                                </a>
-                            </div>
+                            @foreach ($media_mentions as $mention)
+                                <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
+                                    <a href="{{ $mention->url }}" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open {{ $mention->title }}">
+                                        <span class="flex-1 min-w-0">{!! $mention->title !!}</span>
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="flex flex-row gap-14">

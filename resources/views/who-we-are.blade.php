@@ -450,7 +450,7 @@
 
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         Our strategy is anchored on three pillars which are Quality, Life Long Development and Access.
-                        Currently, we are scaling our impact across Nigeria and Africa by targeting to raise 100,000
+                        Currently, we are scaling our impact across Nigeria and Africa by targeting to raise 500,000
                         leaders by 2030. Our strategy directly resonates with Sustainable Development Goal 4 on
                         Education though our work spans across a wide spectrum of the SDGs global development framework.
                     </p>

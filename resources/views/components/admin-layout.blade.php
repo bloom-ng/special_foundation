@@ -144,6 +144,21 @@
                 <i class="fas fa-images mr-3"></i>
                 Partners Logo
             </a>
+            <a href="/admin/media-mentions"
+                class="flex items-center {{ $page == 'media-mentions' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-bullhorn mr-3"></i>
+                Media Mentions
+            </a>
+            <a href="/admin/testimonials"
+                class="flex items-center {{ $page == 'testimonials' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-comment-dots mr-3"></i>
+                Testimonials
+            </a>
+            <a href="/admin/accreditations"
+                class="flex items-center {{ $page == 'accreditations' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-certificate mr-3"></i>
+                Accreditations
+            </a>
             <a href="{{ route('admin.events.index') }}"
                 class="flex items-center text-white py-4 pl-6 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
                 <i class="fas fa-calendar mr-3"></i>
@@ -295,6 +310,21 @@
                     class="flex items-center {{ $page == 'cms-partners' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-images mr-3"></i>
                     Partners logo
+                </a>
+                <a href="/admin/media-mentions"
+                    class="flex items-center {{ $page == 'media-mentions' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-bullhorn mr-3"></i>
+                    Media Mentions
+                </a>
+                <a href="/admin/testimonials"
+                    class="flex items-center {{ $page == 'testimonials' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-comment-dots mr-3"></i>
+                    Testimonials
+                </a>
+                <a href="/admin/accreditations"
+                    class="flex items-center {{ $page == 'accreditations' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-certificate mr-3"></i>
+                    Accreditations
                 </a>
                 <a href="{{ route('admin.events.index') }}"
                     class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">

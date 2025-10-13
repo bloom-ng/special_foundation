@@ -270,13 +270,13 @@
         createOdometer(odometer5, 14);
 
         const meter1 = document.querySelector(".odometer-6");
-        createOdometer(meter1, 100000);
+        createOdometer(meter1, 500000);
 
         const meter2 = document.querySelector(".meter-2");
         createOdometer(meter2, 5000);
 
         const meter3 = document.querySelector(".meter-3");
-        createOdometer(meter3, 20000);
+        createOdometer(meter3, 50000);
 
         const meter4 = document.querySelector(".meter-4");
         createOdometer(meter4, 60000);

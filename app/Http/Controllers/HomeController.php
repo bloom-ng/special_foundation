@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\CMS;
 use App\Models\Event;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -115,12 +116,15 @@ class HomeController extends Controller
 
         $partners = CMS::query()->where('type', CMS::TYPE_PARTNERS)->get();
         
+        $testimonials = Testimonial::where('status', 'active')->latest()->take(4)->get();
+
         return view('homepage', [
             'featured_posts' => $featured_posts->shuffle()->take(3),
             'sdgs' => $sdgs,
             'partners' => $partners,
             'activeEvent' => $activeEvent,
-            'activeSummerSchool' => $activeSummerSchool
+            'activeSummerSchool' => $activeSummerSchool,
+            'testimonials' => $testimonials,
         ]);
     }
 }
