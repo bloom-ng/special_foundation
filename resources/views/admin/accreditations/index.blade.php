@@ -15,9 +15,9 @@
             </div>
         @endif
 
-        <div class="bg-blue-50 border border-blue-200 text-blue-800 px-4 py-3 rounded relative mb-4" role="alert">
+        <!-- <div class="bg-blue-50 border border-blue-200 text-blue-800 px-4 py-3 rounded relative mb-4" role="alert">
             <span class="block sm:inline">Only the latest 4 active accreditations appear in the footer. Use the Active status to control visibility and create/update to reorder which 4 appear.</span>
-        </div>
+        </div> -->
 
         <div class="w-full mt-6">
             <div class="bg-white overflow-auto">
