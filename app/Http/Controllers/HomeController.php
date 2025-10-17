@@ -116,7 +116,7 @@ class HomeController extends Controller
 
         $partners = CMS::query()->where('type', CMS::TYPE_PARTNERS)->get();
         
-        $testimonials = Testimonial::where('status', 'active')->latest()->take(4)->get();
+        $testimonials = Testimonial::where('status', 'active')->latest()->get();
 
         return view('homepage', [
             'featured_posts' => $featured_posts->shuffle()->take(3),

@@ -1,6 +1,6 @@
 <div class="bg-[#26225F]">
             <div class="mx-10 lg:mx-20 py-20 text-white">
-                <div class="flex flex-col lg:flex-row pb-12">
+                <div class="flex flex-col lg:flex-row lg:gap-3 pb-12">
                     <div class="flex flex-row gap-14 pb-12">
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
                             <h1 class="montserrat-semibold pb-9">About Us</h1>
@@ -26,31 +26,34 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="basis-1/2 lg:basis-1/4 flex flex-col">
-                        <div>
-                            <h1 class="montserrat-semibold pb-9">Accreditations</h1>
-                            <div class="flex flex-col gap-2 text-xs">
-                                @foreach ($accreditations as $accreditation)
-                                    <div class="flex flex-row items-center gap-1">
-                                        <img class="w-10 h-10" src="{{ asset('storage/' . $accreditation->image) }}" alt="{{ $accreditation->name }}">
-                                        <p class="montserrat-extralight">{{ $accreditation->name }}</p>
+                    <div class="flex flex-row gap-14  pb-12">
+                        <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                            <div>
+                                <h1 class="montserrat-semibold pb-2 sm:pb-5 lg:pb-9">Accreditations</h1>
+                                <div class="flex flex-col gap-2 text-xs">
+                                    @foreach ($accreditations as $accreditation)
+                                        <div class="flex flex-row items-center gap-1">
+                                            <img class="w-10 h-10" src="{{ asset('storage/' . $accreditation->image) }}" alt="{{ $accreditation->name }}">
+                                            <p class="montserrat-extralight">{{ $accreditation->name }}</p>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                            <div>
+                                <h1 class="montserrat-semibold flex flex-row whitespace-nowrap pb-2 sm:pb-5 lg:pb-8">Media Mentions Section</h1>
+                                @foreach ($media_mentions as $mention)
+                                    <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
+                                        <a href="{{ $mention->url }}" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open {{ $mention->title }}">
+                                            <span class="flex-1 min-w-0">{!! $mention->title !!}</span>
+                                        </a>
                                     </div>
                                 @endforeach
                             </div>
                         </div>
                     </div>
-                    <div class="basis-1/2 lg:basis-1/4 flex flex-col">
-                        <div>
-                            <h1 class="montserrat-semibold pb-9">Media Mentions Section</h1>
-                            @foreach ($media_mentions as $mention)
-                                <div class="inline-flex items-center gap-1 max-w-full montserrat-extralight text-xs leading-[18px] pb-3">
-                                    <a href="{{ $mention->url }}" target="_blank" class="cursor-pointer hover:underline shrink-0" aria-label="Open {{ $mention->title }}">
-                                        <span class="flex-1 min-w-0">{!! $mention->title !!}</span>
-                                    </a>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
+                    
                     <div class="flex flex-row gap-14">
                         <div class="basis-1/2 lg:basis-1/4 flex flex-col">
                             <h1 class="montserrat-semibold pb-9">Contact Details</h1>

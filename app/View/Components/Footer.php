@@ -26,7 +26,7 @@ class Footer extends Component
                                 ->published()->latest('published_at')
                                 ->get();
         $this->media_mentions = MediaMention::latest()->take(10)->get();
-        $this->accreditations = Accreditation::where('status', 'active')->latest()->take(4)->get();
+        $this->accreditations = Accreditation::where('status', 'active')->latest()->get();
     }
 
     /**
