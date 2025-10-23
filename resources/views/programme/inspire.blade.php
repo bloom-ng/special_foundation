@@ -28,7 +28,7 @@
                         <li>Uniform</li>
                         <li>Books</li>
                         <li>Stationery</li>
-                        <li>Lunch</li>
+                        <!-- <li>Lunch</li> -->
                     </ul>
                 </div>
             </div>
