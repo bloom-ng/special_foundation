@@ -20,7 +20,8 @@
                 class="text-center text-[25px] md:text-[35px] lg:text-[40px] font-bold py-4 text-[#25A8D6] montserrat-bold">
                 To</h3>
             <div class="max-w-[100%] mx-auto">
-                <a href="{{ route('events.register', $activeEvent->id) }}" class="block">
+                <!-- <a href="{{ route('events.register', $activeEvent->id) }}" class="block"> -->
+                <a href="https://thespecialfoundation.org/blog/join-the-giving-circle-transform-a-life-IG6" class="block">    
                     <div class="relative w-full h-0 pb-[25%] overflow-hidden">
                         @if ($activeEvent->image_width && $activeEvent->image_height)
                             <img src="{{ Storage::url($activeEvent->image) }}" alt="{{ $activeEvent->name }}"
