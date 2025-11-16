@@ -35,7 +35,9 @@ class EventController extends Controller
                 'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
                 'image_width' => 'nullable|integer|min:1|max:2000',
                 'image_height' => 'nullable|integer|min:1|max:2000',
-                'status' => 'required|in:active,inactive'
+                'status' => 'required|in:active,inactive',
+                'link' => 'nullable|url|max:500',
+                'needs_countdown' => 'nullable|boolean'
             ]);
 
             \Log::info('Validation passed');
@@ -77,7 +79,9 @@ class EventController extends Controller
                 'image' => $imagePath,
                 'status' => $request->status,
                 'image_width' => $request->filled('image_width') ? $request->image_width : null,
-                'image_height' => $request->filled('image_height') ? $request->image_height : null
+                'image_height' => $request->filled('image_height') ? $request->image_height : null,
+                'link' => $request->filled('link') ? $request->link : null,
+                'needs_countdown' => $request->has('needs_countdown') // true if checked, false if unchecked
             ]);
 
             \Log::info('Event created successfully', ['event_id' => $event->id]);
@@ -104,7 +108,9 @@ class EventController extends Controller
             'image' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
             'image_width' => 'nullable|integer|min:1|max:2000',
             'image_height' => 'nullable|integer|min:1|max:2000',
-            'status' => 'required|in:active,inactive'
+            'status' => 'required|in:active,inactive',
+            'link' => 'nullable|url|max:500',
+            'needs_countdown' => 'nullable|boolean'
         ]);
 
         if ($request->status === 'active') {
@@ -118,7 +124,9 @@ class EventController extends Controller
             'name' => $request->name,
             'date' => $request->date,
             'content' => $request->content,
-            'status' => $request->status
+            'status' => $request->status,
+            'link' => $request->filled('link') ? $request->link : null,
+            'needs_countdown' => $request->has('needs_countdown')
         ];
 
         if ($request->hasFile('image')) {

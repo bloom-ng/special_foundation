@@ -21,7 +21,9 @@ class Event extends Model
         'content',
         'status',
         'image_width',
-        'image_height'
+        'image_height',
+        'link',
+        'needs_countdown'
     ];
 
     protected static function boot()

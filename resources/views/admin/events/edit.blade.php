@@ -132,6 +132,42 @@
                     </div>
 
                     <div class="w-full px-3 mb-6">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="link">
+                            Custom Link (Optional)
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border @error('link') border-red-500 @enderror rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" 
+                               id="link" 
+                               type="url" 
+                               name="link"
+                               value="{{ old('link', $event->link) }}"
+                               placeholder="https://example.com">
+                        <p class="text-sm text-gray-500 mt-1">Leave empty to use default event registration link</p>
+                        @error('link')
+                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="w-full px-3 mb-6">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="needs_countdown">
+                            Show Countdown
+                        </label>
+                        <div class="flex items-center">
+                            <input class="mr-2" 
+                                   id="needs_countdown" 
+                                   type="checkbox" 
+                                   name="needs_countdown"
+                                   value="1"
+                                   {{ old('needs_countdown', $event->needs_countdown ?? true) ? 'checked' : '' }}>
+                            <label class="text-gray-700 text-sm" for="needs_countdown">
+                                Display countdown timer on homepage
+                            </label>
+                        </div>
+                        @error('needs_countdown')
+                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="w-full px-3 mb-6">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="status">
                             Status
                         </label>
