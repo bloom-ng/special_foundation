@@ -497,7 +497,7 @@
             </p>
             <p class="text-white text-center montserrat-light mb-8">
                 Our impact locations include; Lagos, Niger, Abuja, Kano, Adamawa, Ogun, Osun, Gombe, Kogi, Plateau,
-                Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, and Delta.
+                Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, Benue, and Delta.
             </p>
 
             <img src="/images/new-map.png" alt="Map Of Nigeria With indicators of footprint">
