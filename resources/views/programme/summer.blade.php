@@ -12,7 +12,7 @@
     <div class="w-full px-8 py-20 lg:px-20 flex flex-col gap-16">
         <div class="w-full flex-grow sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full h-full lg:w-1/2 rounded-2xl">
-                <iframe class="w-full h-[315px]" src="https://youtu.be/CzNPyiVd-f8?si=7GNpMjbBNPIT0XWj"
+                <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/CzNPyiVd-f8?si=R-L_BRBAAM7ShDPG"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
