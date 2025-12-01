@@ -12,7 +12,7 @@
     <div class="w-full px-8 py-20 lg:px-20 flex flex-col gap-16">
         <div class="w-full flex-grow sm:flex lg:flex-row sm:flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10">
             <div class="w-full h-full lg:w-1/2 rounded-2xl">
-                <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/Ox9WqmhQsR8?si=g2uvvhm-DtvkqyBK"
+                <iframe class="w-full h-[315px]" src="https://youtu.be/CzNPyiVd-f8?si=7GNpMjbBNPIT0XWj"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -39,44 +39,56 @@
 
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc1.jpg" alt="Students Learning from a chef at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc1.jpg" alt="Students Learning from a chef at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc2.jpg" alt="Student with notepad and pen at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc2.jpg" alt="Student with notepad and pen at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc3.jpg" alt="Student with handdrawn artwork at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc3.jpg" alt="Student with handdrawn artwork at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc4.jpg" alt="Students keenly listening to tutors at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
-            </div>
-        </div>
-        <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc5.jpg" alt="Tutors and students flaunting handmade adire at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
-            </div>
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc6.jpg" alt="Students Playing at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
-            </div>
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc7.jpg" alt="Students and Tutor working on adire at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
-            </div>
-            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/DSC_9442.jpg" alt="Cultural display by students at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc4.jpg" alt="Students keenly listening to tutors at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
         </div>
         <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc9.jpg" alt="Students in chef's apparels Displaying food made at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc5.jpg" alt="Tutors and students flaunting handmade adire at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc10.jpg" alt="Group picture of the Students at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc6.jpg" alt="Students Playing at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc11.jpg" alt="Group picture of the Students and team at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/ssc7.jpg" alt="Students and Tutor working on adire at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
             <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
-                <img src="/images/ssc12.jpg" alt="Cultural display by professionals at Summer School" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+                <img src="/images/DSC_9442.jpg" alt="Cultural display by students at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+            </div>
+        </div>
+        <div class="w-full flex flex-wrap md:flex-nowrap gap-8">
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/ssc9.jpg" alt="Students in chef's apparels Displaying food made at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/ssc10.jpg" alt="Group picture of the Students at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/ssc11.jpg" alt="Group picture of the Students and team at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
+            </div>
+            <div class="md:basis-1/2 lg:basis-1/4 rounded-2xl">
+                <img src="/images/ssc12.jpg" alt="Cultural display by professionals at Summer School"
+                    class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-3xl" loading="lazy">
             </div>
         </div>
     </div>
