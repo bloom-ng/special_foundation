@@ -500,7 +500,7 @@
                 Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, Benue, and Delta.
             </p>
 
-            <img src="/images/new-map.png" alt="Map Of Nigeria With indicators of footprint">
+            <img src="/images/latest-map.png" alt="Map Of Nigeria With indicators of footprint">
 
         </div>
         {{-- OUR FOOTPRINT END --}}
