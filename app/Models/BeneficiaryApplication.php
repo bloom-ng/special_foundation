@@ -9,14 +9,23 @@ class BeneficiaryApplication extends Model
 {
     use HasFactory;
 
-    
+
     protected $fillable = [
         'name',
         'email',
         'contact_number',
         'area_of_residence',
         'purpose_of_application',
-        'programme'
+        'programme',
+        'beneficiary_image',
+        'date_of_birth',
+        'gender',
+        'state_of_origin',
+        'father_occupation',
+        'mother_occupation',
+        'school_name',
+        'class_grade',
+
     ];
 
     const PROGRAMME_INSPIRE_SCHOLARSHIP = 1;
@@ -48,6 +57,16 @@ class BeneficiaryApplication extends Model
             'area_of_residence' => $this->area_of_residence,
             'purpose_of_application' => $this->purpose_of_application,
             'programme' => self::getProgrammeMapping()[$this->programme] ?? 'Unknown Programme',
+            'date_of_birth' => $this->date_of_birth,
+            'gender' => $this->gender,
+            'state_of_origin' => $this->state_of_origin,
+            'father_occupation' => $this->father_occupation,
+            'mother_occupation' => $this->mother_occupation,
+            'school_name' => $this->school_name,
+            'class_grade' => $this->class_grade,
+            'beneficiary_image' => $this->beneficiary_image
+                ? asset('storage/' . $this->beneficiary_image)
+                : null,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
