@@ -21,7 +21,7 @@ class Footer extends Component
      */
     public function __construct()
     {
-        $this->downloads = Download::all();
+        $this->downloads = Download::latest()->get();
         $this->featured_blogs = Post::where('is_featured', 1)
                                 ->published()->latest('published_at')
                                 ->get();

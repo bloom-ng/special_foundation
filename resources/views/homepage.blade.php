@@ -90,23 +90,22 @@
             <div class="flex flex-col lg:flex-row gap-10">
                 <div class="montserrat-light font-normal text-sm 2xl:text-base basis-3/5">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-6">
-                        Who We Are
+                        Building Africa's next set of leaders through education
                     </h1>
                     <div class="">
                         <p class="border-[#25A8D6] pl-5 border-l-[14px]">
-                            The Special Foundation is a social impact organisation that focuses on raising young African
-                            leaders through education by providing platforms and opportunities to fulfil their dreams.
-                            We are a community of young professionals with a vision to improve the quality of leadership
-                            in all spheres of governance in Africa by creating access for more children to get an
-                            education.
-                            <br />
-                            <br />
-                            Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
+                            By reshaping young minds through access to quality learning and transformative mentorship, 
+                            we empower the next generation of African leaders to think boldly, act responsibly, 
+                            and drive lasting change across their communities and the continent.
+                            <!-- Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
                             all spheres of governance in Africa and ensure the creation of a platform where more young
                             people can maximize their potential by gaining access to education. The foundation has
                             empowered over 62,000 less privileged, gifted African children through education,
-                            mentorship, and leadership opportunities.
+                            mentorship, and leadership opportunities. -->
                         </p>
+                    </div>
+                    <div class="mt-10 flex-row flex justify-end">
+                        <a href="/donate" class="text-white text-base bg-[#25A8D6] px-10 py-3 -mt-2 rounded-full">Support a child's Education</a>
                     </div>
                 </div>
                 <div class="basis-2/5">

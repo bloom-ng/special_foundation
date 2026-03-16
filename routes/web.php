@@ -46,7 +46,7 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 Route::get('homepage', function () {
     $activeEvent = \App\Models\Event::where('status', 'active')->latest()->first();
     $activeSummerSchool = \App\Models\SummerSchool::where('status', 'active')->latest()->first();
-    $downloads = Download::all();
+    $downloads = Download::latest()->get();
     $teams = CMS::getDynamicTeams();
     $boards = CMS::getDynamicBoards();
     $testimonials = \App\Models\Testimonial::where('status', 'active')->latest()->take(4)->get();
@@ -57,7 +57,7 @@ Route::get('homepage', function () {
 });
 
 Route::get('who-we-are', function () {
-    $downloads = Download::all();
+    $downloads = Download::latest()->get();
     $teams = CMS::getDynamicTeams();
     $boards = CMS::getDynamicBoards();
     return view('who-we-are', compact('teams'))->with('boards', $boards)->with('downloads', $downloads);

@@ -1,8 +1,8 @@
 <div class="bg-[#26225F]">
             <div class="mx-10 lg:mx-20 py-20 text-white">
-                <div class="flex flex-col lg:flex-row lg:gap-3 pb-12">
-                    <div class="flex flex-row gap-14 pb-12">
-                        <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                <div class="flex flex-col w-full lg:flex-row lg:gap-3 pb-12">
+                    <div class="flex flex-row w-full lg:w-auto gap-14 pb-12">
+                        <div class="basis-1/2 lg:basis-1/4 min-w-[200px] flex flex-col">
                             <h1 class="montserrat-semibold pb-9">About Us</h1>
                             <img class="md:w-44 w-24 pb-7" src="/images/about-us-logo.png" alt="" />
                             <p class="montserrat-extralight text-xs leading-[18px]">
@@ -12,7 +12,7 @@
                                 education.
                             </p>
                         </div>
-                        <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                        <div class="basis-1/2 lg:basis-1/4 min-w-[200px] flex flex-col">
                             <h1 class="montserrat-semibold pb-9">Featured Blogs</h1>
                             @foreach ($featured_blogs as $blog)
                                 <a href="/blog/{{ $blog->id }}" class="pb-4 cursor-pointer">
@@ -26,14 +26,14 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="flex flex-row gap-14  pb-12">
-                        <div class="basis-1/2 lg:basis-1/4 flex flex-col">
+                    <div class="flex flex-row w-full lg:w-auto gap-14 pb-12">
+                        <div class="basis-1/2 lg:basis-2/4 w-full max-w-[300px] min-w-[200px] flex flex-col">
                             <div>
                                 <h1 class="montserrat-semibold pb-2 sm:pb-5 lg:pb-9">Accreditations</h1>
                                 <div class="flex flex-col gap-2 text-xs">
                                     @foreach ($accreditations as $accreditation)
-                                        <div class="flex flex-row items-center gap-1">
-                                            <img class="w-10 h-10" src="{{ asset('storage/' . $accreditation->image) }}" alt="{{ $accreditation->name }}">
+                                        <div class="flex flex-row items-center gap-4">
+                                            <img class="w-8 h-8" src="{{ asset('storage/' . $accreditation->image) }}" alt="{{ $accreditation->name }}">
                                             <p class="montserrat-extralight">{{ $accreditation->name }}</p>
                                         </div>
                                     @endforeach
