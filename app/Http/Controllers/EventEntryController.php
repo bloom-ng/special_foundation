@@ -37,6 +37,7 @@ class EventEntryController extends Controller
                 'Phone Number',
                 'Company',
                 'Will Attend',
+                'Sponsorship Interest',
                 'Registration Date'
             ]);
 
@@ -49,7 +50,8 @@ class EventEntryController extends Controller
                     $entry->email,
                     $entry->phone_number,
                     $entry->company ?: 'Not provided',
-                    $entry->will_attend ? 'Yes' : 'No',
+                    $entry->will_attend,
+                    $entry->sponsorship_interest,
                     $entry->created_at->format('Y-m-d H:i:s')
                 ]);
             }

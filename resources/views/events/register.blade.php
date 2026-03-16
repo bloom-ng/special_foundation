@@ -97,6 +97,30 @@
                         </div>
                     </div>
 
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="flex flex-col lg:flex-row items-start md:items-center px-6 lg:px-2">
+                            <label class="text-white w-full lg:w-1/2 mr-4 montserrat-medium mb-3 lg:mb-0">Are you interested in getting more information about sponsoring a child?</label>
+                            <div class="flex flex-col md:flex-row gap-3 lg:gap-0">
+                                <label class="inline-flex items-center mr-4">
+                                    <input type="radio" name="sponsorship_interest" value="yes" checked
+                                        class="text-[#26225F]">
+                                    <span class="ml-2 text-white">Yes</span>
+                                </label>
+                                <label class="inline-flex items-center mr-4">
+                                    <input type="radio" name="sponsorship_interest" value="no" class="text-[#26225F]">
+                                    <span class="ml-2 text-white">No</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="sponsorship_interest" value="active_partner" class="text-[#26225F]">
+                                    <span class="ml-2 text-white">Already an active partner</span>
+                                </label>
+                                @error('sponsorship_interest')
+                                    <p class="text-red-800 text-xs mt-1">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="flex justify-center mt-8">
                         <button type="submit"
                             class="bg-[#26225F] text-white px-12 py-3 rounded-full hover:bg-opacity-90 transition-colors montserrat-medium">

@@ -188,7 +188,8 @@ class EventController extends Controller
             'email' => 'required|email|max:255',
             'phone_number' => 'required|string|max:20',
             'company' => 'required|string|max:255',
-            'will_attend' => 'required|string|in:yes,no,maybe'
+            'will_attend' => 'required|string|in:yes,no,maybe',
+            'sponsorship_interest' => 'required|string|in:yes,no,active_partner'
         ]);
 
         try {
@@ -199,7 +200,8 @@ class EventController extends Controller
                 'email' => $request->email,
                 'phone_number' => $request->phone_number,
                 'company' => $request->company ?? '',
-                'will_attend' => $request->will_attend
+                'will_attend' => $request->will_attend,
+                'sponsorship_interest' => $request->sponsorship_interest
             ]);
 
             \Log::info('Registration created successfully', ['entry_id' => $entry->id]);
@@ -211,7 +213,8 @@ class EventController extends Controller
                     "Email: {$request->email}\n" .
                     "Phone: {$request->phone_number}\n" .
                     "Company: " . ($request->company ?? 'Not provided') . "\n" .
-                    "Will Attend: " . ($request->will_attend), 
+                    "Will Attend: " . ($request->will_attend) . "\n" .
+                    "Sponsorship Interest: " . ($request->sponsorship_interest), 
                     function($message) use ($event) {
                         $message->to('info@specialfoundation.com')
                                 ->subject("New Registration for {$event->name}");
@@ -261,6 +264,7 @@ class EventController extends Controller
                 'Phone Number',
                 'Company',
                 'Will Attend',
+                'Sponsorship Interest',
                 'Registration Date'
             ]);
 
@@ -274,6 +278,7 @@ class EventController extends Controller
                     $entry->phone_number,
                     $entry->company ?: 'Not provided',
                     $entry->will_attend,
+                    $entry->sponsorship_interest,
                     $entry->created_at->format('Y-m-d H:i:s')
                 ]);
             }

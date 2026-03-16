@@ -30,6 +30,7 @@
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Company</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Will Attend</th>
+                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Sponsorship Interest</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Date Registered</th>
                         </tr>
                     </thead>
@@ -48,11 +49,18 @@
                                         {{ ucfirst($entry->will_attend) }}
                                     </span>
                                 </td>
+                                <td class="text-left py-3 px-4">
+                                    @if($entry->sponsorship_interest === 'active_partner')
+                                        Already an active partner
+                                    @else
+                                        {{ ucfirst($entry->sponsorship_interest ?? '') }}
+                                    @endif
+                                </td>
                                 <td class="text-left py-3 px-4">{{ $entry->created_at->format('M d, Y H:i') }}</td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="6" class="text-center py-4 text-gray-500">No entries found for this event.</td>
+                                <td colspan="7" class="text-center py-4 text-gray-500">No entries found for this event.</td>
                             </tr>
                         @endforelse
                     </tbody>

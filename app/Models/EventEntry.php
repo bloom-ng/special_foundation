@@ -16,7 +16,8 @@ class EventEntry extends Model
         'email',
         'company',
         'phone_number',
-        'will_attend'
+        'will_attend',
+        'sponsorship_interest'
     ];
 
     public function event()
