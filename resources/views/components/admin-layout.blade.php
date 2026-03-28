@@ -9,7 +9,7 @@
     <meta name="description" content="" />
 
     <!-- Tailwind --><!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
+    @vite(["resources/sass/app.scss", "resources/js/app.js", "resources/css/app.css"])
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" /> --}}
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -51,26 +51,34 @@
         /* SCROLLBAR */
 
         ::-webkit-scrollbar {
-        width: 7px; /* Width of the scrollbar */
-        height: 7px; /* Height of the scrollbar */
+            width: 7px;
+            /* Width of the scrollbar */
+            height: 7px;
+            /* Height of the scrollbar */
         }
 
         ::-webkit-scrollbar-thumb {
-        background-color: #ccc; /* Color of the scrollbar thumb */
-        border-radius: 10px; /* Rounded corners */
+            background-color: #ccc;
+            /* Color of the scrollbar thumb */
+            border-radius: 10px;
+            /* Rounded corners */
         }
 
         ::-webkit-scrollbar-track {
-        background-color: #f1f1f1; /* Color of the scrollbar track */
-        border-radius: 10px; /* Rounded corners */
+            background-color: #f1f1f1;
+            /* Color of the scrollbar track */
+            border-radius: 10px;
+            /* Rounded corners */
         }
 
         ::-webkit-scrollbar-thumb:hover {
-        background-color: #aaa; /* Color of the scrollbar thumb on hover */
+            background-color: #aaa;
+            /* Color of the scrollbar thumb on hover */
         }
 
         ::-webkit-scrollbar-thumb:active {
-        background-color: #999; /* Color of the scrollbar thumb on active */
+            background-color: #999;
+            /* Color of the scrollbar thumb on active */
         }
     </style>
 </head>
@@ -85,103 +93,113 @@
         </div>
         <nav class="text-white text-xs font-semibold pt-3">
             <a href="/admin/dashboard"
-                class="flex items-center {{ $page == 'dashboard' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "dashboard" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
             <a href="/admin/newsletters"
-                class="flex items-center {{ $page == 'newsletter' ? 'active-nav-link' : '' }} text-white hover:opacity-100 py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "newsletter" ? "active-nav-link" : "" }} text-white hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-sticky-note mr-3"></i>
                 Newsletter Subscribers
             </a>
             <a href="/admin/blogs"
-                class="flex items-center {{ $page == 'blogs' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "blogs" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-file mr-3"></i>
                 Posts
             </a>
             <a href="/admin/downloads"
-                class="flex items-center {{ $page == 'downloads' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "downloads" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-download mr-3"></i>
                 Documents
             </a>
             <a href="/admin/galleries"
-                class="flex items-center {{ $page == 'gallery' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "gallery" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-images mr-3"></i>
                 Gallery
             </a>
             <a href="/admin/beneficiaries"
-                class="flex items-center {{ $page == 'beneficiary' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "beneficiary" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-file-invoice mr-3"></i>
                 Beneficiary Applications
             </a>
             <a href="/admin/partners"
-                class="flex items-center {{ $page == 'partner' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "partner" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-file-invoice mr-3"></i>
                 Partner Applications
             </a>
             <a href="/admin/donation-leads"
-                class="flex items-center {{ $page == 'donation' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "donation" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-money-bill-wave mr-3"></i>
                 Prospective Donors
             </a>
+            <a href="/admin/scholaship-donor"
+                class="flex items-center {{ $page == "scholaship-donor" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-money-bill mr-3"></i>
+                Scholaship Donors
+            </a>
             <a href="/admin/volunteers"
-                class="flex items-center {{ $page == 'volunteer' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "volunteer" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-file-invoice mr-3"></i>
                 Prospective Volunteers
             </a>
             <a href="/admin/project-schedules"
-                class="flex items-center {{ $page == 'projects' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "projects" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-calendar-alt mr-3"></i>
                 Project Schedules
             </a>
             <a href="/admin/cms-data/teams"
-                class="flex items-center {{ $page == 'cms-teams' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "cms-teams" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-users mr-3"></i>
                 The Team
             </a>
             <a href="/admin/cms-data/partners"
-                class="flex items-center {{ $page == 'cms-partners' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "cms-partners" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-images mr-3"></i>
                 Partners Logo
             </a>
             <a href="/admin/media-mentions"
-                class="flex items-center {{ $page == 'media-mentions' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "media-mentions" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-bullhorn mr-3"></i>
                 Media Mentions
             </a>
             <a href="/admin/testimonials"
-                class="flex items-center {{ $page == 'testimonials' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "testimonials" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-comment-dots mr-3"></i>
                 Testimonials
             </a>
             <a href="/admin/accreditations"
-                class="flex items-center {{ $page == 'accreditations' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "accreditations" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-certificate mr-3"></i>
                 Accreditations
             </a>
-            <a href="{{ route('admin.events.index') }}"
-                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
+            <a href="{{ route("admin.events.index") }}"
+                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === "events" ? "active-nav-link" : "" }}">
                 <i class="fas fa-calendar mr-3"></i>
                 Events
             </a>
-            <a href="{{ route('admin.summer-school.index') }}"
-                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === 'summer-school' ? 'active-nav-link' : '' }}">
+            <a href="{{ route("admin.campaigns.index") }}"
+                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === "campaigns" ? "active-nav-link" : "" }}">
+                <i class="fa fa-bullhorn mr-3"></i>
+                Campaigns
+            </a>
+            <a href="{{ route("admin.summer-school.index") }}"
+                class="flex items-center text-white py-4 pl-6 nav-item {{ $page === "summer-school" ? "active-nav-link" : "" }}">
                 <i class="fas fa-sun mr-3"></i>
                 Summer School
             </a>
-            <!-- <a href="{{ route('admin.event-entries.index') }}"
-                class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">
+            <!-- <a href="{{ route("admin.event-entries.index") }}"
+                class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ $page === "event-entries" ? "active-nav-link" : "" }}">
                 <i class="fas fa-users mr-3"></i>
                 Event Entries
             </a> -->
             <a href="/admin/cms-data/ai/edit"
-                class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "cms-ai" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-info mr-3"></i>
                 Chatbot Additional Knowledge
             </a>
-           
+
             <a href="/admin/users"
-                class="flex items-center {{ $page == 'users' ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ $page == "users" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-users mr-3"></i>
                 Users
             </a>
@@ -194,14 +212,14 @@
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2">
-                @if (session('success'))
+                @if (session("success"))
                     <div class="bg-green-400 font-semibold text-gray-50 p-2">
-                        {{ session('success') }}
+                        {{ session("success") }}
                     </div>
                 @endif
-                @if (session('error'))
+                @if (session("error"))
                     <div class="bg-red-400 font-semibold text-gray-50 p-2">
-                        {{ session('error') }}
+                        {{ session("error") }}
                     </div>
                 @endif
                 @if ($errors->any())
@@ -225,11 +243,11 @@
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
                     <a href="/admin/users/edit/me" class="block px-4 py-2 account-link hover:text-white ">Account</a>
                     <div class="px-4 py-2 account-link hover:text-white">
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none">
+                        <form id="logout-form" action="{{ route("logout") }}" method="POST" style="display: none">
                             @csrf
                         </form>
 
-                        <a href="{{ route('logout') }}"
+                        <a href="{{ route("logout") }}"
                             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
                             Sign Out
@@ -257,93 +275,93 @@
             <nav :class="isOpen ? 'flex' : 'hidden'" class="flex flex-col pt-4">
 
                 <a href="/admin/dashboard"
-                    class="flex items-center {{ $page == 'dashboard' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "dashboard" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
                 <a href="/admin/newsletters"
-                    class="flex items-center {{ $page == 'newsletter' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "newsletter" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-newspaper mr-3"></i>
                     Newsletter Subscribers
                 </a>
                 <a href="/admin/blogs"
-                    class="flex items-center {{ $page == 'blogs' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "blogs" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-file mr-3"></i>
                     Posts
                 </a>
                 <a href="/admin/downloads"
-                    class="flex items-center {{ $page == 'downloads' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "downloads" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-download mr-3"></i>
                     Documents
                 </a>
                 <a href="/admin/galleries"
-                    class="flex items-center {{ $page == 'gallery' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "gallery" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-images mr-3"></i>
                     Gallery
                 </a>
                 <a href="/admin/beneficiaries"
-                    class="flex items-center {{ $page == 'beneficiary' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "beneficiary" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-file-invoice mr-3"></i>
                     Beneficiary Applications
                 </a>
                 <a href="/admin/partners"
-                    class="flex items-center {{ $page == 'partner' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "partner" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-file-invoice mr-3"></i>
                     Partner Applications
                 </a>
                 <a href="/admin/donation-leads"
-                    class="flex items-center {{ $page == 'donation' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "donation" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-money-bill-wave mr-3"></i>
                     Prospective Donors
                 </a>
                 <a href="/admin/project-schedules"
-                    class="flex items-center {{ $page == 'projects' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "projects" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-calendar-alt mr-3"></i>
                     Project Schedules
                 </a>
                 <a href="/admin/cms-data/teams"
-                    class="flex items-center {{ $page == 'cms-teams' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "cms-teams" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-users mr-3"></i>
                     The Team
                 </a>
                 <a href="/admin/cms-data/partners"
-                    class="flex items-center {{ $page == 'cms-partners' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "cms-partners" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-images mr-3"></i>
                     Partners logo
                 </a>
                 <a href="/admin/media-mentions"
-                    class="flex items-center {{ $page == 'media-mentions' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "media-mentions" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-bullhorn mr-3"></i>
                     Media Mentions
                 </a>
                 <a href="/admin/testimonials"
-                    class="flex items-center {{ $page == 'testimonials' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "testimonials" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-comment-dots mr-3"></i>
                     Testimonials
                 </a>
                 <a href="/admin/accreditations"
-                    class="flex items-center {{ $page == 'accreditations' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "accreditations" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-certificate mr-3"></i>
                     Accreditations
                 </a>
-                <a href="{{ route('admin.events.index') }}"
-                    class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === 'events' ? 'active-nav-link' : '' }}">
+                <a href="{{ route("admin.events.index") }}"
+                    class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === "events" ? "active-nav-link" : "" }}">
                     <i class="fas fa-calendar mr-3"></i>
                     Events
                 </a>
-                <!-- <a href="{{ route('admin.event-entries.index') }}"
-                    class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === 'event-entries' ? 'active-nav-link' : '' }}">
+                <!-- <a href="{{ route("admin.event-entries.index") }}"
+                    class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === "event-entries" ? "active-nav-link" : "" }}">
                     <i class="fas fa-users mr-3"></i>
                     Event Entries
                 </a> -->
                 <a href="/admin/cms-data/ai/edit"
-                    class="flex items-center {{ $page == 'cms-ai' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "cms-ai" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-info mr-3"></i>
                     Chatbot Additional Knowledge
                 </a>
 
                 <a href="/admin/users"
-                    class="flex items-center {{ $page == 'users' ? 'active-nav-link' : '' }} text-white py-2 pl-4 nav-item">
+                    class="flex items-center {{ $page == "users" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-users mr-3"></i>
                     Users
                 </a>
@@ -354,10 +372,10 @@
                     <i class="fas fa-user mr-3"></i>
                     My Account
                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none">
+                <form id="logout-form" action="{{ route("logout") }}" method="POST" style="display: none">
                     @csrf
                 </form>
-                <a href="{{ route('logout') }}"
+                <a href="{{ route("logout") }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                     class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-sign-out-alt mr-3"></i>
@@ -479,6 +497,7 @@
             },
         });
     </script>
+    @stack("scripts")
 </body>
 
 </html>

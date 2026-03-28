@@ -7,7 +7,7 @@
                 Support The Foundation
             </div>
         </div>
-    </div>
+    </div>  
 
     <div class="p-8 lg:p-20">
         <div class="flex flex-col-reverse lg:flex-row items-start justify-center gap-10">
@@ -83,19 +83,19 @@
 
                             <div class="space-y-3 montserrat-thin">
                                 <p>
-                                    <span class="font-semibold">Zenith Bank:</span> 1016058609
+                                    <span class="font-bold">Zenith Bank:</span> <span class="font-semibold">1016058609</span>
                                 </p>
 
                                 <p>
-                                    <span class="font-semibold">FCMB:</span> 8763293012
+                                    <span class="font-semibold">FCMB:</span>  <span class="font-semibold">8763293012 </span>
                                 </p>
 
                                 <p>
-                                    <span class="font-semibold">Sterling Bank:</span> 0131522788
+                                    <span class="font-semibold">Sterling Bank:</span>  <span class="font-semibold">0131522788</span>
                                 </p>
 
                                 <p>
-                                    <span class="font-semibold">Stanbic IBTC:</span> 0058487342
+                                    <span class="font-semibold">Stanbic IBTC:</span>  <span class="font-semibold">0058487342</span>
                                 </p>
                             </div>
                         </div>
@@ -106,15 +106,15 @@
 
                             <div class="space-y-2 montserrat-thin">
                                 <p>
-                                    <span class="font-semibold">Bank:</span> Zenith Bank
+                                    <span class="font-semibold">Bank:</span>  <span class="font-semibold">Zenith Bank</span>
                                 </p>
 
                                 <p>
-                                    <span class="font-semibold">Account Number:</span> 5071271021
+                                    <span class="font-semibold">Account Number:</span>  <span class="font-semibold">5071271021</span>
                                 </p>
 
                                 <p>
-                                    <span class="font-semibold">Swift Code:</span> ZEIBNGLA
+                                    <span class="font-semibold">Swift Code:</span>  <span class="font-semibold">ZEIBNGLA</span>
                                 </p>
                             </div>
                         </div>

@@ -1,33 +1,35 @@
 <?php
 
-use App\Models\Newsletter;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsletterController;
-use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\AccreditationController;
+use App\Http\Controllers\Admin\CampaignController;
+use App\Http\Controllers\Admin\DonorInterestController;
 use App\Http\Controllers\BeneficiaryApplicationController;
-use App\Http\Controllers\PartnerApplicationController;
-use App\Http\Controllers\DonationController;
-use App\Http\Controllers\VolunteerController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\CSVController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\SitemapController;
-use App\Http\Controllers\ProjectScheduleController;
 use App\Http\Controllers\CMSController;
+use App\Http\Controllers\CSVController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DonationController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventEntryController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\MediaMentionController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PartnerApplicationController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProjectScheduleController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\TestimonialController;
-use App\Http\Controllers\AccreditationController;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Download;
-use App\Models\Volunteer;
-use App\Models\View;
-use App\Models\Gallery;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\VolunteerController;
 use App\Models\CMS;
-
+use App\Models\Download;
+use App\Models\Gallery;
+use App\Models\Newsletter;
+use App\Models\View;
+use App\Models\Volunteer;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /*
@@ -63,6 +65,8 @@ Route::get('who-we-are', function () {
     return view('who-we-are', compact('teams'))->with('boards', $boards)->with('downloads', $downloads);
 });
 
+Route::post('/donor-interest', [DonorInterestController::class, 'store'])->name('donor.interest.store');
+
 Route::post('/newsletters', [NewsletterController::class, 'create']);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
@@ -94,6 +98,15 @@ Route::get('/inspire-program', function () {
 Route::get('/special-scholarship-program', function () {
     return view('programme.special');
 });
+
+Route::get('/donor-special-scholarship', function () {
+    return view('donor-process.special-scholaship');
+});
+
+Route::get('/donor-inspire-scholarship', function () {
+    return view('donor-process.inspire-scholaship');
+});
+
 Route::get('/mentorship-program', function () {
     return view('programme.mentorship');
 });
@@ -252,6 +265,11 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/donation-leads/{id}', [DonationController::class, 'show']);
     Route::delete('/donation-leads/{donation}', [DonationController::class, 'destroy']);
 
+     // Scholaship Donor routes
+     Route::get('/scholaship-donor', [DonorInterestController::class, 'index']);
+     Route::get('/scholaship-donor/{id}', [DonorInterestController::class, 'show']);
+     Route::delete('/scholaship-donor/{donor}', [DonorInterestController::class, 'destroy']);
+
     // Volunteer Applications routes
     Route::get('/volunteers', [VolunteerController::class, 'index']);
     Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
@@ -299,6 +317,15 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/accreditations/{accreditation}/edit', [AccreditationController::class, 'edit'])->name('admin.accreditations.edit');
     Route::put('/accreditations/{accreditation}', [AccreditationController::class, 'update'])->name('admin.accreditations.update');
     Route::delete('/accreditations/{accreditation}', [AccreditationController::class, 'destroy'])->name('admin.accreditations.destroy');
+
+    // Campaign routes
+    Route::get('/campaigns', [CampaignController::class, 'index'])->name('admin.campaigns.index');
+    Route::get('/campaigns/create', [CampaignController::class, 'create'])->name('admin.campaigns.create');
+    Route::post('/campaigns', [CampaignController::class, 'store'])->name('admin.campaigns.store');
+    Route::get('/campaigns/{campaign}/edit', [CampaignController::class, 'edit'])->name('admin.campaigns.edit');
+    Route::put('/campaigns/{campaign}', [CampaignController::class, 'update'])->name('admin.campaigns.update');
+    Route::delete('/campaigns/{campaign}', [CampaignController::class, 'destroy'])->name('admin.campaigns.destroy');
+    Route::get('/campaign/{slug}', [CampaignController::class, 'show'])->name('campaign.show');
 
     // Testimonials routes
     Route::get('/testimonials', [TestimonialController::class, 'index'])->name('admin.testimonials.index');

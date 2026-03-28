@@ -1,3 +1,6 @@
+@php
+    $menuCampaigns = \App\Models\Campaign::where("show_in_menu", true)->get();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,7 @@
     <!-- Include Tailwind CSS -->
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']); --}}
 
-    <link rel="stylesheet" href="{{ asset('css/font.css') }}" />
+    <link rel="stylesheet" href="{{ asset("css/font.css") }}" />
     {{-- <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}" /> --}}
 
     <title>{{ $title }}</title>
@@ -39,22 +42,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="{{ config('app.name', 'Special Foundation') }}" />
+    <meta name="title" content="{{ config("app.name", "Special Foundation") }}" />
     <meta name="description" content="Special Foundation - Empowering Communities" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:title" content="{{ config('app.name', 'Special Foundation') }}" />
+    <meta property="og:title" content="{{ config("app.name", "Special Foundation") }}" />
     <meta property="og:description" content="Special Foundation - Empowering Communities" />
-    <meta property="og:image" content="{{ asset('images/og_graph.png') }}" />
+    <meta property="og:image" content="{{ asset("images/og_graph.png") }}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="{{ url()->current() }}" />
-    <meta property="twitter:title" content="{{ config('app.name', 'Special Foundation') }}" />
+    <meta property="twitter:title" content="{{ config("app.name", "Special Foundation") }}" />
     <meta property="twitter:description" content="Special Foundation - Empowering Communities" />
-    <meta property="twitter:image" content="{{ asset('images/og_graph.png') }}" />
+    <meta property="twitter:image" content="{{ asset("images/og_graph.png") }}" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -66,15 +69,15 @@
             overflow-x: hidden;
         }
     </style>
-    @stack('head')
+    @stack("head")
 </head>
 
 <body>
-    @if (session('success'))
+    @if (session("success"))
         <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script>
             Toastify({
-                text: "{{ session('success') }}",
+                text: "{{ session("success") }}",
                 duration: 3000,
                 close: true,
                 gravity: "top",
@@ -87,11 +90,11 @@
         </script>
     @endif
 
-    @if (session('error'))
+    @if (session("error"))
         <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script>
             Toastify({
-                text: "{{ session('error') }}",
+                text: "{{ session("error") }}",
                 duration: 3000,
                 close: true,
                 gravity: "top",
@@ -134,10 +137,10 @@
         <div id="menu"
             class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-6 xl:gap-14 lg:text-sm xl:text-sm montserrat-medium w-full lg:w-auto">
             <a href="/"
-                class="{{ $page == 'home' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}">HOME</a>
+                class="{{ $page == "home" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}">HOME</a>
             <div class="relative">
                 <button id="programs-button"
-                    class="{{ $page == 'programs' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }} flex gap-2 items-center justify-center focus:outline-none">
+                    class="{{ $page == "programs" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
                     <span>PROGRAMS</span>
                     <img id="programs-icon" class="pt-1 transform transition-transform" src="/images/collapse-arrow.svg"
                         alt="Collapse Arrow" />
@@ -156,14 +159,33 @@
                     <a href="/school-build" class="block px-4 py-2 text-black hover:bg-gray-200">School Build</a>
                 </div>
             </div>
-            <a class="{{ $page == 'who_we_are' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}"
+            <div class="relative">
+                <button id="donor-button"
+                    class="{{ $page == "donor" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
+
+                    <span>DONOR PROCESS</span>
+
+                    <img id="donor-icon" class="w-3 h-3 transform transition-transform duration-300"
+                        src="/images/collapse-arrow.svg" alt="Dropdown Arrow" />
+                </button>
+
+                <div id="donor-dropdown"
+                class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20">
+
+                    <a href="/donor-inspire-scholarship" class="block px-4 py-2 text-black hover:bg-gray-200">Inspire
+                        Scholarship</a>
+                    <a href="/donor-special-scholarship" class="block px-4 py-2 text-black hover:bg-gray-200">Special
+                        Scholarship</a>
+                </div>
+            </div>
+            <a class="{{ $page == "who_we_are" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
                 href="/who-we-are">WHO
                 WE
                 ARE</a>
 
             <div class="relative">
                 <button id="communications-button"
-                    class="{{ $page == 'blog' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }} flex gap-2 items-center justify-center focus:outline-none">
+                    class="{{ $page == "blog" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
                     <span>MEDIA</span>
                     <img id="communications-icon" class="pt-1 transform transition-transform"
                         src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
@@ -177,10 +199,16 @@
                     <a href="/project" class="block px-4 py-2 text-black hover:bg-gray-200">Project Schedule</a>
                 </div>
             </div>
-            <a class="{{ $page == 'get_involved' ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }}"
+            <a class="{{ $page == "get_involved" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
                 href="/get-involved">GET
                 INVOLVED</a>
-            <a class="{{ $page == 'donate' ? 'montserrat-bold font-extrabold' : 'font-medium' }} rounded-full px-10 py-2 bg-[#25A8D6] text-white text-center"
+            @foreach ($menuCampaigns as $campaign)
+                <a class="{{ request()->is("campaign/" . $campaign->slug) ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} uppercase"
+                    href="{{ route("campaign.show", $campaign->slug) }}">
+                    {{ $campaign->menu_title ?? $campaign->title }}
+                </a>
+            @endforeach
+            <a class="{{ $page == "donate" ? "montserrat-bold font-extrabold" : "font-medium" }} rounded-full px-10 py-2 bg-[#25A8D6] text-white text-center"
                 href="/donate">DONATE</a>
         </div>
     </nav>
@@ -195,31 +223,71 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const menu = document.getElementById('menu');
             const menuIcon = document.getElementById('menu-icon');
+
             const programsButton = document.getElementById('programs-button');
             const programsDropdown = document.getElementById('programs-dropdown');
             const programsIcon = document.getElementById('programs-icon');
+
+            const donorButton = document.getElementById('donor-button');
+            const donorDropdown = document.getElementById('donor-dropdown');
+            const donorIcon = document.getElementById('donor-icon');
+
             const communicationsButton = document.getElementById('communications-button');
             const communicationsDropdown = document.getElementById('communications-dropdown');
             const communicationsIcon = document.getElementById('communications-icon');
 
+            // MOBILE MENU
             mobileMenuButton.addEventListener('click', function() {
                 menu.classList.toggle('hidden');
-                menuIcon.src = menu.classList.contains('hidden') ? '/images/hamburger.svg' :
+                menuIcon.src = menu.classList.contains('hidden') ?
+                    '/images/hamburger.svg' :
                     '/images/close_menu.svg';
             });
 
-            programsButton.addEventListener('click', function() {
+            // PROGRAMS
+            programsButton.addEventListener('click', function(e) {
+                e.stopPropagation();
                 programsDropdown.classList.toggle('hidden');
                 programsIcon.classList.toggle('rotate-180');
+
+                // close others
+                donorDropdown.classList.add('hidden');
+                donorIcon.classList.remove('rotate-180');
             });
 
-            communicationsButton.addEventListener('click', function() {
+            // DONOR PROCESS
+            donorButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                donorDropdown.classList.toggle('hidden');
+                donorIcon.classList.toggle('rotate-180');
+
+                // close others
+                programsDropdown.classList.add('hidden');
+                programsIcon.classList.remove('rotate-180');
+            });
+
+            // MEDIA
+            communicationsButton.addEventListener('click', function(e) {
+                e.stopPropagation();
                 communicationsDropdown.classList.toggle('hidden');
                 communicationsIcon.classList.toggle('rotate-180');
             });
+
+            // CLICK OUTSIDE CLOSE
+            document.addEventListener('click', function() {
+                programsDropdown.classList.add('hidden');
+                donorDropdown.classList.add('hidden');
+                communicationsDropdown.classList.add('hidden');
+
+                programsIcon.classList.remove('rotate-180');
+                donorIcon.classList.remove('rotate-180');
+                communicationsIcon.classList.remove('rotate-180');
+            });
+
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"

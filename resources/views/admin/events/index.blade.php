@@ -52,18 +52,18 @@
                                 </td>
                                 <td class="text-left py-3 px-4">
                                     <div class="flex space-x-2">
-                                        <a href="{{ url('/admin/events/'.$event->id.'/edit') }}" 
+                                        <a href="{{ url('/admin/events/'.$event->id.'/edit') }}"
                                            class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
                                             Edit
                                         </a>
-                                        <a href="{{ route('admin.events.entries', $event->id) }}" 
+                                        <a href="{{ route('admin.events.entries', $event->id) }}"
                                            class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
                                             View Entries
                                         </a>
                                         <form action="{{ url('/admin/events/'.$event->id) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" 
+                                            <button type="submit"
                                                     class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
                                                     onclick="return confirm('Are you sure?')">
                                                 Delete
