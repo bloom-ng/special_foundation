@@ -7,7 +7,7 @@
                 Support The Foundation
             </div>
         </div>
-    </div>  
+    </div>
 
     <div class="p-8 lg:p-20">
         <div class="flex flex-col-reverse lg:flex-row items-start justify-center gap-10">
@@ -83,15 +83,15 @@
 
                             <div class="space-y-3 montserrat-thin">
                                 <p>
+                                    <span class="font-semibold">Sterling Bank:</span>  <span class="font-semibold">0131522788</span>
+                                </p>
+                                
+                                <p>
                                     <span class="font-bold">Zenith Bank:</span> <span class="font-semibold">1016058609</span>
                                 </p>
 
                                 <p>
                                     <span class="font-semibold">FCMB:</span>  <span class="font-semibold">8763293012 </span>
-                                </p>
-
-                                <p>
-                                    <span class="font-semibold">Sterling Bank:</span>  <span class="font-semibold">0131522788</span>
                                 </p>
 
                                 <p>
