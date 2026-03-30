@@ -161,7 +161,7 @@
             </div>
             <div class="relative">
                 <button id="donor-button"
-                    class="{{ $page == "donor" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
+                class="{{ request()->is('admin/donor*') ? 'text-[#25A8D6] montserrat-bold font-extrabold' : 'text-black font-medium' }} flex gap-2 items-center justify-center focus:outline-none">
 
                     <span>DONOR PROCESS</span>
 

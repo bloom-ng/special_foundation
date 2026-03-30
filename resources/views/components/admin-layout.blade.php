@@ -128,12 +128,12 @@
                 Partner Applications
             </a>
             <a href="/admin/donation-leads"
-                class="flex items-center {{ $page == "donation" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+            class="flex items-center {{ request()->is('admin/donation-leads*') ? 'active-nav-link' : '' }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-money-bill-wave mr-3"></i>
                 Prospective Donors
             </a>
             <a href="/admin/scholaship-donor"
-                class="flex items-center {{ $page == "scholaship-donor" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                class="flex items-center {{ request()->is("admin/scholaship-donor*") ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-money-bill mr-3"></i>
                 Scholaship Donors
             </a>
@@ -310,9 +310,14 @@
                     Partner Applications
                 </a>
                 <a href="/admin/donation-leads"
-                    class="flex items-center {{ $page == "donation" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
+    class="flex items-center {{ request()->is('admin/donation-leads*') ? 'active-nav-link' : '' }} text-white py-4 pl-4 nav-item">
                     <i class="fas fa-money-bill-wave mr-3"></i>
                     Prospective Donors
+                </a>
+                <a href="/admin/scholaship-donor"
+                    class="flex items-center {{ request()->is("admin/scholaship-donor*") ? "active-nav-link" : "" }} text-white py-4 pl-4 nav-item">
+                    <i class="fas fa-money-bill mr-3"></i>
+                    Scholaship Donors
                 </a>
                 <a href="/admin/project-schedules"
                     class="flex items-center {{ $page == "projects" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
