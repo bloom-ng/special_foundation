@@ -327,6 +327,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::delete('/campaigns/{campaign}', [CampaignController::class, 'destroy'])->name('admin.campaigns.destroy');
     Route::get('/campaign/{slug}', [CampaignController::class, 'show'])->name('campaign.show');
     Route::post('/campaign/{id}/layout', [CampaignController::class, 'updateLayout'])->name('admin.campaign.layout.update');
+    Route::post('/upload', [CampaignController::class, 'uploadImage'])->name('admin.builder.upload');
     Route::get('/admin/campaign/{campaign}/builder', [CampaignController::class, 'builder'])
     ->name('admin.campaigns.builder');
 

@@ -35,4 +35,6 @@ const app = createApp({});
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 
-app.mount("#app2");
+if (document.getElementById("app2")) {
+    app.mount("#app2");
+}

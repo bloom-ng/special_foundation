@@ -161,11 +161,6 @@ class CampaignController extends Controller
      */
     public function builder(Campaign $campaign)
     {
-        // Ensure layout is always a clean JSON string (handle legacy array casts)
-        if (empty($campaign->getRawOriginal('layout'))) {
-            $campaign->update(['layout' => json_encode([])]);
-        }
-
         return view('admin.campaigns.builder', compact('campaign'));
     }
 
@@ -187,7 +182,7 @@ class CampaignController extends Controller
             return response()->json(['status' => 'error', 'message' => 'Invalid JSON layout'], 422);
         }
 
-        $campaign->layout = $request->layout;
+        $campaign->layout = $decoded; // assign decoded array so the array cast encodes it correctly
         $campaign->save();
 
         return response()->json(['status' => 'saved']);
@@ -207,8 +202,9 @@ class CampaignController extends Controller
 
         $path = $request->file('image')->store('builder', 'public');
 
+        // Use a root-relative URL so it works on any port/domain
         return response()->json([
-            'url' => Storage::disk('public')->url($path),
+            'url' => '/storage/' . $path,
         ]);
     }
 }

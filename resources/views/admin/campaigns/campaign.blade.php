@@ -13,7 +13,7 @@
 @endphp
 
 @foreach ($layout as $section)
-    @include('campaigns.partials.section', ['section' => $section])
+    @include('partials.section', ['section' => $section])
 @endforeach
 
 @endsection

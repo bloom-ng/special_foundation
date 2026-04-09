@@ -12,7 +12,7 @@
             background: {{ $d['bgColor'] ?? '#1a1a2e' }};
             padding: 60px 32px;
             text-align: {{ $d['textAlign'] ?? 'center' }};
-            border-radius: 10px;
+            border-radius: 0px;
         ">
             <h1 style="margin:0 0 16px; font-size:clamp(28px,5vw,52px); font-weight:800; color:#fff; line-height:1.2;">
                 {{ $d['title'] ?? '' }}
@@ -33,13 +33,10 @@
 
     {{-- ── Text ── --}}
     @case('text')
-        @php
-            $fsMap = ['text-sm'=>'14px','text-base'=>'16px','text-lg'=>'18px','text-xl'=>'20px','text-2xl'=>'24px'];
-            $fs = $fsMap[$d['fontSize'] ?? 'text-base'] ?? '16px';
-        @endphp
         <p style="
             margin: 0;
-            font-size: {{ $fs }};
+            font-size: {{ $d['fontSize'] ?? '16px' }};
+            font-weight: {{ $d['fontWeight'] ?? '400' }};
             text-align: {{ $d['textAlign'] ?? 'left' }};
             color: {{ $d['color'] ?? 'inherit' }};
         ">{{ $d['content'] ?? '' }}</p>
@@ -132,7 +129,7 @@
             border-radius: 8px;
         ">
             @foreach ($kids as $child)
-                @include('campaigns.partials.block', ['block' => $child])
+                @include('partials.block', ['block' => $child])
             @endforeach
         </div>
     @break
@@ -148,7 +145,7 @@
             border-radius: 8px;
         ">
             @foreach ($kids as $child)
-                @include('campaigns.partials.block', ['block' => $child])
+                @include('partials.block', ['block' => $child])
             @endforeach
         </div>
     @break
@@ -162,7 +159,7 @@
         ">
             @foreach ($kids as $child)
                 <div style="flex:1; min-width:200px;">
-                    @include('campaigns.partials.block', ['block' => $child])
+                    @include('partials.block', ['block' => $child])
                 </div>
             @endforeach
         </div>

@@ -3,13 +3,12 @@
     page="campaign"
 >
 
-    @foreach ($campaign->content ?? [] as $block)
+    @php
+        $layout = is_array($campaign->layout) ? $campaign->layout : (json_decode($campaign->layout, true) ?? []);
+    @endphp
 
-        @includeIf('campaign.blocks.' . $block['type'], [
-            'data' => $block['data'],
-            'campaign' => $campaign
-        ])
-
+    @foreach ($layout as $section)
+        @include('partials.section', ['section' => $section])
     @endforeach
 
 </x-guest-layout>
