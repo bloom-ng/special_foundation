@@ -12,7 +12,7 @@
             </a>
         </div>
 
-       
+
         <div class="w-full mt-6">
             <div class="bg-white overflow-auto rounded-lg shadow">
 
@@ -104,6 +104,12 @@
                                             Edit
                                         </a>
 
+                                        {{-- BUILDER --}}
+                                        <a href="{{ route('admin.campaigns.builder', $campaign->id) }}"
+                                           class="bg-black text-white px-3 py-1 rounded hover:bg-gray-800">
+                                            Builder
+                                        </a>
+
                                         {{-- DELETE --}}
                                         <form action="{{ route('admin.campaigns.destroy', $campaign->id) }}"
                                               method="POST">
@@ -111,7 +117,7 @@
                                             @method('DELETE')
 
                                             <button type="submit"
-                                                    onclick="return confirm('Are you sure you want to delete this campaign?')"
+                                                    onclick="return confirm('Are you sure?')"
                                                     class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
                                                 Delete
                                             </button>

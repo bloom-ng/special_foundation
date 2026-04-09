@@ -27,6 +27,7 @@ class Campaign extends Model
         'secondary_cta_link',
         'show_in_menu',
         'menu_title',
+        'layout',
     ];
 
     protected $casts = [
@@ -36,5 +37,6 @@ class Campaign extends Model
         'show_in_menu' => 'boolean',
         'countdown_date' => 'datetime',
         'stats' => 'array',
+        'layout' => 'array',
     ];
 }

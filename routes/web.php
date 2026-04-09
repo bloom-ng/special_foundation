@@ -326,6 +326,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::put('/campaigns/{campaign}', [CampaignController::class, 'update'])->name('admin.campaigns.update');
     Route::delete('/campaigns/{campaign}', [CampaignController::class, 'destroy'])->name('admin.campaigns.destroy');
     Route::get('/campaign/{slug}', [CampaignController::class, 'show'])->name('campaign.show');
+    Route::post('/campaign/{id}/layout', [CampaignController::class, 'updateLayout'])->name('admin.campaign.layout.update');
+    Route::get('/admin/campaign/{campaign}/builder', [CampaignController::class, 'builder'])
+    ->name('admin.campaigns.builder');
 
     // Testimonials routes
     Route::get('/testimonials', [TestimonialController::class, 'index'])->name('admin.testimonials.index');
