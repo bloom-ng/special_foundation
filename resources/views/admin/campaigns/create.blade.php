@@ -30,7 +30,7 @@
                     placeholder="Campaign Title" required>
 
                 {{-- HERO --}}
-                <div class="border-t pt-4">
+                {{-- <div class="border-t pt-4">
                     <h2 class="font-bold">Hero Section</h2>
 
                     <input type="text" name="hero_title" value="{{ old("hero_title") }}"
@@ -39,10 +39,10 @@
                     <textarea name="hero_text" class="tinymce w-full bg-gray-200 p-2" placeholder="Hero Text">{{ old("hero_text") }}</textarea>
 
                     <input type="file" name="hero_image" class="mt-2">
-                </div>
+                </div> --}}
 
                 {{-- BANNER --}}
-                <div class="border-t pt-4">
+                {{-- <div class="border-t pt-4">
                     <h2 class="font-bold">Banner</h2>
 
                     <input type="file" name="banner_image" class="mb-2">
@@ -51,10 +51,10 @@
                         <input type="checkbox" name="show_banner" checked>
                         Show Banner
                     </label>
-                </div>
+                </div> --}}
 
                 {{-- COUNTDOWN --}}
-                <div class="border-t pt-4">
+                {{-- <div class="border-t pt-4">
                     <label>
                         <input type="checkbox" name="show_countdown">
                         Enable Countdown
@@ -62,10 +62,10 @@
 
                     <input type="datetime-local" name="countdown_date" class="w-full bg-gray-200 p-2 mt-2"
                         value="{{ old("countdown_date") }}">
-                </div>
+                </div> --}}
 
                 {{-- STATS --}}
-                <div class="border-t pt-4">
+                {{-- <div class="border-t pt-4">
                     <h2 class="font-bold mb-2">Stats</h2>
 
                     <div id="stats-container" class="space-y-4"></div>
@@ -73,15 +73,15 @@
                         + Add Stat
                     </button>
                 </div>
-                <input type="hidden" name="stats" id="stats-input">
+                <input type="hidden" name="stats" id="stats-input"> --}}
 
                 {{-- TESTIMONIAL --}}
-                <div class="border-t pt-4">
+                {{-- <div class="border-t pt-4">
                     <textarea name="testimonial" class="tinymce w-full bg-gray-200 p-2" placeholder="Testimonial">{{ old("testimonial") }}</textarea>
-                </div>
+                </div> --}}
 
                 {{-- CTA --}}
-                <div class="border-t pt-4 space-y-2">
+                {{-- <div class="border-t pt-4 space-y-2">
                     <input name="primary_cta_text" value="{{ old("primary_cta_text") }}"
                         class="w-full bg-gray-200 p-2 rounded" placeholder="Primary CTA Text">
 
@@ -93,7 +93,7 @@
 
                     <input name="secondary_cta_link" value="{{ old("secondary_cta_link") }}"
                         class="w-full bg-gray-200 p-2 rounded" placeholder="Secondary CTA Link">
-                </div>
+                </div> --}}
 
                 {{-- MENU --}}
                 <div class="border-t pt-4">
@@ -107,14 +107,14 @@
                 </div>
 
                 {{-- SECTIONS --}}
-                <div class="border-t pt-4">
+                {{-- <div class="border-t pt-4">
                     <h2 class="font-bold mb-2">Sections</h2>
                     <div id="sections-container" class="space-y-4"></div>
                     <button type="button" id="add-section" class="bg-green-500 text-white px-4 py-2 mt-2 rounded">
                         + Add Section
                     </button>
                 </div>
-                <input type="hidden" name="sections" id="sections-input">
+                <input type="hidden" name="sections" id="sections-input"> --}}
 
                 {{-- SUBMIT --}}
                 <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded">Create Campaign</button>

@@ -199,6 +199,7 @@ Auth::routes(['register' => false]);
 // Summer School volunteer registration routes (public)
 Route::get('/summer-school/{program}/register', [App\Http\Controllers\Admin\SummerSchoolController::class, 'showRegistration'])->name('summer-school.register');
 Route::post('/summer-school/{programId}/register', [App\Http\Controllers\Admin\SummerSchoolController::class, 'submitRegistration'])->name('summer-school.submit-registration');
+Route::get('/campaign/{slug}', [CampaignController::class, 'show'])->name('campaign.show');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Admin event routes
@@ -325,7 +326,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/campaigns/{campaign}/edit', [CampaignController::class, 'edit'])->name('admin.campaigns.edit');
     Route::put('/campaigns/{campaign}', [CampaignController::class, 'update'])->name('admin.campaigns.update');
     Route::delete('/campaigns/{campaign}', [CampaignController::class, 'destroy'])->name('admin.campaigns.destroy');
-    Route::get('/campaign/{slug}', [CampaignController::class, 'show'])->name('campaign.show');
+
     Route::post('/campaign/{id}/layout', [CampaignController::class, 'updateLayout'])->name('admin.campaign.layout.update');
     Route::post('/upload', [CampaignController::class, 'uploadImage'])->name('admin.builder.upload');
     Route::get('/admin/campaign/{campaign}/builder', [CampaignController::class, 'builder'])
