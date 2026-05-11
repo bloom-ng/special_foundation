@@ -218,7 +218,7 @@
 
             {{-- MEET THE FOUNDER START --}}
             <div class="flex flex-col lg:flex-row items-center justify-between my-14 gap-8 w-full">
-                <div class="basis-full lg:basis-1/2"><img src="/images/seyi_who_we_are.png" alt="Seyi Akinwale the Founder">
+                <div class="basis-full lg:basis-1/2"><img src="/images/seyi-image.jpeg" alt="Seyi Akinwale the Founder">
                 </div>
                 <div class="basis-full lg:basis-1/2 ">
                     <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl">Meet The
@@ -229,15 +229,15 @@
                             Seyi Akinwale
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                        Seyi is a solutionist who is passionate about developing sustainable solutions that 
-                        address societal challenges. He is a trained board member and has extensive experience 
-                        originating, developing, and executing infrastructure projects in Sub-Saharan Africa. 
-                        He is an alumnus of the prestigious University of Chicago Booth School of Business and 
+                        Seyi is a solutionist who is passionate about developing sustainable solutions that
+                        address societal challenges. He is a trained board member and has extensive experience
+                        originating, developing, and executing infrastructure projects in Sub-Saharan Africa.
+                        He is an alumnus of the prestigious University of Chicago Booth School of Business and
                         has corporate experience leading finance teams at General Electric and PricewaterhouseCoopers (PwC).
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                        His understanding of the key role education plays in national development inspired 
-                        him to establish the Foundation as a platform to improve the quality of leadership 
+                        His understanding of the key role education plays in national development inspired
+                        him to establish the Foundation as a platform to improve the quality of leadership
                         in Africa by increasing access to education for underprivileged children.”
                         </p>
                         <p class="border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6]">
