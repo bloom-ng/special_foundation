@@ -27,7 +27,7 @@
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl">
                         <h3 class="montserrat-bold text-lg">Fund a Year of Tuition</h3>
                         <p class="montserrat-thin mt-2">
-                            Give a child uninterrupted access to quality education for an entire academic year.
+                           With ₦300,000, you can give a child uninterrupted access to quality education for an entire academic year. Your support covers tuition and essential learning needs, helping a child stay in school, learn with confidence, and build a brighter future.
                         </p>
                     </div>
 
@@ -85,7 +85,7 @@
                                 <p>
                                     <span class="font-semibold">Sterling Bank:</span>  <span class="font-semibold">0131522788</span>
                                 </p>
-                                
+
                                 <p>
                                     <span class="font-bold">Zenith Bank:</span> <span class="font-semibold">1016058609</span>
                                 </p>
