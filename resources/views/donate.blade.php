@@ -26,28 +26,28 @@
 
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl">
                         <h3 class="montserrat-bold text-lg">Fund a Year of Tuition</h3>
-                        <p class="montserrat-thin mt-2">
+                        <p class="montserrat-medium mt-2">
                            With ₦300,000, you can give a child uninterrupted access to quality education for an entire academic year. Your support covers tuition and essential learning needs, helping a child stay in school, learn with confidence, and build a brighter future.
                         </p>
                     </div>
 
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl">
                         <h3 class=" montserrat-bold text-lg">Support a Summer School Student</h3>
-                        <p class="montserrat-thin mt-2">
+                        <p class="montserrat-medium mt-2">
                             Provide a child with 4–6 weeks of free learning, mentorship, and enrichment.
                         </p>
                     </div>
 
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl">
                         <h3 class="montserrat-bold text-lg">Support School Infrastructure</h3>
-                        <p class="montserrat-thin mt-2">
+                        <p class="montserrat-medium mt-2">
                             Help build and improve safe, well-equipped learning environments for children.
                         </p>
                     </div>
 
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl flex items-center justify-center">
                         <a href="#donate"
-                            class="text-white bg-[#25A8D6] px-6 py-3 rounded-full montserrat-thin text-sm">
+                            class="text-white bg-[#25A8D6] px-6 py-3 rounded-full montserrat-medium text-sm">
                             Support a Child’s Education
                         </a>
                     </div>
@@ -61,14 +61,14 @@
                     </h3>
 
                     <!-- Intro -->
-                    <p class="montserrat-thin text-base text-[#26225F] mb-6">
+                    <p class="montserrat-medium text-base text-[#26225F] mb-6">
                         Please donate via bank transfer. Choose the option that works best for you.
                         Every contribution helps expand educational opportunities.
                     </p>
 
                     <!-- Account Name -->
                     <div class="mb-8">
-                        <p class="montserrat-thin text-sm text-gray-600">Account Name</p>
+                        <p class="montserrat-medium text-sm text-gray-600">Account Name</p>
                         <p class="montserrat-medium text-lg text-[#26225F]">
                             The Special Youth Leadership Foundation
                         </p>
