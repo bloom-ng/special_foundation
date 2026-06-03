@@ -100,7 +100,7 @@
                         <dt class="text-sm font-medium leading-6 text-gray-900">Beneficiary Image</dt>
                         <dd class="mt-1 sm:col-span-2 sm:mt-0">
                             @if ($application->beneficiary_image)
-                                <img src="{{ asset("storage/" . $application->beneficiary_image) }}"
+                                <img src="{{ $application->beneficiaryImageUrl() }}"
                                     class="w-48 h-48 object-cover rounded-xl border shadow-md" alt="Beneficiary Image">
                             @else
                                 <span class="text-gray-500 text-sm">No image uploaded</span>

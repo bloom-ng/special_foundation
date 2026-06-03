@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 
 use App\Models\BeneficiaryApplication;
-use App\Models\Newsletter;
+use App\Services\CloudinaryService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class BeneficiaryApplicationController extends Controller
 {
@@ -33,7 +34,7 @@ class BeneficiaryApplicationController extends Controller
             ->with('programmeMapping', BeneficiaryApplication::getProgrammeMapping());
     }
 
-    public function store(Request $request)
+    public function store(Request $request, CloudinaryService $cloudinary)
     {
         $this->validate($request, [
             'name' => 'required|string',
@@ -68,9 +69,22 @@ class BeneficiaryApplicationController extends Controller
         $application->class_grade = $request->class_grade;
 
         if ($request->hasFile('beneficiary_image')) {
-            $imagePath = $request->file('beneficiary_image')
-                ->store('beneficiaries', 'public');
-            $application->beneficiary_image = $imagePath;
+            if ($cloudinary->isConfigured()) {
+                try {
+                    $application->beneficiary_image = $cloudinary->uploadBeneficiaryImage(
+                        $request->file('beneficiary_image')
+                    );
+                } catch (\Throwable $e) {
+                    Log::error('Error uploading beneficiary image to Cloudinary: ' . $e->getMessage());
+
+                    return back()
+                        ->withErrors(['beneficiary_image' => 'We could not upload the beneficiary image. Please try again.'])
+                        ->withInput();
+                }
+            } else {
+                $application->beneficiary_image = $request->file('beneficiary_image')
+                    ->store('beneficiaries', 'public');
+            }
         }
 
         $application->save();

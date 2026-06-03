@@ -312,7 +312,7 @@
                 @enderror
             </div>
 
-            <input type="hidden" name="programme" value= "2">
+            <input type="hidden" name="programme" value= "5">
 
             <button type="submit"
                 class="text-white bg-[#26225F] px-20 py-2 rounded-full w-fit hover:bg-[#1b1947] transition">
@@ -338,4 +338,3 @@
         }
     }
 </script>
-

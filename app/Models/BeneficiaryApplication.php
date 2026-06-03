@@ -47,6 +47,19 @@ class BeneficiaryApplication extends Model
         ];
     }
 
+    public function beneficiaryImageUrl()
+    {
+        if (! $this->beneficiary_image) {
+            return null;
+        }
+
+        if (preg_match('/^https?:\/\//i', $this->beneficiary_image)) {
+            return $this->beneficiary_image;
+        }
+
+        return asset('storage/' . $this->beneficiary_image);
+    }
+
     public function toMappedArray()
     {
         return [
@@ -64,9 +77,7 @@ class BeneficiaryApplication extends Model
             'mother_occupation' => $this->mother_occupation,
             'school_name' => $this->school_name,
             'class_grade' => $this->class_grade,
-            'beneficiary_image' => $this->beneficiary_image
-                ? asset('storage/' . $this->beneficiary_image)
-                : null,
+            'beneficiary_image' => $this->beneficiaryImageUrl(),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
