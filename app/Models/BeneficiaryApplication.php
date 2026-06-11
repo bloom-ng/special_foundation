@@ -57,7 +57,19 @@ class BeneficiaryApplication extends Model
             return $this->beneficiary_image;
         }
 
-        return asset('storage/' . $this->beneficiary_image);
+        return url('storage/' . $this->beneficiaryImageStoragePath());
+    }
+
+    public function beneficiaryImageStoragePath()
+    {
+        if (! $this->beneficiary_image || preg_match('/^https?:\/\//i', $this->beneficiary_image)) {
+            return null;
+        }
+
+        $path = preg_replace('/^\/?storage\//i', '', $this->beneficiary_image);
+        $path = preg_replace('/^public\//i', '', $path);
+
+        return ltrim($path, '/');
     }
 
     public function toMappedArray()

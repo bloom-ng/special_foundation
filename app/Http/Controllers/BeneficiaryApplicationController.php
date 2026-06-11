@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 
 use App\Models\BeneficiaryApplication;
 use App\Services\CloudinaryService;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BeneficiaryApplicationController extends Controller
 {
@@ -108,5 +111,57 @@ class BeneficiaryApplicationController extends Controller
         $application = BeneficiaryApplication::find($id);
         $application->delete();
         return back()->with('success', 'Application Deleted');
+    }
+
+    public function downloadImage($id)
+    {
+        $application = BeneficiaryApplication::findOrFail($id);
+
+        if (! $application->beneficiary_image) {
+            return back()->with('error', 'No beneficiary image found.');
+        }
+
+        if (preg_match('/^https?:\/\//i', $application->beneficiary_image)) {
+            try {
+                $response = Http::timeout(30)->get($application->beneficiary_image);
+            } catch (\Throwable $e) {
+                Log::error('Error downloading remote beneficiary image: ' . $e->getMessage());
+
+                return back()->with('error', 'Could not download beneficiary image.');
+            }
+
+            if (! $response->successful()) {
+                return back()->with('error', 'Could not download beneficiary image.');
+            }
+
+            $extension = pathinfo(parse_url($application->beneficiary_image, PHP_URL_PATH) ?? '', PATHINFO_EXTENSION) ?: 'jpg';
+            $filename = $this->beneficiaryImageFilename($application, $extension);
+
+            return response()->streamDownload(
+                fn () => print $response->body(),
+                $filename,
+                ['Content-Type' => $response->header('Content-Type') ?: 'image/jpeg']
+            );
+        }
+
+        $path = $application->beneficiaryImageStoragePath();
+
+        if (! $path || ! Storage::disk('public')->exists($path)) {
+            return back()->with('error', 'Beneficiary image file was not found on the server.');
+        }
+
+        $extension = pathinfo($path, PATHINFO_EXTENSION) ?: 'jpg';
+
+        return Storage::disk('public')->download(
+            $path,
+            $this->beneficiaryImageFilename($application, $extension)
+        );
+    }
+
+    private function beneficiaryImageFilename(BeneficiaryApplication $application, string $extension): string
+    {
+        $name = Str::slug($application->name ?: 'beneficiary');
+
+        return $name . '-beneficiary-image.' . strtolower($extension);
     }
 }

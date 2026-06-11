@@ -252,6 +252,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Beneficiary Applications routes
     Route::get('/beneficiaries', [BeneficiaryApplicationController::class, 'index']);
     Route::get('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'show']);
+    Route::get('/beneficiaries/{id}/image/download', [BeneficiaryApplicationController::class, 'downloadImage']);
     Route::get('/beneficiaries/create', [BeneficiaryApplicationController::class, 'create']);
     Route::delete('/beneficiaries/{id}', [BeneficiaryApplicationController::class, 'destroy']);
 

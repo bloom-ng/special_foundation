@@ -100,8 +100,14 @@
                         <dt class="text-sm font-medium leading-6 text-gray-900">Beneficiary Image</dt>
                         <dd class="mt-1 sm:col-span-2 sm:mt-0">
                             @if ($application->beneficiary_image)
-                                <img src="{{ $application->beneficiaryImageUrl() }}"
-                                    class="w-48 h-48 object-cover rounded-xl border shadow-md" alt="Beneficiary Image">
+                                <div class="flex flex-col items-start gap-3">
+                                    <img src="{{ $application->beneficiaryImageUrl() }}"
+                                        class="w-48 h-48 object-cover rounded-xl border shadow-md" alt="Beneficiary Image">
+                                    <a href="/admin/beneficiaries/{{ $application->id }}/image/download"
+                                        class="inline-flex items-center rounded-lg bg-indigo-500 px-4 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition-all hover:bg-indigo-400">
+                                        <i class="fa fa-download mr-2"></i> Download Image
+                                    </a>
+                                </div>
                             @else
                                 <span class="text-gray-500 text-sm">No image uploaded</span>
                             @endif

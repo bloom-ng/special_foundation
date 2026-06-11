@@ -17,12 +17,17 @@
                                 See list of beneficiary applications
                             </p>
                         </div>
-                        <div>
+                        <div class="flex flex-wrap gap-2">
                             <a type="button" target="_blank" href="/admin/download/BeneficiaryApplication/csv"
                                 class="align-middle select-none font-sans font-bold text-center capitalize transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-indigo-500"
                                 type="button" data-ripple-light="true">
                                 <i class="fa fa-download mr-3"></i> Download CSV
                             </a>
+                            <!-- <a type="button" target="_blank" href="/admin/download/BeneficiaryApplication/xlsx"
+                                class="align-middle select-none font-sans font-bold text-center capitalize transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                                type="button" data-ripple-light="true">
+                                <i class="fa fa-download mr-3"></i> Download XLSX
+                            </a> -->
                         </div>
 
                     </div>
