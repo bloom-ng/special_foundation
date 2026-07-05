@@ -10,7 +10,7 @@ class TestimonialController extends Controller
 {
     public function index()
     {
-        $testimonials = Testimonial::latest()->get();
+        $testimonials = Testimonial::orderBy('sort_order', 'asc')->latest()->get();
         return view('admin.testimonials.index', compact('testimonials'));
     }
 
@@ -26,7 +26,8 @@ class TestimonialController extends Controller
             'role' => 'nullable|string|max:255',
             'quote' => 'required|string',
             'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
-            'status' => 'required|in:active,inactive'
+            'status' => 'required|in:active,inactive',
+            'sort_order' => 'nullable|integer'
         ]);
 
         $imagePath = $request->file('image')->store('testimonials', 'public');
@@ -37,6 +38,7 @@ class TestimonialController extends Controller
             'quote' => $validated['quote'],
             'image' => $imagePath,
             'status' => $validated['status'],
+            'sort_order' => $validated['sort_order'] ?? 0,
         ]);
 
         return redirect()->route('admin.testimonials.index')->with('success', 'Testimonial created successfully');
@@ -54,7 +56,8 @@ class TestimonialController extends Controller
             'role' => 'nullable|string|max:255',
             'quote' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
-            'status' => 'required|in:active,inactive'
+            'status' => 'required|in:active,inactive',
+            'sort_order' => 'nullable|integer'
         ]);
 
         $data = [
@@ -62,6 +65,7 @@ class TestimonialController extends Controller
             'role' => $validated['role'] ?? null,
             'quote' => $validated['quote'],
             'status' => $validated['status'],
+            'sort_order' => $validated['sort_order'] ?? 0,
         ];
 
         if ($request->hasFile('image')) {

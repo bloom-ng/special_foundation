@@ -1,5 +1,6 @@
 @php
     $menuCampaigns = \App\Models\Campaign::where("show_in_menu", true)->get();
+    $downloads = \App\Models\Download::latest()->get();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +107,7 @@
             }).showToast();
         </script>
     @endif
-    @if ($errors->any())
+    @if (isset($errors) && $errors->any())
         <div class="text-red-400 p-2 text-xs font-extralight">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -135,10 +136,13 @@
             </div>
         </div>
         <div id="menu"
-            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-6 xl:gap-14 lg:text-sm xl:text-sm montserrat-medium w-full lg:w-auto">
-            <a href="/"
-                class="{{ $page == "home" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}">HOME</a>
+            class="hidden grid lg:flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center gap-4 lg:gap-6 xl:gap-8 lg:text-sm xl:text-sm montserrat-medium w-full lg:w-auto">
+
+             <a class="{{ $page == "who_we_are" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
+                href="/who-we-are">WHO WE ARE</a>
+                
             <div class="relative">
+                
                 <button id="programs-button"
                     class="{{ $page == "programs" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
                     <span>PROGRAMS</span>
@@ -178,10 +182,6 @@
                         Scholarship</a>
                 </div>
             </div>
-            <a class="{{ $page == "who_we_are" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
-                href="/who-we-are">WHO
-                WE
-                ARE</a>
 
             <div class="relative">
                 <button id="communications-button"
@@ -199,9 +199,23 @@
                     <a href="/project" class="block px-4 py-2 text-black hover:bg-gray-200">Project Schedule</a>
                 </div>
             </div>
+
+            <div class="relative">
+                <button id="downloads-button"
+                    class="{{ $page == "downloads" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
+                    <span>PUBLICATIONS</span>
+                    <img id="downloads-icon" class="pt-1 transform transition-transform"
+                        src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
+                </button>
+                <div id="downloads-dropdown"
+                    class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20 w-40">
+                    @foreach ($downloads as $download)
+                        <a href="{{ Storage::url($download->url) }}" target="_blank" class="block px-4 py-2 text-black hover:bg-gray-200">{{ $download->name }}</a>
+                    @endforeach
+                </div>
+            </div>
             <a class="{{ $page == "get_involved" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
-                href="/get-involved">GET
-                INVOLVED</a>
+                href="/get-involved">GET INVOLVED</a>
             @foreach ($menuCampaigns as $campaign)
                 <a class="{{ request()->is("campaign/" . $campaign->slug) ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} uppercase"
                     href="{{ route("campaign.show", $campaign->slug) }}">
@@ -240,6 +254,10 @@
             const communicationsDropdown = document.getElementById('communications-dropdown');
             const communicationsIcon = document.getElementById('communications-icon');
 
+            const downloadsButton = document.getElementById('downloads-button');
+            const downloadsDropdown = document.getElementById('downloads-dropdown');
+            const downloadsIcon = document.getElementById('downloads-icon');
+
             // MOBILE MENU
             mobileMenuButton.addEventListener('click', function() {
                 menu.classList.toggle('hidden');
@@ -275,6 +293,29 @@
                 e.stopPropagation();
                 communicationsDropdown.classList.toggle('hidden');
                 communicationsIcon.classList.toggle('rotate-180');
+
+                programsDropdown.classList.add('hidden');
+                programsIcon.classList.remove('rotate-180');
+                donorDropdown.classList.add('hidden');
+                donorIcon.classList.remove('rotate-180');
+                if (downloadsDropdown) {
+                    downloadsDropdown.classList.add('hidden');
+                    downloadsIcon.classList.remove('rotate-180');
+                }
+            });
+
+            // DOWNLOADS
+            downloadsButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                downloadsDropdown.classList.toggle('hidden');
+                downloadsIcon.classList.toggle('rotate-180');
+
+                programsDropdown.classList.add('hidden');
+                programsIcon.classList.remove('rotate-180');
+                donorDropdown.classList.add('hidden');
+                donorIcon.classList.remove('rotate-180');
+                communicationsDropdown.classList.add('hidden');
+                communicationsIcon.classList.remove('rotate-180');
             });
 
             // CLICK OUTSIDE CLOSE
@@ -282,10 +323,12 @@
                 programsDropdown.classList.add('hidden');
                 donorDropdown.classList.add('hidden');
                 communicationsDropdown.classList.add('hidden');
+                if (downloadsDropdown) downloadsDropdown.classList.add('hidden');
 
                 programsIcon.classList.remove('rotate-180');
                 donorIcon.classList.remove('rotate-180');
                 communicationsIcon.classList.remove('rotate-180');
+                if (downloadsIcon) downloadsIcon.classList.remove('rotate-180');
             });
 
         });

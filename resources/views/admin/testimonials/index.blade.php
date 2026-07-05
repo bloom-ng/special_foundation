@@ -22,6 +22,7 @@
                         <tr>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Role</th>
+                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Order</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Status</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
                         </tr>
@@ -45,6 +46,7 @@
                                     </div>
                                 </td>
                                 <td class="text-left py-3 px-4">{{ $testimonial->role }}</td>
+                                <td class="text-left py-3 px-4">{{ $testimonial->sort_order }}</td>
                                 <td class="text-left py-3 px-4">
                                     <span class="px-2 py-1 rounded-full text-xs {{ $testimonial->status === 'active' ? 'bg-green-200 text-green-800' : 'bg-gray-200 text-gray-800' }}">
                                         {{ ucfirst($testimonial->status) }}

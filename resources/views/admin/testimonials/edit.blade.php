@@ -89,6 +89,21 @@
                             <p class="text-red-500 text-xs italic">{{ $message }}</p>
                         @enderror
                     </div>
+
+                    <div class="w-full px-3 mb-6">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="sort_order">
+                            Sort Order (lower numbers appear first)
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border @error('sort_order') border-red-500 @enderror rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                               id="sort_order"
+                               type="number"
+                               name="sort_order"
+                               value="{{ old('sort_order', $testimonial->sort_order) }}"
+                               required>
+                        @error('sort_order')
+                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
                 </div>
 
                 <div class="flex items-center justify-end">

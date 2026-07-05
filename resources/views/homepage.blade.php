@@ -161,7 +161,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-4">
-                        {{-- 10,165+ --}}0
+                        {{-- 11,071+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
@@ -173,7 +173,7 @@
             <div class="pb-10">
                 <div class="flex">
                     <h1 class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] pb-3 odometer-5">
-                        {{-- 14+ --}}0
+                        {{-- 15+ --}}0
                     </h1>
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>

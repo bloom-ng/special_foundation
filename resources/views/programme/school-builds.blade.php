@@ -38,7 +38,7 @@
             </div>
             <div class="w-full lg:w-1/2 rounded-2xl">
                 {{-- <img src="/images/school_build_1.png" alt=""> --}}
-                <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/AFecLWwg5tc?si=glsyG9btuLHvsWgG"
+                <iframe class="w-full h-[315px]" src="https://www.youtube.com/embed/Mm8ZZWhKoXU"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>

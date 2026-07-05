@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl flex items-center justify-center">
-                        <a href="#donate"
+                        <a href="https://paystack.shop/pay/ejyy1q12rf"
                             class="text-white bg-[#25A8D6] px-6 py-3 rounded-full montserrat-medium text-sm">
                             Support a Child’s Education
                         </a>

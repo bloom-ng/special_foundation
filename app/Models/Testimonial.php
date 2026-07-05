@@ -15,5 +15,6 @@ class Testimonial extends Model
         'quote',
         'image',
         'status',
+        'sort_order',
     ];
 }
