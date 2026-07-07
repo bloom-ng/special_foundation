@@ -39,19 +39,19 @@
                         autoplay-delay="8000" autoplay-disable-on-interaction="false" class="w-full max-w-md">
                         <swiper-slide>
                             <div>
-                                <img src="/images/AMINA.png">
+                                <img src="/images/amina-inspire.PNG">
                             </div>
                         </swiper-slide>
 
                         <swiper-slide>
                             <div>
-                                <img src="/images/GRACE.png" c>
+                                <img src="/images/grace-special.PNG" c>
                             </div>
                         </swiper-slide>
 
                         <swiper-slide>
                             <div>
-                                <img src="/images/JOHN.png">
+                                <img src="/images/john-inspire.PNG">
                             </div>
                         </swiper-slide>
 

@@ -43,19 +43,19 @@
                         class="w-full max-w-md">
                         <swiper-slide>
                             <div>
-                                <img src="/images/AISHA.png">
+                                <img src="/images/Aisha-spec.PNG">
                             </div>
                         </swiper-slide>
 
                         <swiper-slide>
                             <div>
-                                <img src="/images/DANIEL.png" c>
+                                <img src="/images/Daniel-Spec.PNG">
                             </div>
                         </swiper-slide>
 
                         <swiper-slide>
                             <div>
-                                <img src="/images/SAMUEL.png">
+                                <img src="/images/samuel-special.PNG">
                             </div>
                         </swiper-slide>
 
