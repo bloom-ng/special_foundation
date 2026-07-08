@@ -375,10 +375,10 @@
         createOdometer(odometer3, 24258);
 
         const odometer4 = document.querySelector(".odometer-4");
-        createOdometer(odometer4, 10165);
+        createOdometer(odometer4, 11071);
 
         const odometer5 = document.querySelector(".odometer-5");
-        createOdometer(odometer5, 14);
+        createOdometer(odometer5, 15);
 
         const meter1 = document.querySelector(".odometer-6");
         createOdometer(meter1, 500000);
