@@ -548,13 +548,13 @@
         {{-- OUR ACCOUNNTABILITY END --}}
 
         {{-- DOWNLOADS START --}}
-        <div class="w-full bg-[#25A8D6] p-10 lg:p-20">
+        <div id="downloads" class="w-full bg-[#25A8D6] p-10 lg:p-20">
             <h2 class="text-[#26225F] montserrat-bold text-4xl lg:text-3xl xl:text-4xl mb-4">Downloads
             </h2>
 
             <div class="w-full flex flex-wrap justify-start items-center gap-8">
                 @foreach ($downloads as $download)
-                    <a href="{{ Storage::url($download->url) }}"
+                    <a href="{{ Storage::url($download->url) }}" target="_blank"
                         class="rounded-full text-white montserrat-medium px-8 py-2 bg-[#26225F]">{{ $download->name }}</a>
                 @endforeach
             </div>

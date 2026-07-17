@@ -43,6 +43,7 @@ class DownloadController extends Controller
         $download->name = $request->name;
         $download->url = $path;
         $download->type = Download::TYPE_DEFAULT;
+        $download->show_on_homepage_dropdown = $request->has('show_on_homepage_dropdown');
         $download->save();
 
         return redirect('/admin/downloads');
@@ -54,6 +55,13 @@ class DownloadController extends Controller
         Storage::delete($download->url);
         $download->delete();
         return back()->with('success', 'Document Deleted');
+    }
+
+    public function toggleDropdown(Download $download)
+    {
+        $download->show_on_homepage_dropdown = !$download->show_on_homepage_dropdown;
+        $download->save();
+        return back()->with('success', 'Dropdown visibility updated');
     }
     
 }

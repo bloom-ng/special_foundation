@@ -239,6 +239,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/downloads', [DownloadController::class, 'index']);
     Route::get('/downloads/create', [DownloadController::class, 'create']);
     Route::post('/downloads', [DownloadController::class, 'store']);
+    Route::put('/downloads/{download}/toggle-dropdown', [DownloadController::class, 'toggleDropdown']);
     Route::delete('/downloads/{download}', [DownloadController::class, 'destroy']);
 
     // Project Schedules routes

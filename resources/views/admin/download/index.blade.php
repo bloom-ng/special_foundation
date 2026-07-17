@@ -72,6 +72,12 @@
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p
                                     class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
+                                    Show on Dropdown
+                                </p>
+                            </th>
+                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
+                                <p
+                                    class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
                                     URL
                                 </p>
                             </th>
@@ -86,17 +92,24 @@
                     <tbody class="text-gray-700 text-xs">
                         @foreach ($downloads as $download)
                         <tr>
-                            <td class="w-1/3 text-left py-3 px-4">
+                            <td class="w-1/4 text-left py-3 px-4">
                                 {{ $download->id }}
                             </td>
-                            <td class="w-1/3 text-left py-3 px-4">
+                            <td class="w-1/4 text-left py-3 px-4">
                                 {{ $download->name }}
                             </td>
-                            <td class="w-1/3 text-left py-3 px-4">
+                            <td class="w-1/4 text-left py-3 px-4">
+                                <form action="/admin/downloads/{{$download->id}}/toggle-dropdown" method="POST" style="display: inline;">
+                                    @csrf
+                                    @method('PUT')
+                                    <input type="checkbox" name="show_on_homepage_dropdown" value="1" onchange="this.form.submit()" {{ $download->show_on_homepage_dropdown ? 'checked' : '' }} class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 cursor-pointer">
+                                </form>
+                            </td>
+                            <td class="w-1/4 text-left py-3 px-4">
                                 <a href="{{ Storage::url($download->url) }}" class="text-indigo-600" target="_blank" >Link</a>
                             </td>
                            
-                            <td class="w-1/3 text-left py-3 px-4">
+                            <td class="w-1/4 text-left py-3 px-4">
                                 <form
                                     id="download-delete-{{$download->id}}"
                                     action="/admin/downloads/{{$download->id}}"

@@ -1,6 +1,6 @@
 @php
     $menuCampaigns = \App\Models\Campaign::where("show_in_menu", true)->get();
-    $downloads = \App\Models\Download::latest()->get();
+    $downloads = \App\Models\Download::where('show_on_homepage_dropdown', true)->latest()->take(3)->get();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -212,6 +212,7 @@
                     @foreach ($downloads as $download)
                         <a href="{{ Storage::url($download->url) }}" target="_blank" class="block px-4 py-2 text-black hover:bg-gray-200">{{ $download->name }}</a>
                     @endforeach
+                    <a href="/who-we-are#downloads" class="block px-4 py-2 text-black hover:bg-gray-200">Others</a>
                 </div>
             </div>
             <a class="{{ $page == "get_involved" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
