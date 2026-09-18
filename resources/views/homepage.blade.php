@@ -22,7 +22,7 @@
                     To</h3>
             @endif
             <div class="max-w-[100%] mx-auto">
-                <a href="{{ $activeEvent->link ? $activeEvent->link : route('events.register', $activeEvent->id) }}" class="block">    
+                <a href="{{ $activeEvent->link ? $activeEvent->link : route('events.register', $activeEvent->id) }}" class="block">
                     <div class="relative w-full h-0 pb-[25%] overflow-hidden">
                         @if ($activeEvent->image_width && $activeEvent->image_height)
                             <img src="{{ Storage::url($activeEvent->image) }}" alt="{{ $activeEvent->name }}"
@@ -58,7 +58,7 @@
                         document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
                             minutes + "m " + seconds + "s ";
 
-                        // If the count down is over, write some text 
+                        // If the count down is over, write some text
                         if (distance < 0) {
                             clearInterval(x);
                             document.getElementById("countdown").innerHTML = "EXPIRED";
@@ -94,8 +94,8 @@
                     </h1>
                     <div class="">
                         <p class="border-[#25A8D6] pl-5 border-l-[14px]">
-                            By reshaping young minds through access to quality learning and transformative mentorship, 
-                            we empower the next generation of African leaders to think boldly, act responsibly, 
+                            By reshaping young minds through access to quality learning and transformative mentorship,
+                            we empower the next generation of African leaders to think boldly, act responsibly,
                             and drive lasting change across their communities and the continent.
                             <!-- Founded by Seyi Akinwale in 2018 through his vision to improve the quality of leadership in
                             all spheres of governance in Africa and ensure the creation of a platform where more young
@@ -130,8 +130,7 @@
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
                 <p class="">
-                    Nigerian children directly and indirectly impacted by
-                    the foundation over the last 5 years
+                    Nigerian children directly and indirectly impacted
                 </p>
             </div>
             <div class="pb-10">
@@ -142,8 +141,7 @@
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
                 <p class="">
-                    Nigerian children are given access to education through
-                    the Inspire Scholarship Program yearly
+                    Nigerian children are given access to education through the Inspire Scholarship Program yearly
                 </p>
             </div>
             <div class="pb-10">
@@ -154,8 +152,7 @@
                     <span class="montserrat-bold text-[#26225F] text-[38px] leading-[45px] ml-1">+</span>
                 </div>
                 <p class="">
-                    Nigerian children access educational and vocational
-                    training through the free Summer School Program yearly
+                    Nigerian children access educational and vocational training through the free Summer School Program yearly
                 </p>
             </div>
             <div class="pb-10">
@@ -530,14 +527,14 @@
         <div class="text-left mb-16">
             <h2 class="montserrat-bold text-4xl md:text-[38px] md:leading-[45px] text-[#26225F] mb-4">What People Say</h2>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[2000px] mx-auto">
             @foreach($testimonials as $testimonial)
                 <div class="bg-white rounded-lg overflow-hidden border border-[#25A8D6]/10 transform transition-all duration-300">
                     <div class="p-6 ">
                         <div class="flex flex-col gap-4 items-center mb-4">
                             <img class="w-32 h-32 rounded-full object-cover border border-[#25A8D6]" src="{{ asset('storage/' . $testimonial->image) }}" alt="{{ $testimonial->name }} Testimonial">
-                            
+
                             <div class="ml-4">
                                 <h3 class="text-lg text-center font-semibold text-gray-800">{{ $testimonial->name }}</h3>
                                 @if(!empty($testimonial->role))

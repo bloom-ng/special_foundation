@@ -140,9 +140,9 @@
 
              <a class="{{ $page == "who_we_are" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
                 href="/who-we-are">WHO WE ARE</a>
-                
+
             <div class="relative">
-                
+
                 <button id="programs-button"
                     class="{{ $page == "programs" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
                     <span>PROGRAMS</span>
@@ -367,16 +367,16 @@
         };
 
         const odometer1 = document.querySelector(".odometer-1");
-        createOdometer(odometer1, 62623);
+        createOdometer(odometer1, 103758);
 
         const odometer2 = document.querySelector(".odometer-2");
-        createOdometer(odometer2, 619);
+        createOdometer(odometer2, 642);
 
         const odometer3 = document.querySelector(".odometer-3");
-        createOdometer(odometer3, 24258);
+        createOdometer(odometer3, 31737);
 
         const odometer4 = document.querySelector(".odometer-4");
-        createOdometer(odometer4, 11071);
+        createOdometer(odometer4, 11293);
 
         const odometer5 = document.querySelector(".odometer-5");
         createOdometer(odometer5, 15);
