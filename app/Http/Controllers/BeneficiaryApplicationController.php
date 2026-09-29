@@ -49,10 +49,15 @@ class BeneficiaryApplicationController extends Controller
             'date_of_birth' => 'nullable|date',
             'gender' => 'nullable|string',
             'state_of_origin' => 'nullable|string',
+            'lga' => 'nullable|string',
             'father_occupation' => 'nullable|string',
             'mother_occupation' => 'nullable|string',
             'school_name' => 'nullable|string',
             'class_grade' => 'nullable|string',
+            'orphanhood_status' => 'nullable|in:Yes,No',
+            'disability_status' => 'nullable|in:Yes,No',
+            'disability_details' => 'nullable|string',
+            'school_fees_cost' => 'nullable|numeric|min:0',
             'beneficiary_image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
@@ -66,10 +71,15 @@ class BeneficiaryApplicationController extends Controller
         $application->date_of_birth = $request->date_of_birth;
         $application->gender = $request->gender;
         $application->state_of_origin = $request->state_of_origin;
+        $application->lga = $request->lga;
         $application->father_occupation = $request->father_occupation;
         $application->mother_occupation = $request->mother_occupation;
         $application->school_name = $request->school_name;
         $application->class_grade = $request->class_grade;
+        $application->orphanhood_status = $request->orphanhood_status;
+        $application->disability_status = $request->disability_status;
+        $application->disability_details = $request->disability_details;
+        $application->school_fees_cost = $request->school_fees_cost;
 
         if ($request->hasFile('beneficiary_image')) {
             if ($cloudinary->isConfigured()) {

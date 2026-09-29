@@ -220,6 +220,17 @@
                 </div>
 
                 <div class="w-full relative">
+                    <input class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="lga"
+                        type="text" placeholder="Local Government Area" value="{{ old("lga") }}" required />
+
+                    @error("lga")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full relative">
                     <input class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="mother_occupation"
                         type="text" placeholder="Mother's Occupation" value="{{ old("mother_occupation") }}"
                         required />
@@ -228,8 +239,7 @@
                         <small class="text-red-200">{{ $message }}</small>
                     @enderror
                 </div>
-            </div>
-            <div class="flex flex-col lg:flex-row gap-4">
+
                 <div class="w-full relative">
                     <input class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="father_occupation"
                         type="text" placeholder="Father's Occupation" value="{{ old("father_occupation") }}"
@@ -239,12 +249,24 @@
                         <small class="text-red-200">{{ $message }}</small>
                     @enderror
                 </div>
+            </div>
 
+            <div class="flex flex-col lg:flex-row gap-4">
                 <div class="w-full relative">
                     <input class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="class_grade"
                         type="text" placeholder="Class Grade" value="{{ old("class_grade") }}" required />
 
                     @error("class_grade")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="w-full relative">
+                    <input class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="school_fees_cost"
+                        type="number" step="0.01" min="0" placeholder="Cost of School Fees"
+                        value="{{ old("school_fees_cost") }}" required />
+
+                    @error("school_fees_cost")
                         <small class="text-red-200">{{ $message }}</small>
                     @enderror
                 </div>
@@ -256,6 +278,42 @@
                     <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="area_of_residence" type="text"
                         placeholder="Area of Residence" value="{{ old("area_of_residence") }}" required />
                     @error("area_of_residence")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- ORPHANHOOD + DISABILITY -->
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <select class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="orphanhood_status" required>
+                        <option value="">Orphanhood Status</option>
+                        <option value="Yes" {{ old("orphanhood_status") == "Yes" ? "selected" : "" }}>Yes</option>
+                        <option value="No" {{ old("orphanhood_status") == "No" ? "selected" : "" }}>No</option>
+                    </select>
+                    @error("orphanhood_status")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="w-full">
+                    <select class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5 text-gray-500" name="disability_status" required>
+                        <option value="">Living with Disability Status</option>
+                        <option value="Yes" {{ old("disability_status") == "Yes" ? "selected" : "" }}>Yes</option>
+                        <option value="No" {{ old("disability_status") == "No" ? "selected" : "" }}>No</option>
+                    </select>
+                    @error("disability_status")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 pr-6 placeholder:text-xs py-3.5" name="disability_details" type="text"
+                        placeholder="Disability Details - if applicable, specify the nature of the disability, otherwise write N/A"
+                        value="{{ old("disability_details") }}" required />
+                    @error("disability_details")
                         <small class="text-red-200">{{ $message }}</small>
                     @enderror
                 </div>
