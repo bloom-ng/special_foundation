@@ -22,13 +22,23 @@ class CloudinaryService
 
     public function uploadBeneficiaryImage(UploadedFile $file): string
     {
+        return $this->uploadImage($file, (string) config('services.cloudinary.beneficiary_folder', 'beneficiaries'));
+    }
+
+    public function uploadSchoolBuildPhoto(UploadedFile $file): string
+    {
+        return $this->uploadImage($file, (string) config('services.cloudinary.school_build_folder', 'school-builds'));
+    }
+
+    public function uploadImage(UploadedFile $file, string $folder = ''): string
+    {
         if (! $this->isConfigured()) {
             throw new RuntimeException('Cloudinary is not configured.');
         }
 
         $cloudName = config('services.cloudinary.cloud_name');
         $timestamp = time();
-        $folder = trim((string) config('services.cloudinary.beneficiary_folder', 'beneficiaries'), '/');
+        $folder = trim($folder, '/');
         $params = [
             'timestamp' => $timestamp,
         ];

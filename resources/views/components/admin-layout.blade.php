@@ -143,6 +143,21 @@
                 <i class="fas fa-file-invoice mr-3"></i>
                 Prospective Volunteers
             </a>
+            <a href="/admin/mentorship-interests"
+                class="flex items-center {{ request()->is("admin/mentorship-interests*") ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-chalkboard-teacher mr-3"></i>
+                Mentorship Interests
+            </a>
+            <a href="/admin/school-build-interests"
+                class="flex items-center {{ request()->is("admin/school-build-interests*") ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-school mr-3"></i>
+                School Build Interests
+            </a>
+            <a href="/admin/summer-school-waitlist"
+                class="flex items-center {{ request()->is("admin/summer-school-waitlist*") ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-sun mr-3"></i>
+                Summer School Waitlist
+            </a>
             <a href="/admin/project-schedules"
                 class="flex items-center {{ $page == "projects" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
                 <i class="fas fa-calendar-alt mr-3"></i>

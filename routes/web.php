@@ -13,9 +13,12 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventEntryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\MediaMentionController;
+use App\Http\Controllers\MentorshipInterestController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PartnerApplicationController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SchoolBuildInterestController;
+use App\Http\Controllers\SummerSchoolWaitlistController;
 use App\Http\Controllers\ProjectScheduleController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\TestimonialController;
@@ -75,6 +78,9 @@ Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']
 Route::post('/partners', [PartnerApplicationController::class, 'store']);
 Route::post('/donation-lead', [DonationController::class, 'store']);
 Route::post('/volunteer', [VolunteerController::class, 'store']);
+Route::post('/mentorship-interest', [MentorshipInterestController::class, 'store'])->name('mentorship.interest.store');
+Route::post('/school-build-interest', [SchoolBuildInterestController::class, 'store'])->name('school.build.interest.store');
+Route::post('/summer-school-waitlist', [SummerSchoolWaitlistController::class, 'store'])->name('summer.school.waitlist.store');
 
 // Event registration routes (must be before admin routes)
 Route::get('/events/{event}/register', [EventController::class, 'showRegistration'])->name('events.register');
@@ -278,6 +284,21 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/volunteers/{id}', [VolunteerController::class, 'show']);
     Route::get('/volunteers/create', [VolunteerController::class, 'create']);
     Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy']);
+
+    // Mentorship/Career Day interest routes
+    Route::get('/mentorship-interests', [MentorshipInterestController::class, 'index']);
+    Route::get('/mentorship-interests/{id}', [MentorshipInterestController::class, 'show']);
+    Route::delete('/mentorship-interests/{id}', [MentorshipInterestController::class, 'destroy']);
+
+    // School Build interest routes
+    Route::get('/school-build-interests', [SchoolBuildInterestController::class, 'index']);
+    Route::get('/school-build-interests/{id}', [SchoolBuildInterestController::class, 'show']);
+    Route::delete('/school-build-interests/{id}', [SchoolBuildInterestController::class, 'destroy']);
+
+    // Summer School waitlist routes
+    Route::get('/summer-school-waitlist', [SummerSchoolWaitlistController::class, 'index']);
+    Route::get('/summer-school-waitlist/{id}', [SummerSchoolWaitlistController::class, 'show']);
+    Route::delete('/summer-school-waitlist/{id}', [SummerSchoolWaitlistController::class, 'destroy']);
 
     // Blog routes
     Route::get('/blogs', [PostController::class, 'index']);

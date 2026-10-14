@@ -36,6 +36,7 @@ return [
         'api_key' => env('CLOUDINARY_API_KEY'),
         'api_secret' => env('CLOUDINARY_API_SECRET'),
         'beneficiary_folder' => env('CLOUDINARY_BENEFICIARY_FOLDER', 'beneficiaries'),
+        'school_build_folder' => env('CLOUDINARY_SCHOOL_BUILD_FOLDER', 'school-builds'),
     ],
 
 ];

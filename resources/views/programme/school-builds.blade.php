@@ -77,5 +77,205 @@
         </div>
     </div>
 
-    <x-beneficiary-form programme="3" />
+    <div class="bg-[#25A8D6] px-8 lg:px-20 py-20">
+        <div>
+            <h1 class="text-[#26225F] text-[48px] leading-[52px] pb-2 montserrat-bold font-extrabold">
+                School Build Expression of Interest
+            </h1>
+            <p class="text-white montserrat-medium text-[20] font-semibold">
+                Fill in the form below to tell us about your school and we’d
+                get back to you as soon as possible.
+            </p>
+        </div>
+
+        <form method="POST" action="/school-build-interest" enctype="multipart/form-data"
+            class="py-10 flex flex-col gap-4">
+
+            @csrf
+
+            <!-- SCHOOL + CONTACT PERSON -->
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="school_name" type="text"
+                        placeholder="School Name" value="{{ old("school_name") }}" required />
+                    @error("school_name")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="contact_person"
+                        type="text" placeholder="Contact Person" value="{{ old("contact_person") }}" required />
+                    @error("contact_person")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- ROLE + EMAIL -->
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="role" type="text"
+                        placeholder="Role" value="{{ old("role") }}" required />
+                    @error("role")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="email" type="email"
+                        placeholder="Email Address" value="{{ old("email") }}" required />
+                    @error("email")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- CONTACT NUMBER + SCHOOL ADDRESS -->
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="contact_number"
+                        type="text" placeholder="Contact Number" value="{{ old("contact_number") }}" required />
+                    @error("contact_number")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="school_address"
+                        type="text" placeholder="School Address" value="{{ old("school_address") }}" required />
+                    @error("school_address")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- STATE + LGA -->
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="state" type="text"
+                        placeholder="State" value="{{ old("state") }}" required />
+                    @error("state")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="lga" type="text"
+                        placeholder="Local Government Area" value="{{ old("lga") }}" required />
+                    @error("lga")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- NUMBER OF STUDENTS -->
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full">
+                    <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5 text-gray-500"
+                        name="number_of_students" type="number" min="1" placeholder="Number of Students"
+                        value="{{ old("number_of_students") }}" required />
+                    @error("number_of_students")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- SCHOOL PROPERTY OWNERSHIP -->
+            <div class="flex flex-col lg:flex-row gap-4 pt-2">
+                <div class="w-full flex flex-col gap-3">
+                    <label class="text-white montserrat-medium font-semibold">School Property Ownership</label>
+                    <div class="flex flex-row flex-wrap gap-3">
+                        @foreach (\App\Models\SchoolBuildInterest::getOwnershipOptions() as $option)
+                            <label
+                                class="flex items-center gap-3 bg-white rounded-full px-6 py-3 cursor-pointer text-sm text-[#26225F]">
+                                <input type="checkbox" name="property_ownership[]" value="{{ $option }}"
+                                    class="accent-[#26225F] w-4 h-4"
+                                    {{ in_array($option, old("property_ownership", [])) ? "checked" : "" }} />
+                                {{ $option }}
+                            </label>
+                        @endforeach
+                    </div>
+                    @error("property_ownership")
+                        <small class="text-red-200">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <!-- WHAT DOES THE SCHOOL NEED -->
+            <div class="flex flex-col gap-2 pt-2">
+                <label class="text-white montserrat-medium font-semibold">
+                    What does the school need?
+                </label>
+                <input class="w-full rounded-full ps-6 placeholder:text-xs py-3.5" name="school_needs" type="text"
+                    placeholder="e.g. new classroom blocks, roofing, furniture, toilets, water supply"
+                    value="{{ old("school_needs") }}" required />
+                @error("school_needs")
+                    <small class="text-red-200">{{ $message }}</small>
+                @enderror
+            </div>
+
+            <!-- TELL US MORE -->
+            <div class="flex flex-col gap-2">
+                <label class="text-white montserrat-medium font-semibold">
+                    Tell us more about the school’s needs
+                </label>
+                <textarea class="w-full h-48 rounded-3xl ps-6 placeholder:text-xs py-3.5" name="needs_details"
+                    placeholder="Describe the current condition of the school and what would make the biggest difference"
+                    required>{{ old("needs_details") }}</textarea>
+                @error("needs_details")
+                    <small class="text-red-200">{{ $message }}</small>
+                @enderror
+            </div>
+
+            <!-- PHOTO UPLOAD -->
+            <div class="w-full flex flex-col gap-2">
+                <label class="text-white montserrat-medium font-semibold">Upload School Photos</label>
+
+                <label for="school_photos"
+                    class="cursor-pointer bg-white text-[#26225F] rounded-full px-6 py-3 text-center font-semibold hover:bg-gray-100 transition">
+                    Choose Photos
+                </label>
+
+                <input id="school_photos" name="photos[]" type="file" accept="image/*" multiple class="hidden"
+                    onchange="previewSchoolPhotos(event)" />
+
+                <small class="text-white/80 text-xs">You can upload up to 6 photos (JPG or PNG, max 4MB each).</small>
+
+                @error("photos")
+                    <small class="text-red-200">{{ $message }}</small>
+                @enderror
+                @error("photos.*")
+                    <small class="text-red-200">{{ $message }}</small>
+                @enderror
+
+                <!-- Previews -->
+                <div id="schoolPhotoPreviews" class="flex flex-row flex-wrap gap-3 mt-2"></div>
+            </div>
+
+            <button type="submit"
+                class="text-white bg-[#26225F] px-20 py-2 rounded-full w-fit hover:bg-[#1b1947] transition">
+                Submit
+            </button>
+
+        </form>
+    </div>
+
+    <script>
+        function previewSchoolPhotos(event) {
+            const previews = document.getElementById('schoolPhotoPreviews');
+            previews.innerHTML = '';
+
+            Array.from(event.target.files).slice(0, 6).forEach((file) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'w-28 h-28 object-cover rounded-2xl border-4 border-white shadow-lg';
+                    previews.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
 </x-guest-layout>
