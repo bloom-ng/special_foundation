@@ -85,7 +85,8 @@ class CMSController extends Controller
                                     return $query;
                                 })
                                 ->whereIn('type', [CMS::TYPE_TEAM, CMS::TYPE_BOARD])
-                                ->latest()
+                                ->orderBy('sort_order', 'asc')
+                                ->orderBy('id', 'asc')
                                 ->paginate();
 
 
@@ -113,6 +114,7 @@ class CMSController extends Controller
             'position' => ['nullable'],
             'description' => ['required'],
             'type' => ['required'],
+            'sort_order' => ['nullable','integer'],
         ]);
         
         $cms = new CMS;
@@ -123,6 +125,7 @@ class CMSController extends Controller
         $cms->slug = $request->position ?? $request->linkedInUrl;
         $cms->value = json_encode(['content' => $request->description, 'image' => $path]);
         $cms->type = $request->type;
+        $cms->sort_order = $request->sort_order ?? 0;
         $cms->save();
 
         return redirect('/admin/cms-data/teams');
@@ -138,6 +141,7 @@ class CMSController extends Controller
             'position' => ['nullable'],
             'description' => ['required'],
             'type' => ['required'],
+            'sort_order' => ['nullable','integer'],
         ]);
      
         $currentValue = json_decode($cms->value, true);
@@ -158,6 +162,7 @@ class CMSController extends Controller
             'image' => $imagePath
         ]);
         $cms->type = $request->type;
+        $cms->sort_order = $request->sort_order ?? 0;
         $cms->save();
 
         return redirect('/admin/cms-data/teams')->with('success', 'Updated');

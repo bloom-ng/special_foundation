@@ -53,6 +53,11 @@
                         <tr>
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
+                                    Order
+                                </p>
+                            </th>
+                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
+                                <p class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
                                     Name
                                 </p>
                             </th>
@@ -71,6 +76,9 @@
                     <tbody class="text-gray-700 text-xs">
                         @foreach ($teams as $team)
                             <tr>
+                                <td class="w-1/4 text-left py-3 px-4 font-bold">
+                                    {{ $team->sort_order }}
+                                </td>
                                 <td class="w-1/4 text-left py-3 px-4">
                                     {{ $team->name }}
                                 </td>

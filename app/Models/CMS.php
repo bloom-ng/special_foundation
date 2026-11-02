@@ -15,6 +15,7 @@ class CMS extends Model
         'name',
         'type',
         'value',
+        'sort_order',
     ];
 
     const TYPE_TEXT = 1;
@@ -272,6 +273,8 @@ class CMS extends Model
     public static function getDynamicTeams()
     {
         return self::where('type', self::TYPE_TEAM)
+            ->orderBy('sort_order', 'asc')
+            ->orderBy('id', 'asc')
             ->get()
             ->map(function($team) {
                 $value = json_decode($team->value, true);
@@ -290,6 +293,8 @@ class CMS extends Model
     public static function getDynamicBoards()
     {
         return self::where('type', self::TYPE_BOARD)
+            ->orderBy('sort_order', 'asc')
+            ->orderBy('id', 'asc')
             ->get()
             ->map(function($board) {
                 $value = json_decode($board->value, true);

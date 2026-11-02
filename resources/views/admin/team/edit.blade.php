@@ -48,6 +48,17 @@
                         </div>
 
                         <div class="pb-2">
+                            <label class="block text-sm pb-1" for="sort_order">Display Order (lower numbers appear first)</label>
+                            <input class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 "
+                                    id="sort_order" name="sort_order" type="number"
+                                    value="{{ old('sort_order', $cms->sort_order) }}"
+                                    placeholder="0" aria-label="Display Order">
+                            @error('sort_order')
+                                <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="pb-2">
                             <label class="block text-sm pb-1" for="type">Team Type</label>
                             <select class="px-2 block ring-1 ring-inset ring-gray-300 w-full border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
                                     id="type" name="type" required>
