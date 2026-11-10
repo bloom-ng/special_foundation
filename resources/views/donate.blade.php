@@ -125,12 +125,12 @@
                     <div class="flex flex-col sm:flex-row gap-6 mt-10">
 
                         <a class="text-white font-light py-[15px] px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm md:text-lg text-center"
-                            href="https://paystack.com/pay/ejyy1q12rf" target="_blank">
+                            href="https://paystack.shop/pay/h34dhapt3d" target="_blank">
                             DONATE ONLINE (NGN)
                         </a>
 
                         <a class="text-white font-light py-[15px] px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm md:text-lg text-center"
-                            href="https://paystack.com/pay/md1d9s2p91" target="_blank">
+                            href="https://paystack.shop/pay/p3ha2q123l" target="_blank">
                             DONATE ONLINE (USD)
                         </a>
 
