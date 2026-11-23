@@ -32,7 +32,9 @@
             </div>
 
             <div class="w-full lg:w-[60%]">
-                <img src="{{ Storage::url($cloud->value) }}" class="" alt="Our Partners">
+                @if ($cloud?->value)
+                    <img src="{{ Storage::url($cloud->value) }}" class="" alt="Our Partners">
+                @endif
             </div>
         </div>
         {{-- PARTNER WITH US END --}}

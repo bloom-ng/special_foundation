@@ -14,6 +14,7 @@ class CMS extends Model
         'slug',
         'name',
         'type',
+        'status',
         'value',
         'sort_order',
     ];
@@ -273,6 +274,7 @@ class CMS extends Model
     public static function getDynamicTeams()
     {
         return self::where('type', self::TYPE_TEAM)
+            ->where('status', 'active')
             ->orderBy('sort_order', 'asc')
             ->orderBy('id', 'asc')
             ->get()
@@ -293,6 +295,7 @@ class CMS extends Model
     public static function getDynamicBoards()
     {
         return self::where('type', self::TYPE_BOARD)
+            ->where('status', 'active')
             ->orderBy('sort_order', 'asc')
             ->orderBy('id', 'asc')
             ->get()

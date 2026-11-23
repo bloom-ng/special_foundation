@@ -47,7 +47,7 @@
     <div class="bg-[#25A8D6] px-8 lg:px-20 py-20">
         <div>
             <h1 class="text-[#26225F] text-[48px] pb-2 montserrat-bold font-extrabold">
-                Express Interest
+               Expression of Interest
             </h1>
             <p class="text-white montserrat-medium text-[20] font-semibold">
                 Fill in the form below to express interest in hosting a Mentorship/Career Day

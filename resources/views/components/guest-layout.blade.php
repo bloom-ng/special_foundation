@@ -215,8 +215,19 @@
                     <a href="/who-we-are#downloads" class="block px-4 py-2 text-black hover:bg-gray-200">Others</a>
                 </div>
             </div>
-            <a class="{{ $page == "get_involved" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }}"
-                href="/get-involved">GET INVOLVED</a>
+            <div class="relative">
+                <button id="involved-button"
+                    class="{{ $page == "get_involved" ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} flex gap-2 items-center justify-center focus:outline-none">
+                    <span>GET INVOLVED</span>
+                    <img id="involved-icon" class="pt-1 transform transition-transform"
+                        src="/images/collapse-arrow.svg" alt="Collapse Arrow" />
+                </button>
+                <div id="involved-dropdown"
+                    class="hidden absolute bg-white shadow-md mt-2 rounded-lg z-20 w-52">
+                    <a href="/get-involved" class="block px-4 py-2 text-black hover:bg-gray-200">Get Involved</a>
+                    <a href="/ways-to-support" class="block px-4 py-2 text-black hover:bg-gray-200">Ways to Support</a>
+                </div>
+            </div>
             @foreach ($menuCampaigns as $campaign)
                 <a class="{{ request()->is("campaign/" . $campaign->slug) ? "text-[#25A8D6] montserrat-bold font-extrabold" : "text-black font-medium" }} uppercase"
                     href="{{ route("campaign.show", $campaign->slug) }}">
@@ -258,6 +269,27 @@
             const downloadsButton = document.getElementById('downloads-button');
             const downloadsDropdown = document.getElementById('downloads-dropdown');
             const downloadsIcon = document.getElementById('downloads-icon');
+
+            const involvedButton = document.getElementById('involved-button');
+            const involvedDropdown = document.getElementById('involved-dropdown');
+            const involvedIcon = document.getElementById('involved-icon');
+
+            if (involvedButton) {
+                involvedButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    involvedDropdown.classList.toggle('hidden');
+                    involvedIcon.classList.toggle('rotate-180');
+
+                    programsDropdown.classList.add('hidden');
+                    programsIcon.classList.remove('rotate-180');
+                    donorDropdown.classList.add('hidden');
+                    donorIcon.classList.remove('rotate-180');
+                    communicationsDropdown.classList.add('hidden');
+                    communicationsIcon.classList.remove('rotate-180');
+                    downloadsDropdown.classList.add('hidden');
+                    downloadsIcon.classList.remove('rotate-180');
+                });
+            }
 
             // MOBILE MENU
             mobileMenuButton.addEventListener('click', function() {
@@ -325,11 +357,13 @@
                 donorDropdown.classList.add('hidden');
                 communicationsDropdown.classList.add('hidden');
                 if (downloadsDropdown) downloadsDropdown.classList.add('hidden');
+                if (involvedDropdown) involvedDropdown.classList.add('hidden');
 
                 programsIcon.classList.remove('rotate-180');
                 donorIcon.classList.remove('rotate-180');
                 communicationsIcon.classList.remove('rotate-180');
                 if (downloadsIcon) downloadsIcon.classList.remove('rotate-180');
+                if (involvedIcon) involvedIcon.classList.remove('rotate-180');
             });
 
         });

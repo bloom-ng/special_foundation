@@ -1,4 +1,4 @@
-<x-guest-layout title="Programs - Inspire Scholarship" page="programs">
+<x-guest-layout title="Sponsor an Inspire Scholar" page="programs">
     <style>
         swiper-slide {
             transition: transform 10s ease, opacity 0.3s ease;
@@ -141,11 +141,15 @@
 
             <!-- SECTION 2 -->
             <h3 class="font-bold text-[#26225F] text-lg">Sponsorship Details</h3>
+            <p class="montserrat-light text-sm text-[#26225F] -mt-3">
+                Sponsorship costs <span class="font-semibold">&#8358;300,000 per scholar per year</span>,
+                or <span class="font-semibold">&#8358;100,000 per term</span>.
+            </p>
 
             <!-- CHILDREN + AGE -->
             <div class="flex flex-col lg:flex-row gap-4">
                 <input class="w-full rounded-full ps-6 py-3.5 placeholder:text-xs"
-                    name="children_count" type="number" placeholder="Number of children">
+                    name="children_count" type="number" min="1" placeholder="Number of scholars">
 
                 <input class="w-full rounded-full ps-6 py-3.5 placeholder:text-xs"
                     name="preferred_age" type="text" placeholder="Preferred age/class (optional)">

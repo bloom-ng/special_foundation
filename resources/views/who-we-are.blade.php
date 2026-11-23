@@ -225,8 +225,11 @@
                         Founder</h2>
                     <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light font-normal">
 
-                        <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6] font-bold">
+                        <p class="pb-1 border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6] font-bold">
                             Seyi Akinwale
+                        </p>
+                        <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px] text-[#26225F] montserrat-semibold uppercase tracking-wide text-xs">
+                            Founder
                         </p>
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         Seyi is a solutionist who is passionate about developing sustainable solutions that
@@ -238,11 +241,11 @@
                         <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         His understanding of the key role education plays in national development inspired
                         him to establish the Foundation as a platform to improve the quality of leadership
-                        in Africa by increasing access to education for underprivileged children.”
+                        in Africa by increasing access to education for underprivileged children.
                         </p>
-                        <p class="border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6]">
-                            .. Every Child is SPECIAL, and it is our joint responsibility to unearth the unique
-                            possibilities in them...
+                        <p class="border-[#25A8D6] pl-5 border-l-[14px] text-[#25A8D6] italic">
+                            &ldquo;Every Child is SPECIAL, and it is our joint responsibility to unearth the unique
+                            possibilities in them.&rdquo;
                         </p>
                     </div>
                 </div>
@@ -251,194 +254,73 @@
         </div>
 
         {{-- MEET THE ADVISORY BOARD START --}}
+        @if (count($boards))
         <div class="w-full">
             <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
                 Meet The Advisory Board
             </div>
 
-            {{-- MOBILE VIEW START --}}
             <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="flex md:hidden flex-row gap-12 pb-16">
+                breakpoints='{"768":{"slidesPerView":3},"1280":{"slidesPerView":4},"1536":{"slidesPerView":5}}'
+                class="flex flex-row gap-12 pb-16">
                 @foreach ($boards as $index => $board)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-8 rounded-3xl board-img">
+                    <swiper-slide>
+                        <div class="py-10 px-6 md:px-8 rounded-3xl board-img">
                             <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
-                                class="w-[150px] max-w-[230px] h-52" data-index="{{ $index }}">
-                            <div class="bg-[#26225F] w-[150px] max-w-[230px] h-24  flex  items-center p-2 py-4 -mt-10 z-20 rounded-b-3xl"
+                                class="w-[150px] md:w-[230px] 2xl:w-[300px] h-52 md:h-72 2xl:h-96 object-cover rounded-t-3xl cursor-pointer"
+                                role="button" tabindex="0"
+                                aria-label="Read more about {{ $board['name'] }}"
+                                data-index="{{ $index }}">
+                            <div class="bg-[#26225F] w-[150px] md:w-[230px] 2xl:w-[300px] min-h-[4.5rem] md:min-h-[5rem] flex items-center gap-2 p-3 md:p-4 pt-8 md:pt-10 -mt-10 z-20 rounded-b-3xl"
                                 style="position: relative;">
-                                <a href="{{ $board['link'] }}">
-                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
+                                <a href="{{ $board['link'] }}" target="_blank" rel="noopener noreferrer"
+                                    aria-label="{{ $board['name'] }} on LinkedIn">
+                                    <img src="/images/Linkedin.png" alt="LinkedIn">
                                 </a>
-                                <h5 class="montserrat-bold text-[#FFFFFF] text-xs ml-1 ">{{ $board['name'] }}</h5>
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-xs md:text-lg xl:text-xl">
+                                    {{ $board['name'] }}</h3>
                             </div>
                         </div>
                     </swiper-slide>
                 @endforeach
             </swiper-container>
-            {{-- MOBILE VIEW END --}}
-
-            {{-- TABLET VIEW START --}}
-            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden md:flex xl:hidden flex-row gap-12 pb-16">
-                @foreach ($boards as $index => $board)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-8 rounded-3xl board-img">
-                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
-                                class="w-[230px] max-w-[280px] h-72" data-index="{{ $index }}">
-                            <div class="bg-[#26225F] w-[230px] max-w-[280px] flex  items-center p-4 -mt-10 z-20 rounded-b-3xl"
-                                style="position: relative;">
-                                <a href="{{ $board['link'] }}">
-                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                </a>
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-lg ml-3 ">{{ $board['name'] }}</h3>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- TABLET VIEW END --}}
-
-            {{-- SMALL PC VIEW START --}}
-            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden lg:hidden xl:flex 2xl:hidden flex-row gap-12 pb-16">
-                @foreach ($boards as $index => $board)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-6 rounded-3xl board-img ">
-                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
-                                class="w-[230px] max-w-[300px] h-72" data-index="{{ $index }}">
-
-                            <div class="bg-[#26225F] w-[230px] max-w-[300px] flex  items-center p-4 -mt-10 z-20 rounded-b-3xl"
-                                style="position: relative;">
-                                <a href="{{ $board['link'] }}">
-                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                </a>
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl ml-3 ">{{ $board['name'] }}</h3>
-                            </div>
-
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- SMALL PC VIEW END --}}
-
-            {{-- LARGE PC VIEW START --}}
-            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden xl:hidden 2xl:flex flex-row gap-12 pb-16">
-                @foreach ($boards as $index => $board)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-6 rounded-3xl board-img">
-                            <img loading="lazy" src="{{ $board['list_image'] }}" alt="{{ $board['name'] }}"
-                                class="w-[300px] max-w-[400px] h-96" data-index="{{ $index }}">
-                            <div class="bg-[#26225F] flex w-[300px] max-w-[400px] items-center p-4 -mt-10 z-20 rounded-b-3xl"
-                                style="position: relative;">
-                                <a href="{{ $board['link'] }}">
-                                    <img src="/images/Linkedin.png" alt="Linkedin Icon">
-                                </a>
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl ml-3 ">{{ $board['name'] }}</h3>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- LARGE PC VIEW END --}}
 
         </div>
+        @endif
         {{-- MEET THE ADVISORY BOARD END --}}
 
         {{-- MEET THE TEAM START --}}
+        @if (count($teams))
         <div class="w-full">
             <div class="mx-10 lg:mx-20 pt-20 lg:pb-12 text-[#26225F] montserrat-bold text-[38px] leading-[45px]">
                 Meet The Team
             </div>
 
-            {{-- MOBILE VIEW START --}}
             <swiper-container slides-per-view="2" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="flex md:hidden flex-row gap-12 pb-16">
+                breakpoints='{"768":{"slidesPerView":3},"1280":{"slidesPerView":4},"1536":{"slidesPerView":5}}'
+                class="flex flex-row gap-12 pb-16">
                 @foreach ($teams as $index => $team)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-8 rounded-3xl team-img">
+                    <swiper-slide>
+                        <div class="py-10 px-6 md:px-8 rounded-3xl team-img">
                             <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="w-[150px] max-w-[230px] h-52" data-index="{{ $index }}">
-
-                            <div class="bg-[#25A8D6] flex-col w-[150px] max-w-[230px] h-28 items-center p-2 -mt-10 z-20 rounded-b-3xl"
+                                class="w-[150px] md:w-[230px] 2xl:w-[300px] h-52 md:h-72 2xl:h-80 object-cover rounded-t-3xl cursor-pointer"
+                                role="button" tabindex="0"
+                                aria-label="Read more about {{ $team['name'] }}"
+                                data-index="{{ $index }}">
+                            <div class="bg-[#25A8D6] flex flex-col justify-center w-[150px] md:w-[230px] 2xl:w-[300px] min-h-[5.5rem] md:min-h-[6.25rem] items-center p-3 md:p-4 pt-8 md:pt-10 -mt-10 z-20 rounded-b-3xl"
                                 style="position: relative;">
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-sm text-center ">{{ $team['name'] }}
-                                </h3>
-                                <h3 class="font-montserrat  text-[#FFFFFF] text-xs text-center ">
+                                <h3 class="montserrat-bold text-[#FFFFFF] text-sm md:text-base 2xl:text-xl text-center">
+                                    {{ $team['name'] }}</h3>
+                                <h3 class="font-montserrat text-[#FFFFFF] text-xs md:text-sm 2xl:text-lg text-center">
                                     {{ $team['position'] }}</h3>
                             </div>
                         </div>
                     </swiper-slide>
                 @endforeach
             </swiper-container>
-            {{-- MOBILE VIEW END --}}
-
-            {{-- TABLET VIEW START --}}
-            <swiper-container slides-per-view="3" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden md:flex xl:hidden flex-row gap-12 pb-16">
-                @foreach ($teams as $index => $team)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-8 rounded-3xl team-img">
-                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="w-[230px] max-w-[280px] h-76" data-index="{{ $index }}">
-                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[280px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl"
-                                style="position: relative;">
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}
-                                </h3>
-                                <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">
-                                    {{ $team['position'] }}</h3>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- TABLET VIEW END --}}
-
-            {{-- SMALL PC VIEW START --}}
-            <swiper-container slides-per-view="4" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden lg:hidden xl:flex 2xl:hidden flex-row gap-12 pb-16">
-                @foreach ($teams as $index => $team)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-6 rounded-3xl team-img">
-                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="w-[230px] max-w-[300px] h-76" data-index="{{ $index }}">
-                            <div class="bg-[#25A8D6] flex-col w-[230px] max-w-[300px] h-28  items-center p-4 -mt-10 z-20 rounded-b-3xl"
-                                style="position: relative;">
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-md text-center ">{{ $team['name'] }}
-                                </h3>
-                                <h3 class="font-montserrat  text-[#FFFFFF] text-sm text-center ">
-                                    {{ $team['position'] }}</h3>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- SMALL PC VIEW END --}}
-
-            {{-- LARGE PC VIEW START --}}
-            <swiper-container slides-per-view="5" speed="500" loop="true" autoplay="true" css-mode="true"
-                class="hidden xl:hidden 2xl:flex flex-row gap-12 pb-16">
-                @foreach ($teams as $index => $team)
-                    <swiper-slide class="">
-                        <div class=" py-10 px-6 rounded-3xl team-img">
-                            <img loading="lazy" src="{{ $team['list_image'] }}" alt="{{ $team['name'] }}"
-                                class="max-w-[300px] w-[400px]  h-80" data-index="{{ $index }}">
-
-                            <div class="bg-[#25A8D6] flex-col w-[300px] max-w-[400px] h-32  items-center p-4 -mt-10 z-20 rounded-b-3xl"
-                                style="position: relative;">
-
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-xl text-center ">{{ $team['name'] }}
-                                </h3>
-                                <h3 class="montserrat-bold text-[#FFFFFF] text-lg text-center ">
-                                    {{ $team['position'] }}</h3>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                @endforeach
-            </swiper-container>
-            {{-- LARGE PC VIEW END --}}
 
         </div>
+        @endif
         {{-- MEET THE TEAM END --}}
 
         {{-- HOW WE WORK START --}}
@@ -449,10 +331,10 @@
                 <div class="pt-6 md:text-sm text-xs xl:text-lg xl:leading-[24px] montserrat-light font-normal">
 
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
-                        Our strategy is anchored on three pillars which are Quality, Life Long Development and Access.
+                        Our strategy is anchored on three pillars which are Quality, Lifelong Development and Access.
                         Currently, we are scaling our impact across Nigeria and Africa by targeting to raise 500,000
                         leaders by 2030. Our strategy directly resonates with Sustainable Development Goal 4 on
-                        Education though our work spans across a wide spectrum of the SDGs global development framework.
+                        Education, though our work spans across a wide spectrum of the SDGs global development framework.
                     </p>
                     <p class="pb-4 border-[#25A8D6] pl-5 border-l-[14px]">
                         <span class="font-semibold">Improving Quality Education <br></span>
@@ -491,13 +373,13 @@
             </h2>
 
             <p class="text-white text-center montserrat-light mb-5">
-                Through cooperation agreements with State and Local Governments, Missionary Societies and Schools. We
-                currently sponsor children across 21 states in Nigeria with the vision to move to other African
+                Through cooperation agreements with State and Local Governments, Missionary Societies and Schools, we
+                currently sponsor children across 21 states including the FCT in Nigeria with the vision to move to other African
                 Countries. We have an operating office in Lagos which coordinates all our activities.
             </p>
             <p class="text-white text-center montserrat-light mb-8">
                 Our impact locations include; Lagos, Niger, Abuja, Kano, Adamawa, Ogun, Osun, Gombe, Kogi, Plateau,
-                Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross RIver, Benue, and Delta.
+                Enugu, Oyo, Kaduna, Ondo, Jigawa, Katsina, Ekiti, Imo, Cross River, Benue and Delta.
             </p>
 
             <img src="/images/latest-map.png" alt="Map Of Nigeria With indicators of footprint">
@@ -561,91 +443,154 @@
         </div>
         {{-- DOWNLOADS END --}}
 
-        {{-- TEAM MODAL START --}}
-        <div id="team-modal"
-            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
-        </div>
-        {{-- TEAM MODAL END --}}
+        {{-- PERSON MODAL START --}}
+        <div id="person-modal" role="dialog" aria-modal="true" aria-labelledby="person-modal-name"
+            class="fixed inset-0 z-50 hidden items-start justify-center overflow-y-auto bg-[#26225F]/80 backdrop-blur-sm px-4 py-8 sm:px-8 sm:py-12 lg:py-16">
+            <div id="person-modal-panel"
+                class="relative w-full max-w-4xl rounded-3xl bg-white shadow-2xl my-auto">
+                <button type="button" id="person-modal-close" aria-label="Close"
+                    class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#F2F4FA] text-[#26225F] transition hover:bg-[#25A8D6] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#25A8D6]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" class="h-5 w-5" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" />
+                    </svg>
+                </button>
 
-        {{-- BOARDS MODAL START --}}
-        <div id="boards-modal"
-            class="fixed inset-0 bg-black/80 bg-opacity-75 flex items-start justify-center lg:p-20 px-8 py-10 overflow-y-scroll hidden z-50">
+                <div class="flex flex-col gap-8 p-6 sm:p-10 lg:flex-row lg:gap-12 lg:p-14">
+                    <div class="shrink-0 self-center lg:self-start">
+                        <img id="person-modal-image" src="" alt=""
+                            class="h-56 w-56 rounded-2xl object-cover sm:h-64 sm:w-64 lg:h-72 lg:w-72">
+                    </div>
+
+                    <div class="flex min-w-0 flex-col items-start gap-5">
+                        <div class="pr-10">
+                            <h3 id="person-modal-name" class="montserrat-bold text-2xl text-[#25A8D6] lg:text-3xl"></h3>
+                            <p id="person-modal-position" class="montserrat-semibold mt-1 text-lg text-[#26225F]"></p>
+                            <span class="mt-4 block h-1 w-14 rounded-full bg-[#25A8D6]"></span>
+                        </div>
+
+                        <div id="person-modal-content"
+                            class="montserrat-light text-sm leading-relaxed text-[#4B4B5A] lg:text-base"></div>
+
+                        <a id="person-modal-link" href="#" target="_blank" rel="noopener noreferrer"
+                            class="mt-1 inline-flex items-center gap-2 rounded-full bg-[#25A8D6] px-5 py-2 text-sm montserrat-semibold text-white transition hover:bg-[#1B7FA6] focus:outline-none focus:ring-2 focus:ring-[#25A8D6] focus:ring-offset-2">
+                            <img src="/images/Linkedin.png" alt="" class="h-4 w-4" aria-hidden="true">
+                            View LinkedIn profile
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        {{-- BOARDS MODAL END --}}
+        {{-- PERSON MODAL END --}}
     </div>
     </div>
 
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const teams = @json($teams);
-            const modal = document.getElementById('team-modal');
+            const people = {
+                team: @json($teams),
+                board: @json($boards),
+            };
 
-            const boards = @json($boards);
-            const Admodal = document.getElementById('boards-modal');
+            const modal = document.getElementById('person-modal');
+            const panel = document.getElementById('person-modal-panel');
+            const closeBtn = document.getElementById('person-modal-close');
+            const elName = document.getElementById('person-modal-name');
+            const elPosition = document.getElementById('person-modal-position');
+            const elImage = document.getElementById('person-modal-image');
+            const elContent = document.getElementById('person-modal-content');
+            const elLink = document.getElementById('person-modal-link');
 
-            document.querySelectorAll('.board-img img').forEach(img => {
-                img.addEventListener('click', function() {
-                    const index = this.getAttribute('data-index');
-                    const board = boards[index];
+            let lastFocused = null;
 
-                    const content =
-                        `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
-                            <img src="${board.image}" alt="${board.name}">
-                            <div class="flex flex-col items-start gap-8">
-                                <div>
-                                    <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${board.name}</h3>
-                                </div>
-                                <p class="montserrat-thin font-light">
-                                    ${board.content}
-                                </p>
-                                <a href="${board.link}">
-                                    <img src="/images/detail_icon.svg" alt="Linkedin Icon">
-                                </a>
-                            </div>
-                        </div>`;
+            // Only allow http(s) links through to the profile button.
+            function safeUrl(url) {
+                if (!url) return null;
+                try {
+                    const parsed = new URL(url, window.location.origin);
+                    return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : null;
+                } catch (e) {
+                    return null;
+                }
+            }
 
-                    Admodal.innerHTML = content;
-                    Admodal.classList.remove('hidden');
-                });
-            });
+            function openModal(person) {
+                if (!person) return;
 
-            document.querySelectorAll('.team-img img').forEach(img => {
-                img.addEventListener('click', function() {
-                    const index = this.getAttribute('data-index');
-                    const team = teams[index];
+                lastFocused = document.activeElement;
 
-                    const content =
-                        `<div class="flex flex-col lg:flex-row items-start justify-center bg-white rounded-3xl p-10 lg:px-20 lg:py-14 gap-12">
-                            <img src="${team.image}" alt="${team.name}">
-                            <div class="flex flex-col items-start gap-8">
-                                <div>
-                                    <h3 class="montserrat-bold text-[#25A8D6] text-2xl">${team.name}</h3>
-                                    <h3 class="montserrat-bold text-black text-xl">${team.position}</h3>
-                                </div>
-                                <p class="montserrat-thin font-light">
-                                    ${team.content}
-                                </p>
-                                <a href="${team.link}">
-                                    <img src="/images/detail_icon.svg" alt="Linkedin Icon">
-                                </a>
-                            </div>
-                        </div>`;
+                elName.textContent = person.name || '';
 
-                    modal.innerHTML = content;
-                    modal.classList.remove('hidden');
-                });
-            });
+                if (person.position) {
+                    elPosition.textContent = person.position;
+                    elPosition.classList.remove('hidden');
+                } else {
+                    elPosition.textContent = '';
+                    elPosition.classList.add('hidden');
+                }
 
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.classList.add('hidden');
+                elImage.src = person.image || person.list_image || '';
+                elImage.alt = person.name || '';
+                elContent.innerHTML = person.content || '';
+
+                const href = safeUrl(person.link);
+                if (href) {
+                    elLink.href = href;
+                    elLink.classList.remove('hidden');
+                } else {
+                    elLink.removeAttribute('href');
+                    elLink.classList.add('hidden');
+                }
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+            }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+                if (lastFocused && typeof lastFocused.focus === 'function') {
+                    lastFocused.focus();
+                }
+            }
+
+            // Delegated, so it keeps working on the slides Swiper clones for looping.
+            function handleActivate(e) {
+                const img = e.target.closest('.team-img img, .board-img img');
+                if (!img) return;
+
+                const group = img.closest('.team-img') ? 'team' : 'board';
+                const index = img.getAttribute('data-index');
+                if (index === null) return;
+
+                e.preventDefault();
+                openModal(people[group][index]);
+            }
+
+            document.addEventListener('click', handleActivate);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    if (e.target.closest && e.target.closest('.team-img img, .board-img img')) {
+                        handleActivate(e);
+                    }
                 }
             });
 
-            Admodal.addEventListener('click', function(e) {
-                if (e.target === Admodal) {
-                    Admodal.classList.add('hidden');
+            closeBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', function(e) {
+                if (!panel.contains(e.target)) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
                 }
             });
         });

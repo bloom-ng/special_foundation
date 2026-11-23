@@ -34,7 +34,8 @@
                     <div class="bg-[#F5FAFD] border border-[#25A8D6] p-6 rounded-xl">
                         <h3 class=" montserrat-bold text-lg">Support a Summer School Student</h3>
                         <p class="montserrat-medium mt-2">
-                            Provide a child with 4–6 weeks of free learning, mentorship, and enrichment.
+                            With ₦39,000, you can support a child during the 4&ndash;6 weeks of free learning,
+                            mentorship, and enrichment at the Special Summer School.
                         </p>
                     </div>
 
@@ -53,146 +54,107 @@
                     </div>
 
                 </div>
-                <div class="w-full bg-[#F5FAFD] border border-[#25A8D6] rounded-2xl p-8 mt-28">
-
-                    <!-- Title -->
-                    <h3 class="montserrat-bold text-2xl text-[#26225F] mb-4">
-                        Donate Offline
-                    </h3>
-
-                    <!-- Intro -->
-                    <p class="montserrat-medium text-base text-[#26225F] mb-6">
-                        Please donate via bank transfer. Choose the option that works best for you.
-                        Every contribution helps expand educational opportunities.
-                    </p>
-
-                    <!-- Account Name -->
-                    <div class="mb-8">
-                        <p class="montserrat-medium text-sm text-gray-600">Account Name</p>
-                        <p class="montserrat-medium text-lg text-[#26225F]">
-                            The Special Youth Leadership Foundation
-                        </p>
-                    </div>
-
-                    <!-- Bank Cards -->
-                    <div class="flex flex-col lg:flex-row gap-8">
-
-                        <!-- Naira Accounts -->
-                        <div class="w-full lg:w-[50%] bg-[#25A8D6] p-8 text-white rounded-xl">
-                            <p class="montserrat-bold text-lg mb-4">Naira (NGN)</p>
-
-                            <div class="space-y-3 montserrat-thin">
-                                <p>
-                                    <span class="font-semibold">Sterling Bank:</span>  <span class="font-semibold">0131522788</span>
-                                </p>
-
-                                <p>
-                                    <span class="font-bold">Zenith Bank:</span> <span class="font-semibold">1016058609</span>
-                                </p>
-
-                                <p>
-                                    <span class="font-semibold">FCMB:</span>  <span class="font-semibold">8763293012 </span>
-                                </p>
-
-                                <p>
-                                    <span class="font-semibold">Stanbic IBTC:</span>  <span class="font-semibold">0058487342</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- USD Account -->
-                        <div class="w-full lg:w-[50%] bg-[#25A8D6] p-8 text-white rounded-xl">
-                            <p class="montserrat-bold text-lg mb-4">USD</p>
-
-                            <div class="space-y-2 montserrat-thin">
-                                <p>
-                                    <span class="font-semibold">Bank:</span>  <span class="font-semibold">Zenith Bank</span>
-                                </p>
-
-                                <p>
-                                    <span class="font-semibold">Account Number:</span>  <span class="font-semibold">5071271021</span>
-                                </p>
-
-                                <p>
-                                    <span class="font-semibold">Swift Code:</span>  <span class="font-semibold">ZEIBNGLA</span>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Online Donate Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-6 mt-10">
-
-                        <a class="text-white font-light py-[15px] px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm md:text-lg text-center"
-                            href="https://paystack.shop/pay/h34dhapt3d" target="_blank">
-                            DONATE ONLINE (NGN)
-                        </a>
-
-                        <a class="text-white font-light py-[15px] px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm md:text-lg text-center"
-                            href="https://paystack.shop/pay/p3ha2q123l" target="_blank">
-                            DONATE ONLINE (USD)
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <p
-                    class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:leading-8 xl:leading-9 my-8">
-                    You can also fill the form below and we will contact you to complete your donation
-                </p>
-
-                <form action="/donate" method="POST" class="w-full flex flex-col space-y-8">
-                    @csrf
-                    <input
-                        class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
-                        type="text" name="name" placeholder="Your Full Name" required />
-
-                    <div class="w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-2">
-                        <input
-                            class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
-                            type="email" name="email" placeholder="Email Address" required />
-
-                        <input
-                            class="w-full lg:max-w-[430px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
-                            type="text" name="contact_number" placeholder="Contact Number" required />
-                    </div>
-
-                    <p
-                        class="montserrat-thin text-base font-bold leading-6 text-left md:text-lg lg:text-xl xl:text-2xl md:leading-7 lg:leading-8 xl:leading-9 text-[#26225F]">
-                        How did you hear about us?
-                    </p>
-
-                    <select
-                        class="max-w-[852px] h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
-                        type="text" name="source" placeholder="Select an option" required>
-                        <option disabled value="">Select an option</option>
-                        <option value="1">Social Media</option>
-                        <option value="2">Google Search</option>
-                        <option value="3">Word of Mouth</option>
-                        <option value="4">Online Advertising</option>
-                        <option value="5">Email Marketing</option>
-                        <option value="6">Content Marketing</option>
-                        <option value="7">Event or Conference</option>
-                        <option value="8">Referral from Partner or Affiliate</option>
-                        <option value="9">Online Directory or Listing</option>
-                        <option value="10">Other (specify in comment)</option>
-                    </select>
-
-                    <textarea
-                        class="max-w-[852px] min-h-[172px] pt-[25px] pb-[25px] pl-[50px] rounded-3xl border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
-                        type="text" name="comments" placeholder="Comments [Optional]"></textarea>
-
-                    <button
-                        class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#26225F] montserrat-light text-md leading-[18px] tracking-wider text-center md:text-xl md:leading-[26px] lg:leading-[28px] xl:leading-[30px] mt-10 montserrat-thin"
-                        href="https://paystack.com/pay/ejyy1q12rf" target="_blank">SUBMIT</button>
-
-                </form>
             </div>
             <div class="w-full lg:w-[40%]">
                 <img src="/images/donate.png" alt="Image of a girl holding a The Special Youth Book">
             </div>
+        </div>
+
+        <div class="w-full max-w-5xl mx-auto mt-24">
+            <div class="w-full bg-[#F5FAFD] border border-[#25A8D6] rounded-2xl p-8">
+
+                <!-- Title -->
+                <h3 class="montserrat-bold text-2xl text-[#26225F] mb-4">
+                    Donate Offline
+                </h3>
+
+                <x-bank-details />
+
+                <!-- Online Donate Buttons -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-start gap-6 mt-10">
+
+                    <a class="text-white font-light py-[15px] px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm md:text-lg text-center"
+                        href="https://paystack.shop/pay/h34dhapt3d" target="_blank">
+                        DONATE ONLINE (NGN)
+                    </a>
+
+                    <div class="flex flex-col gap-2">
+                        <a class="text-white font-light py-[15px] px-[30px] rounded-full bg-[#25A8D6] montserrat-thin text-sm md:text-lg text-center"
+                            href="https://paystack.shop/pay/p3ha2q123l" target="_blank">
+                            DONATE ONLINE (USD)
+                        </a>
+                        <p class="montserrat-thin text-sm text-[#26225F] text-center">
+                            Giving from the US?
+                            @if (config('support.globalgiving_url'))
+                                <a href="{{ config('support.globalgiving_url') }}" target="_blank" rel="noopener noreferrer"
+                                    class="text-[#25A8D6] underline">Donate through GlobalGiving.</a>
+                            @else
+                                Donate through GlobalGiving.
+                            @endif
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mt-8">
+                    <a href="/ways-to-support" class="montserrat-medium text-[#25A8D6] underline">
+                        See more ways to support The Special Foundation
+                    </a>
+                </div>
+
+            </div>
+
+            <p
+                class="montserrat-thin text-base font-normal leading-6 text-left md:text-lg md:leading-7 lg:leading-8 xl:leading-9 my-8">
+                You can also fill the form below and we will contact you to complete your donation
+            </p>
+
+            <form action="/donate" method="POST" class="w-full flex flex-col space-y-8">
+                @csrf
+                <input
+                    class="w-full h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
+                    type="text" name="name" placeholder="Your Full Name" required />
+
+                <div class="w-full flex flex-col lg:flex-row items-center gap-8">
+                    <input
+                        class="w-full lg:flex-1 lg:min-w-0 h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
+                        type="email" name="email" placeholder="Email Address" required />
+
+                    <input
+                        class="w-full lg:flex-1 lg:min-w-0 h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
+                        type="text" name="contact_number" placeholder="Contact Number" required />
+                </div>
+
+                <p
+                    class="montserrat-thin text-base font-bold leading-6 text-left md:text-lg lg:text-xl xl:text-2xl md:leading-7 lg:leading-8 xl:leading-9 text-[#26225F]">
+                    How did you hear about us?
+                </p>
+
+                <select
+                    class="w-full h-[72px] pt-[25px] pb-[25px] pl-[50px] rounded-full border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
+                    type="text" name="source" placeholder="Select an option" required>
+                    <option disabled value="">Select an option</option>
+                    <option value="1">Social Media</option>
+                    <option value="2">Google Search</option>
+                    <option value="3">Word of Mouth</option>
+                    <option value="4">Online Advertising</option>
+                    <option value="5">Email Marketing</option>
+                    <option value="6">Content Marketing</option>
+                    <option value="7">Event or Conference</option>
+                    <option value="8">Referral from Partner or Affiliate</option>
+                    <option value="9">Online Directory or Listing</option>
+                    <option value="10">Other (specify in comment)</option>
+                </select>
+
+                <textarea
+                    class="w-full min-h-[172px] pt-[25px] pb-[25px] pl-[50px] rounded-3xl border-[#25A8D6] border-[1px] text-black placeholder:text-black montserrat-thin font-normal"
+                    type="text" name="comments" placeholder="Comments [Optional]"></textarea>
+
+                <button
+                    class="text-white font-normal w-[308px] h-[54px] pr-[10px] pl-[10px] rounded-full bg-[#26225F] montserrat-light text-md leading-[18px] tracking-wider text-center md:text-xl md:leading-[26px] lg:leading-[28px] xl:leading-[30px] mt-10 montserrat-thin"
+                    type="submit">SUBMIT</button>
+
+            </form>
         </div>
 
     </div>

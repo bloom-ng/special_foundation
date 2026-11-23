@@ -38,16 +38,25 @@
                 <h1 class="montserrat-semibold pb-6 uppercase tracking-wider text-lg">Accreditations</h1>
                 <div class="flex flex-col gap-4 text-sm">
                     @foreach ($accreditations as $accreditation)
-                        <div class="flex items-center gap-4 group">
+                        @php
+                            // GlobalGiving falls back to the shared project URL when no
+                            // link has been set on the record itself.
+                            $accreditationLink = $accreditation->link
+                                ?: (str_contains(strtolower($accreditation->name), 'globalgiving')
+                                    ? config('support.globalgiving_url')
+                                    : null);
+                        @endphp
+                        <a @if ($accreditationLink) href="{{ $accreditationLink }}" target="_blank" rel="noopener noreferrer" @endif
+                            class="flex items-center gap-4 group">
                             <div class="bg-white rounded p-1.5 transition-transform group-hover:scale-105">
                                 <img class="w-8 h-8 object-contain"
                                      src="{{ asset('storage/' . $accreditation->image) }}"
                                      alt="{{ $accreditation->name }}">
                             </div>
-                            <p class="montserrat-extralight leading-snug text-gray-200">
+                            <p class="montserrat-extralight leading-snug text-gray-200 {{ $accreditationLink ? 'group-hover:underline' : '' }}">
                                 {{ $accreditation->name }}
                             </p>
-                        </div>
+                        </a>
                     @endforeach
                 </div>
             </div>

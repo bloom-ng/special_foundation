@@ -12,6 +12,7 @@ class Accreditation extends Model
     protected $fillable = [
         'name',
         'image',
+        'link',
         'status',
     ];
 }

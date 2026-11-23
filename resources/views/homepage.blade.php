@@ -104,8 +104,9 @@
                             mentorship, and leadership opportunities. -->
                         </p>
                     </div>
-                    <div class="mt-10 flex-row flex justify-end">
-                        <a href="/donate" class="text-white text-base bg-[#25A8D6] px-10 py-3 -mt-2 rounded-full">Support a child's Education</a>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-end">
+                        <a href="/donate" class="text-white text-base bg-[#25A8D6] px-10 py-3 -mt-2 rounded-full text-center">Support a child's Education</a>
+                        <a href="/ways-to-support" class="text-[#25A8D6] text-base border-2 border-[#25A8D6] px-10 py-3 -mt-2 rounded-full text-center transition hover:bg-[#25A8D6] hover:text-white">More ways to support</a>
                     </div>
                 </div>
                 <div class="basis-2/5">
@@ -181,6 +182,55 @@
             </div>
         </div>
     </div>
+
+
+    {{-- AWARDS AND RECOGNITION START --}}
+    @if (!empty($awards))
+        <div id="awards" class="bg-white">
+            <div class="mx-5 lg:mx-20 pt-16 pb-20">
+                <h2 class="montserrat-bold text-[#25A8D6] text-[32px] lg:text-[38px] leading-[40px] lg:leading-[45px] pb-3">
+                    Awards and Recognition
+                </h2>
+                <p class="text-[#4B4B5A] max-w-3xl pb-10">
+                    Recognition of our work from independent awarding bodies, and the networks that verify us.
+                </p>
+
+                @foreach ($awards as $category => $items)
+                    <div class="@if (!$loop->first) mt-14 @endif">
+                        <h3 class="montserrat-semibold text-[#25A8D6] uppercase tracking-wider text-sm pb-6">
+                            {{ \App\Models\Award::getCategories()[$category] ?? $category }}
+                        </h3>
+
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                            @foreach ($items as $award)
+                                @php $hasLink = filled($award->link); @endphp
+                                <a @if ($hasLink) href="{{ $award->link }}" target="_blank" rel="noopener noreferrer" @endif
+                                   class="flex flex-col items-center text-center bg-white border border-[#E6E6EF] rounded-xl p-5 h-full transition duration-200 @if ($hasLink) hover:border-[#25A8D6] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#25A8D6] @endif">
+                                    <img class="h-20 w-20 object-contain mb-4"
+                                         src="{{ asset('storage/' . $award->image) }}"
+                                         alt="{{ $award->name }}"
+                                         loading="lazy"
+                                         width="80" height="80">
+                                    <span class="montserrat-semibold text-[#26225F] text-sm leading-snug">
+                                        {{ $award->name }}
+                                    </span>
+                                    @if ($award->year)
+                                        <span class="text-[#6B6B7B] text-xs mt-1">{{ $award->year }}</span>
+                                    @endif
+                                    @if ($award->recognition)
+                                        <span class="mt-3 inline-block px-3 py-1 rounded-full text-[11px] montserrat-semibold uppercase tracking-wide bg-[#25A8D6]/10 text-[#25A8D6]">
+                                            {{ $award->recognition }}
+                                        </span>
+                                    @endif
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    @endif
+    {{-- AWARDS AND RECOGNITION END --}}
 
     {{-- OUR PROGRAMS START --}}
     <div id="programs" class="bg-[#26225F]">

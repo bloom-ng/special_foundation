@@ -2,6 +2,12 @@
 
     <main class="w-full flex-grow p-6">
 
+        @if (session('success'))
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <span class="block sm:inline">{{ session('success') }}</span>
+            </div>
+        @endif
+
         <div class="w-full my-4">
 
             <section class="container mx-auto py-8">
@@ -68,6 +74,11 @@
                             </th>
                             <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
                                 <p class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
+                                    Shown on site
+                                </p>
+                            </th>
+                            <th class="border-b border-gray-300 !p-4 pb-8 !text-left">
+                                <p class="block antialiased font-sans text-xs font-light leading-normal text-blue-gray-900 !font-bold">
                                     Actions
                                 </p>
                             </th>
@@ -84,6 +95,22 @@
                                 </td>
                                 <td class="w-1/4 text-left py-3 px-4">
                                     {{ $team->type == \App\Models\CMS::TYPE_TEAM ? 'Team Member' : 'Board Member' }}
+                                </td>
+                                <td class="w-1/4 text-left py-3 px-4">
+                                    @php $isActive = ($team->status ?? 'active') === 'active'; @endphp
+                                    <form action="{{ route('admin.teams.toggle', $team->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" role="switch" aria-checked="{{ $isActive ? 'true' : 'false' }}"
+                                            aria-label="{{ $isActive ? 'Hide' : 'Show' }} {{ $team->name }} on the website"
+                                            class="group inline-flex items-center gap-2 focus:outline-none">
+                                            <span class="relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors {{ $isActive ? 'bg-green-500' : 'bg-gray-300' }} group-focus:ring-2 group-focus:ring-indigo-400 group-focus:ring-offset-1">
+                                                <span class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform {{ $isActive ? 'translate-x-4' : 'translate-x-1' }}"></span>
+                                            </span>
+                                            <span class="{{ $isActive ? 'text-green-700' : 'text-gray-500' }}">
+                                                {{ $isActive ? 'Shown' : 'Hidden' }}
+                                            </span>
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="w-1/4 text-left py-3 px-4">
                                     <a class="pr-2 text-blue-300 hover:text-blue-500"

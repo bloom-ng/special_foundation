@@ -125,6 +125,7 @@ class CMSController extends Controller
         $cms->slug = $request->position ?? $request->linkedInUrl;
         $cms->value = json_encode(['content' => $request->description, 'image' => $path]);
         $cms->type = $request->type;
+        $cms->status = $request->status === 'inactive' ? 'inactive' : 'active';
         $cms->sort_order = $request->sort_order ?? 0;
         $cms->save();
 
@@ -162,11 +163,23 @@ class CMSController extends Controller
             'image' => $imagePath
         ]);
         $cms->type = $request->type;
+        $cms->status = $request->status === 'inactive' ? 'inactive' : 'active';
         $cms->sort_order = $request->sort_order ?? 0;
         $cms->save();
 
         return redirect('/admin/cms-data/teams')->with('success', 'Updated');
         
+    }
+
+    public function toggleTeam(CMS $cms)
+    {
+        $cms->status = $cms->status === 'active' ? 'inactive' : 'active';
+        $cms->save();
+
+        return back()->with(
+            'success',
+            $cms->name . ' is now ' . ($cms->status === 'active' ? 'shown on' : 'hidden from') . ' the website'
+        );
     }
 
     public function editAi()

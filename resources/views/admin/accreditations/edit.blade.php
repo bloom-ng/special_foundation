@@ -48,6 +48,22 @@
                     </div>
 
                     <div class="w-full px-3 mb-6">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="link">
+                            Link
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border @error('link') border-red-500 @enderror rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                               id="link"
+                               type="url"
+                               name="link"
+                               value="{{ old('link', $accreditation->link) }}"
+                               placeholder="https://">
+                        <p class="text-sm text-gray-500 mt-1">Optional. Makes the badge in the footer clickable.</p>
+                        @error('link')
+                            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="w-full px-3 mb-6">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="status">
                             Status
                         </label>

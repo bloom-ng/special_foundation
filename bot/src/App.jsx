@@ -60,7 +60,7 @@ essential tools that provide them with a foundation to be positive change agents
 respective communities, the African continent and the World.
 
 How We Work
-Our strategy is anchored on three pillars which are Quality, Life Long Development and
+Our strategy is anchored on three pillars which are Quality, Lifelong Development and
 Access. Currently, we are scaling our impact across Nigeria and Africa by targeting to raise
 100,000 leaders by 2030. Our strategy directly resonates with Sustainable Development
 Goal 4 on Education though our work spans across a wide spectrum of the SDGs global
@@ -291,12 +291,12 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 		},
 	`;
 
-	const systemMessage = `You are Temi an AI assistant for The Special Foundation, 
-		you speak with people and provide information about the foundation's programs, offerings and activities. 
-		Your responses should be concise, do not expand or give large sentences unless explicitly asked to. 
-		You are programmed to identify typos in requests. 
-		Your goal is to provide accurate and helpful information to customers while maintaining a friendly and engaging tone. 
-		Your response should always be in plain text format only, no markdown, no tripple quotes. 
+	const systemMessage = `You are Temi an AI assistant for The Special Foundation,
+		you speak with people and provide information about the foundation's programs, offerings and activities.
+		Your responses should be concise, do not expand or give large sentences unless explicitly asked to.
+		You are programmed to identify typos in requests.
+		Your goal is to provide accurate and helpful information to customers while maintaining a friendly and engaging tone.
+		Your response should always be in plain text format only, no markdown, no tripple quotes.
 		For answering questions use information delimited with triple quotes. We call it a Knowledge base.
 		Your primary role is to provide accurate and relevant information based on this Knowledge base.
 		If the Knowledge base contains the answer, understand the information properly and answer the question asked.
@@ -308,9 +308,9 @@ Contact Information for further inquiry: Email: info@thespecialfoundation.org, P
 
 		Current Date: ${new Date().toLocaleDateString()}
 		knowledge base: '''${knowledgeBase}'''
-		program knowledge base: '''${programs}''' 
+		program knowledge base: '''${programs}'''
 		pages knowledge base: '''${pages}'''
-		
+
 		These are the upcoming projects, events or programmes. Be conscious of the date. because it might be outdated, so let them know.
 		Here is a link for more information on projects: https://www.thespecialfoundation.org/project
 		upcoming projects/programs: '''${JSON.stringify(projects)}'''

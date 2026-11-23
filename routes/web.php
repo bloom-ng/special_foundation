@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AccreditationController;
+use App\Http\Controllers\AwardController;
+use App\Http\Controllers\SupportEnquiryController;
+use App\Http\Controllers\SupportOptionController;
 use App\Http\Controllers\Admin\CampaignController;
 use App\Http\Controllers\Admin\DonorInterestController;
 use App\Http\Controllers\BeneficiaryApplicationController;
@@ -76,6 +79,11 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 
 Route::post('/beneficiaries', [BeneficiaryApplicationController::class, 'store']);
 Route::post('/partners', [PartnerApplicationController::class, 'store']);
+
+// Ways to Support
+Route::get('/ways-to-support', [SupportEnquiryController::class, 'page'])->name('ways.to.support');
+Route::get('/ways-to-support/enquiry', [SupportEnquiryController::class, 'form'])->name('ways.to.support.form');
+Route::post('/ways-to-support/enquiry', [SupportEnquiryController::class, 'store'])->name('ways.to.support.store');
 Route::post('/donation-lead', [DonationController::class, 'store']);
 Route::post('/volunteer', [VolunteerController::class, 'store']);
 Route::post('/mentorship-interest', [MentorshipInterestController::class, 'store'])->name('mentorship.interest.store');
@@ -342,6 +350,27 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::put('/accreditations/{accreditation}', [AccreditationController::class, 'update'])->name('admin.accreditations.update');
     Route::delete('/accreditations/{accreditation}', [AccreditationController::class, 'destroy'])->name('admin.accreditations.destroy');
 
+    // Awards and Recognition routes
+    Route::get('/awards', [AwardController::class, 'index'])->name('admin.awards.index');
+    Route::get('/awards/create', [AwardController::class, 'create'])->name('admin.awards.create');
+    Route::post('/awards', [AwardController::class, 'store'])->name('admin.awards.store');
+    Route::get('/awards/{award}/edit', [AwardController::class, 'edit'])->name('admin.awards.edit');
+    Route::put('/awards/{award}', [AwardController::class, 'update'])->name('admin.awards.update');
+    Route::delete('/awards/{award}', [AwardController::class, 'destroy'])->name('admin.awards.destroy');
+
+    // Ways to Support cards
+    Route::get('/support-options', [SupportOptionController::class, 'index'])->name('admin.support-options.index');
+    Route::get('/support-options/create', [SupportOptionController::class, 'create'])->name('admin.support-options.create');
+    Route::post('/support-options', [SupportOptionController::class, 'store'])->name('admin.support-options.store');
+    Route::get('/support-options/{supportOption}/edit', [SupportOptionController::class, 'edit'])->name('admin.support-options.edit');
+    Route::put('/support-options/{supportOption}', [SupportOptionController::class, 'update'])->name('admin.support-options.update');
+    Route::delete('/support-options/{supportOption}', [SupportOptionController::class, 'destroy'])->name('admin.support-options.destroy');
+    Route::post('/support-options/{supportOption}/toggle', [SupportOptionController::class, 'toggle'])->name('admin.support-options.toggle');
+
+    // Ways to Support enquiries
+    Route::get('/support-enquiries', [SupportEnquiryController::class, 'index'])->name('admin.support-enquiries.index');
+    Route::delete('/support-enquiries/{supportEnquiry}', [SupportEnquiryController::class, 'destroy'])->name('admin.support-enquiries.destroy');
+
     // Campaign routes
     Route::get('/campaigns', [CampaignController::class, 'index'])->name('admin.campaigns.index');
     Route::get('/campaigns/create', [CampaignController::class, 'create'])->name('admin.campaigns.create');
@@ -376,6 +405,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/cms-data/teams/{cms}/edit', [CMSController::class, 'editTeams']);
     Route::post('/cms-data/teams', [CMSController::class, 'storeTeams']);
     Route::put('/cms-data/teams/{cms}', [CMSController::class, 'updateTeams']);
+    Route::post('/cms-data/teams/{cms}/toggle', [CMSController::class, 'toggleTeam'])->name('admin.teams.toggle');
 
     //AI Data
     Route::get('/cms-data/ai/edit', [CMSController::class, 'editAi']);

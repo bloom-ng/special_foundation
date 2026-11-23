@@ -188,6 +188,21 @@
                 <i class="fas fa-certificate mr-3"></i>
                 Accreditations
             </a>
+            <a href="/admin/awards"
+                class="flex items-center {{ $page == "awards" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-trophy mr-3"></i>
+                Awards
+            </a>
+            <a href="/admin/support-options"
+                class="flex items-center {{ $page == "support-options" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-hand-holding-heart mr-3"></i>
+                Ways to Support
+            </a>
+            <a href="/admin/support-enquiries"
+                class="flex items-center {{ $page == "support-enquiries" ? "active-nav-link" : "" }} text-white py-4 pl-6 nav-item">
+                <i class="fas fa-envelope-open-text mr-3"></i>
+                Support Enquiries
+            </a>
             <a href="{{ route("admin.events.index") }}"
                 class="flex items-center text-white py-4 pl-6 nav-item {{ $page === "events" ? "active-nav-link" : "" }}">
                 <i class="fas fa-calendar mr-3"></i>
@@ -364,6 +379,21 @@
                     class="flex items-center {{ $page == "accreditations" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
                     <i class="fas fa-certificate mr-3"></i>
                     Accreditations
+                </a>
+                <a href="/admin/awards"
+                    class="flex items-center {{ $page == "awards" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-trophy mr-3"></i>
+                    Awards
+                </a>
+                <a href="/admin/support-options"
+                    class="flex items-center {{ $page == "support-options" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-hand-holding-heart mr-3"></i>
+                    Ways to Support
+                </a>
+                <a href="/admin/support-enquiries"
+                    class="flex items-center {{ $page == "support-enquiries" ? "active-nav-link" : "" }} text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-envelope-open-text mr-3"></i>
+                    Support Enquiries
                 </a>
                 <a href="{{ route("admin.events.index") }}"
                     class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item {{ $page === "events" ? "active-nav-link" : "" }}">

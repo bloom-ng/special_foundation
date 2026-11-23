@@ -24,6 +24,7 @@ class AccreditationController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,jpg,png|max:4096',
+            'link' => 'nullable|url|max:2048',
             'status' => 'required|in:active,inactive',
         ]);
 
@@ -32,6 +33,7 @@ class AccreditationController extends Controller
         Accreditation::create([
             'name' => $validated['name'],
             'image' => $imagePath,
+            'link' => $validated['link'] ?? null,
             'status' => $validated['status'],
         ]);
 
@@ -48,11 +50,13 @@ class AccreditationController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,jpg,png|max:4096',
+            'link' => 'nullable|url|max:2048',
             'status' => 'required|in:active,inactive',
         ]);
 
         $data = [
             'name' => $validated['name'],
+            'link' => $validated['link'] ?? null,
             'status' => $validated['status'],
         ];
 

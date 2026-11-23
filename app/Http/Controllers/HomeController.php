@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\CMS;
 use App\Models\Event;
 use App\Models\Testimonial;
+use App\Models\Award;
 
 class HomeController extends Controller
 {
@@ -118,6 +119,8 @@ class HomeController extends Controller
         
         $testimonials = Testimonial::where('status', 'active')->orderBy('sort_order', 'asc')->latest()->get();
 
+        $awards = Award::grouped();
+
         return view('homepage', [
             'featured_posts' => $featured_posts->shuffle()->take(3),
             'sdgs' => $sdgs,
@@ -125,6 +128,7 @@ class HomeController extends Controller
             'activeEvent' => $activeEvent,
             'activeSummerSchool' => $activeSummerSchool,
             'testimonials' => $testimonials,
+            'awards' => $awards,
         ]);
     }
 }
