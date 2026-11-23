@@ -203,14 +203,19 @@
 
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                             @foreach ($items as $award)
-                                @php $hasLink = filled($award->link); @endphp
+                                @php
+                                    $hasLink = filled($award->link);
+                                    $logo = $award->logoPath();
+                                @endphp
                                 <a @if ($hasLink) href="{{ $award->link }}" target="_blank" rel="noopener noreferrer" @endif
                                    class="flex flex-col items-center text-center bg-white border border-[#E6E6EF] rounded-xl p-5 h-full transition duration-200 @if ($hasLink) hover:border-[#25A8D6] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#25A8D6] @endif">
-                                    <img class="h-20 w-20 object-contain mb-4"
-                                         src="{{ asset('storage/' . $award->image) }}"
-                                         alt="{{ $award->name }}"
-                                         loading="lazy"
-                                         width="80" height="80">
+                                    @if ($logo)
+                                        <img class="h-20 w-20 object-contain mb-4"
+                                             src="{{ asset('storage/' . $logo) }}"
+                                             alt="{{ $award->name }}"
+                                             loading="lazy"
+                                             width="80" height="80">
+                                    @endif
                                     <span class="montserrat-semibold text-[#26225F] text-sm leading-snug">
                                         {{ $award->name }}
                                     </span>

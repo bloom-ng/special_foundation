@@ -44,9 +44,17 @@
                             <tr class="border-b">
                                 <td class="text-left py-3 px-4">{{ $award->sort_order }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <img class="h-10 w-10 rounded object-contain border border-[#25A8D6] bg-white"
-                                         src="{{ asset('storage/' . $award->image) }}"
-                                         alt="{{ $award->name }}">
+                                    @php $logo = $award->logoPath(); @endphp
+                                    @if ($logo)
+                                        <img class="h-10 w-10 rounded object-contain border border-[#25A8D6] bg-white"
+                                             src="{{ asset('storage/' . $logo) }}"
+                                             alt="{{ $award->name }}">
+                                        @if (! $award->image && $award->accreditation)
+                                            <span class="block text-[10px] text-gray-500 mt-1">from accreditation</span>
+                                        @endif
+                                    @else
+                                        <span class="text-xs text-gray-400">none</span>
+                                    @endif
                                 </td>
                                 <td class="text-left py-3 px-4">{{ $award->name }}</td>
                                 <td class="text-left py-3 px-4">{{ $award->year ?: '—' }}</td>

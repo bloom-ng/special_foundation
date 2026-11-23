@@ -10,8 +10,11 @@ class AwardSeeder extends Seeder
     /**
      * Awards and memberships supplied by TSF for the Q4 update.
      *
-     * Badges are placeholders until TSF supplies the real artwork, and no
-     * links were supplied, so every badge is currently non-clickable.
+     * The badge files here are placeholders. On an installation that already
+     * has the real logos in the footer accreditation list, run
+     * `php artisan awards:link-logos` afterwards to point each award at the
+     * accreditation holding its logo. No links were supplied, so every badge
+     * is currently non-clickable.
      */
     public function run(): void
     {

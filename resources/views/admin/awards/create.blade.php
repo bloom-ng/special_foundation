@@ -99,11 +99,30 @@
                     </div>
 
                     <div class="w-full px-3 mb-6">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="accreditation_id">
+                            Use logo from
+                        </label>
+                        <select class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                                id="accreditation_id" name="accreditation_id">
+                            <option value="">&mdash; none &mdash;</option>
+                            @foreach ($accreditations as $accreditation)
+                                <option value="{{ $accreditation->id }}" {{ (string) old('accreditation_id', '') === (string) $accreditation->id ? 'selected' : '' }}>
+                                    {{ $accreditation->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <p class="text-sm text-gray-500 mt-1">
+                            Borrows the logo from an accreditation so the homepage badge and the footer badge
+                            stay identical. A badge uploaded below overrides this.
+                        </p>
+                    </div>
+
+                    <div class="w-full px-3 mb-6">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="image">
                             Badge
                         </label>
                         <input class="appearance-none block w-full bg-gray-200 text-gray-700 border @error('image') border-red-500 @enderror rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-                               id="image" type="file" name="image" accept="image/jpeg,image/png,image/jpg,image/webp" required>
+                               id="image" type="file" name="image" accept="image/jpeg,image/png,image/jpg,image/webp">
                         <p class="text-sm text-gray-500 mt-1">Square PNG or WebP with a transparent background, recommended 240×240 px.</p>
                         @error('image')
                             <p class="text-red-500 text-xs italic">{{ $message }}</p>
